@@ -509,5 +509,679 @@
  },
  "Sydney, Queen Victoria Building": {
   "title": "File:Queen Victoria Building, central cupola 20230206 1.jpg"
+ },
+ "Buenos Aires, cathedral": {
+  "title": "File:Buenos Aires katedra 14.jpg",
+  "own": {
+   "name": "Buenos Aires Metropolitan Cathedral",
+   "built": "1752–1852",
+   "by": "Antonio Masella",
+   "note": "",
+   "lat": -34.6074,
+   "lon": -58.3733,
+   "country": "Argentina",
+   "item": "Q967929"
+  }
+ },
+ "Graz, Mariatrost": {
+  "title": "File:Graz Wallfahrtskirche Maria Trost Innen Kuppel 2.JPG",
+  "own": {
+   "name": "Mariatrost Basilica",
+   "built": "1714–24",
+   "by": "Andreas Stengg and Johann Georg Stengg",
+   "note": "",
+   "lat": 47.1072,
+   "lon": 15.4914,
+   "country": "Austria",
+   "item": "Q675795"
+  }
+ },
+ "Innsbruck, Jesuit Church": {
+  "title": "File:Innsbruck Jesuitenkirche Hl. Dreifaltigkeit Innen Vierungskuppel 1.jpg",
+  "own": {
+   "name": "Jesuit Church",
+   "built": "1627–46",
+   "by": "Karl Fontaner and Christoph Gumpp the Younger",
+   "note": "",
+   "lat": 47.2684,
+   "lon": 11.3979,
+   "country": "Austria",
+   "item": "Q387643"
+  }
+ },
+ "Vienna, Central Cemetery church": {
+  "title": "File:Friedhofskirche zum Heiligen Karl Borromäus - Cupola - Vienna.jpg",
+  "own": {
+   "name": "St Charles Borromeo Cemetery Church",
+   "built": "1908–11",
+   "by": "Max Hegele",
+   "note": "",
+   "lat": 48.1508,
+   "lon": 16.4381,
+   "country": "Austria",
+   "item": "Q16102021"
+  }
+ },
+ "Vidin, cathedral": {
+  "title": "File:Видин, май 2013 - panoramio (36).jpg",
+  "own": {
+   "name": "Cathedral of St Demetrius",
+   "built": "1885–1926",
+   "by": "",
+   "note": "",
+   "lat": 43.9871,
+   "lon": 22.874,
+   "country": "Bulgaria",
+   "item": "Q2372540"
+  }
+ },
+ "Kačina": {
+  "title": "File:Pohlad do neba.jpg",
+  "own": {
+   "name": "Kačina Castle",
+   "built": "1806–24",
+   "by": "Christian Friedrich Schuricht",
+   "note": "",
+   "lat": 49.9817,
+   "lon": 15.3461,
+   "country": "Czech Republic",
+   "item": "Q1418291"
+  }
+ },
+ "Prague, Spanish Synagogue": {
+  "title": "File:Spanish Synagogue 3 (2540836857).jpg",
+  "own": {
+   "name": "Spanish Synagogue",
+   "built": "1868",
+   "by": "Vojtěch Ignác Ullmann",
+   "note": "",
+   "lat": 50.0904,
+   "lon": 14.4208,
+   "country": "Czech Republic",
+   "item": "Q990003"
+  }
+ },
+ "Paris, Chapelle expiatoire": {
+  "title": "File:Dome @ Chapelle Expiatoire @ Square Louis XVI @ Paris (34359385705).jpg",
+  "own": {
+   "name": "Chapelle expiatoire",
+   "built": "1815–26",
+   "by": "Pierre-François-Léonard Fontaine",
+   "note": "",
+   "lat": 48.8737,
+   "lon": 2.3228,
+   "country": "France",
+   "item": "Q1062732"
+  }
+ },
+ "Besançon, synagogue": {
+  "title": "File:Synagogue de Besançon - détail coupole.jpg",
+  "own": {
+   "name": "Synagogue of Besançon",
+   "built": "1869–71",
+   "by": "Pierre Marnotte",
+   "note": "",
+   "lat": 47.2413,
+   "lon": 6.0214,
+   "country": "France",
+   "item": "Q1141086"
+  }
+ },
+ "Boulogne-sur-Mer, basilica": {
+  "title": "File:Fr Boulogne-sur-Mer cathedral dome.JPG",
+  "own": {
+   "name": "Basilica of Notre-Dame de Boulogne",
+   "built": "1827–66",
+   "by": "Benoît-Agathon Haffreingue",
+   "note": "",
+   "lat": 50.7261,
+   "lon": 1.615,
+   "country": "France",
+   "item": "Q2886913"
+  }
+ },
+ "Dijon, Sainte-Anne": {
+  "title": "File:Dijon - Musée Art Sacré - Coupole.jpg",
+  "own": {
+   "name": "Church of Sainte-Anne",
+   "built": "1699–1709",
+   "by": "",
+   "note": "",
+   "lat": 47.3177,
+   "lon": 5.0381,
+   "country": "France",
+   "item": "Q3584911"
+  }
+ },
+ "Lourdes, Rosary Basilica": {
+  "title": "File:Dome interior - Rosary Basilica - Lourdes 2014.jpg",
+  "own": {
+   "name": "Rosary Basilica",
+   "built": "1883–99",
+   "by": "Léopold Hardy",
+   "note": "",
+   "lat": 43.0975,
+   "lon": -0.0575,
+   "country": "France",
+   "item": "Q746283"
+  }
+ },
+ "Montpellier, Hôtel Saint-Côme": {
+  "title": "File:Hôtel de Saint-Côme (Montpeller) - Interior cúpula - 2.jpg",
+  "own": {
+   "name": "Hôtel Saint-Côme",
+   "built": "1747–57",
+   "by": "Jean-Antoine Giral",
+   "note": "Built as an anatomy theatre for the surgeons of Montpellier",
+   "lat": 43.608,
+   "lon": 3.8773,
+   "country": "France",
+   "item": "Q3145663"
+  }
+ },
+ "Strasbourg, Saint-Pierre-le-Jeune (Catholic)": {
+  "title": "File:Dome @ Église catholique Saint-Pierre-le-Jeune @ Strasbourg (44870274424).jpg",
+  "own": {
+   "name": "Saint-Pierre-le-Jeune Catholic Church",
+   "built": "1889–93",
+   "by": "Skjold Neckelmann and August Hartel",
+   "note": "",
+   "lat": 48.5883,
+   "lon": 7.7489,
+   "country": "France",
+   "item": "Q2212718"
+  }
+ },
+ "Évian-les-Bains, Palais Lumière": {
+  "title": "File:Anciens thermes Evian 6.jpg",
+  "own": {
+   "name": "Palais Lumière",
+   "built": "1900–02",
+   "by": "Ernest Brunnarius",
+   "note": "Built as a spa",
+   "lat": 46.4012,
+   "lon": 6.5916,
+   "country": "France",
+   "item": "Q20751541"
+  }
+ },
+ "Fulda, cathedral": {
+  "title": "File:Fulda Dom St. Salvator & Bonifatius Innen Kuppel 2.JPG"
+ },
+ "Kempten, St Lorenz": {
+  "title": "File:20221019 St. Lorenz Kempten 03.jpg",
+  "own": {
+   "name": "St Lorenz Basilica",
+   "built": "1652–1748",
+   "by": "Michael Beer, then Johann Serro",
+   "note": "",
+   "lat": 47.7285,
+   "lon": 10.3116,
+   "country": "Germany",
+   "item": "Q2320318"
+  }
+ },
+ "Munich, Trinity Church": {
+  "title": "File:Dreifaltigkeitskirche - Blick zur Kuppel - München.jpg",
+  "own": {
+   "name": "Trinity Church (Dreifaltigkeitskirche)",
+   "built": "1711–18",
+   "by": "Giovanni Antonio Viscardi; fresco by Cosmas Damian Asam",
+   "note": "",
+   "lat": 48.1408,
+   "lon": 11.5708,
+   "country": "Germany",
+   "item": "Q524044"
+  }
+ },
+ "Potsdam, St Nicholas": {
+  "title": "File:20220810 St. Nikolaikirche Potsdam 04.jpg"
+ },
+ "Schwetzingen, mosque": {
+  "title": "File:Moschee Schwetzingen - kleine Kuppel im Seitenraum.JPG",
+  "own": {
+   "name": "Mosque in the Schwetzingen Palace gardens",
+   "built": "1779–95",
+   "by": "Nicolas de Pigage",
+   "note": "A garden building, never used for worship",
+   "lat": 49.3811,
+   "lon": 8.5647,
+   "country": "Germany",
+   "item": "Q1948947"
+  }
+ },
+ "Győr, synagogue": {
+  "title": "File:Cupola ceiling Synagogue Gyor Hungary.jpg",
+  "own": {
+   "name": "Győr Synagogue",
+   "built": "1868–70",
+   "by": "Károly Benkó",
+   "note": "",
+   "lat": 47.6857,
+   "lon": 17.6259,
+   "country": "Hungary",
+   "item": "Q1030719"
+  }
+ },
+ "Modhera, Sun Temple": {
+  "title": "File:Roof of the Sun Temple (20627176381).jpg",
+  "own": {
+   "name": "Sun Temple",
+   "built": "1026–27",
+   "by": "Built under Bhima I of the Chaulukya dynasty",
+   "note": "Carved stone ceiling",
+   "lat": 23.5838,
+   "lon": 72.1327,
+   "country": "India",
+   "item": "Q2570737"
+  }
+ },
+ "Mumbai, Prince of Wales Museum": {
+  "title": "File:Architecture style of Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,Mumbai,.jpg"
+ },
+ "Delhi, Tomb of Isa Khan": {
+  "title": "File:PXL 20231129 045206509 Isa Khan's Tomb, Delhi 05.jpg",
+  "own": {
+   "name": "Tomb of Isa Khan",
+   "built": "1547–48",
+   "by": "",
+   "note": "",
+   "lat": 28.5922,
+   "lon": 77.2462,
+   "country": "India",
+   "item": "Q65041035"
+  }
+ },
+ "Dublin, National Museum": {
+  "title": "File:National Museum of Ireland, Kildare Street, Dublin, October 2010 (04).JPG"
+ },
+ "Lonato del Garda, cathedral": {
+  "title": "File:Lonato del Garda, chiesa di San Giovanni Battista - Cupola 02.jpg",
+  "own": {
+   "name": "Basilica of San Giovanni Battista",
+   "built": "1738–80",
+   "by": "Paolo Soratini",
+   "note": "",
+   "lat": 45.4602,
+   "lon": 10.4854,
+   "country": "Italy",
+   "item": "Q55166856"
+  }
+ },
+ "Crespano del Grappa, Santuario del Covolo": {
+  "title": "File:Pieve del Grappa, santuario della Beata Vergine del Covolo - Cupola 02.jpg",
+  "own": {
+   "name": "Sanctuary of the Beata Vergine del Covolo",
+   "built": "Begun 1804",
+   "by": "Design attributed to Antonio Canova",
+   "note": "",
+   "lat": 45.8481,
+   "lon": 11.8247,
+   "country": "Italy",
+   "item": "Q16600406"
+  }
+ },
+ "Possagno, Tempio Canoviano": {
+  "title": "File:Possagno, tempio canoviano - Cupola 02.jpg",
+  "own": {
+   "name": "Tempio Canoviano",
+   "built": "1819–30",
+   "by": "Antonio Canova",
+   "note": "",
+   "lat": 45.858,
+   "lon": 11.8783,
+   "country": "Italy",
+   "item": "Q3983177"
+  }
+ },
+ "Pristina, Imperial Mosque": {
+  "title": "File:Detaje nga Xhamia e Mbretit, Prishtine.JPG",
+  "own": {
+   "name": "Imperial Mosque (King's Mosque)",
+   "built": "1460–61",
+   "by": "Built for Sultan Mehmed II",
+   "note": "",
+   "lat": 42.667,
+   "lon": 21.167,
+   "country": "Kosovo",
+   "item": "Q513756"
+  }
+ },
+ "Cospicua, collegiate church": {
+  "title": "File:30000 Parish Church Dome.jpg",
+  "own": {
+   "name": "Collegiate Church of the Immaculate Conception",
+   "built": "1684–1730",
+   "by": "",
+   "note": "",
+   "lat": 35.8812,
+   "lon": 14.5207,
+   "country": "Malta",
+   "item": "Q15958443"
+  }
+ },
+ "Qrendi, parish church": {
+  "title": "File:Iris of God.jpg",
+  "own": {
+   "name": "Parish Church of the Assumption",
+   "built": "1685–1712",
+   "by": "Lorenzo Gafà",
+   "note": "",
+   "lat": 35.8344,
+   "lon": 14.4575,
+   "country": "Malta",
+   "item": "Q20949689"
+  }
+ },
+ "Oaxaca, cathedral": {
+  "title": "File:CopulaOaxacaCathedral.jpg",
+  "own": {
+   "name": "Cathedral of Our Lady of the Assumption",
+   "built": "1702–33",
+   "by": "",
+   "note": "",
+   "lat": 17.0615,
+   "lon": -96.7251,
+   "country": "Mexico",
+   "item": "Q2942237"
+  }
+ },
+ "Haarlem, Cathedral of St Bavo": {
+  "title": "File:Haarlem Kathedraal Sint Bavo Innen Kuppel 3.jpg"
+ },
+ "The Hague, Passage": {
+  "title": "File:Den Haag Passage Kuppel.jpg",
+  "own": {
+   "name": "De Passage",
+   "built": "1882–85",
+   "by": "Herman Wesstra and J. C. van Wijk",
+   "note": "Glass dome over a shopping arcade",
+   "lat": 52.078,
+   "lon": 4.3109,
+   "country": "Netherlands",
+   "item": "Q2376537"
+  }
+ },
+ "Kraków, St Anne": {
+  "title": "File:Saint Anne church 2019 02.jpg",
+  "own": {
+   "name": "Church of St Anne",
+   "built": "1689–1703",
+   "by": "Tylman van Gameren",
+   "note": "",
+   "lat": 50.0621,
+   "lon": 19.9338,
+   "country": "Poland",
+   "item": "Q1126134"
+  }
+ },
+ "Warsaw, All Saints": {
+  "title": "File:Warszawa Kościół Wszystkich Świętych 42.jpg",
+  "own": {
+   "name": "All Saints Church",
+   "built": "1861–83; rebuilt after 1945",
+   "by": "Enrico Marconi",
+   "note": "",
+   "lat": 52.235,
+   "lon": 21.0036,
+   "country": "Poland",
+   "item": "Q11745958"
+  }
+ },
+ "Warsaw, St Alexander": {
+  "title": "File:Wwa Kościół św. Aleksandra 15.JPG",
+  "own": {
+   "name": "St Alexander's Church",
+   "built": "1818–25; rebuilt 1949–52",
+   "by": "Chrystian Piotr Aigner",
+   "note": "",
+   "lat": 52.2289,
+   "lon": 21.0222,
+   "country": "Poland",
+   "item": "Q3354467"
+  }
+ },
+ "Coimbra, New Cathedral": {
+  "title": "File:1 Cúpula do cruzeiro Sé Nova de Coimbra IMG 8668.jpg",
+  "own": {
+   "name": "New Cathedral of Coimbra",
+   "built": "1598–1698",
+   "by": "Baltasar Álvares",
+   "note": "",
+   "lat": 40.2094,
+   "lon": -8.4244,
+   "country": "Portugal",
+   "item": "Q979100"
+  }
+ },
+ "Pskov, Mirozhsky Monastery": {
+  "title": "File:Мирож купол.jpg",
+  "own": {
+   "name": "Transfiguration Cathedral, Mirozhsky Monastery",
+   "built": "Mid 12th century",
+   "by": "",
+   "note": "Painted dome",
+   "lat": 57.8061,
+   "lon": 28.3292,
+   "country": "Russia",
+   "item": "Q21768398"
+  }
+ },
+ "Alcañiz, Santa María la Mayor": {
+  "title": "File:Alcañiz - Ex Colegiata de Santa María la Mayor, interior 14.jpg",
+  "own": {
+   "name": "Church of Santa María la Mayor",
+   "built": "1736–79",
+   "by": "Domingo de Yarza",
+   "note": "",
+   "lat": 41.0508,
+   "lon": -0.1317,
+   "country": "Spain",
+   "item": "Q5403105"
+  }
+ },
+ "Alicante, co-cathedral": {
+  "title": "File:Alacant 056.jpg",
+  "own": {
+   "name": "Co-cathedral of St Nicholas of Bari",
+   "built": "1616–62",
+   "by": "Agustín Bernardino",
+   "note": "",
+   "lat": 38.3454,
+   "lon": -0.4825,
+   "country": "Spain",
+   "item": "Q2942405"
+  }
+ },
+ "Alicante, Central Market": {
+  "title": "File:Cúpula del mercat central d'Alacant.JPG",
+  "own": {
+   "name": "Central Market",
+   "built": "1911–21",
+   "by": "Francisco Fajardo Guardiola, completed by Juan Vidal Ramos",
+   "note": "",
+   "lat": 38.3482,
+   "lon": -0.4861,
+   "country": "Spain",
+   "item": "Q9031615"
+  }
+ },
+ "Boadilla del Monte, palace chapel": {
+  "title": "File:Palacio del Infante don Luis (Boadilla del Monte) 03.jpg",
+  "own": {
+   "name": "Palace of the Infante Don Luis",
+   "built": "1763–65",
+   "by": "Ventura Rodríguez",
+   "note": "",
+   "lat": 40.4067,
+   "lon": -3.8736,
+   "country": "Spain",
+   "item": "Q7126237"
+  }
+ },
+ "Madrid, Santa Bárbara": {
+  "title": "File:Iglesia Parroquial de Santa Bárbara (Madrid) 06.jpg",
+  "own": {
+   "name": "Church of Santa Bárbara (Salesas Reales)",
+   "built": "1750–58",
+   "by": "François Carlier",
+   "note": "",
+   "lat": 40.4245,
+   "lon": -3.6939,
+   "country": "Spain",
+   "item": "Q5117141"
+  }
+ },
+ "Pego, Ecce Homo Chapel": {
+  "title": "File:Capella de l'Ecce Homo de Pego, cúpula.JPG",
+  "own": {
+   "name": "Ecce Homo Chapel",
+   "built": "1770s",
+   "by": "",
+   "note": "",
+   "lat": 38.8428,
+   "lon": -0.1176,
+   "country": "Spain",
+   "item": "Q57497197"
+  }
+ },
+ "Valencia, Central Market": {
+  "title": "File:Interior de Cúpula del Mercado Central.jpg",
+  "own": {
+   "name": "Mercat Central",
+   "built": "1914–28",
+   "by": "Francesc Guàrdia i Vial and Alexandre Soler i March",
+   "note": "",
+   "lat": 39.4735,
+   "lon": -0.3789,
+   "country": "Spain",
+   "item": "Q2197068"
+  }
+ },
+ "Stockholm, Adolf Fredrik Church": {
+  "title": "File:Adolf Fredriks kyrka September 2015 02.jpg",
+  "own": {
+   "name": "Adolf Fredrik Church",
+   "built": "1768–74; ceiling painted 1899–1900",
+   "by": "Carl Fredrik Adelcrantz; ceiling by Julius Kronberg",
+   "note": "",
+   "lat": 59.3378,
+   "lon": 18.0603,
+   "country": "Sweden",
+   "item": "Q360572"
+  }
+ },
+ "Taipei, Control Yuan": {
+  "title": "File:Ceiling of the Control Yuan Building-02.2024-09-21.jpg",
+  "own": {
+   "name": "Control Yuan Building",
+   "built": "1912–15",
+   "by": "Moriyama Matsunosuke",
+   "note": "Built as the Taipei Prefecture Hall",
+   "lat": 25.045,
+   "lon": 121.5197,
+   "country": "Taiwan",
+   "item": "Q15935432"
+  }
+ },
+ "Taipei, National Taiwan Museum": {
+  "title": "File:03 Dome Interior of the National Taiwan Museum.jpg",
+  "own": {
+   "name": "National Taiwan Museum",
+   "built": "1913–15",
+   "by": "Nomura Ichirō",
+   "note": "",
+   "lat": 25.0428,
+   "lon": 121.515,
+   "country": "Taiwan",
+   "item": "Q706692"
+  }
+ },
+ "Istanbul, Eyüp Sultan": {
+  "title": "File:Eyup Sultan Mosque DSCF8165.jpg",
+  "own": {
+   "name": "Eyüp Sultan Mosque",
+   "built": "1458; rebuilt 1798–1800",
+   "by": "",
+   "note": "",
+   "lat": 41.0479,
+   "lon": 28.9338,
+   "country": "Turkey",
+   "item": "Q956677"
+  }
+ },
+ "Istanbul, Ashkenazi Synagogue": {
+  "title": "File:Dome of the Istanbul Ashkenazi Sinagogue.JPG",
+  "own": {
+   "name": "Ashkenazi Synagogue",
+   "built": "1900",
+   "by": "Gabriel Tedeschi",
+   "note": "",
+   "lat": 41.0252,
+   "lon": 28.9751,
+   "country": "Turkey",
+   "item": "Q2079847"
+  }
+ },
+ "London, St Mary-at-Hill": {
+  "title": "File:St Mary-at-Hill interior ceiling.jpg",
+  "own": {
+   "name": "St Mary-at-Hill",
+   "built": "1670–74; restored after the fire of 1988",
+   "by": "Sir Christopher Wren",
+   "note": "",
+   "lat": 51.5101,
+   "lon": -0.0837,
+   "country": "United Kingdom",
+   "item": "Q7594548"
+  }
+ },
+ "Frankfort, State Capitol": {
+  "title": "File:Frankfort - Kentucky State Capitol - 20220601081245.jpg"
+ },
+ "New York, Eldridge Street Synagogue": {
+  "title": "File:Ceiling Dome Detail Eldridge Street Synagogue.jpg",
+  "own": {
+   "name": "Eldridge Street Synagogue",
+   "built": "1886–87",
+   "by": "Herter Brothers",
+   "note": "",
+   "lat": 40.7148,
+   "lon": -73.9935,
+   "country": "United States",
+   "item": "Q1113721"
+  }
+ },
+ "Richmond, Cathedral of the Sacred Heart": {
+  "title": "File:MJK50236 Cathedral of the Sacred Heart (Richmond, Virginia).jpg",
+  "own": {
+   "name": "Cathedral of the Sacred Heart",
+   "built": "1903–06",
+   "by": "Joseph H. McGuire",
+   "note": "",
+   "lat": 37.5474,
+   "lon": -77.4521,
+   "country": "United States",
+   "item": "Q5052468"
+  }
+ },
+ "San Francisco, City Hall": {
+  "title": "File:San Francisco City Hall Dome, interior, from ground floor (Masrur Odinaev).jpg"
+ },
+ "Tallahassee, Old Capitol": {
+  "title": "File:Tallahassee - Florida State Capitol - 20220627114720.jpg"
+ },
+ "Winona, Watkins Administration Building": {
+  "title": "File:J.R. Watkins Headquarters interior 02.jpg",
+  "own": {
+   "name": "J. R. Watkins Administration Building",
+   "built": "1911–13",
+   "by": "George W. Maher",
+   "note": "",
+   "lat": 44.0494,
+   "lon": -91.6281,
+   "country": "United States",
+   "item": "Q7974706"
+  }
  }
 }

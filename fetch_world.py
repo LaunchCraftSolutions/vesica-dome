@@ -291,16 +291,19 @@ def pull(width=1280):
     # the list the drawing and the site are made from
     out = []
     for h in index:
-        d = by_place.get(h["place"]); pl = places.get(d["wiki"], {}) if d else {}; pick = picks.get(h["place"], {})
-        if not d or h["place"] not in picks or pl.get("lat") is None:
+        d = by_place.get(h["place"]); pick = picks.get(h["place"], {}); own = pick.get("own")
+        if d:   # a building from world_list.py: placed by its Wikipedia article
+            pl = places.get(d["wiki"], {}); town = d["place"].split(",")[0]; name = re.sub(r"\s*\([^)]*\)$", "", d["wiki"])
+            name = name[:-len(", " + town)] if name.endswith(", " + town) else name
+        elif own:   # a building found by walking Commons' categories (fetch_tree.py): its details came with the pick
+            d = {"place": h["place"], "built": own["built"], "by": own["by"], "note": own["note"]}; pl = own; town = h["place"].split(",")[0]; name = own["name"]
+        if not d or pl.get("lat") is None:
             continue
-        town = d["place"].split(",")[0]; name = re.sub(r"\s*\([^)]*\)$", "", d["wiki"])
-        name = name[:-len(", " + town)] if name.endswith(", " + town) else name
         # the middle: by hand if one was given; otherwise by turning the picture on itself, unless the pick asks for the ring-finder ("middle": "rings")
         if "turned" not in h and not pick.get("hand") and pick.get("middle") != "rings":
             h["turned"] = middle_by_turning(Image.open(os.path.join(WORLD, h["file"])))
         mid = None if pick.get("hand") or pick.get("middle") == "rings" else h.get("turned")
-        out.append({"place": d["place"], "photo": "world/" + h["file"], "built": d["built"], "note": d["note"], "hand": pick.get("hand"), "turned": mid, "squash": pick.get("squash", False),   # these were picked for looking straight up; the oval test is asked for by name
+        out.append({"place": d["place"], "photo": "world/" + h["file"], "built": d["built"], "note": d["note"], "hand": pick.get("hand"), "turned": mid, "squash": pick.get("squash", False),
                     "lat": round(pl["lat"], 4), "lon": round(pl["lon"], 4),
                     "building": {"name": pick.get("name") or name, "where": ", ".join(x for x in (town if town != name else "", pl.get("country")) if x), "built": d["built"], "by": d["by"] or "Not looked up yet"}})
     json.dump(index, open(idx_path, "w", encoding="utf-8"), indent=1, ensure_ascii=False)

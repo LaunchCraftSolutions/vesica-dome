@@ -3092,5 +3092,1165 @@
    "built": "1893–98",
    "by": "George McRae"
   }
+ },
+ {
+  "place": "Buenos Aires, cathedral",
+  "photo": "world/w173.jpg",
+  "built": "1752–1852",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   354
+  ],
+  "squash": false,
+  "lat": -34.6074,
+  "lon": -58.3733,
+  "building": {
+   "name": "Buenos Aires Metropolitan Cathedral",
+   "where": "Buenos Aires, Argentina",
+   "built": "1752–1852",
+   "by": "Antonio Masella"
+  }
+ },
+ {
+  "place": "Graz, Mariatrost",
+  "photo": "world/w174.jpg",
+  "built": "1714–24",
+  "note": "",
+  "hand": null,
+  "turned": [
+   621,
+   490
+  ],
+  "squash": false,
+  "lat": 47.1072,
+  "lon": 15.4914,
+  "building": {
+   "name": "Mariatrost Basilica",
+   "where": "Graz, Austria",
+   "built": "1714–24",
+   "by": "Andreas Stengg and Johann Georg Stengg"
+  }
+ },
+ {
+  "place": "Innsbruck, Jesuit Church",
+  "photo": "world/w175.jpg",
+  "built": "1627–46",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   485
+  ],
+  "squash": false,
+  "lat": 47.2684,
+  "lon": 11.3979,
+  "building": {
+   "name": "Jesuit Church",
+   "where": "Innsbruck, Austria",
+   "built": "1627–46",
+   "by": "Karl Fontaner and Christoph Gumpp the Younger"
+  }
+ },
+ {
+  "place": "Vienna, Central Cemetery church",
+  "photo": "world/w176.jpg",
+  "built": "1908–11",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   430
+  ],
+  "squash": false,
+  "lat": 48.1508,
+  "lon": 16.4381,
+  "building": {
+   "name": "St Charles Borromeo Cemetery Church",
+   "where": "Vienna, Austria",
+   "built": "1908–11",
+   "by": "Max Hegele"
+  }
+ },
+ {
+  "place": "Vidin, cathedral",
+  "photo": "world/w177.jpg",
+  "built": "1885–1926",
+  "note": "",
+  "hand": null,
+  "turned": [
+   646,
+   432
+  ],
+  "squash": false,
+  "lat": 43.9871,
+  "lon": 22.874,
+  "building": {
+   "name": "Cathedral of St Demetrius",
+   "where": "Vidin, Bulgaria",
+   "built": "1885–1926",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Kačina",
+  "photo": "world/w178.jpg",
+  "built": "1806–24",
+  "note": "",
+  "hand": null,
+  "turned": [
+   662,
+   438
+  ],
+  "squash": false,
+  "lat": 49.9817,
+  "lon": 15.3461,
+  "building": {
+   "name": "Kačina Castle",
+   "where": "Kačina, Czech Republic",
+   "built": "1806–24",
+   "by": "Christian Friedrich Schuricht"
+  }
+ },
+ {
+  "place": "Prague, Spanish Synagogue",
+  "photo": "world/w179.jpg",
+  "built": "1868",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   534
+  ],
+  "squash": false,
+  "lat": 50.0904,
+  "lon": 14.4208,
+  "building": {
+   "name": "Spanish Synagogue",
+   "where": "Prague, Czech Republic",
+   "built": "1868",
+   "by": "Vojtěch Ignác Ullmann"
+  }
+ },
+ {
+  "place": "Paris, Chapelle expiatoire",
+  "photo": "world/w180.jpg",
+  "built": "1815–26",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   414
+  ],
+  "squash": false,
+  "lat": 48.8737,
+  "lon": 2.3228,
+  "building": {
+   "name": "Chapelle expiatoire",
+   "where": "Paris, France",
+   "built": "1815–26",
+   "by": "Pierre-François-Léonard Fontaine"
+  }
+ },
+ {
+  "place": "Besançon, synagogue",
+  "photo": "world/w181.jpg",
+  "built": "1869–71",
+  "note": "",
+  "hand": null,
+  "turned": [
+   624,
+   400
+  ],
+  "squash": false,
+  "lat": 47.2413,
+  "lon": 6.0214,
+  "building": {
+   "name": "Synagogue of Besançon",
+   "where": "Besançon, France",
+   "built": "1869–71",
+   "by": "Pierre Marnotte"
+  }
+ },
+ {
+  "place": "Boulogne-sur-Mer, basilica",
+  "photo": "world/w182.jpg",
+  "built": "1827–66",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   474
+  ],
+  "squash": false,
+  "lat": 50.7261,
+  "lon": 1.615,
+  "building": {
+   "name": "Basilica of Notre-Dame de Boulogne",
+   "where": "Boulogne-sur-Mer, France",
+   "built": "1827–66",
+   "by": "Benoît-Agathon Haffreingue"
+  }
+ },
+ {
+  "place": "Dijon, Sainte-Anne",
+  "photo": "world/w183.jpg",
+  "built": "1699–1709",
+  "note": "",
+  "hand": null,
+  "turned": [
+   490,
+   459
+  ],
+  "squash": false,
+  "lat": 47.3177,
+  "lon": 5.0381,
+  "building": {
+   "name": "Church of Sainte-Anne",
+   "where": "Dijon, France",
+   "built": "1699–1709",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Lourdes, Rosary Basilica",
+  "photo": "world/w184.jpg",
+  "built": "1883–99",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   342
+  ],
+  "squash": false,
+  "lat": 43.0975,
+  "lon": -0.0575,
+  "building": {
+   "name": "Rosary Basilica",
+   "where": "Lourdes, France",
+   "built": "1883–99",
+   "by": "Léopold Hardy"
+  }
+ },
+ {
+  "place": "Montpellier, Hôtel Saint-Côme",
+  "photo": "world/w185.jpg",
+  "built": "1747–57",
+  "note": "Built as an anatomy theatre for the surgeons of Montpellier",
+  "hand": null,
+  "turned": [
+   603,
+   314
+  ],
+  "squash": false,
+  "lat": 43.608,
+  "lon": 3.8773,
+  "building": {
+   "name": "Hôtel Saint-Côme",
+   "where": "Montpellier, France",
+   "built": "1747–57",
+   "by": "Jean-Antoine Giral"
+  }
+ },
+ {
+  "place": "Strasbourg, Saint-Pierre-le-Jeune (Catholic)",
+  "photo": "world/w186.jpg",
+  "built": "1889–93",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   422
+  ],
+  "squash": false,
+  "lat": 48.5883,
+  "lon": 7.7489,
+  "building": {
+   "name": "Saint-Pierre-le-Jeune Catholic Church",
+   "where": "Strasbourg, France",
+   "built": "1889–93",
+   "by": "Skjold Neckelmann and August Hartel"
+  }
+ },
+ {
+  "place": "Évian-les-Bains, Palais Lumière",
+  "photo": "world/w187.jpg",
+  "built": "1900–02",
+  "note": "Built as a spa",
+  "hand": null,
+  "turned": [
+   632,
+   496
+  ],
+  "squash": false,
+  "lat": 46.4012,
+  "lon": 6.5916,
+  "building": {
+   "name": "Palais Lumière",
+   "where": "Évian-les-Bains, France",
+   "built": "1900–02",
+   "by": "Ernest Brunnarius"
+  }
+ },
+ {
+  "place": "Fulda, cathedral",
+  "photo": "world/w188.jpg",
+  "built": "1704–12",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   472
+  ],
+  "squash": false,
+  "lat": 50.554,
+  "lon": 9.6718,
+  "building": {
+   "name": "Fulda Cathedral",
+   "where": "Fulda, Germany",
+   "built": "1704–12",
+   "by": "Johann Dientzenhofer"
+  }
+ },
+ {
+  "place": "Kempten, St Lorenz",
+  "photo": "world/w189.jpg",
+  "built": "1652–1748",
+  "note": "",
+  "hand": null,
+  "turned": [
+   650,
+   427
+  ],
+  "squash": false,
+  "lat": 47.7285,
+  "lon": 10.3116,
+  "building": {
+   "name": "St Lorenz Basilica",
+   "where": "Kempten, Germany",
+   "built": "1652–1748",
+   "by": "Michael Beer, then Johann Serro"
+  }
+ },
+ {
+  "place": "Munich, Trinity Church",
+  "photo": "world/w190.jpg",
+  "built": "1711–18",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   427
+  ],
+  "squash": false,
+  "lat": 48.1408,
+  "lon": 11.5708,
+  "building": {
+   "name": "Trinity Church (Dreifaltigkeitskirche)",
+   "where": "Munich, Germany",
+   "built": "1711–18",
+   "by": "Giovanni Antonio Viscardi; fresco by Cosmas Damian Asam"
+  }
+ },
+ {
+  "place": "Potsdam, St Nicholas",
+  "photo": "world/w191.jpg",
+  "built": "1830–50",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   427
+  ],
+  "squash": false,
+  "lat": 52.3963,
+  "lon": 13.061,
+  "building": {
+   "name": "St. Nicholas Church",
+   "where": "Potsdam, Germany",
+   "built": "1830–50",
+   "by": "Karl Friedrich Schinkel; dome by Ludwig Persius and Friedrich August Stüler"
+  }
+ },
+ {
+  "place": "Schwetzingen, mosque",
+  "photo": "world/w192.jpg",
+  "built": "1779–95",
+  "note": "A garden building, never used for worship",
+  "hand": null,
+  "turned": [
+   643,
+   485
+  ],
+  "squash": false,
+  "lat": 49.3811,
+  "lon": 8.5647,
+  "building": {
+   "name": "Mosque in the Schwetzingen Palace gardens",
+   "where": "Schwetzingen, Germany",
+   "built": "1779–95",
+   "by": "Nicolas de Pigage"
+  }
+ },
+ {
+  "place": "Győr, synagogue",
+  "photo": "world/w193.jpg",
+  "built": "1868–70",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   410
+  ],
+  "squash": false,
+  "lat": 47.6857,
+  "lon": 17.6259,
+  "building": {
+   "name": "Győr Synagogue",
+   "where": "Győr, Hungary",
+   "built": "1868–70",
+   "by": "Károly Benkó"
+  }
+ },
+ {
+  "place": "Modhera, Sun Temple",
+  "photo": "world/w194.jpg",
+  "built": "1026–27",
+  "note": "Carved stone ceiling",
+  "hand": null,
+  "turned": [
+   648,
+   366
+  ],
+  "squash": false,
+  "lat": 23.5838,
+  "lon": 72.1327,
+  "building": {
+   "name": "Sun Temple",
+   "where": "Modhera, India",
+   "built": "1026–27",
+   "by": "Built under Bhima I of the Chaulukya dynasty"
+  }
+ },
+ {
+  "place": "Mumbai, Prince of Wales Museum",
+  "photo": "world/w195.jpg",
+  "built": "1905–15",
+  "note": "",
+  "hand": null,
+  "turned": [
+   726,
+   413
+  ],
+  "squash": false,
+  "lat": 18.9267,
+  "lon": 72.8322,
+  "building": {
+   "name": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+   "where": "Mumbai, India",
+   "built": "1905–15",
+   "by": "George Wittet"
+  }
+ },
+ {
+  "place": "Delhi, Tomb of Isa Khan",
+  "photo": "world/w196.jpg",
+  "built": "1547–48",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   435
+  ],
+  "squash": false,
+  "lat": 28.5922,
+  "lon": 77.2462,
+  "building": {
+   "name": "Tomb of Isa Khan",
+   "where": "Delhi, India",
+   "built": "1547–48",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Dublin, National Museum",
+  "photo": "world/w197.jpg",
+  "built": "1885–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   712,
+   435
+  ],
+  "squash": false,
+  "lat": 53.3403,
+  "lon": -6.255,
+  "building": {
+   "name": "National Museum of Ireland – Archaeology",
+   "where": "Dublin, Ireland",
+   "built": "1885–90",
+   "by": "Thomas Newenham Deane and Thomas Manly Deane"
+  }
+ },
+ {
+  "place": "Lonato del Garda, cathedral",
+  "photo": "world/w198.jpg",
+  "built": "1738–80",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   482
+  ],
+  "squash": false,
+  "lat": 45.4602,
+  "lon": 10.4854,
+  "building": {
+   "name": "Basilica of San Giovanni Battista",
+   "where": "Lonato del Garda, Italy",
+   "built": "1738–80",
+   "by": "Paolo Soratini"
+  }
+ },
+ {
+  "place": "Crespano del Grappa, Santuario del Covolo",
+  "photo": "world/w199.jpg",
+  "built": "Begun 1804",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   485
+  ],
+  "squash": false,
+  "lat": 45.8481,
+  "lon": 11.8247,
+  "building": {
+   "name": "Sanctuary of the Beata Vergine del Covolo",
+   "where": "Crespano del Grappa, Italy",
+   "built": "Begun 1804",
+   "by": "Design attributed to Antonio Canova"
+  }
+ },
+ {
+  "place": "Possagno, Tempio Canoviano",
+  "photo": "world/w200.jpg",
+  "built": "1819–30",
+  "note": "",
+  "hand": null,
+  "turned": [
+   646,
+   858
+  ],
+  "squash": false,
+  "lat": 45.858,
+  "lon": 11.8783,
+  "building": {
+   "name": "Tempio Canoviano",
+   "where": "Possagno, Italy",
+   "built": "1819–30",
+   "by": "Antonio Canova"
+  }
+ },
+ {
+  "place": "Pristina, Imperial Mosque",
+  "photo": "world/w201.jpg",
+  "built": "1460–61",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   461
+  ],
+  "squash": false,
+  "lat": 42.667,
+  "lon": 21.167,
+  "building": {
+   "name": "Imperial Mosque (King's Mosque)",
+   "where": "Pristina, Kosovo",
+   "built": "1460–61",
+   "by": "Built for Sultan Mehmed II"
+  }
+ },
+ {
+  "place": "Cospicua, collegiate church",
+  "photo": "world/w202.jpg",
+  "built": "1684–1730",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   382
+  ],
+  "squash": false,
+  "lat": 35.8812,
+  "lon": 14.5207,
+  "building": {
+   "name": "Collegiate Church of the Immaculate Conception",
+   "where": "Cospicua, Malta",
+   "built": "1684–1730",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Qrendi, parish church",
+  "photo": "world/w203.jpg",
+  "built": "1685–1712",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   360
+  ],
+  "squash": false,
+  "lat": 35.8344,
+  "lon": 14.4575,
+  "building": {
+   "name": "Parish Church of the Assumption",
+   "where": "Qrendi, Malta",
+   "built": "1685–1712",
+   "by": "Lorenzo Gafà"
+  }
+ },
+ {
+  "place": "Oaxaca, cathedral",
+  "photo": "world/w204.jpg",
+  "built": "1702–33",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   434
+  ],
+  "squash": false,
+  "lat": 17.0615,
+  "lon": -96.7251,
+  "building": {
+   "name": "Cathedral of Our Lady of the Assumption",
+   "where": "Oaxaca, Mexico",
+   "built": "1702–33",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Haarlem, Cathedral of St Bavo",
+  "photo": "world/w205.jpg",
+  "built": "1895–1930",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   504
+  ],
+  "squash": false,
+  "lat": 52.3766,
+  "lon": 4.6221,
+  "building": {
+   "name": "Cathedral of St Bavo",
+   "where": "Haarlem, Netherlands",
+   "built": "1895–1930",
+   "by": "Joseph Cuypers"
+  }
+ },
+ {
+  "place": "The Hague, Passage",
+  "photo": "world/w206.jpg",
+  "built": "1882–85",
+  "note": "Glass dome over a shopping arcade",
+  "hand": null,
+  "turned": [
+   640,
+   470
+  ],
+  "squash": false,
+  "lat": 52.078,
+  "lon": 4.3109,
+  "building": {
+   "name": "De Passage",
+   "where": "The Hague, Netherlands",
+   "built": "1882–85",
+   "by": "Herman Wesstra and J. C. van Wijk"
+  }
+ },
+ {
+  "place": "Kraków, St Anne",
+  "photo": "world/w207.jpg",
+  "built": "1689–1703",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   427
+  ],
+  "squash": false,
+  "lat": 50.0621,
+  "lon": 19.9338,
+  "building": {
+   "name": "Church of St Anne",
+   "where": "Kraków, Poland",
+   "built": "1689–1703",
+   "by": "Tylman van Gameren"
+  }
+ },
+ {
+  "place": "Warsaw, All Saints",
+  "photo": "world/w208.jpg",
+  "built": "1861–83; rebuilt after 1945",
+  "note": "",
+  "hand": null,
+  "turned": [
+   632,
+   485
+  ],
+  "squash": false,
+  "lat": 52.235,
+  "lon": 21.0036,
+  "building": {
+   "name": "All Saints Church",
+   "where": "Warsaw, Poland",
+   "built": "1861–83; rebuilt after 1945",
+   "by": "Enrico Marconi"
+  }
+ },
+ {
+  "place": "Warsaw, St Alexander",
+  "photo": "world/w209.jpg",
+  "built": "1818–25; rebuilt 1949–52",
+  "note": "",
+  "hand": null,
+  "turned": [
+   621,
+   267
+  ],
+  "squash": false,
+  "lat": 52.2289,
+  "lon": 21.0222,
+  "building": {
+   "name": "St Alexander's Church",
+   "where": "Warsaw, Poland",
+   "built": "1818–25; rebuilt 1949–52",
+   "by": "Chrystian Piotr Aigner"
+  }
+ },
+ {
+  "place": "Coimbra, New Cathedral",
+  "photo": "world/w210.jpg",
+  "built": "1598–1698",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   426
+  ],
+  "squash": false,
+  "lat": 40.2094,
+  "lon": -8.4244,
+  "building": {
+   "name": "New Cathedral of Coimbra",
+   "where": "Coimbra, Portugal",
+   "built": "1598–1698",
+   "by": "Baltasar Álvares"
+  }
+ },
+ {
+  "place": "Pskov, Mirozhsky Monastery",
+  "photo": "world/w211.jpg",
+  "built": "Mid 12th century",
+  "note": "Painted dome",
+  "hand": null,
+  "turned": [
+   653,
+   862
+  ],
+  "squash": false,
+  "lat": 57.8061,
+  "lon": 28.3292,
+  "building": {
+   "name": "Transfiguration Cathedral, Mirozhsky Monastery",
+   "where": "Pskov, Russia",
+   "built": "Mid 12th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Alcañiz, Santa María la Mayor",
+  "photo": "world/w212.jpg",
+  "built": "1736–79",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   480
+  ],
+  "squash": false,
+  "lat": 41.0508,
+  "lon": -0.1317,
+  "building": {
+   "name": "Church of Santa María la Mayor",
+   "where": "Alcañiz, Spain",
+   "built": "1736–79",
+   "by": "Domingo de Yarza"
+  }
+ },
+ {
+  "place": "Alicante, co-cathedral",
+  "photo": "world/w213.jpg",
+  "built": "1616–62",
+  "note": "",
+  "hand": null,
+  "turned": [
+   554,
+   469
+  ],
+  "squash": false,
+  "lat": 38.3454,
+  "lon": -0.4825,
+  "building": {
+   "name": "Co-cathedral of St Nicholas of Bari",
+   "where": "Alicante, Spain",
+   "built": "1616–62",
+   "by": "Agustín Bernardino"
+  }
+ },
+ {
+  "place": "Alicante, Central Market",
+  "photo": "world/w214.jpg",
+  "built": "1911–21",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   406
+  ],
+  "squash": false,
+  "lat": 38.3482,
+  "lon": -0.4861,
+  "building": {
+   "name": "Central Market",
+   "where": "Alicante, Spain",
+   "built": "1911–21",
+   "by": "Francisco Fajardo Guardiola, completed by Juan Vidal Ramos"
+  }
+ },
+ {
+  "place": "Boadilla del Monte, palace chapel",
+  "photo": "world/w215.jpg",
+  "built": "1763–65",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   406
+  ],
+  "squash": false,
+  "lat": 40.4067,
+  "lon": -3.8736,
+  "building": {
+   "name": "Palace of the Infante Don Luis",
+   "where": "Boadilla del Monte, Spain",
+   "built": "1763–65",
+   "by": "Ventura Rodríguez"
+  }
+ },
+ {
+  "place": "Madrid, Santa Bárbara",
+  "photo": "world/w216.jpg",
+  "built": "1750–58",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   563
+  ],
+  "squash": false,
+  "lat": 40.4245,
+  "lon": -3.6939,
+  "building": {
+   "name": "Church of Santa Bárbara (Salesas Reales)",
+   "where": "Madrid, Spain",
+   "built": "1750–58",
+   "by": "François Carlier"
+  }
+ },
+ {
+  "place": "Pego, Ecce Homo Chapel",
+  "photo": "world/w217.jpg",
+  "built": "1770s",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   435
+  ],
+  "squash": false,
+  "lat": 38.8428,
+  "lon": -0.1176,
+  "building": {
+   "name": "Ecce Homo Chapel",
+   "where": "Pego, Spain",
+   "built": "1770s",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Valencia, Central Market",
+  "photo": "world/w218.jpg",
+  "built": "1914–28",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   424
+  ],
+  "squash": false,
+  "lat": 39.4735,
+  "lon": -0.3789,
+  "building": {
+   "name": "Mercat Central",
+   "where": "Valencia, Spain",
+   "built": "1914–28",
+   "by": "Francesc Guàrdia i Vial and Alexandre Soler i March"
+  }
+ },
+ {
+  "place": "Stockholm, Adolf Fredrik Church",
+  "photo": "world/w219.jpg",
+  "built": "1768–74; ceiling painted 1899–1900",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   637
+  ],
+  "squash": false,
+  "lat": 59.3378,
+  "lon": 18.0603,
+  "building": {
+   "name": "Adolf Fredrik Church",
+   "where": "Stockholm, Sweden",
+   "built": "1768–74; ceiling painted 1899–1900",
+   "by": "Carl Fredrik Adelcrantz; ceiling by Julius Kronberg"
+  }
+ },
+ {
+  "place": "Taipei, Control Yuan",
+  "photo": "world/w220.jpg",
+  "built": "1912–15",
+  "note": "Built as the Taipei Prefecture Hall",
+  "hand": null,
+  "turned": [
+   651,
+   467
+  ],
+  "squash": false,
+  "lat": 25.045,
+  "lon": 121.5197,
+  "building": {
+   "name": "Control Yuan Building",
+   "where": "Taipei, Taiwan",
+   "built": "1912–15",
+   "by": "Moriyama Matsunosuke"
+  }
+ },
+ {
+  "place": "Taipei, National Taiwan Museum",
+  "photo": "world/w221.jpg",
+  "built": "1913–15",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   642
+  ],
+  "squash": false,
+  "lat": 25.0428,
+  "lon": 121.515,
+  "building": {
+   "name": "National Taiwan Museum",
+   "where": "Taipei, Taiwan",
+   "built": "1913–15",
+   "by": "Nomura Ichirō"
+  }
+ },
+ {
+  "place": "Istanbul, Eyüp Sultan",
+  "photo": "world/w222.jpg",
+  "built": "1458; rebuilt 1798–1800",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   384
+  ],
+  "squash": false,
+  "lat": 41.0479,
+  "lon": 28.9338,
+  "building": {
+   "name": "Eyüp Sultan Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1458; rebuilt 1798–1800",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Istanbul, Ashkenazi Synagogue",
+  "photo": "world/w223.jpg",
+  "built": "1900",
+  "note": "",
+  "hand": null,
+  "turned": [
+   710,
+   478
+  ],
+  "squash": false,
+  "lat": 41.0252,
+  "lon": 28.9751,
+  "building": {
+   "name": "Ashkenazi Synagogue",
+   "where": "Istanbul, Turkey",
+   "built": "1900",
+   "by": "Gabriel Tedeschi"
+  }
+ },
+ {
+  "place": "London, St Mary-at-Hill",
+  "photo": "world/w224.jpg",
+  "built": "1670–74; restored after the fire of 1988",
+  "note": "",
+  "hand": null,
+  "turned": [
+   651,
+   640
+  ],
+  "squash": false,
+  "lat": 51.5101,
+  "lon": -0.0837,
+  "building": {
+   "name": "St Mary-at-Hill",
+   "where": "London, United Kingdom",
+   "built": "1670–74; restored after the fire of 1988",
+   "by": "Sir Christopher Wren"
+  }
+ },
+ {
+  "place": "Frankfort, State Capitol",
+  "photo": "world/w225.jpg",
+  "built": "1905–09",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   482
+  ],
+  "squash": false,
+  "lat": 38.1867,
+  "lon": -84.8753,
+  "building": {
+   "name": "Kentucky State Capitol",
+   "where": "Frankfort, United States",
+   "built": "1905–09",
+   "by": "Frank Mills Andrews"
+  }
+ },
+ {
+  "place": "New York, Eldridge Street Synagogue",
+  "photo": "world/w226.jpg",
+  "built": "1886–87",
+  "note": "",
+  "hand": null,
+  "turned": [
+   646,
+   826
+  ],
+  "squash": false,
+  "lat": 40.7148,
+  "lon": -73.9935,
+  "building": {
+   "name": "Eldridge Street Synagogue",
+   "where": "New York, United States",
+   "built": "1886–87",
+   "by": "Herter Brothers"
+  }
+ },
+ {
+  "place": "Richmond, Cathedral of the Sacred Heart",
+  "photo": "world/w227.jpg",
+  "built": "1903–06",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   426
+  ],
+  "squash": false,
+  "lat": 37.5474,
+  "lon": -77.4521,
+  "building": {
+   "name": "Cathedral of the Sacred Heart",
+   "where": "Richmond, United States",
+   "built": "1903–06",
+   "by": "Joseph H. McGuire"
+  }
+ },
+ {
+  "place": "San Francisco, City Hall",
+  "photo": "world/w228.jpg",
+  "built": "1913–15",
+  "note": "",
+  "hand": null,
+  "turned": [
+   651,
+   429
+  ],
+  "squash": false,
+  "lat": 37.7792,
+  "lon": -122.4191,
+  "building": {
+   "name": "San Francisco City Hall",
+   "where": "San Francisco, United States",
+   "built": "1913–15",
+   "by": "Arthur Brown Jr."
+  }
+ },
+ {
+  "place": "Tallahassee, Old Capitol",
+  "photo": "world/w229.jpg",
+  "built": "Dome 1902",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   462
+  ],
+  "squash": false,
+  "lat": 30.4381,
+  "lon": -84.2816,
+  "building": {
+   "name": "Florida State Capitol",
+   "where": "Tallahassee, United States",
+   "built": "Dome 1902",
+   "by": "Frank Pierce Milburn"
+  }
+ },
+ {
+  "place": "Winona, Watkins Administration Building",
+  "photo": "world/w230.jpg",
+  "built": "1911–13",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   618
+  ],
+  "squash": false,
+  "lat": 44.0494,
+  "lon": -91.6281,
+  "building": {
+   "name": "J. R. Watkins Administration Building",
+   "where": "Winona, United States",
+   "built": "1911–13",
+   "by": "George W. Maher"
+  }
  }
 ]

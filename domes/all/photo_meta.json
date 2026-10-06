@@ -3054,5 +3054,933 @@
   "description": "A view of the central cupola, Queen Victoria Building, Sydney",
   "artist": "DXR",
   "license": "CC BY-SA 4.0"
+ },
+ "world/w173.jpg": {
+  "taken": "2015-03-10",
+  "make": "Canon",
+  "model": "Canon PowerShot G12",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3648,
+   2736
+  ],
+  "description": "Buenos Aires - cathedral",
+  "artist": "Andrzej Otrębski",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w174.jpg": {
+  "taken": "2011-09-18",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3444,
+   2586
+  ],
+  "description": "Dome of Mariatrost Pilgrimage Basilica, Graz",
+  "artist": "Zairon",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w175.jpg": {
+  "taken": "2015-06-04",
+  "make": "Panasonic",
+  "model": "DMC-G3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   4530,
+   3427
+  ],
+  "description": "Crossing Dome of the Jesuit Church of the Homst Holy Trinity, Innsbruck, Tyrol, Austria",
+  "artist": "Zairon",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w176.jpg": {
+  "taken": "2017-09-24",
+  "make": "Canon",
+  "model": "Canon EOS 700D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   5184,
+   3456
+  ],
+  "description": "Cupola of Friedhofskirche zum Heiligen Karl Borromäus, Vienna",
+  "artist": "Jean-Frédéric",
+  "license": "CC0"
+ },
+ "world/w177.jpg": {
+  "taken": "2013-05-03",
+  "make": "SONY",
+  "model": "DSC-HX1",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3456,
+   2592
+  ],
+  "description": "Видин, май 2013",
+  "artist": "Nikolai Karaneschev",
+  "license": "CC BY 3.0"
+ },
+ "world/w178.jpg": {
+  "taken": "2014-08-31",
+  "make": "Canon",
+  "model": "Canon EOS M",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3456,
+   2304
+  ],
+  "description": "This is a photo of a cultural monument of the Czech Republic,number:",
+  "artist": "Michalnovota",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w179.jpg": {
+  "taken": "2008-05-27",
+  "make": "Canon",
+  "model": "Canon EOS DIGITAL REBEL XT",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop CS2 Windows",
+  "original_size": [
+   2468,
+   2188
+  ],
+  "description": "Spanish Synagogue 3",
+  "artist": "Tony Hisgett from Birmingham, UK",
+  "license": "CC BY 2.0"
+ },
+ "world/w180.jpg": {
+  "taken": "2017-04-29",
+  "make": "SONY",
+  "model": "DSC-RX100M3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "DSC-RX100M3 v1.20",
+  "original_size": [
+   5472,
+   3648
+  ],
+  "description": "The Chapelle expiatoire, a chapel located in the 8th arrondissement of Paris, France. This chapel is dedicated to Louis XVI and his wife, Marie Antoinette, although they are formally buried in the Bas",
+  "artist": "Guilhem Vellut from Paris, France",
+  "license": "CC BY 2.0"
+ },
+ "world/w181.jpg": {
+  "taken": "2011-09-18",
+  "make": "Canon",
+  "model": "Canon HG20",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   1978,
+   1438
+  ],
+  "description": "Détail d'une coupole de la Synagogue de Besançon.",
+  "artist": "Toufik-de-planoise",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w182.jpg": {
+  "taken": "2013-08-15",
+  "make": "Panasonic",
+  "model": "DMC-TZ6",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 25,
+  "software": "Ver.1.2  ",
+  "original_size": [
+   3648,
+   2736
+  ],
+  "description": "Vue intérieure du dôme de la Cathédrale Notre-Dame de Boulogne-sur-Mer",
+  "artist": "Pethrus",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w183.jpg": {
+  "taken": "2011-03-06",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3456,
+   2304
+  ],
+  "description": "Coupole de l'église Sainte-Anne de Dijon, occupée par le musée d'art sacré de Dijon, vue intérieure, Dijon, Côte-d'Or, Bourgogne, FRANCE",
+  "artist": "photography taken by Christophe.Finot",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w184.jpg": {
+  "taken": "2014-02-15",
+  "make": "Canon",
+  "model": "Canon EOS 7D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   2592,
+   1728
+  ],
+  "description": "Rosary Basilica - Lourdes",
+  "artist": "José Luiz",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w185.jpg": {
+  "taken": "2011-09-18",
+  "make": "Panasonic",
+  "model": "DMC-TZ5",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   3456,
+   2592
+  ],
+  "description": "Interior de l'amfiteatre de l'Hôtel de Saint-Côme (Montpeller).",
+  "artist": "Albertvillanovadelmoral",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w186.jpg": {
+  "taken": "2018-09-22",
+  "make": "SONY",
+  "model": "DSC-RX100M3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "DSC-RX100M3 v1.20",
+  "original_size": [
+   5472,
+   3648
+  ],
+  "description": "Dome @ Église catholique Saint-Pierre-le-Jeune @ Strasbourg",
+  "artist": "Guilhem Vellut from Annecy, France",
+  "license": "CC BY 2.0"
+ },
+ "world/w187.jpg": {
+  "taken": "2011-09-09",
+  "make": "Panasonic",
+  "model": "DMC-FZ18",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   3264,
+   2448
+  ],
+  "description": "Anciens thermes d'Evian-les-Bains, dôme du hall d'accueil",
+  "artist": "Camster",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w188.jpg": {
+  "taken": "2006-04-13",
+  "make": "PENTAX Corporation",
+  "model": "PENTAX Optio 50L",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "V1.00",
+  "original_size": [
+   2048,
+   1536
+  ],
+  "description": "Dome of the catholic Cathedral St. Saviour, Fulda",
+  "artist": "Zairon",
+  "license": "CC0"
+ },
+ "world/w189.jpg": {
+  "taken": "2022-10-19",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D750",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 20,
+  "software": "Adobe Lightroom 5.5 (Windows)",
+  "original_size": [
+   6016,
+   4016
+  ],
+  "description": "View into the dome of the church St. Lorenz in Kempten.",
+  "artist": "Flocci Nivis",
+  "license": "CC BY 4.0"
+ },
+ "world/w190.jpg": {
+  "taken": "2012-04-09",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D70s",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 25,
+  "software": "Adobe Photoshop CS4 Macintosh",
+  "original_size": [
+   3008,
+   2000
+  ],
+  "description": "Dreifaltigkeitskirche - Blick zur Kuppel - München. Die katholische Dreifaltigkeitskirche ist eine Votivkirche der Münchner Stände und wurde im Stil des bayerischen Barock nach Plänen von Giovanni Ant",
+  "artist": "Digital cat",
+  "license": "CC BY-SA 3.0 de"
+ },
+ "world/w191.jpg": {
+  "taken": "2022-08-10",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D750",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 20,
+  "software": "Adobe Lightroom 6.1 (Windows)",
+  "original_size": [
+   5927,
+   3957
+  ],
+  "description": "The inside of the dome of the St. Nikolaikirche in Potsdam.",
+  "artist": "Flocci Nivis",
+  "license": "CC BY 4.0"
+ },
+ "world/w192.jpg": {
+  "taken": "2008-03-30",
+  "make": "Canon",
+  "model": "Canon DIGITAL IXUS 65",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop CS3 Windows",
+  "original_size": [
+   2774,
+   2080
+  ],
+  "description": "Mosque, Castle Garden of Schwetzingen, Interior view of the small dome",
+  "artist": "Andree Stephan",
+  "license": "CC BY 3.0"
+ },
+ "world/w193.jpg": {
+  "taken": "2010-10-14",
+  "make": "PENTAX             ",
+  "model": "PENTAX K20D        ",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 15,
+  "software": "Adobe Photoshop CS5 Windows",
+  "original_size": [
+   4672,
+   3104
+  ],
+  "description": "Cupola ceiling, in the Synagogue of Gyor, Hungary",
+  "artist": "Emmanuel Dyan",
+  "license": "CC BY 2.0"
+ },
+ "world/w194.jpg": {
+  "taken": "2015-05-11",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D3300",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 31,
+  "software": "Ver.1.00 ",
+  "original_size": [
+   6000,
+   4000
+  ],
+  "description": "Modhera",
+  "artist": "Tristan Ferris",
+  "license": "CC BY 2.0"
+ },
+ "world/w195.jpg": {
+  "taken": "2016-01-16",
+  "make": "NIKON",
+  "model": "COOLPIX P600",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "COOLPIX P600   V1.0",
+  "original_size": [
+   4608,
+   3456
+  ],
+  "description": "Architecture of Chhatrapati Shivaji Maharaj Vastu Sangrahalaya,Mumbai, India",
+  "artist": "Harvinder Chandigarh",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w196.jpg": {
+  "taken": "2023-11-29",
+  "make": "Google",
+  "model": "Pixel 7",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 16,
+  "software": "Adobe Photoshop Lightroom Classic 10.1 (Macintosh)",
+  "original_size": [
+   4080,
+   3072
+  ],
+  "description": "Isa Khan's Tomb, Delhi",
+  "artist": "Sourabh.biswas003",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w197.jpg": {
+  "taken": "2010-10-27",
+  "make": "Canon",
+  "model": "Canon EOS 450D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4272,
+   2848
+  ],
+  "description": "Oculus and dome interior, National Museum of Ireland, Kildare Street, Dublin, Republic of Ireland, October 2010",
+  "artist": "Ardfern",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w198.jpg": {
+  "taken": "2023-11-04",
+  "make": "Panasonic",
+  "model": "DMC-TZ80",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 47,
+  "software": "Ver.1.1  ",
+  "original_size": [
+   4896,
+   3672
+  ],
+  "description": "Lonato del Garda (Lombardy, Italy), Saint John the Baptist church - Dome",
+  "artist": "Syrio",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w199.jpg": {
+  "taken": "2025-06-15",
+  "make": "Panasonic",
+  "model": "DMC-TZ80",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "Adobe Photoshop CS6 (Windows)",
+  "original_size": [
+   4797,
+   3598
+  ],
+  "description": "Pieve del Grappa (Veneto, Italy), Beata Vergine del Covolo sanctuary - Dome interior",
+  "artist": "Syrio",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w200.jpg": {
+  "taken": "2025-06-15",
+  "make": "Panasonic",
+  "model": "DMC-TZ80",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "Adobe Photoshop CS6 (Windows)",
+  "original_size": [
+   3672,
+   4896
+  ],
+  "description": "Possagno (Veneto, Italy), tempio canoviano - Dome interior",
+  "artist": "Syrio",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w201.jpg": {
+  "taken": "2015-10-04",
+  "make": "Canon",
+  "model": "Canon PowerShot SX170 IS",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Windows Photo Editor 6.3.9600.17418",
+  "original_size": [
+   4387,
+   3456
+  ],
+  "description": "This is a photo of a monument in Kosovo, number:",
+  "artist": "MeritaKoqi",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w202.jpg": {
+  "taken": "2014-10-05",
+  "make": "Canon",
+  "model": "Canon EOS REBEL T2i",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop CC (Windows)",
+  "original_size": [
+   4724,
+   3543
+  ],
+  "description": "This media is about Maltese cultural property with inventory number 00669.",
+  "artist": "Nmallia414",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w203.jpg": {
+  "taken": "2020-02-17",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   1920,
+   1080
+  ],
+  "description": "This is an center image of Qrendi parish church of the Assumption Cupola.",
+  "artist": "Justinas Cechanavičius",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w204.jpg": {
+  "taken": "2009-02-01",
+  "make": "NIKON                  ",
+  "model": "COOLPIX L12  ",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 61,
+  "software": "COOLPIX L12V1.0                ",
+  "original_size": [
+   3072,
+   2304
+  ],
+  "description": "The copula of the cathedral in the city of Oaxaca in Mexico",
+  "artist": "AlejandroLinaresGarcia",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w205.jpg": {
+  "taken": "2015-08-05",
+  "make": "Panasonic",
+  "model": "DMC-G3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 66,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   4442,
+   3447
+  ],
+  "description": "Dome of the Cathedral St. Bavo, Haarlem, Province of North Holland, Netherlands",
+  "artist": "Zairon",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w206.jpg": {
+  "taken": "2015-08-05",
+  "make": "Panasonic",
+  "model": "DMC-G3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   4447,
+   3281
+  ],
+  "description": "Dome of the Passage, The Hague, Province of South Holland, Netherlands",
+  "artist": "Zairon",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w207.jpg": {
+  "taken": "2019-05-10",
+  "make": "Canon",
+  "model": "Canon PowerShot G9 X Mark II",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom Classic 8.2.1 (Macintosh)",
+  "original_size": [
+   3000,
+   2000
+  ],
+  "description": "Interior of Saint Anne church in Kraków",
+  "artist": "Richard Broekhuijzen",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w208.jpg": {
+  "taken": "2025-06-14",
+  "make": "HONOR",
+  "model": "BVL-N49",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": null,
+  "original_size": [
+   4096,
+   3072
+  ],
+  "description": "Warszawa, Kościół Wszystkich Świętych w Warszawie",
+  "artist": "Zala",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w209.jpg": {
+  "taken": "2011-06-30",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D90",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Ver.1.00 ",
+  "original_size": [
+   2144,
+   1424
+  ],
+  "description": "Warszawa Śródmieście. Plac Trzech Krzyży. Kościół pw. św. Aleksandra.",
+  "artist": "Beemwej",
+  "license": "CC BY-SA 3.0 pl"
+ },
+ "world/w210.jpg": {
+  "taken": "2017-02-11",
+  "make": "Canon",
+  "model": "Canon PowerShot G7 X",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Camera Raw 6.4.1",
+  "original_size": [
+   1973,
+   1315
+  ],
+  "description": "Cúpula do cruzeiro, Sé Nova de Coimbra",
+  "artist": "Manuelvbotelho",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w211.jpg": {
+  "taken": "2009-07-08",
+  "make": "Canon",
+  "model": "Canon PowerShot A550",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   2304,
+   3072
+  ],
+  "description": "Купол собора Мирожского монастыря. Вознесение.",
+  "artist": "Vash Alex kun",
+  "license": "Public domain"
+ },
+ "world/w212.jpg": {
+  "taken": "2016-09-29",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   2048,
+   1536
+  ],
+  "description": "Alcañiz - Ex Colegiata de Santa María la Mayor",
+  "artist": "Zarateman",
+  "license": "CC0"
+ },
+ "world/w213.jpg": {
+  "taken": "2007-12-27",
+  "make": "BenQ",
+  "model": "DC X720",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 37,
+  "software": "101.08.00",
+  "original_size": [
+   3072,
+   2304
+  ],
+  "description": "Cúpula Sant Nicolau",
+  "artist": "Joanbanjo",
+  "license": "Public domain"
+ },
+ "world/w214.jpg": {
+  "taken": "2016-02-09",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D3100",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Microsoft Windows Photo Gallery 6.0.6000.16385",
+  "original_size": [
+   4559,
+   3071
+  ],
+  "description": "Cúpula del mercat central d'Alacant.",
+  "artist": "Joanbanjo",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w215.jpg": {
+  "taken": "2019-10-01",
+  "make": "Canon",
+  "model": "Canon EOS 1100D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop CS6 (Windows)",
+  "original_size": [
+   4217,
+   2742
+  ],
+  "description": "Dome of the chapel of the Palace of Infante don Luis in Boadilla del Monte (Community of Madrid, Spain).",
+  "artist": "Luis García (Zaqarbal)",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w216.jpg": {
+  "taken": "2009-02-19",
+  "make": "EASTMAN KODAK COMPANY",
+  "model": "KODAK EASYSHARE C713 ZOOM DIGITAL CAMERA",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 36,
+  "software": "Adobe Photoshop 7.0 ",
+  "original_size": [
+   2605,
+   2292
+  ],
+  "description": "Interior view of the dome of Iglesia Parroquial de Santa Bárbara (\"Parish Church of St. Barbara\") in Madrid (Spain).",
+  "artist": "Luis García (Zaqarbal)",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w217.jpg": {
+  "taken": "2012-12-09",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D3100",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Microsoft Windows Photo Gallery 6.0.6001.18000",
+  "original_size": [
+   4523,
+   3071
+  ],
+  "description": "Capella de l'Ecce Homo de Pego, cúpula.",
+  "artist": "Joanbanjo",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w218.jpg": {
+  "taken": "2014-01-25",
+  "make": "Canon",
+  "model": "Canon EOS 650D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom 4.3 (Windows)",
+  "original_size": [
+   5012,
+   3342
+  ],
+  "description": "",
+  "artist": "Rafesmar",
+  "license": "CC BY-SA 3.0 es"
+ },
+ "world/w219.jpg": {
+  "taken": "2015-09-12",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D600",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 16,
+  "software": "Adobe Photoshop Lightroom Classic 13.4 (Macintosh)",
+  "original_size": [
+   3646,
+   3646
+  ],
+  "description": "Adolf Fredriks kyrka (church), Stockholm. Adolf Fredrik parish, Diocese of Stockholm, Church of Sweden. Build 1768-1774.",
+  "artist": "Arild Vågen",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w220.jpg": {
+  "taken": "2024-09-21",
+  "make": "samsung",
+  "model": "SM-A7050",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 26,
+  "software": "A7050ZHU2ASF5",
+  "original_size": [
+   4032,
+   3024
+  ],
+  "description": "​監察院大廳天花板。",
+  "artist": "阿道",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w221.jpg": {
+  "taken": "2026-06-13",
+  "make": "samsung",
+  "model": "Galaxy S25 Ultra",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 13,
+  "software": "Luminar Neo",
+  "original_size": [
+   5496,
+   5496
+  ],
+  "description": "03 Dome Interior of the National Taiwan Museum",
+  "artist": "NateBergin",
+  "license": "CC BY 4.0"
+ },
+ "world/w222.jpg": {
+  "taken": "2016-06-05",
+  "make": "FUJIFILM",
+  "model": "X20",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "PaintShop Pro 20.00",
+  "original_size": [
+   4000,
+   3000
+  ],
+  "description": "Eyüp Sultan Mosque, Istanbul",
+  "artist": "R Prazeres",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w223.jpg": {
+  "taken": "2007-08-20",
+  "make": "FUJIFILM",
+  "model": "FinePix S5700 S700",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Digital Camera FinePix S5700 S700 Ver1.00",
+  "original_size": [
+   3072,
+   2304
+  ],
+  "description": "Dome of the Istanbul Ashkenazi Sinagogue",
+  "artist": "Alaexis",
+  "license": "CC BY-SA 2.5"
+ },
+ "world/w224.jpg": {
+  "taken": "2007-04-05",
+  "make": "RICOH      ",
+  "model": "GR Digital     ",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   2458,
+   2458
+  ],
+  "description": "(Cropped) photo of the ceiling of St Mary-at-Hill church, City of London",
+  "artist": "Steve Cadman from London, U.K.",
+  "license": "CC BY-SA 2.0"
+ },
+ "world/w225.jpg": {
+  "taken": "2022-06-01",
+  "make": "NIKON",
+  "model": "COOLPIX P510",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "COOLPIX P510   V1.0",
+  "original_size": [
+   4608,
+   3456
+  ],
+  "description": "Frankfort, Kentucky State Capitol.",
+  "artist": "Riis2602",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w226.jpg": {
+  "taken": "2016-10-16",
+  "make": "Apple",
+  "model": "iPhone 6",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 29,
+  "software": "10.0.2",
+  "original_size": [
+   2448,
+   3264
+  ],
+  "description": "Ceiling Dome Detail \nEldridge Street Synagogue",
+  "artist": "AnneRuthmann",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w227.jpg": {
+  "taken": "2017-08-25",
+  "make": "Canon",
+  "model": "Canon EOS 5D Mark III",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom 6.12 (Windows)",
+  "original_size": [
+   5637,
+   3758
+  ],
+  "description": "Crossing of the the Cathedral of the Sacred Heart in Richmond, Virginia",
+  "artist": "Martin Kraft",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w228.jpg": {
+  "taken": "2009-12-07",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D60",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Ver.1.01 ",
+  "original_size": [
+   1936,
+   1296
+  ],
+  "description": "City Hall",
+  "artist": "Masrur Odinaev",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w229.jpg": {
+  "taken": "2022-06-27",
+  "make": "NIKON",
+  "model": "COOLPIX P510",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 35,
+  "software": "COOLPIX P510   V1.0",
+  "original_size": [
+   4608,
+   3456
+  ],
+  "description": "Tallahassee, Florida State Capitol.",
+  "artist": "Riis2602",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w230.jpg": {
+  "taken": "2024-06-18",
+  "make": "Apple",
+  "model": "iPhone 15",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 14,
+  "software": null,
+  "original_size": [
+   2869,
+   2756
+  ],
+  "description": "The dome interior of the J.R. Watkins Headquarters in Winona, Minnesota.",
+  "artist": "Farragutful",
+  "license": "CC0"
  }
 }
