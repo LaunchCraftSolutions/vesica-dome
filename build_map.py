@@ -79,6 +79,22 @@ BUILDINGS = {
     "Istanbul": ("Little Hagia Sophia (Church of Saints Sergius and Bacchus)", "Istanbul, Turkey", "527–536", "Built for Emperor Justinian I. Builder not recorded"),
 }
 
+# The wider collection (fetch_world.py) brings its own building details.
+_world = os.path.join(HERE, "domes", "world.json")
+if os.path.exists(_world):
+    for w in json.load(open(_world, encoding="utf-8")):
+        b = w["building"]; BUILDINGS[w["place"]] = (b["name"], b["where"], b["built"], b["by"])
+
+
+def licence_link(lic):
+    """Where a licence is written out in full, worked out for the Creative Commons ones this file does not list by name."""
+    if lic in LICENCE_LINKS:
+        return LICENCE_LINKS[lic]
+    m = re.match(r"CC (BY(?:-SA)?) (\d\.\d)(?: ([A-Za-z-]+))?$", lic or "")
+    if m:
+        return f"https://creativecommons.org/licenses/{m.group(1).lower()}/{m.group(2)}/" + (m.group(3).lower() + "/" if m.group(3) else "")
+    return "https://creativecommons.org/publicdomain/mark/1.0/" if (lic or "").lower().startswith("public domain") else ""
+
 
 written = set()   # every file this build put into site/; anything else found there afterwards is left over from an older build
 
@@ -142,7 +158,7 @@ def credits():
     for name, hits in cand.items():
         for i, h in enumerate(hits):
             out[f"candidates/{name}_{i}.jpg"] = h
-    for folder in ("sample", "corridor"):
+    for folder in ("sample", "corridor", "world"):
         for h in load(f"{folder}/_index.json") or []:
             out[f"{folder}/{h['file']}"] = h
     return out
@@ -195,7 +211,7 @@ def main():
         r["page"] = h.get("page", "")
         r["meta"] = dict(meta.get(r["photo"], {}))
         r["meta"]["artist"] = by_line(r["meta"].get("artist"))
-        r["licence_url"] = LICENCE_LINKS.get(r["meta"].get("license", ""), "")
+        r["licence_url"] = licence_link(r["meta"].get("license", ""))
         if r["place"] in BUILDINGS:
             name, where, built, by = BUILDINGS[r["place"]]
             r["building"] = {"name": name, "where": where, "built": built, "by": by}

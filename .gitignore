@@ -66,3 +66,10 @@ _log.txt
 # Keys never go in the repository.
 private/
 google_key.txt
+
+# Small copies of search results, kept only while domes are being picked.
+domes/found/
+
+# Working logs of the photo searches.
+domes/*_out.txt
+domes/*_err.txt

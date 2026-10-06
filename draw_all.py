@@ -80,6 +80,20 @@ COORDS = {"Belgrade, Bajrakli mosque": (44.8222, 20.4575), "Belgrade, St Sava": 
           "Rila": (42.1335, 23.3402), "Plovdiv": (42.1479, 24.7480), "Edirne, Üç Şerefeli": (41.6783, 26.5535), "Edirne, Selimiye": (41.6781, 26.5594),
           "London": (51.5137, -0.0983), "St Petersburg": (59.9342, 30.3063), "Rome": (41.8986, 12.4769), "Isfahan": (32.6574, 51.6788), "Istanbul": (41.0028, 28.9722)}
 
+# The wider collection (fetch_world.py): the same procedure on domes from the rest of the world. None are on the line.
+# Their middles are found by turning the picture on itself (fetch_world.middle_by_turning) unless one was placed by hand, and a
+# dome can be marked as not to be un-squashed (a star vault has no rings for the oval test to read).
+TURNED, ROUND_AS_IS = set(), set()
+_world = os.path.join(HERE, "domes", "world.json")
+if os.path.exists(_world):
+    for w in json.load(open(_world, encoding="utf-8")):
+        mid = w.get("hand") or w.get("turned")
+        DOMES.append((w["place"], w["photo"], None, w["built"], w["note"], tuple(mid) if mid else None)); COORDS[w["place"]] = (w["lat"], w["lon"])
+        if w.get("turned") and not w.get("hand"):
+            TURNED.add(w["place"])
+        if w.get("squash") is False:
+            ROUND_AS_IS.add(w["place"])
+
 
 def true_middle(gray):
     """A dome looks the same turned half-way round its middle, and its rings line up there. Use both."""
@@ -116,7 +130,7 @@ def true_middle(gray):
     return cx, cy
 
 
-def unsquash(rgb, gray, cx, cy):
+def unsquash(rgb, gray, cx, cy, try_oval=True):
     small = gray.copy(); small.thumbnail((240, 240)); k = gray.width / small.width
     px, w, h = small.load(), small.width, small.height
     rmax = int(0.42 * min(w, h)); x0, y0 = cx / k, cy / k
@@ -127,7 +141,7 @@ def unsquash(rgb, gray, cx, cy):
             if e > best[0]:
                 best = (e, s, math.radians(a))
     e, s, al = best
-    if e < 1.08 * base:
+    if e < 1.08 * base or not try_oval:
         s, al = 1.0, 0.0
     W, H = rgb.size
     N = int(2 * max(math.hypot(cx, cy), math.hypot(W - cx, cy), math.hypot(cx, H - cy), math.hypot(W - cx, H - cy)) * 0.75)
@@ -158,7 +172,7 @@ def draw(place, rel, along, built, note, hand):
         rgb, st, model = got; squash, sq_dir = 1.0, 0; cx, cy = model.crown(); hand = None
         shown = redraw(rgb0, model)   # shown with the parts the camera could not see greyed down
     else:
-        rgb, squash, sq_dir = unsquash(rgb0, gray0, cx, cy); shown = rgb
+        rgb, squash, sq_dir = unsquash(rgb0, gray0, cx, cy, try_oval=place not in ROUND_AS_IS); shown = rgb
     gray = rgb.convert("L"); N = rgb.width; px = gray.load(); c = N / 2
     frame = min(cx, cy, W - cx, H - cy)  # how far the photo reaches from the middle before its nearest edge
     rmin = int(0.04 * min(W, H))   # nearer the middle than this, a few pixels of noise swamp any ring
@@ -217,7 +231,7 @@ def draw(place, rel, along, built, note, hand):
     lat, lon = COORDS[place]
     return {"place": place, "slug": slug, "photo": rel, "along": along, "built": built, "note": note, "lat": lat, "lon": lon,
             "photo_size": [W, H], "middle_in_photo": [round(cx), round(cy)], "straightened_px": N, "view_px": view.width, "first_circle_view_px": round(u * view.width / N, 2),
-            "placed_by_hand": bool(hand), "off_middle_px": [round(cx - W / 2), round(cy - H / 2)], "squash": squash, "squash_direction_deg": sq_dir,
+            "placed_by_hand": bool(hand) and place not in TURNED, "off_middle_px": [round(cx - W / 2), round(cy - H / 2)], "squash": squash, "squash_direction_deg": sq_dir,
             "first_circle_px": round(u, 1), "turn_deg": round(turn, 1), "landed": k, "luck": round(luck, 3), "sizes_tried": len(cands),
             "rings": [{"ring": n, "times_first_circle": round(m, 3), "drawn_px": round(d), "nearest_edge_px": e, "off_pct": round(off * 100, 1), "landed": off <= LAND}
                       for n, m, d, e, off in land],

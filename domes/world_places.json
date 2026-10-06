@@ -1,0 +1,2854 @@
+{
+ "333 Collins Street": {
+  "article": "333 Collins Street",
+  "by_hand": true,
+  "country": "Australia",
+  "item": null,
+  "lat": -37.8163,
+  "lon": 144.9617,
+  "missing": true
+ },
+ "Abbey of Saint Gall": {
+  "article": "Abbey of Saint Gall",
+  "country": "Switzerland",
+  "item": "Q155699",
+  "lat": 47.42305556,
+  "lon": 9.37722222,
+  "missing": false
+ },
+ "Abdulaziz Khan Madrasah": {
+  "article": "Abdulaziz Khan Madrasah",
+  "country": "Uzbekistan",
+  "item": "Q4287926",
+  "lat": 39.776,
+  "lon": 64.4177,
+  "missing": false
+ },
+ "Agha Bozorg Mosque": {
+  "article": "Agha Bozorg Mosque",
+  "country": "Iran",
+  "item": "Q3396964",
+  "lat": 33.97861111,
+  "lon": 51.44527778,
+  "missing": false
+ },
+ "Akbar's tomb": {
+  "article": "Akbar's tomb",
+  "country": "India",
+  "item": "Q416646",
+  "lat": 27.22044,
+  "lon": 77.95031,
+  "missing": false
+ },
+ "Al-Rifa'i Mosque": {
+  "article": "Al-Rifa'i Mosque",
+  "country": "Egypt",
+  "item": "Q311441",
+  "lat": 30.15472222,
+  "lon": 31.31027778,
+  "missing": false
+ },
+ "Alabama State Capitol": {
+  "article": "Alabama State Capitol",
+  "country": "United States",
+  "item": "Q473393",
+  "lat": 32.37777778,
+  "lon": -86.30055556,
+  "missing": false
+ },
+ "Alai Darwaza": {
+  "article": "Alai Darwaza",
+  "country": "India",
+  "item": "Q61638119",
+  "lat": 28.52425,
+  "lon": 77.18572,
+  "missing": false
+ },
+ "Alberta Legislature Building": {
+  "article": "Alberta Legislature Building",
+  "country": "Canada",
+  "item": "Q4711758",
+  "lat": 53.53369444,
+  "lon": -113.50661111,
+  "missing": false
+ },
+ "Alcázar of Seville": {
+  "article": "Alcázar of Seville",
+  "country": "Spain",
+  "item": "Q498261",
+  "lat": 37.3844261490673,
+  "lon": -5.99118662585353,
+  "missing": false
+ },
+ "Alexander Hamilton U.S. Custom House": {
+  "article": "Alexander Hamilton U.S. Custom House",
+  "country": "United States",
+  "item": "Q2068997",
+  "lat": 40.70416667,
+  "lon": -74.01361111,
+  "missing": false
+ },
+ "Allen County Courthouse (Indiana)": {
+  "article": "Allen County Courthouse (Indiana)",
+  "country": "United States",
+  "item": "Q3181076",
+  "lat": 41.07972222,
+  "lon": -85.13916667,
+  "missing": false
+ },
+ "Almoravid Qubba": {
+  "article": "Almoravid Qubba",
+  "country": "Morocco",
+  "item": "Q3412514",
+  "lat": 31.6315,
+  "lon": -7.9872,
+  "missing": false
+ },
+ "Antwerpen-Centraal railway station": {
+  "article": "Antwerpen-Centraal railway station",
+  "country": "Belgium",
+  "item": "Q800398",
+  "lat": 51.21722222,
+  "lon": 4.42111111,
+  "missing": false
+ },
+ "Arian Baptistery": {
+  "article": "Arian Baptistery",
+  "country": "Italy",
+  "item": "Q1449217",
+  "lat": 44.41861111,
+  "lon": 12.2025,
+  "missing": false
+ },
+ "Arkansas State Capitol": {
+  "article": "Arkansas State Capitol",
+  "country": "United States",
+  "item": "Q673076",
+  "lat": 34.74666667,
+  "lon": -92.28916667,
+  "missing": false
+ },
+ "Austrian National Library": {
+  "article": "Austrian National Library",
+  "country": "Austria",
+  "item": "Q304037",
+  "lat": 48.20611111,
+  "lon": 16.36638889,
+  "missing": false
+ },
+ "Badshahi Mosque": {
+  "article": "Badshahi Mosque",
+  "country": "Pakistan",
+  "item": "Q330872",
+  "lat": 31.58805556,
+  "lon": 74.30944444,
+  "missing": false
+ },
+ "Baiae": {
+  "article": "Baiae",
+  "country": "Italy",
+  "item": "Q290097",
+  "lat": 40.816666666667,
+  "lon": 14.069722222222,
+  "missing": false
+ },
+ "Bank of Montreal Head Office, Montreal": {
+  "article": "Bank of Montreal Head Office",
+  "country": "Canada",
+  "item": "Q3579103",
+  "lat": 45.5049,
+  "lon": -73.5579,
+  "missing": false
+ },
+ "Baptistery of Neon": {
+  "article": "Baptistery of Neon",
+  "country": "Italy",
+  "item": "Q1256487",
+  "lat": 44.41555556,
+  "lon": 12.19722222,
+  "missing": false
+ },
+ "Basilica and Convent of San Francisco, Lima": {
+  "article": "Basilica and Convent of San Francisco, Lima",
+  "country": "Peru",
+  "item": "Q2404214",
+  "lat": -12.04549722,
+  "lon": -77.02739444,
+  "missing": false
+ },
+ "Basilica of Our Lady of Scherpenheuvel": {
+  "article": "Basilica of Our Lady of Scherpenheuvel",
+  "country": "Belgium",
+  "item": "Q2057311",
+  "lat": 50.98027778,
+  "lon": 4.97833333,
+  "missing": false
+ },
+ "Basilica of Our Lady of the Forsaken": {
+  "article": "Basilica of Our Lady of the Forsaken",
+  "country": "Spain",
+  "item": "Q978306",
+  "lat": 39.47625,
+  "lon": -0.37482,
+  "missing": false
+ },
+ "Basilica of San Gaudenzio": {
+  "article": "Basilica of San Gaudenzio",
+  "country": "Italy",
+  "item": "Q2639843",
+  "lat": 45.449,
+  "lon": 8.62,
+  "missing": false
+ },
+ "Basilica of San Vitale": {
+  "article": "Basilica of San Vitale",
+  "country": "Italy",
+  "item": "Q721817",
+  "lat": 44.4206,
+  "lon": 12.1964,
+  "missing": false
+ },
+ "Basilica of Sant'Ambrogio": {
+  "article": "Basilica of Sant'Ambrogio",
+  "country": "Russia",
+  "item": "Q1071570",
+  "lat": 45.462425,
+  "lon": 9.17580556,
+  "missing": false
+ },
+ "Basilica of Sant'Andrea, Mantua": {
+  "article": "Basilica of Sant'Andrea, Mantua",
+  "country": "Italy",
+  "item": "Q1581882",
+  "lat": 45.15888889,
+  "lon": 10.79416667,
+  "missing": false
+ },
+ "Basilica of St. Josaphat": {
+  "article": "Basilica of St. Josaphat",
+  "country": "United States",
+  "item": "Q4867385",
+  "lat": 43.0025,
+  "lon": -87.91916667,
+  "missing": false
+ },
+ "Basilica of Superga": {
+  "article": "Basilica of Superga",
+  "country": "Italy",
+  "item": "Q1145261",
+  "lat": 45.08083333,
+  "lon": 7.7675,
+  "missing": false
+ },
+ "Basilica of the National Shrine of the Assumption of the Blessed Virgin Mary": {
+  "article": "Basilica of the National Shrine of the Assumption of the Blessed Virgin Mary",
+  "country": "United States",
+  "item": "Q1968407",
+  "lat": 39.29439167,
+  "lon": -76.61616111,
+  "missing": false
+ },
+ "Bayezid II Mosque": {
+  "article": "Bayezid II Mosque",
+  "country": null,
+  "item": "Q92785418",
+  "lat": null,
+  "lon": null,
+  "missing": false
+ },
+ "Bayezid II Mosque, Istanbul": {
+  "article": "Bayezid II Mosque, Istanbul",
+  "country": "Turkey",
+  "item": "Q853064",
+  "lat": 41.01027778,
+  "lon": 28.96527778,
+  "missing": false
+ },
+ "Bazaar of Kashan": {
+  "article": "Bazaar of Kashan",
+  "country": "Iran",
+  "item": "Q6374202",
+  "lat": 33.985,
+  "lon": 51.44916667,
+  "missing": false
+ },
+ "Befreiungshalle": {
+  "article": "Befreiungshalle",
+  "country": "Germany",
+  "item": "Q259004",
+  "lat": 48.91833333,
+  "lon": 11.86055556,
+  "missing": false
+ },
+ "Belfast City Hall": {
+  "article": "Belfast City Hall",
+  "country": "United Kingdom",
+  "item": "Q3351920",
+  "lat": 54.596484,
+  "lon": -5.930053,
+  "missing": false
+ },
+ "Berlin Cathedral": {
+  "article": "Berlin Cathedral",
+  "country": "Germany",
+  "item": "Q154563",
+  "lat": 52.51916667,
+  "lon": 13.40111111,
+  "missing": false
+ },
+ "Bibi-Khanym Mosque": {
+  "article": "Bibi-Khanym Mosque",
+  "country": "Uzbekistan",
+  "item": "Q679218",
+  "lat": 39.66055556,
+  "lon": 66.97916667,
+  "missing": false
+ },
+ "Blue Mosque, Istanbul": {
+  "article": "Blue Mosque, Istanbul",
+  "country": "Turkey",
+  "item": "Q80541",
+  "lat": 41.0053851,
+  "lon": 28.9768247,
+  "missing": false
+ },
+ "Blue Mosque, Tabriz": {
+  "article": "Blue Mosque, Tabriz",
+  "country": "Iran",
+  "item": "Q1519733",
+  "lat": 38.07361111,
+  "lon": 46.30111111,
+  "missing": false
+ },
+ "Bode Museum": {
+  "article": "Bode Museum",
+  "country": "Germany",
+  "item": "Q157825",
+  "lat": 52.52194444,
+  "lon": 13.39472222,
+  "missing": false
+ },
+ "Boim Chapel": {
+  "article": "Boim Chapel",
+  "country": "Ukraine",
+  "item": "Q891038",
+  "lat": 49.84055556,
+  "lon": 24.03111111,
+  "missing": false
+ },
+ "Borujerdi House": {
+  "article": "Borujerdi House",
+  "country": "Iran",
+  "item": "Q3196070",
+  "lat": 33.974583333333335,
+  "lon": 51.44063888888889,
+  "missing": false
+ },
+ "Bourse de commerce (Paris)": {
+  "article": "Bourse de commerce (Paris)",
+  "country": "France",
+  "item": "Q691375",
+  "lat": 48.862731,
+  "lon": 2.34278,
+  "missing": false
+ },
+ "British Columbia Parliament Buildings": {
+  "article": "British Columbia Parliament Buildings",
+  "country": "Canada",
+  "item": "Q3365509",
+  "lat": 48.41944444,
+  "lon": -123.37027778,
+  "missing": false
+ },
+ "British Museum Reading Room": {
+  "article": "British Museum Reading Room",
+  "country": "United Kingdom",
+  "item": "Q2152532",
+  "lat": 51.51944444,
+  "lon": -0.12694444,
+  "missing": false
+ },
+ "Brompton Oratory": {
+  "article": "Brompton Oratory",
+  "country": "United Kingdom",
+  "item": "Q1769288",
+  "lat": 51.49722222,
+  "lon": -0.16972222,
+  "missing": false
+ },
+ "Burgos Cathedral": {
+  "article": "Burgos Cathedral",
+  "country": "Spain",
+  "item": "Q744420",
+  "lat": 42.34080556,
+  "lon": -3.70447222,
+  "missing": false
+ },
+ "CEC Palace": {
+  "article": "CEC Palace",
+  "country": "Romania",
+  "item": "Q5010221",
+  "lat": 44.432,
+  "lon": 26.0965,
+  "missing": false
+ },
+ "California State Capitol": {
+  "article": "California State Capitol",
+  "country": "United States",
+  "item": "Q1026860",
+  "lat": 38.57666667,
+  "lon": -121.49361111,
+  "missing": false
+ },
+ "Candelária Church": {
+  "article": "Candelária Church",
+  "country": "Brazil",
+  "item": "Q82312",
+  "lat": -22.900811,
+  "lon": -43.177894,
+  "missing": false
+ },
+ "Capilla del Rosario, Puebla": {
+  "article": "Capilla del Rosario, Puebla",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Cappella Palatina": {
+  "article": "Cappella Palatina",
+  "country": "Italy",
+  "item": "Q1034853",
+  "lat": 38.11083333,
+  "lon": 13.35361111,
+  "missing": false
+ },
+ "Castle Howard": {
+  "article": "Castle Howard",
+  "country": "United Kingdom",
+  "item": "Q1049514",
+  "lat": 54.12138889,
+  "lon": -0.90583333,
+  "missing": false
+ },
+ "Cathedral Basilica of Saint Louis (St. Louis)": {
+  "article": "Cathedral Basilica of Saint Louis",
+  "country": "United States",
+  "item": "Q128058",
+  "lat": 38.6425,
+  "lon": -90.25472222,
+  "missing": false
+ },
+ "Cathedral Basilica of Saints Peter and Paul, Philadelphia": {
+  "article": "Cathedral Basilica of Saints Peter and Paul (Philadelphia)",
+  "country": "United States",
+  "item": "Q5052192",
+  "lat": 39.9575,
+  "lon": -75.1686,
+  "missing": false
+ },
+ "Cathedral of Córdoba, Argentina": {
+  "article": "Cathedral of Córdoba, Argentina",
+  "country": "Argentina",
+  "item": "Q2942294",
+  "lat": -31.41666667,
+  "lon": -64.18472222,
+  "missing": false
+ },
+ "Cathedral of Saint Bavo, Haarlem": {
+  "article": "Cathedral of Saint Bavo, Haarlem",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Cathedral of Saint Domnius": {
+  "article": "Cathedral of Saint Domnius",
+  "country": "Croatia",
+  "item": "Q1268475",
+  "lat": 43.50805556,
+  "lon": 16.44027778,
+  "missing": false
+ },
+ "Cathedral of St Bavo, Haarlem": {
+  "article": "Cathedral of St Bavo, Haarlem",
+  "country": "Netherlands",
+  "item": "Q962195",
+  "lat": 52.37655,
+  "lon": 4.62211,
+  "missing": false
+ },
+ "Cathedral of St. Matthew the Apostle (Washington, D.C.)": {
+  "article": "Cathedral of St. Matthew the Apostle",
+  "country": "United States",
+  "item": "Q603535",
+  "lat": 38.90611111,
+  "lon": -77.04,
+  "missing": false
+ },
+ "Cathedral-Basilica of Our Lady of the Pillar": {
+  "article": "Cathedral-Basilica of Our Lady of the Pillar",
+  "country": "Spain",
+  "item": "Q810684",
+  "lat": 41.65694444,
+  "lon": -0.87833333,
+  "missing": false
+ },
+ "Centcelles": {
+  "article": "Centcelles",
+  "by_hand": true,
+  "country": "Spain",
+  "item": null,
+  "lat": 41.1561,
+  "lon": 1.2289,
+  "missing": true
+ },
+ "Centennial Hall": {
+  "article": "Centennial Hall",
+  "country": null,
+  "item": "Q1211598",
+  "lat": null,
+  "lon": null,
+  "missing": false
+ },
+ "Centennial Hall (Wrocław)": {
+  "article": "Centennial Hall (Wrocław)",
+  "country": "Poland",
+  "item": "Q155743",
+  "lat": 51.10694444,
+  "lon": 17.07722222,
+  "missing": false
+ },
+ "Chaharbagh School": {
+  "article": "Chaharbagh School",
+  "country": "Iran",
+  "item": "Q5067540",
+  "lat": 32.6518,
+  "lon": 51.6692,
+  "missing": false
+ },
+ "Chapel of the Holy Shroud": {
+  "article": "Chapel of the Holy Shroud",
+  "country": "Italy",
+  "item": "Q3657503",
+  "lat": 45.07332,
+  "lon": 7.685435,
+  "missing": false
+ },
+ "Chapel of the Rosario, Puebla": {
+  "article": "Chapel of the Rosario, Puebla",
+  "country": "Mexico",
+  "item": "Q5748455",
+  "lat": 19.046478,
+  "lon": -98.198226,
+  "missing": false
+ },
+ "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya": {
+  "article": "Chhatrapati Shivaji Maharaj Vastu Sangrahalaya",
+  "country": "India",
+  "item": "Q1071500",
+  "lat": 18.926667,
+  "lon": 72.832222,
+  "missing": false
+ },
+ "Chhatrapati Shivaji Terminus": {
+  "article": "Chhatrapati Shivaji Terminus",
+  "country": "India",
+  "item": "Q235884",
+  "lat": 18.93985,
+  "lon": 72.83544,
+  "missing": false
+ },
+ "Chicago Cultural Center": {
+  "article": "Chicago Cultural Center",
+  "country": "United States",
+  "item": "Q2398614",
+  "lat": 41.88388889,
+  "lon": -87.625,
+  "missing": false
+ },
+ "Chiswick House": {
+  "article": "Chiswick House",
+  "country": "United Kingdom",
+  "item": "Q1074877",
+  "lat": 51.48376,
+  "lon": -0.25866,
+  "missing": false
+ },
+ "Chora Church": {
+  "article": "The Chora",
+  "country": "Turkey",
+  "item": "Q849489",
+  "lat": 41.03122,
+  "lon": 28.93903,
+  "missing": false
+ },
+ "Christiansborg Palace Chapel": {
+  "article": "Christiansborg Palace",
+  "country": "Denmark",
+  "item": "Q940733",
+  "lat": 55.675833333333,
+  "lon": 12.578888888889,
+  "missing": false
+ },
+ "Church of La Compañía, Quito": {
+  "article": "Church of La Compañía, Quito",
+  "country": "Ecuador",
+  "item": "Q3075573",
+  "lat": -0.22083333,
+  "lon": -78.51388889,
+  "missing": false
+ },
+ "Church of Saint George, Sofia": {
+  "article": "Church of Saint George, Sofia",
+  "country": "Bulgaria",
+  "item": "Q2598073",
+  "lat": 42.69694444,
+  "lon": 23.32277778,
+  "missing": false
+ },
+ "Church of Saint Louis of France": {
+  "article": "Church of Saint Louis of France",
+  "country": "Spain",
+  "item": "Q3582357",
+  "lat": 37.39833333,
+  "lon": -5.98833333,
+  "missing": false
+ },
+ "Church of Santa María Tonantzintla": {
+  "article": "Church of Santa María Tonantzintla",
+  "country": "Mexico",
+  "item": "Q63974283",
+  "lat": 19.02986111,
+  "lon": -98.31972222,
+  "missing": false
+ },
+ "Church of Santo Domingo de Guzmán (Oaxaca)": {
+  "article": "Church of Santo Domingo de Guzmán",
+  "country": "Mexico",
+  "item": "Q2779092",
+  "lat": 17.06555556,
+  "lon": -96.72305556,
+  "missing": false
+ },
+ "Church of St. Francis of Assisi (Prague)": {
+  "article": "Church of St. Francis of Assisi (Prague)",
+  "by_hand": true,
+  "country": "Czech Republic",
+  "item": null,
+  "lat": 50.0864,
+  "lon": 14.4142,
+  "missing": true
+ },
+ "Church of St. Peter and St. Paul, Vilnius": {
+  "article": "Church of St. Peter and St. Paul, Vilnius",
+  "country": "Lithuania",
+  "item": "Q1283798",
+  "lat": 54.69416667,
+  "lon": 25.30638889,
+  "missing": false
+ },
+ "Church of the Gesù": {
+  "article": "Church of the Gesù",
+  "country": "Italy",
+  "item": "Q719794",
+  "lat": 41.89583333,
+  "lon": 12.47972222,
+  "missing": false
+ },
+ "Church of the Holy Sepulchre": {
+  "article": "Church of the Holy Sepulchre",
+  "country": "Israel",
+  "item": "Q187702",
+  "lat": 31.77833333,
+  "lon": 35.22972222,
+  "missing": false
+ },
+ "Church of the Savior on Blood": {
+  "article": "Church of the Savior on Blood",
+  "country": "Russia",
+  "item": "Q215208",
+  "lat": 59.94,
+  "lon": 30.32861111,
+  "missing": false
+ },
+ "Church of the Society of Jesus (Cusco)": {
+  "article": "Church of the Society of Jesus (Cusco)",
+  "by_hand": true,
+  "country": "Peru",
+  "item": null,
+  "lat": -13.5175,
+  "lon": -71.9779,
+  "missing": true
+ },
+ "Church of the Society of Jesus (Quito)": {
+  "article": "Church of the Society of Jesus (Quito)",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "City Hall, Dublin": {
+  "article": "City Hall, Dublin",
+  "country": "Ireland",
+  "item": "Q1101808",
+  "lat": 53.344012,
+  "lon": -6.26725,
+  "missing": false
+ },
+ "City of Paris Dry Goods Co.": {
+  "article": "City of Paris Dry Goods Co.",
+  "country": "United States",
+  "item": "Q5123857",
+  "lat": 37.787432,
+  "lon": -122.406464,
+  "missing": false
+ },
+ "Cleveland Trust Company Building": {
+  "article": "Cleveland Trust Company Building",
+  "country": "United States",
+  "item": "Q21197553",
+  "lat": 41.50004,
+  "lon": -81.68612,
+  "missing": false
+ },
+ "Colorado State Capitol": {
+  "article": "Colorado State Capitol",
+  "country": "United States",
+  "item": "Q1111402",
+  "lat": 39.7392321,
+  "lon": -104.9848677,
+  "missing": false
+ },
+ "Connecticut State Capitol": {
+  "article": "Connecticut State Capitol",
+  "country": "United States",
+  "item": "Q1126213",
+  "lat": 41.76416667,
+  "lon": -72.68222222,
+  "missing": false
+ },
+ "Court of the Lions": {
+  "article": "Court of the Lions",
+  "country": "Spain",
+  "item": "Q4270926",
+  "lat": 37.17706667,
+  "lon": -3.58926667,
+  "missing": false
+ },
+ "Daphni Monastery": {
+  "article": "Daphni Monastery",
+  "country": "Greece",
+  "item": "Q500444",
+  "lat": 38.01296,
+  "lon": 23.63588,
+  "missing": false
+ },
+ "Devonshire Dome": {
+  "article": "Devonshire Dome",
+  "country": "United Kingdom",
+  "item": "Q5267877",
+  "lat": 53.26,
+  "lon": -1.9168,
+  "missing": false
+ },
+ "Dilwara Temples": {
+  "article": "Dilwara Temples",
+  "country": "India",
+  "item": "Q2712405",
+  "lat": 24.60930556,
+  "lon": 72.72305556,
+  "missing": false
+ },
+ "Dolmabahçe Palace": {
+  "article": "Dolmabahçe Palace",
+  "country": "Turkey",
+  "item": "Q274141",
+  "lat": 41.03944444,
+  "lon": 29.00166667,
+  "missing": false
+ },
+ "Dome of Soltaniyeh": {
+  "article": "Dome of Soltaniyeh",
+  "country": "Iran",
+  "item": "Q20645774",
+  "lat": 36.43397222,
+  "lon": 48.79602778,
+  "missing": false
+ },
+ "Dome of the Rock": {
+  "article": "Dome of the Rock",
+  "country": "Palestine",
+  "item": "Q172077",
+  "lat": 31.778,
+  "lon": 35.2354,
+  "missing": false
+ },
+ "Einsiedeln Abbey": {
+  "article": "Einsiedeln Abbey",
+  "country": "Switzerland",
+  "item": "Q125072234",
+  "lat": 47.12666667,
+  "lon": 8.75147222,
+  "missing": false
+ },
+ "El Capitolio": {
+  "article": "National Capitol of Cuba",
+  "country": "Cuba",
+  "item": "Q1352908",
+  "lat": 23.13527778,
+  "lon": -82.35944444,
+  "missing": false
+ },
+ "El Escorial": {
+  "article": "El Escorial",
+  "country": "Spain",
+  "item": "Q28471",
+  "lat": 40.59,
+  "lon": -4.15,
+  "missing": false
+ },
+ "Ely Cathedral": {
+  "article": "Ely Cathedral",
+  "country": "United Kingdom",
+  "item": "Q579004",
+  "lat": 52.39861111,
+  "lon": 0.26388889,
+  "missing": false
+ },
+ "Estrela Basilica": {
+  "article": "Estrela Basilica",
+  "country": "Portugal",
+  "item": "Q2657972",
+  "lat": 38.71316,
+  "lon": -9.16056,
+  "missing": false
+ },
+ "Et'hem Bey Mosque": {
+  "article": "Et'hem Bey Mosque",
+  "country": "Albania",
+  "item": "Q798610",
+  "lat": 41.32777778,
+  "lon": 19.81916667,
+  "missing": false
+ },
+ "Etchmiadzin Cathedral": {
+  "article": "Etchmiadzin Cathedral",
+  "country": "Armenia",
+  "item": "Q1294648",
+  "lat": 40.16186,
+  "lon": 44.291,
+  "missing": false
+ },
+ "Ettal Abbey": {
+  "article": "Ettal Abbey",
+  "country": "Germany",
+  "item": "Q253359",
+  "lat": 47.57166667,
+  "lon": 11.095,
+  "missing": false
+ },
+ "Fatih Mosque, Istanbul": {
+  "article": "Fatih Mosque, Istanbul",
+  "country": "Turkey",
+  "item": "Q756189",
+  "lat": 41.01972222,
+  "lon": 28.94972222,
+  "missing": false
+ },
+ "Federal Hall": {
+  "article": "Federal Hall",
+  "country": "United States",
+  "item": "Q858689",
+  "lat": 40.70722222,
+  "lon": -74.01027778,
+  "missing": false
+ },
+ "Federal Palace of Switzerland": {
+  "article": "Federal Palace of Switzerland",
+  "country": "Switzerland",
+  "item": "Q30911",
+  "lat": 46.94666667,
+  "lon": 7.44416667,
+  "missing": false
+ },
+ "Florence Baptistery": {
+  "article": "Florence Baptistery",
+  "country": "Italy",
+  "item": "Q732511",
+  "lat": 43.7731,
+  "lon": 11.255,
+  "missing": false
+ },
+ "Florence Cathedral": {
+  "article": "Florence Cathedral",
+  "country": "Italy",
+  "item": "Q191739",
+  "lat": 43.77305556,
+  "lon": 11.25694444,
+  "missing": false
+ },
+ "Florida State Capitol": {
+  "article": "Florida State Capitol",
+  "country": "United States",
+  "item": "Q1430074",
+  "lat": 30.43811,
+  "lon": -84.2816,
+  "missing": false
+ },
+ "Four Courts": {
+  "article": "Four Courts",
+  "country": "Ireland",
+  "item": "Q1439960",
+  "lat": 53.3459,
+  "lon": -6.2735,
+  "missing": false
+ },
+ "Frederik's Church": {
+  "article": "Frederik's Church",
+  "country": "Denmark",
+  "item": "Q1321231",
+  "lat": 55.685,
+  "lon": 12.58944444,
+  "missing": false
+ },
+ "Fulda Cathedral": {
+  "article": "Fulda Cathedral",
+  "country": "Germany",
+  "item": "Q314517",
+  "lat": 50.554,
+  "lon": 9.6718,
+  "missing": false
+ },
+ "Galeries Lafayette Haussmann": {
+  "article": "Galeries Lafayette Haussmann",
+  "by_hand": true,
+  "country": "France",
+  "item": null,
+  "lat": 48.8737,
+  "lon": 2.332,
+  "missing": true
+ },
+ "Galleria Umberto I": {
+  "article": "Galleria Umberto I",
+  "country": "Italy",
+  "item": "Q1007726",
+  "lat": 40.83862778,
+  "lon": 14.24956944,
+  "missing": false
+ },
+ "Galleria Vittorio Emanuele II": {
+  "article": "Galleria Vittorio Emanuele II",
+  "country": "Italy",
+  "item": "Q51112",
+  "lat": 45.46555556,
+  "lon": 9.19,
+  "missing": false
+ },
+ "Gazi Husrev-beg Mosque": {
+  "article": "Gazi Husrev-beg Mosque",
+  "country": "Bosnia and Herzegovina",
+  "item": "Q1255835",
+  "lat": 43.85916667,
+  "lon": 18.42902778,
+  "missing": false
+ },
+ "Geghard": {
+  "article": "Geghard",
+  "country": "Armenia",
+  "item": "Q499285",
+  "lat": 40.140425,
+  "lon": 44.818511,
+  "missing": false
+ },
+ "General Post Office, Mumbai": {
+  "article": "General Post Office, Mumbai",
+  "country": "India",
+  "item": "Q5532120",
+  "lat": 18.93876667,
+  "lon": 72.83703889,
+  "missing": false
+ },
+ "General Register House": {
+  "article": "General Register House",
+  "country": "United Kingdom",
+  "item": "Q17570609",
+  "lat": 55.9538,
+  "lon": -3.1893,
+  "missing": false
+ },
+ "Georgia State Capitol": {
+  "article": "Georgia State Capitol",
+  "country": "United States",
+  "item": "Q1509326",
+  "lat": 33.74905,
+  "lon": -84.38813,
+  "missing": false
+ },
+ "Gol Gumbaz": {
+  "article": "Gol Gumbaz",
+  "country": "India",
+  "item": "Q192295",
+  "lat": 16.83003056,
+  "lon": 75.73609722,
+  "missing": false
+ },
+ "Gould Memorial Library": {
+  "article": "Gould Memorial Library",
+  "country": "United States",
+  "item": "Q112265463",
+  "lat": 40.85875,
+  "lon": -73.91397222,
+  "missing": false
+ },
+ "Granada Cathedral": {
+  "article": "Granada Cathedral",
+  "country": "Spain",
+  "item": "Q5419362",
+  "lat": 37.176,
+  "lon": -3.599,
+  "missing": false
+ },
+ "Grand Mosque of Bursa": {
+  "article": "Grand Mosque of Bursa",
+  "country": "Turkey",
+  "item": "Q32339",
+  "lat": 40.18388889,
+  "lon": 29.06166667,
+  "missing": false
+ },
+ "Grant's Tomb": {
+  "article": "Grant's Tomb",
+  "country": "United States",
+  "item": "Q1025105",
+  "lat": 40.81333333,
+  "lon": -73.96305556,
+  "missing": false
+ },
+ "Great Dome (MIT)": {
+  "article": "Campus of the Massachusetts Institute of Technology",
+  "country": "United States",
+  "item": "Q4180921",
+  "lat": 42.3591,
+  "lon": -71.0934,
+  "missing": false
+ },
+ "Great Mosque and Hospital of Divriği": {
+  "article": "Divriği Great Mosque and Hospital",
+  "country": "Turkey",
+  "item": "Q581641",
+  "lat": 39.37127111,
+  "lon": 38.12182611,
+  "missing": false
+ },
+ "Great Mosque of Kairouan": {
+  "article": "Great Mosque of Kairouan",
+  "country": "Tunisia",
+  "item": "Q1255269",
+  "lat": 35.681388888889,
+  "lon": 10.103888888889,
+  "missing": false
+ },
+ "Great Mosque of Tlemcen": {
+  "article": "Great Mosque of Tlemcen",
+  "country": "Algeria",
+  "item": "Q2989371",
+  "lat": 34.8837,
+  "lon": -1.3105,
+  "missing": false
+ },
+ "Green Mosque, Bursa": {
+  "article": "Green Mosque, Bursa",
+  "country": "Turkey",
+  "item": "Q1549086",
+  "lat": 40.18194444,
+  "lon": 29.07444444,
+  "missing": false
+ },
+ "Gur-e-Amir": {
+  "article": "Gur-e-Amir",
+  "country": "Uzbekistan",
+  "item": "Q1256223",
+  "lat": 39.64833333,
+  "lon": 66.96888889,
+  "missing": false
+ },
+ "Gustaf Vasa Church": {
+  "article": "Gustaf Vasa Church",
+  "country": "Sweden",
+  "item": "Q1555501",
+  "lat": 59.3425,
+  "lon": 18.0475,
+  "missing": false
+ },
+ "HSBC Building, the Bund": {
+  "article": "HSBC Building, the Bund",
+  "country": "People's Republic of China",
+  "item": "Q213087",
+  "lat": 31.2379,
+  "lon": 121.4851,
+  "missing": false
+ },
+ "Hagia Sophia": {
+  "article": "Hagia Sophia",
+  "country": "Turkey",
+  "item": "Q12506",
+  "lat": 41.00833333,
+  "lon": 28.98,
+  "missing": false
+ },
+ "Hagia Sophia, Thessaloniki": {
+  "article": "Hagia Sophia, Thessaloniki",
+  "country": "Greece",
+  "item": "Q1568660",
+  "lat": 40.63277778,
+  "lon": 22.94694444,
+  "missing": false
+ },
+ "Hasht Behesht": {
+  "article": "Hasht Behesht",
+  "country": "Iran",
+  "item": "Q1314130",
+  "lat": 32.65336111111111,
+  "lon": 51.670138888888886,
+  "missing": false
+ },
+ "Helsinki Cathedral": {
+  "article": "Helsinki Cathedral",
+  "country": "Finland",
+  "item": "Q738015",
+  "lat": 60.17027778,
+  "lon": 24.95222222,
+  "missing": false
+ },
+ "Hockey Hall of Fame": {
+  "article": "Hockey Hall of Fame",
+  "country": "Canada",
+  "item": "Q1136687",
+  "lat": 43.6469,
+  "lon": -79.3772,
+  "missing": false
+ },
+ "Hofburg": {
+  "article": "Hofburg",
+  "country": "Austria",
+  "item": "Q46242",
+  "lat": 48.20638889,
+  "lon": 16.36527778,
+  "missing": false
+ },
+ "Hoshang Shah's Tomb": {
+  "article": "Hoshang Shah's Tomb",
+  "by_hand": true,
+  "country": "India",
+  "item": null,
+  "lat": 22.3353,
+  "lon": 75.4158,
+  "missing": true
+ },
+ "Hosios Loukas": {
+  "article": "Hosios Loukas",
+  "country": "Greece",
+  "item": "Q844841",
+  "lat": 38.39536111,
+  "lon": 22.74683333,
+  "missing": false
+ },
+ "Hospicio Cabañas": {
+  "article": "Hospicio Cabañas",
+  "country": "Mexico",
+  "item": "Q28416",
+  "lat": 20.676897222222,
+  "lon": -103.33733333333,
+  "missing": false
+ },
+ "Humayun's Tomb": {
+  "article": "Humayun's tomb",
+  "country": "India",
+  "item": "Q189648",
+  "lat": 28.59327778,
+  "lon": 77.25069444,
+  "missing": false
+ },
+ "Hyōkeikan": {
+  "article": "Hyōkeikan",
+  "by_hand": true,
+  "country": "Japan",
+  "item": null,
+  "lat": 35.7186,
+  "lon": 139.7748,
+  "missing": true
+ },
+ "Idaho State Capitol": {
+  "article": "Idaho State Capitol",
+  "country": "United States",
+  "item": "Q1491417",
+  "lat": 43.6177,
+  "lon": -116.1996,
+  "missing": false
+ },
+ "Illinois State Capitol": {
+  "article": "Illinois State Capitol",
+  "country": "United States",
+  "item": "Q1658839",
+  "lat": 39.79833333,
+  "lon": -89.65472222,
+  "missing": false
+ },
+ "Immanuel Church, Jakarta": {
+  "article": "Immanuel Church, Jakarta",
+  "country": "Indonesia",
+  "item": "Q12483944",
+  "lat": -6.17674,
+  "lon": 106.831999,
+  "missing": false
+ },
+ "Ince Minaret Medrese": {
+  "article": "İnce Minareli Medrese",
+  "country": "Turkey",
+  "item": "Q4287964",
+  "lat": 37.872889,
+  "lon": 32.489982,
+  "missing": false
+ },
+ "Indiana Statehouse": {
+  "article": "Indiana Statehouse",
+  "country": "United States",
+  "item": "Q1661319",
+  "lat": 39.76861111,
+  "lon": -86.16277778,
+  "missing": false
+ },
+ "Iowa State Capitol": {
+  "article": "Iowa State Capitol",
+  "country": "United States",
+  "item": "Q2977124",
+  "lat": 41.59119444,
+  "lon": -93.60380556,
+  "missing": false
+ },
+ "Jama Mosque, Ahmedabad": {
+  "article": "Jama Mosque, Ahmedabad",
+  "country": "India",
+  "item": "Q2758009",
+  "lat": 23.023822,
+  "lon": 72.587222,
+  "missing": false
+ },
+ "Jama Mosque, Champaner": {
+  "article": "Jama Mosque, Champaner",
+  "country": "India",
+  "item": "Q6127153",
+  "lat": 22.4859,
+  "lon": 73.5371,
+  "missing": false
+ },
+ "Jamali Kamali Mosque and Tomb": {
+  "article": "Jamali Kamali Mosque and Tomb",
+  "country": "India",
+  "item": "Q4292384",
+  "lat": 28.5625,
+  "lon": 77.21777778,
+  "missing": false
+ },
+ "Jameh Mosque of Isfahan": {
+  "article": "Jameh Mosque of Isfahan",
+  "country": "Iran",
+  "item": "Q1256501",
+  "lat": 32.66972222,
+  "lon": 51.68527778,
+  "missing": false
+ },
+ "Jameh Mosque of Natanz": {
+  "article": "Jameh Mosque of Natanz",
+  "country": "Iran",
+  "item": "Q12641567",
+  "lat": 33.518063,
+  "lon": 51.912954,
+  "missing": false
+ },
+ "Jameh Mosque of Yazd": {
+  "article": "Jameh Mosque of Yazd",
+  "country": "Iran",
+  "item": "Q1454816",
+  "lat": 31.90138889,
+  "lon": 54.36861111,
+  "missing": false
+ },
+ "Jami Mosque, Champaner": {
+  "article": "Jami Mosque, Champaner",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Justizpalast (Munich)": {
+  "article": "Justizpalast (Munich)",
+  "country": "Germany",
+  "item": "Q130609",
+  "lat": 48.14055556,
+  "lon": 11.56472222,
+  "missing": false
+ },
+ "Kalan Mosque": {
+  "article": "Kalan Mosque",
+  "country": "Uzbekistan",
+  "item": "Q4292343",
+  "lat": 39.7759,
+  "lon": 64.4141,
+  "missing": false
+ },
+ "Kansas State Capitol": {
+  "article": "Kansas State Capitol",
+  "country": "United States",
+  "item": "Q2613943",
+  "lat": 39.04805556,
+  "lon": -95.67805556,
+  "missing": false
+ },
+ "Karatay Madrasa": {
+  "article": "Karatay Medrese",
+  "country": "Turkey",
+  "item": "Q12060961",
+  "lat": 37.87472222,
+  "lon": 32.49277778,
+  "missing": false
+ },
+ "Kazan Cathedral, Saint Petersburg": {
+  "article": "Kazan Cathedral, Saint Petersburg",
+  "country": "Russia",
+  "item": "Q404571",
+  "lat": 59.9343,
+  "lon": 30.3245,
+  "missing": false
+ },
+ "Kentucky State Capitol": {
+  "article": "Kentucky State Capitol",
+  "country": "United States",
+  "item": "Q3696032",
+  "lat": 38.1867,
+  "lon": -84.8753,
+  "missing": false
+ },
+ "Khan As'ad Pasha": {
+  "article": "Khan As'ad Pasha",
+  "country": "Syria",
+  "item": "Q1061557",
+  "lat": 33.50916667,
+  "lon": 36.30666667,
+  "missing": false
+ },
+ "Koepelgevangenis (Breda)": {
+  "article": "Koepelgevangenis (Breda)",
+  "country": "Netherlands",
+  "item": "Q1984443",
+  "lat": 51.59027778,
+  "lon": 4.78722222,
+  "missing": false
+ },
+ "Kok Gumbaz Mosque": {
+  "article": "Kok Gumbaz Mosque",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Kollegienkirche, Salzburg": {
+  "article": "Kollegienkirche, Salzburg",
+  "country": "Austria",
+  "item": "Q1779328",
+  "lat": 47.7991,
+  "lon": 13.0431,
+  "missing": false
+ },
+ "Koski Mehmed Pasha Mosque": {
+  "article": "Koski Mehmed Pasha Mosque",
+  "by_hand": true,
+  "country": "Bosnia and Herzegovina",
+  "item": null,
+  "lat": 43.3397,
+  "lon": 17.8147,
+  "missing": true
+ },
+ "Kroměříž": {
+  "article": "Kroměříž",
+  "country": "Czech Republic",
+  "item": "Q158239",
+  "lat": 49.29888889,
+  "lon": 17.39305556,
+  "missing": false
+ },
+ "Kronstadt Naval Cathedral": {
+  "article": "Kronstadt Naval Cathedral",
+  "country": "Russia",
+  "item": "Q2321997",
+  "lat": 59.99166667,
+  "lon": 29.77777778,
+  "missing": false
+ },
+ "Kuk Gumbaz Mosque (Shahrisabz)": {
+  "article": "Kuk Gumbaz Mosque (Shahrisabz)",
+  "country": "Uzbekistan",
+  "item": "Q28822665",
+  "lat": 39.04972,
+  "lon": 66.82724,
+  "missing": false
+ },
+ "Kılıç Ali Pasha Complex": {
+  "article": "Kılıç Ali Pasha Complex",
+  "country": "Turkey",
+  "item": "Q862848",
+  "lat": 41.026373,
+  "lon": 28.980928,
+  "missing": false
+ },
+ "Leadenhall Market": {
+  "article": "Leadenhall Market",
+  "country": "United Kingdom",
+  "item": "Q961148",
+  "lat": 51.5128,
+  "lon": -0.0835,
+  "missing": false
+ },
+ "Les Invalides": {
+  "article": "Les Invalides",
+  "country": "France",
+  "item": "Q188977",
+  "lat": 48.855,
+  "lon": 2.3125,
+  "missing": false
+ },
+ "Library of Parliament": {
+  "article": "Library of Parliament",
+  "country": "Canada",
+  "item": "Q1125633",
+  "lat": 45.425466,
+  "lon": -75.700296,
+  "missing": false
+ },
+ "Lincoln Cathedral": {
+  "article": "Lincoln Cathedral",
+  "country": "United Kingdom",
+  "item": "Q390169",
+  "lat": 53.23444444,
+  "lon": -0.53611111,
+  "missing": false
+ },
+ "Los Angeles Central Library": {
+  "article": "Los Angeles Central Library",
+  "country": "United States",
+  "item": "Q27676389",
+  "lat": 34.05027778,
+  "lon": -118.255,
+  "missing": false
+ },
+ "Los Angeles City Hall": {
+  "article": "Los Angeles City Hall",
+  "country": "United States",
+  "item": "Q368489",
+  "lat": 34.0536,
+  "lon": -118.243,
+  "missing": false
+ },
+ "Low Memorial Library": {
+  "article": "Low Memorial Library",
+  "country": "United States",
+  "item": "Q6692918",
+  "lat": 40.80833333,
+  "lon": -73.96194444,
+  "missing": false
+ },
+ "Maeshowe": {
+  "article": "Maeshowe",
+  "country": "United Kingdom",
+  "item": "Q507076",
+  "lat": 58.9966,
+  "lon": -3.1882,
+  "missing": false
+ },
+ "Manitoba Legislative Building": {
+  "article": "Manitoba Legislative Building",
+  "country": "Canada",
+  "item": "Q6750086",
+  "lat": 49.8844,
+  "lon": -97.1469,
+  "missing": false
+ },
+ "Marseille Cathedral": {
+  "article": "Marseille Cathedral",
+  "country": "France",
+  "item": "Q1419757",
+  "lat": 43.29972222,
+  "lon": 5.365,
+  "missing": false
+ },
+ "Martorana": {
+  "article": "Church of Santa Maria dell'Ammiraglio",
+  "country": "Italy",
+  "item": "Q1644597",
+  "lat": 38.11483333,
+  "lon": 13.36294167,
+  "missing": false
+ },
+ "Mary, Queen of the World Cathedral": {
+  "article": "Mary, Queen of the World Cathedral",
+  "country": "Canada",
+  "item": "Q1151330",
+  "lat": 45.49919444,
+  "lon": -73.56836111,
+  "missing": false
+ },
+ "Maryland State House": {
+  "article": "Maryland State House",
+  "country": "United States",
+  "item": "Q1858066",
+  "lat": 38.97888889,
+  "lon": -76.49111111,
+  "missing": false
+ },
+ "Mausoleum of Emperor Ferdinand II": {
+  "article": "Mausoleum of Emperor Ferdinand II",
+  "country": "Austria",
+  "item": "Q1736098",
+  "lat": 47.07175,
+  "lon": 15.44265,
+  "missing": false
+ },
+ "Mausoleum of Galla Placidia": {
+  "article": "Mausoleum of Galla Placidia",
+  "country": "Italy",
+  "item": "Q644288",
+  "lat": 44.42111111,
+  "lon": 12.19694444,
+  "missing": false
+ },
+ "Mausoleum of Imam al-Shafi'i": {
+  "article": "Mausoleum of Imam al-Shafi'i",
+  "country": "Egypt",
+  "item": "Q12242699",
+  "lat": 30.0117,
+  "lon": 31.25805,
+  "missing": false
+ },
+ "Mausoleum of Khoja Ahmed Yasawi": {
+  "article": "Mausoleum of Khoja Ahmed Yasawi",
+  "country": "Kazakhstan",
+  "item": "Q46069",
+  "lat": 43.29777778,
+  "lon": 68.27083333,
+  "missing": false
+ },
+ "McEwan Hall": {
+  "article": "McEwan Hall",
+  "country": "United Kingdom",
+  "item": "Q6801106",
+  "lat": 55.94537,
+  "lon": -3.189479,
+  "missing": false
+ },
+ "Medici Chapels": {
+  "article": "Medici Chapels",
+  "country": "Italy",
+  "item": "Q1357573",
+  "lat": 43.7751,
+  "lon": 11.2534,
+  "missing": false
+ },
+ "Mexico City Metropolitan Cathedral": {
+  "article": "Mexico City Metropolitan Cathedral",
+  "country": "Mexico",
+  "item": "Q610961",
+  "lat": 19.4343942,
+  "lon": -99.1330824,
+  "missing": false
+ },
+ "Michigan State Capitol": {
+  "article": "Michigan State Capitol",
+  "country": "United States",
+  "item": "Q1579713",
+  "lat": 42.73361111,
+  "lon": -84.55555556,
+  "missing": false
+ },
+ "Mihrimah Sultan Mosque (Edirnekapı)": {
+  "article": "Mihrimah Sultan Mosque, Edirnekapı",
+  "country": "Turkey",
+  "item": "Q1581190",
+  "lat": 41.029166666667,
+  "lon": 28.935833333333,
+  "missing": false
+ },
+ "Minnesota State Capitol": {
+  "article": "Minnesota State Capitol",
+  "country": "United States",
+  "item": "Q1789816",
+  "lat": 44.95527778,
+  "lon": -93.10222222,
+  "missing": false
+ },
+ "Mississippi State Capitol": {
+  "article": "Mississippi State Capitol",
+  "country": "United States",
+  "item": "Q3696020",
+  "lat": 32.30388889,
+  "lon": -90.18222222,
+  "missing": false
+ },
+ "Missouri State Capitol": {
+  "article": "Missouri State Capitol",
+  "country": "United States",
+  "item": "Q2749733",
+  "lat": 38.57916667,
+  "lon": -92.17277778,
+  "missing": false
+ },
+ "Mole Antonelliana": {
+  "article": "Mole Antonelliana",
+  "country": "Italy",
+  "item": "Q201902",
+  "lat": 45.06888889,
+  "lon": 7.69305556,
+  "missing": false
+ },
+ "Montana State Capitol": {
+  "article": "Montana State Capitol",
+  "country": "United States",
+  "item": "Q2985180",
+  "lat": 46.5857,
+  "lon": -112.0184,
+  "missing": false
+ },
+ "Monument to the Battle of the Nations": {
+  "article": "Monument to the Battle of the Nations",
+  "country": "Germany",
+  "item": "Q699448",
+  "lat": 51.31222222,
+  "lon": 12.41305556,
+  "missing": false
+ },
+ "Mosque of Muhammad Ali": {
+  "article": "Muhammad Ali Mosque",
+  "country": "Egypt",
+  "item": "Q652046",
+  "lat": 30.028611,
+  "lon": 31.259722,
+  "missing": false
+ },
+ "Mosque of Qaitbay": {
+  "article": "Mosque of Qaitbay",
+  "by_hand": true,
+  "country": "Egypt",
+  "item": null,
+  "lat": 30.0439,
+  "lon": 31.275,
+  "missing": true
+ },
+ "Mosque-Madrasa of Sultan Hasan": {
+  "article": "Mosque-Madrasa of Sultan Hasan",
+  "country": "Egypt",
+  "item": "Q1430119",
+  "lat": 30.0319,
+  "lon": 31.2567,
+  "missing": false
+ },
+ "Mosque–Cathedral of Córdoba": {
+  "article": "Mosque–Cathedral of Córdoba",
+  "country": "Spain",
+  "item": "Q33200",
+  "lat": 37.87916667,
+  "lon": -4.77972222,
+  "missing": false
+ },
+ "Museum of Applied Arts (Budapest)": {
+  "article": "Museum of Applied Arts (Budapest)",
+  "country": "Hungary",
+  "item": "Q1088467",
+  "lat": 47.4861,
+  "lon": 19.0683,
+  "missing": false
+ },
+ "Mysore Palace": {
+  "article": "Mysore Palace",
+  "country": "India",
+  "item": "Q456575",
+  "lat": 12.30388889,
+  "lon": 76.65444444,
+  "missing": false
+ },
+ "National Library of Finland": {
+  "article": "National Library of Finland",
+  "country": "Finland",
+  "item": "Q420747",
+  "lat": 60.17027778,
+  "lon": 24.95027778,
+  "missing": false
+ },
+ "National Museum of Ireland – Archaeology": {
+  "article": "National Museum of Ireland – Archaeology",
+  "country": "Ireland",
+  "item": "Q6974473",
+  "lat": 53.34027778,
+  "lon": -6.255,
+  "missing": false
+ },
+ "National Museum of Natural History": {
+  "article": "National Museum of Natural History",
+  "country": "United States",
+  "item": "Q148554",
+  "lat": 38.8913,
+  "lon": -77.0259,
+  "missing": false
+ },
+ "National Museum of Singapore": {
+  "article": "National Museum of Singapore",
+  "country": "Singapore",
+  "item": "Q632689",
+  "lat": 1.29672222,
+  "lon": 103.84863889,
+  "missing": false
+ },
+ "Natural History Museum, Vienna": {
+  "article": "Natural History Museum, Vienna",
+  "country": "Austria",
+  "item": "Q688704",
+  "lat": 48.2052,
+  "lon": 16.3599,
+  "missing": false
+ },
+ "Nebraska State Capitol": {
+  "article": "Nebraska State Capitol",
+  "country": "United States",
+  "item": "Q1683354",
+  "lat": 40.80805556,
+  "lon": -96.69972222,
+  "missing": false
+ },
+ "New Cathedral of Salamanca": {
+  "article": "New Cathedral of Salamanca",
+  "country": "Spain",
+  "item": "Q2462558",
+  "lat": 40.96055556,
+  "lon": -5.66583333,
+  "missing": false
+ },
+ "New Jersey State House": {
+  "article": "New Jersey State House",
+  "country": "United States",
+  "item": "Q3695455",
+  "lat": 40.220437,
+  "lon": -74.769902,
+  "missing": false
+ },
+ "New Mosque, Istanbul": {
+  "article": "New Mosque, Istanbul",
+  "country": "Turkey",
+  "item": "Q911720",
+  "lat": 41.01701389,
+  "lon": 28.97147222,
+  "missing": false
+ },
+ "New York City Hall": {
+  "article": "New York City Hall",
+  "country": "United States",
+  "item": "Q1065206",
+  "lat": 40.7127,
+  "lon": -74.0059,
+  "missing": false
+ },
+ "Newgrange": {
+  "article": "Newgrange",
+  "country": "Ireland",
+  "item": "Q339503",
+  "lat": 53.6947251,
+  "lon": -6.4755655,
+  "missing": false
+ },
+ "North Carolina State Capitol": {
+  "article": "North Carolina State Capitol",
+  "country": "United States",
+  "item": "Q3694520",
+  "lat": 35.78036111,
+  "lon": -78.63911111,
+  "missing": false
+ },
+ "Nuraghe Santu Antine": {
+  "article": "Nuraghe Santu Antine",
+  "country": "Italy",
+  "item": "Q56258655",
+  "lat": 40.4865,
+  "lon": 8.7698,
+  "missing": false
+ },
+ "Nuruosmaniye Mosque": {
+  "article": "Nuruosmaniye Mosque",
+  "country": "Turkey",
+  "item": "Q1430090",
+  "lat": 41.010234,
+  "lon": 28.97054,
+  "missing": false
+ },
+ "Ohio Statehouse": {
+  "article": "Ohio Statehouse",
+  "country": "United States",
+  "item": "Q2281225",
+  "lat": 39.96138889,
+  "lon": -82.99888889,
+  "missing": false
+ },
+ "Old Courthouse (St. Louis)": {
+  "article": "Old Courthouse (St. Louis)",
+  "country": "United States",
+  "item": "Q12064730",
+  "lat": 38.62577,
+  "lon": -90.189257,
+  "missing": false
+ },
+ "Old Louisiana State Capitol": {
+  "article": "Old Louisiana State Capitol",
+  "country": "United States",
+  "item": "Q7084390",
+  "lat": 30.446656,
+  "lon": -91.188614,
+  "missing": false
+ },
+ "Ortaköy Mosque": {
+  "article": "Ortaköy Mosque",
+  "country": "Turkey",
+  "item": "Q176380",
+  "lat": 41.04694444,
+  "lon": 29.02694444,
+  "missing": false
+ },
+ "Padua Baptistery": {
+  "article": "Padua Baptistery",
+  "country": "Italy",
+  "item": "Q3636809",
+  "lat": 45.4068,
+  "lon": 11.8718,
+  "missing": false
+ },
+ "Pahlavon Mahmud Mausoleum": {
+  "article": "Pahlavon Mahmud Complex",
+  "country": "Uzbekistan",
+  "item": "Q4273777",
+  "lat": 41.3769,
+  "lon": 60.3594,
+  "missing": false
+ },
+ "Palace of Justice, Brussels": {
+  "article": "Palace of Justice, Brussels",
+  "country": "Belgium",
+  "item": "Q850537",
+  "lat": 50.83666667,
+  "lon": 4.35166667,
+  "missing": false
+ },
+ "Palace of Mafra": {
+  "article": "Palace of Mafra",
+  "country": "Portugal",
+  "item": "Q599223",
+  "lat": 38.9369,
+  "lon": -9.3258,
+  "missing": false
+ },
+ "Palace of the Argentine National Congress": {
+  "article": "Palace of the Argentine National Congress",
+  "country": "Argentina",
+  "item": "Q646142",
+  "lat": -34.60965278,
+  "lon": -58.39258056,
+  "missing": false
+ },
+ "Palacio de Bellas Artes": {
+  "article": "Palacio de Bellas Artes",
+  "country": "Mexico",
+  "item": "Q1139081",
+  "lat": 19.4353,
+  "lon": -99.1414,
+  "missing": false
+ },
+ "Palatine Chapel, Aachen": {
+  "article": "Palatine Chapel, Aachen",
+  "country": "Germany",
+  "item": "Q2458522",
+  "lat": 50.7747,
+  "lon": 6.08444,
+  "missing": false
+ },
+ "Pammakaristos Church": {
+  "article": "Pammakaristos Church",
+  "country": "Turkey",
+  "item": "Q1420984",
+  "lat": 41.02916667,
+  "lon": 28.94638889,
+  "missing": false
+ },
+ "Panthéon": {
+  "article": "Panthéon",
+  "country": "France",
+  "item": "Q188856",
+  "lat": 48.84611111,
+  "lon": 2.34583333,
+  "missing": false
+ },
+ "Parma Baptistery": {
+  "article": "Parma Baptistery",
+  "country": "Italy",
+  "item": "Q2883692",
+  "lat": 44.80308,
+  "lon": 10.33041,
+  "missing": false
+ },
+ "Parma Cathedral": {
+  "article": "Parma Cathedral",
+  "country": "Italy",
+  "item": "Q1287889",
+  "lat": 44.80333333,
+  "lon": 10.33111111,
+  "missing": false
+ },
+ "Pazzi Chapel": {
+  "article": "Pazzi Chapel",
+  "country": "Italy",
+  "item": "Q600355",
+  "lat": 43.76800556,
+  "lon": 11.26298889,
+  "missing": false
+ },
+ "Pennsylvania State Capitol": {
+  "article": "Pennsylvania State Capitol",
+  "country": "United States",
+  "item": "Q2915393",
+  "lat": 40.26444444,
+  "lon": -76.88361111,
+  "missing": false
+ },
+ "Petit Palais": {
+  "article": "Petit Palais",
+  "country": "France",
+  "item": "Q820892",
+  "lat": 48.86604,
+  "lon": 2.31453,
+  "missing": false
+ },
+ "Picton Reading Room and Hornby Library": {
+  "article": "Picton Reading Room and Hornby Library",
+  "country": "United Kingdom",
+  "item": "Q7191113",
+  "lat": 53.40986111,
+  "lon": -2.98027778,
+  "missing": false
+ },
+ "Pisa Baptistery": {
+  "article": "Pisa Baptistery",
+  "country": "Italy",
+  "item": "Q1278477",
+  "lat": 43.72333333,
+  "lon": 10.39388889,
+  "missing": false
+ },
+ "Port of Liverpool Building": {
+  "article": "Port of Liverpool Building",
+  "country": "United Kingdom",
+  "item": "Q505233",
+  "lat": 53.4043,
+  "lon": -2.9949,
+  "missing": false
+ },
+ "Puebla Cathedral": {
+  "article": "Puebla Cathedral",
+  "country": "Mexico",
+  "item": "Q1994735",
+  "lat": 19.04277778,
+  "lon": -98.19833333,
+  "missing": false
+ },
+ "Périgueux Cathedral": {
+  "article": "Périgueux Cathedral",
+  "country": "France",
+  "item": "Q1736213",
+  "lat": 45.18361111,
+  "lon": 0.72277778,
+  "missing": false
+ },
+ "Qalawun complex": {
+  "article": "Qalawun complex",
+  "country": "Egypt",
+  "item": "Q1237010",
+  "lat": 30.049528,
+  "lon": 31.260972,
+  "missing": false
+ },
+ "Queen Victoria Building": {
+  "article": "Queen Victoria Building",
+  "country": "Australia",
+  "item": "Q54518",
+  "lat": -33.871758,
+  "lon": 151.206666,
+  "missing": false
+ },
+ "Quincy Market": {
+  "article": "Quincy Market",
+  "country": "United States",
+  "item": "Q901885",
+  "lat": 42.36,
+  "lon": -71.055,
+  "missing": false
+ },
+ "Radcliffe Camera": {
+  "article": "Radcliffe Camera",
+  "country": "United Kingdom",
+  "item": "Q1602700",
+  "lat": 51.7534,
+  "lon": -1.2539,
+  "missing": false
+ },
+ "Ranakpur Jain temple": {
+  "article": "Ranakpur Jain temple",
+  "country": "India",
+  "item": "Q12448686",
+  "lat": 25.11574444,
+  "lon": 73.47283056,
+  "missing": false
+ },
+ "Real Chiesa di San Lorenzo, Turin": {
+  "article": "Real Chiesa di San Lorenzo, Turin",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Registan": {
+  "article": "Registan",
+  "country": "Uzbekistan",
+  "item": "Q1373583",
+  "lat": 39.65472222,
+  "lon": 66.97555556,
+  "missing": false
+ },
+ "Rhode Island State House": {
+  "article": "Rhode Island State House",
+  "country": "United States",
+  "item": "Q2281281",
+  "lat": 41.83083333,
+  "lon": -71.415,
+  "missing": false
+ },
+ "Romanian Athenaeum": {
+  "article": "Romanian Athenaeum",
+  "country": "Romania",
+  "item": "Q755457",
+  "lat": 44.4413,
+  "lon": 26.0973,
+  "missing": false
+ },
+ "Rotunda (Thessaloniki)": {
+  "article": "Rotunda (Thessaloniki)",
+  "by_hand": true,
+  "country": "Greece",
+  "item": null,
+  "lat": 40.6333,
+  "lon": 22.9528,
+  "missing": true
+ },
+ "Rotunda of Mosta": {
+  "article": "Rotunda of Mosta",
+  "country": "Malta",
+  "item": "Q153816",
+  "lat": 35.91008333,
+  "lon": 14.42588889,
+  "missing": false
+ },
+ "Royal Chapel of St. Anthony of La Florida": {
+  "article": "Royal Chapel of St. Anthony of La Florida",
+  "country": "Spain",
+  "item": "Q3109752",
+  "lat": 40.425363,
+  "lon": -3.725597,
+  "missing": false
+ },
+ "Royal Exhibition Building": {
+  "article": "Royal Exhibition Building",
+  "country": "Australia",
+  "item": "Q695935",
+  "lat": -37.80472222,
+  "lon": 144.97138889,
+  "missing": false
+ },
+ "Royal Pavilion": {
+  "article": "Royal Pavilion",
+  "country": "United Kingdom",
+  "item": "Q62364",
+  "lat": 50.82305556,
+  "lon": -0.1375,
+  "missing": false
+ },
+ "Rudas Baths": {
+  "article": "Rudas Baths",
+  "country": "Hungary",
+  "item": "Q897824",
+  "lat": 47.48909167,
+  "lon": 19.04786667,
+  "missing": false
+ },
+ "Rüstem Pasha Mosque": {
+  "article": "Rüstem Pasha Mosque",
+  "country": "Turkey",
+  "item": "Q1137511",
+  "lat": 41.0175,
+  "lon": 28.96861111,
+  "missing": false
+ },
+ "Saadian Tombs": {
+  "article": "Saadian Tombs",
+  "country": "Morocco",
+  "item": "Q2152745",
+  "lat": 31.6173,
+  "lon": -7.988702,
+  "missing": false
+ },
+ "Sacré-Cœur, Paris": {
+  "article": "Sacré-Cœur, Paris",
+  "country": "France",
+  "item": "Q28785",
+  "lat": 48.88665,
+  "lon": 2.34295,
+  "missing": false
+ },
+ "Saint Basil's Cathedral": {
+  "article": "Saint Basil's Cathedral",
+  "country": "Russia",
+  "item": "Q129846",
+  "lat": 55.7525,
+  "lon": 37.62305556,
+  "missing": false
+ },
+ "Saint Sophia Cathedral, Kyiv": {
+  "article": "Saint Sophia Cathedral, Kyiv",
+  "country": "Ukraine",
+  "item": "Q830054",
+  "lat": 50.4528,
+  "lon": 30.5144,
+  "missing": false
+ },
+ "Salisbury Cathedral": {
+  "article": "Salisbury Cathedral",
+  "country": "United Kingdom",
+  "item": "Q390150",
+  "lat": 51.06472222,
+  "lon": -1.7975,
+  "missing": false
+ },
+ "Salzburg Cathedral": {
+  "article": "Salzburg Cathedral",
+  "country": "Austria",
+  "item": "Q258908",
+  "lat": 47.79777778,
+  "lon": 13.04694444,
+  "missing": false
+ },
+ "Samanid Mausoleum": {
+  "article": "Samanid Mausoleum",
+  "country": "Uzbekistan",
+  "item": "Q1268850",
+  "lat": 39.77694444,
+  "lon": 64.40055556,
+  "missing": false
+ },
+ "San Biagio, Montepulciano": {
+  "article": "San Biagio, Montepulciano",
+  "country": "Italy",
+  "item": "Q1883452",
+  "lat": 43.09083333,
+  "lon": 11.77444444,
+  "missing": false
+ },
+ "San Carlo alle Quattro Fontane": {
+  "article": "San Carlo alle Quattro Fontane",
+  "country": "Italy",
+  "item": "Q867329",
+  "lat": 41.90181,
+  "lon": 12.49074,
+  "missing": false
+ },
+ "San Francesco di Paola, Naples": {
+  "article": "San Francesco di Paola, Naples",
+  "country": "Italy",
+  "item": "Q241410",
+  "lat": 40.835296,
+  "lon": 14.247471,
+  "missing": false
+ },
+ "San Francisco City Hall": {
+  "article": "San Francisco City Hall",
+  "country": "United States",
+  "item": "Q1093944",
+  "lat": 37.77919,
+  "lon": -122.41914,
+  "missing": false
+ },
+ "San Francisco Columbarium & Funeral Home": {
+  "article": "San Francisco Columbarium & Funeral Home",
+  "country": "United States",
+  "item": "Q1977870",
+  "lat": 37.78055556,
+  "lon": -122.45694444,
+  "missing": false
+ },
+ "San Francisco el Grande Basilica": {
+  "article": "Royal Basilica of Saint Francis the Great",
+  "country": "Spain",
+  "item": "Q2473884",
+  "lat": 40.4105,
+  "lon": -3.7144,
+  "missing": false
+ },
+ "San Lorenzo, Turin": {
+  "article": "San Lorenzo, Turin",
+  "country": "Italy",
+  "item": "Q657635",
+  "lat": 45.0721,
+  "lon": 7.6849,
+  "missing": false
+ },
+ "San Luis de los Franceses": {
+  "article": "San Luis de los Franceses",
+  "item": null,
+  "lat": null,
+  "lon": null,
+  "missing": true
+ },
+ "Sanctuary of Vicoforte": {
+  "article": "Sanctuary of Vicoforte",
+  "country": "Italy",
+  "item": "Q3471751",
+  "lat": 44.366667,
+  "lon": 7.85,
+  "missing": false
+ },
+ "Sant'Agnese in Agone": {
+  "article": "Sant'Agnese in Agone",
+  "country": "Italy",
+  "item": "Q1192577",
+  "lat": 41.89877,
+  "lon": 12.4726,
+  "missing": false
+ },
+ "Sant'Andrea al Quirinale": {
+  "article": "Sant'Andrea al Quirinale",
+  "country": "Italy",
+  "item": "Q1354667",
+  "lat": 41.90068,
+  "lon": 12.48934,
+  "missing": false
+ },
+ "Sant'Andrea della Valle": {
+  "article": "Sant'Andrea della Valle",
+  "country": "Italy",
+  "item": "Q1631593",
+  "lat": 41.89583333,
+  "lon": 12.47444444,
+  "missing": false
+ },
+ "Sant'Ignazio, Rome": {
+  "article": "Sant'Ignazio, Rome",
+  "country": "Italy",
+  "item": "Q1465674",
+  "lat": 41.899,
+  "lon": 12.47977778,
+  "missing": false
+ },
+ "Sant'Ivo alla Sapienza": {
+  "article": "Sant'Ivo alla Sapienza",
+  "country": "Italy",
+  "item": "Q1324617",
+  "lat": 41.898221,
+  "lon": 12.474734,
+  "missing": false
+ },
+ "Santa Costanza": {
+  "article": "Mausoleum of Constantina",
+  "country": "Italy",
+  "item": "Q831361",
+  "lat": 41.922614,
+  "lon": 12.517375,
+  "missing": false
+ },
+ "Santa Maria degli Angeli e dei Martiri": {
+  "article": "Santa Maria degli Angeli e dei Martiri",
+  "country": "Italy",
+  "item": "Q569253",
+  "lat": 41.90305556,
+  "lon": 12.49694444,
+  "missing": false
+ },
+ "Santa Maria della Consolazione, Todi": {
+  "article": "Santa Maria della Consolazione, Todi",
+  "country": "Italy",
+  "item": "Q3585432",
+  "lat": 42.77777778,
+  "lon": 12.40194444,
+  "missing": false
+ },
+ "Santa Maria della Salute": {
+  "article": "Santa Maria della Salute",
+  "country": "Italy",
+  "item": "Q52531",
+  "lat": 45.43083333,
+  "lon": 12.33444444,
+  "missing": false
+ },
+ "Santa Maria delle Grazie, Milan": {
+  "article": "Santa Maria delle Grazie, Milan",
+  "country": "Italy",
+  "item": "Q244952",
+  "lat": 45.46583333,
+  "lon": 9.17111111,
+  "missing": false
+ },
+ "Santi Luca e Martina": {
+  "article": "Santi Luca e Martina",
+  "country": "Italy",
+  "item": "Q1813867",
+  "lat": 41.89322,
+  "lon": 12.48505,
+  "missing": false
+ },
+ "Saskatchewan Legislative Building": {
+  "article": "Saskatchewan Legislative Building",
+  "country": "Canada",
+  "item": "Q3579114",
+  "lat": 50.4324,
+  "lon": -104.6151,
+  "missing": false
+ },
+ "Shah Cheragh": {
+  "article": "Shah Cheragh",
+  "country": "Iran",
+  "item": "Q1957722",
+  "lat": 29.60961111,
+  "lon": 52.54330556,
+  "missing": false
+ },
+ "Shah Jahan Mosque, Thatta": {
+  "article": "Shah Jahan Mosque, Thatta",
+  "country": "Pakistan",
+  "item": "Q4022334",
+  "lat": 24.74722222,
+  "lon": 67.92805556,
+  "missing": false
+ },
+ "Shah Mosque (Isfahan)": {
+  "article": "Shah Mosque (Isfahan)",
+  "country": "Iran",
+  "item": "Q643098",
+  "lat": 32.65444444,
+  "lon": 51.6775,
+  "missing": false
+ },
+ "Shah Nematollah Vali Shrine": {
+  "article": "Shah Nematollah Vali Shrine",
+  "country": "Iran",
+  "item": "Q5853951",
+  "lat": 30.05972222,
+  "lon": 57.29,
+  "missing": false
+ },
+ "Shah-i-Zinda": {
+  "article": "Shah-i-Zinda",
+  "country": "Uzbekistan",
+  "item": "Q671935",
+  "lat": 39.66305556,
+  "lon": 66.98777778,
+  "missing": false
+ },
+ "Sheikh Safi al-Din Khānegāh and Shrine Ensemble": {
+  "article": "Sheikh Safi al-Din Khānegāh and Shrine Ensemble",
+  "country": "Iran",
+  "item": "Q4243",
+  "lat": 38.24861111,
+  "lon": 48.29138889,
+  "missing": false
+ },
+ "Siena Cathedral": {
+  "article": "Siena Cathedral",
+  "country": "Italy",
+  "item": "Q282554",
+  "lat": 43.3177,
+  "lon": 11.329,
+  "missing": false
+ },
+ "Sigismund's Chapel": {
+  "article": "Sigismund's Chapel",
+  "country": "Poland",
+  "item": "Q143915",
+  "lat": 50.05464,
+  "lon": 19.935435,
+  "missing": false
+ },
+ "Sinan Pasha Mosque (Prizren)": {
+  "article": "Sinan Pasha Mosque (Prizren)",
+  "country": "Kosovo",
+  "item": "Q2097655",
+  "lat": 42.20861111,
+  "lon": 20.74138889,
+  "missing": false
+ },
+ "Skeppsholmen Church": {
+  "article": "Skeppsholmen Church",
+  "country": "Sweden",
+  "item": "Q1785830",
+  "lat": 59.32638889,
+  "lon": 18.08194444,
+  "missing": false
+ },
+ "Sokollu Mehmed Pasha Mosque (Kadırga)": {
+  "article": "Sokollu Mehmed Pasha Mosque, Kadırga",
+  "country": "Turkey",
+  "item": "Q1572472",
+  "lat": 41.00472222,
+  "lon": 28.97222222,
+  "missing": false
+ },
+ "South Carolina State House": {
+  "article": "South Carolina State House",
+  "country": "United States",
+  "item": "Q2915276",
+  "lat": 34.00043333,
+  "lon": -81.03314722,
+  "missing": false
+ },
+ "South Dakota State Capitol": {
+  "article": "South Dakota State Capitol",
+  "country": "United States",
+  "item": "Q2919981",
+  "lat": 44.367167,
+  "lon": -100.346353,
+  "missing": false
+ },
+ "St Andrew's Church, Kyiv": {
+  "article": "St Andrew's Church, Kyiv",
+  "country": "Ukraine",
+  "item": "Q167321",
+  "lat": 50.45888889,
+  "lon": 30.51805556,
+  "missing": false
+ },
+ "St Mark's Basilica": {
+  "article": "St Mark's Basilica",
+  "country": "Italy",
+  "item": "Q172988",
+  "lat": 45.43444444,
+  "lon": 12.33972222,
+  "missing": false
+ },
+ "St Stephen Walbrook": {
+  "article": "St Stephen Walbrook",
+  "country": "United Kingdom",
+  "item": "Q952386",
+  "lat": 51.51262778,
+  "lon": -0.08991944,
+  "missing": false
+ },
+ "St Volodymyr's Cathedral": {
+  "article": "St Volodymyr's Cathedral",
+  "country": "Ukraine",
+  "item": "Q1417441",
+  "lat": 50.44472222,
+  "lon": 30.50888889,
+  "missing": false
+ },
+ "St. Blaise Abbey, Black Forest": {
+  "article": "Saint Blaise Abbey, Black Forest",
+  "country": "Germany",
+  "item": "Q532367",
+  "lat": 47.76,
+  "lon": 8.13,
+  "missing": false
+ },
+ "St. Gereon's Basilica": {
+  "article": "St. Gereon's Basilica, Cologne",
+  "country": "Germany",
+  "item": "Q682188",
+  "lat": 50.94333333,
+  "lon": 6.94583333,
+  "missing": false
+ },
+ "St. Ludwig, Darmstadt": {
+  "article": "St. Ludwig, Darmstadt",
+  "by_hand": true,
+  "country": "Germany",
+  "item": null,
+  "lat": 49.8681,
+  "lon": 8.6508,
+  "missing": true
+ },
+ "St. Nicholas Church, Potsdam": {
+  "article": "St. Nicholas Church, Potsdam",
+  "country": "Germany",
+  "item": "Q573737",
+  "lat": 52.39629,
+  "lon": 13.06095,
+  "missing": false
+ },
+ "St. Peter's Basilica": {
+  "article": "St. Peter's Basilica",
+  "country": "Vatican City",
+  "item": "Q12512",
+  "lat": 41.90222222,
+  "lon": 12.45333333,
+  "missing": false
+ },
+ "State Library Victoria": {
+  "article": "State Library Victoria",
+  "country": "Australia",
+  "item": "Q1200052",
+  "lat": -37.809801,
+  "lon": 144.964787,
+  "missing": false
+ },
+ "Sultan Amir Ahmad Bathhouse": {
+  "article": "Sultan Amir Ahmad Bathhouse",
+  "country": "Iran",
+  "item": "Q290344",
+  "lat": 33.975203,
+  "lon": 51.441062,
+  "missing": false
+ },
+ "Supreme Court of Victoria": {
+  "article": "Supreme Court of Victoria",
+  "country": "Australia",
+  "item": "Q4109092",
+  "lat": -37.81416667,
+  "lon": 144.95805556,
+  "missing": false
+ },
+ "Süleymaniye Mosque": {
+  "article": "Süleymaniye Mosque",
+  "country": "Turkey",
+  "item": "Q178643",
+  "lat": 41.01611111,
+  "lon": 28.96388889,
+  "missing": false
+ },
+ "Taj Mahal": {
+  "article": "Taj Mahal",
+  "country": "India",
+  "item": "Q9141",
+  "lat": 27.175,
+  "lon": 78.0419,
+  "missing": false
+ },
+ "Taj Mahal Palace Hotel": {
+  "article": "Taj Mahal Palace Hotel",
+  "country": "India",
+  "item": "Q19104",
+  "lat": 18.922,
+  "lon": 72.8333,
+  "missing": false
+ },
+ "Temple of Heaven": {
+  "article": "Temple of Heaven",
+  "country": "People's Republic of China",
+  "item": "Q125445",
+  "lat": 39.8822,
+  "lon": 116.4066,
+  "missing": false
+ },
+ "Texas State Capitol": {
+  "article": "Texas State Capitol",
+  "country": "United States",
+  "item": "Q2078042",
+  "lat": 30.27472222,
+  "lon": -97.74055556,
+  "missing": false
+ },
+ "The Rotunda (University of Virginia)": {
+  "article": "The Rotunda (University of Virginia)",
+  "country": "United States",
+  "item": "Q7761603",
+  "lat": 38.035556,
+  "lon": -78.503611,
+  "missing": false
+ },
+ "Theatine Church, Munich": {
+  "article": "Theatine Church, Munich",
+  "country": "Germany",
+  "item": "Q259799",
+  "lat": 48.14194444,
+  "lon": 11.57638889,
+  "missing": false
+ },
+ "Thomas Jefferson Building": {
+  "article": "Thomas Jefferson Building",
+  "country": "United States",
+  "item": "Q2615945",
+  "lat": 38.8887,
+  "lon": -77.0046,
+  "missing": false
+ },
+ "Thracian Tomb of Kazanlak": {
+  "article": "Thracian Tomb of Kazanlak",
+  "country": "Bulgaria",
+  "item": "Q301815",
+  "lat": 42.62576,
+  "lon": 25.39919,
+  "missing": false
+ },
+ "Tokyo Station": {
+  "article": "Tokyo Station",
+  "country": "Japan",
+  "item": "Q283196",
+  "lat": 35.68083333,
+  "lon": 139.76694444,
+  "missing": false
+ },
+ "Tomb of Ahmad Sanjar": {
+  "article": "Tomb of Ahmad Sanjar",
+  "country": "Turkmenistan",
+  "item": "Q4273784",
+  "lat": 37.6643,
+  "lon": 62.1637,
+  "missing": false
+ },
+ "Tomb of Hafez": {
+  "article": "Tomb of Hafez",
+  "country": "Iran",
+  "item": "Q129479",
+  "lat": 29.62540278,
+  "lon": 52.55831944,
+  "missing": false
+ },
+ "Tomb of I'timād-ud-Daulah": {
+  "article": "Itmad Ud Daulah",
+  "country": "India",
+  "item": "Q1318766",
+  "lat": 27.1925,
+  "lon": 78.03194444,
+  "missing": false
+ },
+ "Tomb of Safdar Jang": {
+  "article": "Tomb of Safdar Jang",
+  "country": "India",
+  "item": "Q375624",
+  "lat": 28.5893,
+  "lon": 77.2106,
+  "missing": false
+ },
+ "Tomb of Shah Rukn-e-Alam": {
+  "article": "Tomb of Shah Rukn-e-Alam",
+  "country": "Pakistan",
+  "item": "Q15983527",
+  "lat": 30.19888889,
+  "lon": 71.47138889,
+  "missing": false
+ },
+ "Tomb of Sher Shah Suri": {
+  "article": "Tomb of Sher Shah Suri",
+  "country": "India",
+  "item": "Q7818641",
+  "lat": 24.9481,
+  "lon": 84.0092,
+  "missing": false
+ },
+ "Treasury of Atreus": {
+  "article": "Treasury of Atreus",
+  "country": "Greece",
+  "item": "Q1262524",
+  "lat": 37.72682,
+  "lon": 22.75387,
+  "missing": false
+ },
+ "Union Station (Pittsburgh)": {
+  "article": "Union Station (Pittsburgh)",
+  "country": "United States",
+  "item": "Q7886093",
+  "lat": 40.44475,
+  "lon": -79.99213889,
+  "missing": false
+ },
+ "United States Capitol rotunda": {
+  "article": "United States Capitol rotunda",
+  "country": "United States",
+  "item": "Q918708",
+  "lat": 38.88984,
+  "lon": -77.00908,
+  "missing": false
+ },
+ "Utah State Capitol": {
+  "article": "Utah State Capitol",
+  "country": "United States",
+  "item": "Q2627661",
+  "lat": 40.77722222,
+  "lon": -111.88805556,
+  "missing": false
+ },
+ "Val-de-Grâce (church)": {
+  "article": "Val-de-Grâce (church)",
+  "country": "France",
+  "item": "Q2601262",
+  "lat": 48.84083333,
+  "lon": 2.34194444,
+  "missing": false
+ },
+ "Vank Cathedral": {
+  "article": "Vank Cathedral",
+  "country": "Iran",
+  "item": "Q1398856",
+  "lat": 32.634911,
+  "lon": 51.655833,
+  "missing": false
+ },
+ "Victoria Memorial, Kolkata": {
+  "article": "Victoria Memorial, Kolkata",
+  "country": "India",
+  "item": "Q1356352",
+  "lat": 22.5449,
+  "lon": 88.3425,
+  "missing": false
+ },
+ "Vieille Charité": {
+  "article": "Vieille Charité",
+  "country": "France",
+  "item": "Q1065120",
+  "lat": 43.30027778,
+  "lon": 5.36777778,
+  "missing": false
+ },
+ "Virginia State Capitol": {
+  "article": "Virginia State Capitol",
+  "country": "United States",
+  "item": "Q2537798",
+  "lat": 37.538758,
+  "lon": -77.433594,
+  "missing": false
+ },
+ "Washington State Capitol": {
+  "article": "Washington State Capitol",
+  "country": "United States",
+  "item": "Q2620186",
+  "lat": 47.03583333,
+  "lon": -122.90472222,
+  "missing": false
+ },
+ "Wazir Khan Mosque": {
+  "article": "Wazir Khan Mosque",
+  "country": "Pakistan",
+  "item": "Q2352054",
+  "lat": 31.58305556,
+  "lon": 74.32333333,
+  "missing": false
+ },
+ "Weingarten Abbey": {
+  "article": "Weingarten Abbey",
+  "country": "Germany",
+  "item": "Q334353",
+  "lat": 47.80916667,
+  "lon": 9.64472222,
+  "missing": false
+ },
+ "Wells Cathedral": {
+  "article": "Wells Cathedral",
+  "country": "United Kingdom",
+  "item": "Q519614",
+  "lat": 51.2104,
+  "lon": -2.6437,
+  "missing": false
+ },
+ "West Baden Springs Hotel": {
+  "article": "West Baden Springs Hotel",
+  "country": "United States",
+  "item": "Q4479814",
+  "lat": 38.56722222,
+  "lon": -86.61805556,
+  "missing": false
+ },
+ "West Virginia State Capitol": {
+  "article": "West Virginia State Capitol",
+  "country": "United States",
+  "item": "Q2920261",
+  "lat": 38.33611111,
+  "lon": -81.61194444,
+  "missing": false
+ },
+ "Westfield San Francisco Centre": {
+  "article": "San Francisco Centre",
+  "country": "United States",
+  "item": "Q9095816",
+  "lat": 37.78388889,
+  "lon": -122.40722222,
+  "missing": false
+ },
+ "Westminster Abbey": {
+  "article": "Westminster Abbey",
+  "country": "United Kingdom",
+  "item": "Q5933",
+  "lat": 51.49944444,
+  "lon": -0.1275,
+  "missing": false
+ },
+ "Wieskirche": {
+  "article": "Wieskirche",
+  "country": "Germany",
+  "item": "Q156675",
+  "lat": 47.68111111,
+  "lon": 10.9,
+  "missing": false
+ },
+ "Williamsburgh Savings Bank Building (175 Broadway)": {
+  "article": "Williamsburgh Savings Bank Building (175 Broadway)",
+  "country": "United States",
+  "item": "Q111450020",
+  "lat": 40.71027778,
+  "lon": -73.9625,
+  "missing": false
+ },
+ "Wisconsin State Capitol": {
+  "article": "Wisconsin State Capitol",
+  "country": "United States",
+  "item": "Q2915273",
+  "lat": 43.07472222,
+  "lon": -89.38416667,
+  "missing": false
+ },
+ "Wyoming State Capitol": {
+  "article": "Wyoming State Capitol",
+  "country": "United States",
+  "item": "Q723806",
+  "lat": 41.14027778,
+  "lon": -104.81972222,
+  "missing": false
+ },
+ "York Minster": {
+  "article": "York Minster",
+  "country": "United Kingdom",
+  "item": "Q252575",
+  "lat": 53.96194444,
+  "lon": -1.08194444,
+  "missing": false
+ },
+ "Çemberlitaş Hamamı": {
+  "article": "Çemberlitaş Hamam",
+  "country": "Turkey",
+  "item": "Q8077658",
+  "lat": 41.00866667,
+  "lon": 28.97169444,
+  "missing": false
+ },
+ "Şehzade Mosque": {
+  "article": "Şehzade Mosque",
+  "country": "Turkey",
+  "item": "Q644677",
+  "lat": 41.01380556,
+  "lon": 28.95716667,
+  "missing": false
+ },
+ "Šarena Džamija": {
+  "article": "Šarena Mosque",
+  "country": "North Macedonia",
+  "item": "Q1009896",
+  "lat": 42.00583333,
+  "lon": 20.96666667,
+  "missing": false
+ }
+}

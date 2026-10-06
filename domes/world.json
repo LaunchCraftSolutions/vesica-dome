@@ -1,0 +1,3096 @@
+[
+ {
+  "place": "Rome, St Peter's",
+  "photo": "world/w001.jpg",
+  "built": "Dome 1547–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   443
+  ],
+  "squash": false,
+  "lat": 41.9022,
+  "lon": 12.4533,
+  "building": {
+   "name": "St. Peter's Basilica",
+   "where": "Rome, Vatican City",
+   "built": "Dome 1547–90",
+   "by": "Michelangelo, completed by Giacomo della Porta and Domenico Fontana"
+  }
+ },
+ {
+  "place": "Rome, Sant'Ivo alla Sapienza",
+  "photo": "world/w002.jpg",
+  "built": "1642–60",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   467
+  ],
+  "squash": false,
+  "lat": 41.8982,
+  "lon": 12.4747,
+  "building": {
+   "name": "Sant'Ivo alla Sapienza",
+   "where": "Rome, Italy",
+   "built": "1642–60",
+   "by": "Francesco Borromini"
+  }
+ },
+ {
+  "place": "Rome, San Carlo alle Quattro Fontane",
+  "photo": "world/w003.jpg",
+  "built": "1638–46",
+  "note": "Oval dome",
+  "hand": null,
+  "turned": [
+   675,
+   480
+  ],
+  "squash": false,
+  "lat": 41.9018,
+  "lon": 12.4907,
+  "building": {
+   "name": "San Carlo alle Quattro Fontane",
+   "where": "Rome, Italy",
+   "built": "1638–46",
+   "by": "Francesco Borromini"
+  }
+ },
+ {
+  "place": "Rome, Sant'Andrea al Quirinale",
+  "photo": "world/w004.jpg",
+  "built": "1658–70",
+  "note": "Oval dome",
+  "hand": null,
+  "turned": [
+   690,
+   499
+  ],
+  "squash": false,
+  "lat": 41.9007,
+  "lon": 12.4893,
+  "building": {
+   "name": "Sant'Andrea al Quirinale",
+   "where": "Rome, Italy",
+   "built": "1658–70",
+   "by": "Gian Lorenzo Bernini"
+  }
+ },
+ {
+  "place": "Rome, Sant'Andrea della Valle",
+  "photo": "world/w005.jpg",
+  "built": "Dome 1622",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   459
+  ],
+  "squash": false,
+  "lat": 41.8958,
+  "lon": 12.4744,
+  "building": {
+   "name": "Sant'Andrea della Valle",
+   "where": "Rome, Italy",
+   "built": "Dome 1622",
+   "by": "Carlo Maderno; fresco by Giovanni Lanfranco"
+  }
+ },
+ {
+  "place": "Rome, Sant'Agnese in Agone",
+  "photo": "world/w006.jpg",
+  "built": "1652–72",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   406
+  ],
+  "squash": false,
+  "lat": 41.8988,
+  "lon": 12.4726,
+  "building": {
+   "name": "Sant'Agnese in Agone",
+   "where": "Rome, Italy",
+   "built": "1652–72",
+   "by": "Girolamo and Carlo Rainaldi, and Francesco Borromini"
+  }
+ },
+ {
+  "place": "Rome, Il Gesù",
+  "photo": "world/w007.jpg",
+  "built": "1568–84",
+  "note": "",
+  "hand": null,
+  "turned": [
+   622,
+   406
+  ],
+  "squash": false,
+  "lat": 41.8958,
+  "lon": 12.4797,
+  "building": {
+   "name": "Church of the Gesù",
+   "where": "Rome, Italy",
+   "built": "1568–84",
+   "by": "Giacomo Barozzi da Vignola and Giacomo della Porta"
+  }
+ },
+ {
+  "place": "Rome, Sant'Ignazio",
+  "photo": "world/w008.jpg",
+  "built": "Painted 1685",
+  "note": "A flat canvas painted to look like a dome",
+  "hand": null,
+  "turned": [
+   669,
+   418
+  ],
+  "squash": false,
+  "lat": 41.899,
+  "lon": 12.4798,
+  "building": {
+   "name": "Sant'Ignazio",
+   "where": "Rome, Italy",
+   "built": "Painted 1685",
+   "by": "Andrea Pozzo"
+  }
+ },
+ {
+  "place": "Florence, baptistery",
+  "photo": "world/w009.jpg",
+  "built": "1059–1128; mosaics 13th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   643
+  ],
+  "squash": false,
+  "lat": 43.7731,
+  "lon": 11.255,
+  "building": {
+   "name": "Florence Baptistery",
+   "where": "Florence, Italy",
+   "built": "1059–1128; mosaics 13th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Florence, Chapel of the Princes",
+  "photo": "world/w010.jpg",
+  "built": "Begun 1604",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   430
+  ],
+  "squash": false,
+  "lat": 43.7751,
+  "lon": 11.2534,
+  "building": {
+   "name": "Medici Chapels",
+   "where": "Florence, Italy",
+   "built": "Begun 1604",
+   "by": "Matteo Nigetti"
+  }
+ },
+ {
+  "place": "Florence, Pazzi Chapel",
+  "photo": "world/w011.jpg",
+  "built": "1442–78",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   478
+  ],
+  "squash": false,
+  "lat": 43.768,
+  "lon": 11.263,
+  "building": {
+   "name": "Pazzi Chapel",
+   "where": "Florence, Italy",
+   "built": "1442–78",
+   "by": "Filippo Brunelleschi"
+  }
+ },
+ {
+  "place": "Ravenna, San Vitale",
+  "photo": "world/w013.jpg",
+  "built": "526–547",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   485
+  ],
+  "squash": false,
+  "lat": 44.4206,
+  "lon": 12.1964,
+  "building": {
+   "name": "Basilica of San Vitale",
+   "where": "Ravenna, Italy",
+   "built": "526–547",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Ravenna, Arian Baptistery",
+  "photo": "world/w014.jpg",
+  "built": "About 500",
+  "note": "",
+  "hand": null,
+  "turned": [
+   653,
+   453
+  ],
+  "squash": false,
+  "lat": 44.4186,
+  "lon": 12.2025,
+  "building": {
+   "name": "Arian Baptistery",
+   "where": "Ravenna, Italy",
+   "built": "About 500",
+   "by": "Built under Theodoric the Great"
+  }
+ },
+ {
+  "place": "Ravenna, Mausoleum of Galla Placidia",
+  "photo": "world/w015.jpg",
+  "built": "About 425–450",
+  "note": "",
+  "hand": null,
+  "turned": [
+   662,
+   354
+  ],
+  "squash": false,
+  "lat": 44.4211,
+  "lon": 12.1969,
+  "building": {
+   "name": "Mausoleum of Galla Placidia",
+   "where": "Ravenna, Italy",
+   "built": "About 425–450",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Parma, cathedral",
+  "photo": "world/w017.jpg",
+  "built": "Fresco 1526–30",
+  "note": "",
+  "hand": null,
+  "turned": [
+   460,
+   561
+  ],
+  "squash": false,
+  "lat": 44.8033,
+  "lon": 10.3311,
+  "building": {
+   "name": "Parma Cathedral",
+   "where": "Parma, Italy",
+   "built": "Fresco 1526–30",
+   "by": "Fresco by Antonio da Correggio"
+  }
+ },
+ {
+  "place": "Turin, San Lorenzo",
+  "photo": "world/w019.jpg",
+  "built": "1668–87",
+  "note": "",
+  "hand": null,
+  "turned": [
+   632,
+   334
+  ],
+  "squash": false,
+  "lat": 45.0721,
+  "lon": 7.6849,
+  "building": {
+   "name": "San Lorenzo",
+   "where": "Turin, Italy",
+   "built": "1668–87",
+   "by": "Guarino Guarini"
+  }
+ },
+ {
+  "place": "Turin, Chapel of the Holy Shroud",
+  "photo": "world/w020.jpg",
+  "built": "1668–94",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   475
+  ],
+  "squash": false,
+  "lat": 45.0733,
+  "lon": 7.6854,
+  "building": {
+   "name": "Chapel of the Holy Shroud",
+   "where": "Turin, Italy",
+   "built": "1668–94",
+   "by": "Guarino Guarini"
+  }
+ },
+ {
+  "place": "Novara, San Gaudenzio",
+  "photo": "world/w021.jpg",
+  "built": "Dome 1844–78",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   435
+  ],
+  "squash": false,
+  "lat": 45.449,
+  "lon": 8.62,
+  "building": {
+   "name": "Basilica of San Gaudenzio",
+   "where": "Novara, Italy",
+   "built": "Dome 1844–78",
+   "by": "Alessandro Antonelli"
+  }
+ },
+ {
+  "place": "Milan, Galleria Vittorio Emanuele II",
+  "photo": "world/w022.jpg",
+  "built": "1865–77",
+  "note": "Glass dome",
+  "hand": null,
+  "turned": [
+   634,
+   424
+  ],
+  "squash": false,
+  "lat": 45.4656,
+  "lon": 9.19,
+  "building": {
+   "name": "Galleria Vittorio Emanuele II",
+   "where": "Milan, Italy",
+   "built": "1865–77",
+   "by": "Giuseppe Mengoni"
+  }
+ },
+ {
+  "place": "Milan, Santa Maria delle Grazie",
+  "photo": "world/w023.jpg",
+  "built": "Tribune 1492–97",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   402
+  ],
+  "squash": false,
+  "lat": 45.4658,
+  "lon": 9.1711,
+  "building": {
+   "name": "Santa Maria delle Grazie",
+   "where": "Milan, Italy",
+   "built": "Tribune 1492–97",
+   "by": "Attributed to Donato Bramante"
+  }
+ },
+ {
+  "place": "Milan, San Vittore in Ciel d'Oro",
+  "photo": "world/w024.jpg",
+  "built": "5th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   621,
+   450
+  ],
+  "squash": false,
+  "lat": 45.4624,
+  "lon": 9.1758,
+  "building": {
+   "name": "Basilica of Sant'Ambrogio",
+   "where": "Milan, Russia",
+   "built": "5th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Naples, San Francesco di Paola",
+  "photo": "world/w025.jpg",
+  "built": "1816–46",
+  "note": "",
+  "hand": null,
+  "turned": [
+   622,
+   493
+  ],
+  "squash": false,
+  "lat": 40.8353,
+  "lon": 14.2475,
+  "building": {
+   "name": "San Francesco di Paola",
+   "where": "Naples, Italy",
+   "built": "1816–46",
+   "by": "Pietro Bianchi"
+  }
+ },
+ {
+  "place": "Mantua, Sant'Andrea",
+  "photo": "world/w026.jpg",
+  "built": "Dome 1732–65",
+  "note": "",
+  "hand": null,
+  "turned": [
+   626,
+   549
+  ],
+  "squash": false,
+  "lat": 45.1589,
+  "lon": 10.7942,
+  "building": {
+   "name": "Basilica of Sant'Andrea",
+   "where": "Mantua, Italy",
+   "built": "Dome 1732–65",
+   "by": "Dome by Filippo Juvarra"
+  }
+ },
+ {
+  "place": "Montepulciano, San Biagio",
+  "photo": "world/w027.jpg",
+  "built": "1518–45",
+  "note": "",
+  "hand": null,
+  "turned": [
+   600,
+   467
+  ],
+  "squash": false,
+  "lat": 43.0908,
+  "lon": 11.7744,
+  "building": {
+   "name": "San Biagio",
+   "where": "Montepulciano, Italy",
+   "built": "1518–45",
+   "by": "Antonio da Sangallo the Elder"
+  }
+ },
+ {
+  "place": "Mosta",
+  "photo": "world/w028.jpg",
+  "built": "1833–60",
+  "note": "",
+  "hand": null,
+  "turned": [
+   651,
+   363
+  ],
+  "squash": false,
+  "lat": 35.9101,
+  "lon": 14.4259,
+  "building": {
+   "name": "Rotunda of Mosta",
+   "where": "Mosta, Malta",
+   "built": "1833–60",
+   "by": "Giorgio Grognet de Vassé"
+  }
+ },
+ {
+  "place": "Paris, Les Invalides",
+  "photo": "world/w029.jpg",
+  "built": "1677–1706",
+  "note": "",
+  "hand": [
+   635,
+   323
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 48.855,
+  "lon": 2.3125,
+  "building": {
+   "name": "Les Invalides",
+   "where": "Paris, France",
+   "built": "1677–1706",
+   "by": "Jules Hardouin-Mansart"
+  }
+ },
+ {
+  "place": "Paris, Panthéon",
+  "photo": "world/w030.jpg",
+  "built": "1758–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   344
+  ],
+  "squash": false,
+  "lat": 48.8461,
+  "lon": 2.3458,
+  "building": {
+   "name": "Panthéon",
+   "where": "Paris, France",
+   "built": "1758–90",
+   "by": "Jacques-Germain Soufflot"
+  }
+ },
+ {
+  "place": "Paris, Petit Palais",
+  "photo": "world/w031.jpg",
+  "built": "1900",
+  "note": "",
+  "hand": null,
+  "turned": [
+   627,
+   502
+  ],
+  "squash": false,
+  "lat": 48.866,
+  "lon": 2.3145,
+  "building": {
+   "name": "Petit Palais",
+   "where": "Paris, France",
+   "built": "1900",
+   "by": "Charles Girault"
+  }
+ },
+ {
+  "place": "Marseille, cathedral",
+  "photo": "world/w032.jpg",
+  "built": "1852–96",
+  "note": "",
+  "hand": [
+   435,
+   466
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 43.2997,
+  "lon": 5.365,
+  "building": {
+   "name": "Marseille Cathedral",
+   "where": "Marseille, France",
+   "built": "1852–96",
+   "by": "Léon Vaudoyer"
+  }
+ },
+ {
+  "place": "Córdoba, Mezquita",
+  "photo": "world/w033.jpg",
+  "built": "961–965",
+  "note": "",
+  "hand": null,
+  "turned": [
+   574,
+   486
+  ],
+  "squash": false,
+  "lat": 37.8792,
+  "lon": -4.7797,
+  "building": {
+   "name": "Mosque–Cathedral of Córdoba",
+   "where": "Córdoba, Spain",
+   "built": "961–965",
+   "by": "Built for the caliph al-Hakam II"
+  }
+ },
+ {
+  "place": "Granada, Alhambra, Hall of the Two Sisters",
+  "photo": "world/w034.jpg",
+  "built": "1362–91",
+  "note": "Muqarnas dome",
+  "hand": null,
+  "turned": [
+   643,
+   477
+  ],
+  "squash": false,
+  "lat": 37.1771,
+  "lon": -3.5893,
+  "building": {
+   "name": "Court of the Lions",
+   "where": "Granada, Spain",
+   "built": "1362–91",
+   "by": "Built for Muhammad V"
+  }
+ },
+ {
+  "place": "Granada, Alhambra, Hall of the Abencerrajes",
+  "photo": "world/w035.jpg",
+  "built": "1362–91",
+  "note": "Star-shaped muqarnas dome",
+  "hand": null,
+  "turned": [
+   717,
+   462
+  ],
+  "squash": false,
+  "lat": 37.1771,
+  "lon": -3.5893,
+  "building": {
+   "name": "Court of the Lions",
+   "where": "Granada, Spain",
+   "built": "1362–91",
+   "by": "Built for Muhammad V"
+  }
+ },
+ {
+  "place": "Seville, Alcázar, Hall of Ambassadors",
+  "photo": "world/w036.jpg",
+  "built": "Dome 1427",
+  "note": "Gilded wooden dome",
+  "hand": null,
+  "turned": null,
+  "squash": false,
+  "lat": 37.3844,
+  "lon": -5.9912,
+  "building": {
+   "name": "Alcázar of Seville",
+   "where": "Seville, Spain",
+   "built": "Dome 1427",
+   "by": "Dome by Diego Ruiz"
+  }
+ },
+ {
+  "place": "Seville, San Luis de los Franceses",
+  "photo": "world/w037.jpg",
+  "built": "1699–1731",
+  "note": "",
+  "hand": null,
+  "turned": [
+   616,
+   509
+  ],
+  "squash": false,
+  "lat": 37.3983,
+  "lon": -5.9883,
+  "building": {
+   "name": "Church of Saint Louis of France",
+   "where": "Seville, Spain",
+   "built": "1699–1731",
+   "by": "Leonardo de Figueroa"
+  }
+ },
+ {
+  "place": "Madrid, San Francisco el Grande",
+  "photo": "world/w038.jpg",
+  "built": "1761–84",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   727
+  ],
+  "squash": false,
+  "lat": 40.4105,
+  "lon": -3.7144,
+  "building": {
+   "name": "San Francisco el Grande Basilica",
+   "where": "Madrid, Spain",
+   "built": "1761–84",
+   "by": "Francisco Cabezas, completed by Francesco Sabatini"
+  }
+ },
+ {
+  "place": "Zaragoza, El Pilar",
+  "photo": "world/w039.jpg",
+  "built": "1681–1872",
+  "note": "",
+  "hand": null,
+  "turned": [
+   602,
+   442
+  ],
+  "squash": false,
+  "lat": 41.6569,
+  "lon": -0.8783,
+  "building": {
+   "name": "Cathedral-Basilica of Our Lady of the Pillar",
+   "where": "Zaragoza, Spain",
+   "built": "1681–1872",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Burgos, cathedral",
+  "photo": "world/w040.jpg",
+  "built": "Lantern 1539–68",
+  "note": "Star vault",
+  "hand": null,
+  "turned": [
+   627,
+   400
+  ],
+  "squash": false,
+  "lat": 42.3408,
+  "lon": -3.7045,
+  "building": {
+   "name": "Burgos Cathedral",
+   "where": "Burgos, Spain",
+   "built": "Lantern 1539–68",
+   "by": "Juan de Vallejo"
+  }
+ },
+ {
+  "place": "Burgos, Chapel of the Constable",
+  "photo": "world/w041.jpg",
+  "built": "1482–94",
+  "note": "Star vault",
+  "hand": null,
+  "turned": [
+   638,
+   638
+  ],
+  "squash": false,
+  "lat": 42.3408,
+  "lon": -3.7045,
+  "building": {
+   "name": "Burgos Cathedral",
+   "where": "Burgos, Spain",
+   "built": "1482–94",
+   "by": "Simón de Colonia"
+  }
+ },
+ {
+  "place": "Valencia, Basilica of the Forsaken",
+  "photo": "world/w042.jpg",
+  "built": "1652–67; fresco 1701",
+  "note": "Oval dome",
+  "hand": null,
+  "turned": [
+   612,
+   877
+  ],
+  "squash": false,
+  "lat": 39.4763,
+  "lon": -0.3748,
+  "building": {
+   "name": "Basilica of Our Lady of the Forsaken",
+   "where": "Valencia, Spain",
+   "built": "1652–67; fresco 1701",
+   "by": "Fresco by Antonio Palomino"
+  }
+ },
+ {
+  "place": "Salamanca, New Cathedral",
+  "photo": "world/w043.jpg",
+  "built": "Dome 18th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   483
+  ],
+  "squash": false,
+  "lat": 40.9606,
+  "lon": -5.6658,
+  "building": {
+   "name": "New Cathedral of Salamanca",
+   "where": "Salamanca, Spain",
+   "built": "Dome 18th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Lisbon, Estrela Basilica",
+  "photo": "world/w044.jpg",
+  "built": "1779–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   395
+  ],
+  "squash": false,
+  "lat": 38.7132,
+  "lon": -9.1606,
+  "building": {
+   "name": "Estrela Basilica",
+   "where": "Lisbon, Portugal",
+   "built": "1779–90",
+   "by": "Mateus Vicente de Oliveira and Reinaldo Manuel"
+  }
+ },
+ {
+  "place": "Mafra",
+  "photo": "world/w045.jpg",
+  "built": "1717–30",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   472
+  ],
+  "squash": false,
+  "lat": 38.9369,
+  "lon": -9.3258,
+  "building": {
+   "name": "Palace of Mafra",
+   "where": "Mafra, Portugal",
+   "built": "1717–30",
+   "by": "João Frederico Ludovice"
+  }
+ },
+ {
+  "place": "York, Minster chapter house",
+  "photo": "world/w046.jpg",
+  "built": "1260–86",
+  "note": "Eight-sided vault",
+  "hand": null,
+  "turned": [
+   640,
+   389
+  ],
+  "squash": false,
+  "lat": 53.9619,
+  "lon": -1.0819,
+  "building": {
+   "name": "York Minster",
+   "where": "York, United Kingdom",
+   "built": "1260–86",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Ely, octagon",
+  "photo": "world/w047.jpg",
+  "built": "1322–42",
+  "note": "Eight-sided lantern",
+  "hand": null,
+  "turned": [
+   648,
+   792
+  ],
+  "squash": false,
+  "lat": 52.3986,
+  "lon": 0.2639,
+  "building": {
+   "name": "Ely Cathedral",
+   "where": "Ely, United Kingdom",
+   "built": "1322–42",
+   "by": "Alan of Walsingham and William Hurley"
+  }
+ },
+ {
+  "place": "Castle Howard",
+  "photo": "world/w048.jpg",
+  "built": "1699–1712; dome rebuilt after the fire of 1940",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   392
+  ],
+  "squash": false,
+  "lat": 54.1214,
+  "lon": -0.9058,
+  "building": {
+   "name": "Castle Howard",
+   "where": "United Kingdom",
+   "built": "1699–1712; dome rebuilt after the fire of 1940",
+   "by": "Sir John Vanbrugh"
+  }
+ },
+ {
+  "place": "London, Chiswick House",
+  "photo": "world/w049.jpg",
+  "built": "1726–29",
+  "note": "",
+  "hand": null,
+  "turned": [
+   650,
+   440
+  ],
+  "squash": false,
+  "lat": 51.4838,
+  "lon": -0.2587,
+  "building": {
+   "name": "Chiswick House",
+   "where": "London, United Kingdom",
+   "built": "1726–29",
+   "by": "Lord Burlington"
+  }
+ },
+ {
+  "place": "Berlin, cathedral",
+  "photo": "world/w050.jpg",
+  "built": "1894–1905",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   642
+  ],
+  "squash": false,
+  "lat": 52.5192,
+  "lon": 13.4011,
+  "building": {
+   "name": "Berlin Cathedral",
+   "where": "Berlin, Germany",
+   "built": "1894–1905",
+   "by": "Julius Raschdorff"
+  }
+ },
+ {
+  "place": "Aachen, Palatine Chapel",
+  "photo": "world/w051.jpg",
+  "built": "About 796–805; mosaic 1880–81",
+  "note": "Eight-sided vault",
+  "hand": null,
+  "turned": [
+   605,
+   454
+  ],
+  "squash": false,
+  "lat": 50.7747,
+  "lon": 6.0844,
+  "building": {
+   "name": "Palatine Chapel",
+   "where": "Aachen, Germany",
+   "built": "About 796–805; mosaic 1880–81",
+   "by": "Odo of Metz"
+  }
+ },
+ {
+  "place": "Cologne, St Gereon",
+  "photo": "world/w052.jpg",
+  "built": "Decagon 1219–27",
+  "note": "Ten-sided dome",
+  "hand": null,
+  "turned": [
+   638,
+   440
+  ],
+  "squash": false,
+  "lat": 50.9433,
+  "lon": 6.9458,
+  "building": {
+   "name": "St. Gereon's Basilica",
+   "where": "Cologne, Germany",
+   "built": "Decagon 1219–27",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Munich, Theatine Church",
+  "photo": "world/w053.jpg",
+  "built": "1663–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   672,
+   855
+  ],
+  "squash": false,
+  "lat": 48.1419,
+  "lon": 11.5764,
+  "building": {
+   "name": "Theatine Church",
+   "where": "Munich, Germany",
+   "built": "1663–90",
+   "by": "Agostino Barelli and Enrico Zuccalli"
+  }
+ },
+ {
+  "place": "Weingarten Abbey",
+  "photo": "world/w055.jpg",
+  "built": "1715–24",
+  "note": "",
+  "hand": null,
+  "turned": [
+   653,
+   482
+  ],
+  "squash": false,
+  "lat": 47.8092,
+  "lon": 9.6447,
+  "building": {
+   "name": "Weingarten Abbey",
+   "where": "Germany",
+   "built": "1715–24",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "St. Blasien",
+  "photo": "world/w056.jpg",
+  "built": "1768–83",
+  "note": "",
+  "hand": null,
+  "turned": [
+   622,
+   464
+  ],
+  "squash": false,
+  "lat": 47.76,
+  "lon": 8.13,
+  "building": {
+   "name": "St. Blaise Abbey, Black Forest",
+   "where": "St. Blasien, Germany",
+   "built": "1768–83",
+   "by": "Pierre Michel d'Ixnard"
+  }
+ },
+ {
+  "place": "Kelheim, Befreiungshalle",
+  "photo": "world/w057.jpg",
+  "built": "1842–63",
+  "note": "",
+  "hand": null,
+  "turned": [
+   624,
+   408
+  ],
+  "squash": false,
+  "lat": 48.9183,
+  "lon": 11.8606,
+  "building": {
+   "name": "Befreiungshalle",
+   "where": "Kelheim, Germany",
+   "built": "1842–63",
+   "by": "Friedrich von Gärtner, completed by Leo von Klenze"
+  }
+ },
+ {
+  "place": "Darmstadt, St Ludwig",
+  "photo": "world/w058.jpg",
+  "built": "1822–27",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   666
+  ],
+  "squash": false,
+  "lat": 49.8681,
+  "lon": 8.6508,
+  "building": {
+   "name": "St. Ludwig",
+   "where": "Darmstadt, Germany",
+   "built": "1822–27",
+   "by": "Georg Moller"
+  }
+ },
+ {
+  "place": "Salzburg, cathedral",
+  "photo": "world/w059.jpg",
+  "built": "1614–28",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   624
+  ],
+  "squash": false,
+  "lat": 47.7978,
+  "lon": 13.0469,
+  "building": {
+   "name": "Salzburg Cathedral",
+   "where": "Salzburg, Austria",
+   "built": "1614–28",
+   "by": "Santino Solari"
+  }
+ },
+ {
+  "place": "Salzburg, Kollegienkirche",
+  "photo": "world/w060.jpg",
+  "built": "1694–1707",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   475
+  ],
+  "squash": false,
+  "lat": 47.7991,
+  "lon": 13.0431,
+  "building": {
+   "name": "Kollegienkirche",
+   "where": "Salzburg, Austria",
+   "built": "1694–1707",
+   "by": "Johann Bernhard Fischer von Erlach"
+  }
+ },
+ {
+  "place": "Vienna, Natural History Museum",
+  "photo": "world/w061.jpg",
+  "built": "1871–89",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   432
+  ],
+  "squash": false,
+  "lat": 48.2052,
+  "lon": 16.3599,
+  "building": {
+   "name": "Natural History Museum",
+   "where": "Vienna, Austria",
+   "built": "1871–89",
+   "by": "Gottfried Semper and Karl von Hasenauer"
+  }
+ },
+ {
+  "place": "Graz, mausoleum",
+  "photo": "world/w062.jpg",
+  "built": "1614–38",
+  "note": "The dome over St Catherine's Church, which the mausoleum adjoins",
+  "hand": null,
+  "turned": [
+   630,
+   435
+  ],
+  "squash": false,
+  "lat": 47.0718,
+  "lon": 15.4427,
+  "building": {
+   "name": "Mausoleum of Emperor Ferdinand II",
+   "where": "Graz, Austria",
+   "built": "1614–38",
+   "by": "Giovanni Pietro de Pomis"
+  }
+ },
+ {
+  "place": "Prague, St Francis",
+  "photo": "world/w063.jpg",
+  "built": "1679–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   639,
+   780
+  ],
+  "squash": false,
+  "lat": 50.0864,
+  "lon": 14.4142,
+  "building": {
+   "name": "Church of St. Francis of Assisi",
+   "where": "Prague, Czech Republic",
+   "built": "1679–88",
+   "by": "Jean Baptiste Mathey"
+  }
+ },
+ {
+  "place": "Kraków, Sigismund's Chapel",
+  "photo": "world/w064.jpg",
+  "built": "1519–33",
+  "note": "",
+  "hand": null,
+  "turned": [
+   614,
+   508
+  ],
+  "squash": false,
+  "lat": 50.0546,
+  "lon": 19.9354,
+  "building": {
+   "name": "Sigismund's Chapel",
+   "where": "Kraków, Poland",
+   "built": "1519–33",
+   "by": "Bartolommeo Berrecci"
+  }
+ },
+ {
+  "place": "Vilnius, Sts Peter and Paul",
+  "photo": "world/w065.jpg",
+  "built": "1668–1701",
+  "note": "",
+  "hand": null,
+  "turned": [
+   594,
+   488
+  ],
+  "squash": false,
+  "lat": 54.6942,
+  "lon": 25.3064,
+  "building": {
+   "name": "Church of St. Peter and St. Paul",
+   "where": "Vilnius, Lithuania",
+   "built": "1668–1701",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Stockholm, Gustaf Vasa Church",
+  "photo": "world/w066.jpg",
+  "built": "1901–06",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   475
+  ],
+  "squash": false,
+  "lat": 59.3425,
+  "lon": 18.0475,
+  "building": {
+   "name": "Gustaf Vasa Church",
+   "where": "Stockholm, Sweden",
+   "built": "1901–06",
+   "by": "Agi Lindegren"
+  }
+ },
+ {
+  "place": "Copenhagen, Marble Church",
+  "photo": "world/w067.jpg",
+  "built": "1749–1894",
+  "note": "",
+  "hand": null,
+  "turned": [
+   662,
+   466
+  ],
+  "squash": false,
+  "lat": 55.685,
+  "lon": 12.5894,
+  "building": {
+   "name": "Frederik's Church",
+   "where": "Copenhagen, Denmark",
+   "built": "1749–1894",
+   "by": "Nicolai Eigtved, completed by Ferdinand Meldahl"
+  }
+ },
+ {
+  "place": "Antwerp, Central Station",
+  "photo": "world/w068.jpg",
+  "built": "1895–1905",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   666
+  ],
+  "squash": false,
+  "lat": 51.2172,
+  "lon": 4.4211,
+  "building": {
+   "name": "Antwerpen-Centraal railway station",
+   "where": "Antwerp, Belgium",
+   "built": "1895–1905",
+   "by": "Louis Delacenserie"
+  }
+ },
+ {
+  "place": "Kronstadt, Naval Cathedral",
+  "photo": "world/w070.jpg",
+  "built": "1903–13",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   474
+  ],
+  "squash": false,
+  "lat": 59.9917,
+  "lon": 29.7778,
+  "building": {
+   "name": "Kronstadt Naval Cathedral",
+   "where": "Kronstadt, Russia",
+   "built": "1903–13",
+   "by": "Vasily Kosyakov"
+  }
+ },
+ {
+  "place": "Lviv, Boim Chapel",
+  "photo": "world/w071.jpg",
+  "built": "1609–15",
+  "note": "",
+  "hand": null,
+  "turned": [
+   632,
+   485
+  ],
+  "squash": false,
+  "lat": 49.8406,
+  "lon": 24.0311,
+  "building": {
+   "name": "Boim Chapel",
+   "where": "Lviv, Ukraine",
+   "built": "1609–15",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Bucharest, Romanian Athenaeum",
+  "photo": "world/w072.jpg",
+  "built": "1886–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   608,
+   522
+  ],
+  "squash": false,
+  "lat": 44.4413,
+  "lon": 26.0973,
+  "building": {
+   "name": "Romanian Athenaeum",
+   "where": "Bucharest, Romania",
+   "built": "1886–88",
+   "by": "Albert Galleron"
+  }
+ },
+ {
+  "place": "Tetovo, Painted Mosque",
+  "photo": "world/w073.jpg",
+  "built": "1438; rebuilt 1833",
+  "note": "Painted dome",
+  "hand": null,
+  "turned": [
+   818,
+   438
+  ],
+  "squash": false,
+  "lat": 42.0058,
+  "lon": 20.9667,
+  "building": {
+   "name": "Šarena Džamija",
+   "where": "Tetovo, North Macedonia",
+   "built": "1438; rebuilt 1833",
+   "by": "Rebuilt for Abdurrahman Pasha"
+  }
+ },
+ {
+  "place": "Prizren, Sinan Pasha Mosque",
+  "photo": "world/w074.jpg",
+  "built": "1615",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   438
+  ],
+  "squash": false,
+  "lat": 42.2086,
+  "lon": 20.7414,
+  "building": {
+   "name": "Sinan Pasha Mosque",
+   "where": "Prizren, Kosovo",
+   "built": "1615",
+   "by": "Built for Sofi Sinan Pasha"
+  }
+ },
+ {
+  "place": "Thessaloniki, Rotunda",
+  "photo": "world/w076.jpg",
+  "built": "About 306; mosaics 4th–6th centuries",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   466
+  ],
+  "squash": false,
+  "lat": 40.6333,
+  "lon": 22.9528,
+  "building": {
+   "name": "Rotunda",
+   "where": "Thessaloniki, Greece",
+   "built": "About 306; mosaics 4th–6th centuries",
+   "by": "Built for the emperor Galerius"
+  }
+ },
+ {
+  "place": "Hosios Loukas",
+  "photo": "world/w077.jpg",
+  "built": "11th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   629,
+   442
+  ],
+  "squash": false,
+  "lat": 38.3954,
+  "lon": 22.7468,
+  "building": {
+   "name": "Hosios Loukas",
+   "where": "Greece",
+   "built": "11th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Istanbul, Hagia Sophia",
+  "photo": "world/w078.jpg",
+  "built": "532–537; dome rebuilt 558–562",
+  "note": "",
+  "hand": [
+   635,
+   455
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 41.0083,
+  "lon": 28.98,
+  "building": {
+   "name": "Hagia Sophia",
+   "where": "Istanbul, Turkey",
+   "built": "532–537; dome rebuilt 558–562",
+   "by": "Anthemius of Tralles and Isidore of Miletus; the dome by Isidore the Younger"
+  }
+ },
+ {
+  "place": "Istanbul, Blue Mosque",
+  "photo": "world/w079.jpg",
+  "built": "1609–16",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   430
+  ],
+  "squash": false,
+  "lat": 41.0054,
+  "lon": 28.9768,
+  "building": {
+   "name": "Blue Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1609–16",
+   "by": "Sedefkâr Mehmed Ağa, for Sultan Ahmed I"
+  }
+ },
+ {
+  "place": "Istanbul, Şehzade",
+  "photo": "world/w080.jpg",
+  "built": "1543–48",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   438
+  ],
+  "squash": false,
+  "lat": 41.0138,
+  "lon": 28.9572,
+  "building": {
+   "name": "Şehzade Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1543–48",
+   "by": "Mimar Sinan"
+  }
+ },
+ {
+  "place": "Istanbul, Rüstem Pasha",
+  "photo": "world/w081.jpg",
+  "built": "1561–63",
+  "note": "",
+  "hand": [
+   635,
+   425
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 41.0175,
+  "lon": 28.9686,
+  "building": {
+   "name": "Rüstem Pasha Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1561–63",
+   "by": "Mimar Sinan"
+  }
+ },
+ {
+  "place": "Istanbul, Mihrimah Sultan",
+  "photo": "world/w082.jpg",
+  "built": "1562–65",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   434
+  ],
+  "squash": false,
+  "lat": 41.0292,
+  "lon": 28.9358,
+  "building": {
+   "name": "Mihrimah Sultan Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1562–65",
+   "by": "Mimar Sinan"
+  }
+ },
+ {
+  "place": "Istanbul, Nuruosmaniye",
+  "photo": "world/w083.jpg",
+  "built": "1748–55",
+  "note": "",
+  "hand": null,
+  "turned": [
+   667,
+   446
+  ],
+  "squash": false,
+  "lat": 41.0102,
+  "lon": 28.9705,
+  "building": {
+   "name": "Nuruosmaniye Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1748–55",
+   "by": "Simeon Kalfa"
+  }
+ },
+ {
+  "place": "Istanbul, Ortaköy",
+  "photo": "world/w084.jpg",
+  "built": "1854–56",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   403
+  ],
+  "squash": false,
+  "lat": 41.0469,
+  "lon": 29.0269,
+  "building": {
+   "name": "Ortaköy Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1854–56",
+   "by": "Garabet and Nigoğayos Balyan"
+  }
+ },
+ {
+  "place": "Istanbul, Chora",
+  "photo": "world/w086.jpg",
+  "built": "Mosaics and frescoes 1315–21",
+  "note": "",
+  "hand": [
+   622,
+   400
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 41.0312,
+  "lon": 28.939,
+  "building": {
+   "name": "Chora Church",
+   "where": "Istanbul, Turkey",
+   "built": "Mosaics and frescoes 1315–21",
+   "by": "Rebuilt for Theodore Metochites"
+  }
+ },
+ {
+  "place": "Istanbul, Pammakaristos",
+  "photo": "world/w087.jpg",
+  "built": "About 1310",
+  "note": "",
+  "hand": null,
+  "turned": [
+   631,
+   885
+  ],
+  "squash": false,
+  "lat": 41.0292,
+  "lon": 28.9464,
+  "building": {
+   "name": "Pammakaristos Church",
+   "where": "Istanbul, Turkey",
+   "built": "About 1310",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Istanbul, Fatih",
+  "photo": "world/w088.jpg",
+  "built": "Rebuilt 1767–71",
+  "note": "",
+  "hand": null,
+  "turned": [
+   602,
+   350
+  ],
+  "squash": false,
+  "lat": 41.0197,
+  "lon": 28.9497,
+  "building": {
+   "name": "Fatih Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "Rebuilt 1767–71",
+   "by": "Rebuilt by Mehmed Tahir Ağa"
+  }
+ },
+ {
+  "place": "Jerusalem, Church of the Holy Sepulchre",
+  "photo": "world/w089.jpg",
+  "built": "Rotunda 4th century; dome rebuilt 1868, restored 1997",
+  "note": "",
+  "hand": null,
+  "turned": [
+   711,
+   885
+  ],
+  "squash": false,
+  "lat": 31.7783,
+  "lon": 35.2297,
+  "building": {
+   "name": "Church of the Holy Sepulchre",
+   "where": "Jerusalem, Israel",
+   "built": "Rotunda 4th century; dome rebuilt 1868, restored 1997",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Damascus, Khan As'ad Pasha",
+  "photo": "world/w090.jpg",
+  "built": "1751–52",
+  "note": "One of nine domes",
+  "hand": null,
+  "turned": [
+   642,
+   475
+  ],
+  "squash": false,
+  "lat": 33.5092,
+  "lon": 36.3067,
+  "building": {
+   "name": "Khan As'ad Pasha",
+   "where": "Damascus, Syria",
+   "built": "1751–52",
+   "by": "Built for As'ad Pasha al-Azm"
+  }
+ },
+ {
+  "place": "Cairo, Sultan Hassan",
+  "photo": "world/w091.jpg",
+  "built": "1356–63",
+  "note": "",
+  "hand": null,
+  "turned": [
+   656,
+   552
+  ],
+  "squash": false,
+  "lat": 30.0319,
+  "lon": 31.2567,
+  "building": {
+   "name": "Mosque-Madrasa of Sultan Hasan",
+   "where": "Cairo, Egypt",
+   "built": "1356–63",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Cairo, Mosque of Muhammad Ali",
+  "photo": "world/w092.jpg",
+  "built": "1830–48",
+  "note": "",
+  "hand": null,
+  "turned": [
+   653,
+   389
+  ],
+  "squash": false,
+  "lat": 30.0286,
+  "lon": 31.2597,
+  "building": {
+   "name": "Mosque of Muhammad Ali",
+   "where": "Cairo, Egypt",
+   "built": "1830–48",
+   "by": "Yusuf Bushnak"
+  }
+ },
+ {
+  "place": "Cairo, Al-Rifa'i Mosque",
+  "photo": "world/w093.jpg",
+  "built": "1869–1912",
+  "note": "",
+  "hand": null,
+  "turned": [
+   670,
+   768
+  ],
+  "squash": false,
+  "lat": 30.1547,
+  "lon": 31.3103,
+  "building": {
+   "name": "Al-Rifa'i Mosque",
+   "where": "Cairo, Egypt",
+   "built": "1869–1912",
+   "by": "Hussein Fahmy Pasha, completed by Max Herz"
+  }
+ },
+ {
+  "place": "Kairouan, Great Mosque",
+  "photo": "world/w094.jpg",
+  "built": "836–862",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   587
+  ],
+  "squash": false,
+  "lat": 35.6814,
+  "lon": 10.1039,
+  "building": {
+   "name": "Great Mosque of Kairouan",
+   "where": "Kairouan, Tunisia",
+   "built": "836–862",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Isfahan, Shah Mosque",
+  "photo": "world/w095.jpg",
+  "built": "1611–29",
+  "note": "",
+  "hand": null,
+  "turned": null,
+  "squash": false,
+  "lat": 32.6544,
+  "lon": 51.6775,
+  "building": {
+   "name": "Shah Mosque",
+   "where": "Isfahan, Iran",
+   "built": "1611–29",
+   "by": "Ali Akbar Isfahani, for Shah Abbas I"
+  }
+ },
+ {
+  "place": "Isfahan, Vank Cathedral",
+  "photo": "world/w096.jpg",
+  "built": "1655–64",
+  "note": "Painted dome",
+  "hand": null,
+  "turned": [
+   632,
+   461
+  ],
+  "squash": false,
+  "lat": 32.6349,
+  "lon": 51.6558,
+  "building": {
+   "name": "Vank Cathedral",
+   "where": "Isfahan, Iran",
+   "built": "1655–64",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Shiraz, Shah Cheragh",
+  "photo": "world/w097.jpg",
+  "built": "Shrine 14th century; mirror work 19th century",
+  "note": "Mirror-work dome",
+  "hand": null,
+  "turned": [
+   643,
+   467
+  ],
+  "squash": false,
+  "lat": 29.6096,
+  "lon": 52.5433,
+  "building": {
+   "name": "Shah Cheragh",
+   "where": "Shiraz, Iran",
+   "built": "Shrine 14th century; mirror work 19th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Kashan, Agha Bozorg Mosque",
+  "photo": "world/w098.jpg",
+  "built": "Late 18th to mid 19th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   741,
+   670
+  ],
+  "squash": false,
+  "lat": 33.9786,
+  "lon": 51.4453,
+  "building": {
+   "name": "Agha Bozorg Mosque",
+   "where": "Kashan, Iran",
+   "built": "Late 18th to mid 19th century",
+   "by": "Ustad Haj Sa'ban-ali"
+  }
+ },
+ {
+  "place": "Kashan, Borujerdi House",
+  "photo": "world/w099.jpg",
+  "built": "1857",
+  "note": "",
+  "hand": null,
+  "turned": [
+   650,
+   421
+  ],
+  "squash": false,
+  "lat": 33.9746,
+  "lon": 51.4406,
+  "building": {
+   "name": "Borujerdi House",
+   "where": "Kashan, Iran",
+   "built": "1857",
+   "by": "Ustad Ali Maryam"
+  }
+ },
+ {
+  "place": "Yazd, Friday Mosque",
+  "photo": "world/w100.jpg",
+  "built": "1324–65",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   462
+  ],
+  "squash": false,
+  "lat": 31.9014,
+  "lon": 54.3686,
+  "building": {
+   "name": "Jameh Mosque of Yazd",
+   "where": "Yazd, Iran",
+   "built": "1324–65",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Mahan, Shah Nematollah Vali Shrine",
+  "photo": "world/w101.jpg",
+  "built": "1436; enlarged in the Safavid and Qajar eras",
+  "note": "",
+  "hand": null,
+  "turned": [
+   678,
+   629
+  ],
+  "squash": false,
+  "lat": 30.0597,
+  "lon": 57.29,
+  "building": {
+   "name": "Shah Nematollah Vali Shrine",
+   "where": "Mahan, Iran",
+   "built": "1436; enlarged in the Safavid and Qajar eras",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Samarkand, Tilya-Kori",
+  "photo": "world/w102.jpg",
+  "built": "1646–60",
+  "note": "A flat ceiling painted to look like a dome",
+  "hand": null,
+  "turned": [
+   617,
+   896
+  ],
+  "squash": false,
+  "lat": 39.6547,
+  "lon": 66.9756,
+  "building": {
+   "name": "Registan",
+   "where": "Samarkand, Uzbekistan",
+   "built": "1646–60",
+   "by": "Built for Yalangtush Bahadur"
+  }
+ },
+ {
+  "place": "Shahrisabz, Kok Gumbaz",
+  "photo": "world/w103.jpg",
+  "built": "1435",
+  "note": "",
+  "hand": [
+   648,
+   430
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 39.0497,
+  "lon": 66.8272,
+  "building": {
+   "name": "Kuk Gumbaz Mosque",
+   "where": "Shahrisabz, Uzbekistan",
+   "built": "1435",
+   "by": "Built for Ulugh Beg"
+  }
+ },
+ {
+  "place": "Delhi, Humayun's Tomb",
+  "photo": "world/w105.jpg",
+  "built": "1565–72",
+  "note": "",
+  "hand": null,
+  "turned": [
+   682,
+   486
+  ],
+  "squash": false,
+  "lat": 28.5933,
+  "lon": 77.2507,
+  "building": {
+   "name": "Humayun's Tomb",
+   "where": "Delhi, India",
+   "built": "1565–72",
+   "by": "Mirak Mirza Ghiyas"
+  }
+ },
+ {
+  "place": "Delhi, Alai Darwaza",
+  "photo": "world/w106.jpg",
+  "built": "1311",
+  "note": "",
+  "hand": null,
+  "turned": [
+   522,
+   352
+  ],
+  "squash": false,
+  "lat": 28.5242,
+  "lon": 77.1857,
+  "building": {
+   "name": "Alai Darwaza",
+   "where": "Delhi, India",
+   "built": "1311",
+   "by": "Built for Alauddin Khalji"
+  }
+ },
+ {
+  "place": "Bijapur, Gol Gumbaz",
+  "photo": "world/w108.jpg",
+  "built": "1626–56",
+  "note": "",
+  "hand": null,
+  "turned": [
+   691,
+   502
+  ],
+  "squash": false,
+  "lat": 16.83,
+  "lon": 75.7361,
+  "building": {
+   "name": "Gol Gumbaz",
+   "where": "Bijapur, India",
+   "built": "1626–56",
+   "by": "Yaqut of Dabul"
+  }
+ },
+ {
+  "place": "Ranakpur",
+  "photo": "world/w109.jpg",
+  "built": "1437–58",
+  "note": "Carved marble dome",
+  "hand": [
+   653,
+   489
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 25.1157,
+  "lon": 73.4728,
+  "building": {
+   "name": "Ranakpur Jain temple",
+   "where": "Ranakpur, India",
+   "built": "1437–58",
+   "by": "Depaka, for Dharna Shah"
+  }
+ },
+ {
+  "place": "Kolkata, Victoria Memorial",
+  "photo": "world/w110.jpg",
+  "built": "1906–21",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   397
+  ],
+  "squash": false,
+  "lat": 22.5449,
+  "lon": 88.3425,
+  "building": {
+   "name": "Victoria Memorial",
+   "where": "Kolkata, India",
+   "built": "1906–21",
+   "by": "William Emerson"
+  }
+ },
+ {
+  "place": "Mumbai, Chhatrapati Shivaji Terminus",
+  "photo": "world/w111.jpg",
+  "built": "1878–88",
+  "note": "",
+  "hand": [
+   627,
+   345
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 18.9398,
+  "lon": 72.8354,
+  "building": {
+   "name": "Chhatrapati Shivaji Terminus",
+   "where": "Mumbai, India",
+   "built": "1878–88",
+   "by": "Frederick William Stevens"
+  }
+ },
+ {
+  "place": "Mysore Palace",
+  "photo": "world/w112.jpg",
+  "built": "1897–1912",
+  "note": "Eight-sided stained glass ceiling",
+  "hand": null,
+  "turned": [
+   630,
+   382
+  ],
+  "squash": false,
+  "lat": 12.3039,
+  "lon": 76.6544,
+  "building": {
+   "name": "Mysore Palace",
+   "where": "India",
+   "built": "1897–1912",
+   "by": "Henry Irwin"
+  }
+ },
+ {
+  "place": "Lahore, Wazir Khan Mosque",
+  "photo": "world/w113.jpg",
+  "built": "1634–41",
+  "note": "",
+  "hand": null,
+  "turned": [
+   707,
+   486
+  ],
+  "squash": false,
+  "lat": 31.5831,
+  "lon": 74.3233,
+  "building": {
+   "name": "Wazir Khan Mosque",
+   "where": "Lahore, Pakistan",
+   "built": "1634–41",
+   "by": "Built for Wazir Khan"
+  }
+ },
+ {
+  "place": "Lahore, Badshahi Mosque",
+  "photo": "world/w114.jpg",
+  "built": "1671–73",
+  "note": "",
+  "hand": null,
+  "turned": [
+   674,
+   486
+  ],
+  "squash": false,
+  "lat": 31.5881,
+  "lon": 74.3094,
+  "building": {
+   "name": "Badshahi Mosque",
+   "where": "Lahore, Pakistan",
+   "built": "1671–73",
+   "by": "Built for Aurangzeb"
+  }
+ },
+ {
+  "place": "Multan, Shah Rukn-e-Alam",
+  "photo": "world/w116.jpg",
+  "built": "1320–24",
+  "note": "",
+  "hand": [
+   640,
+   353
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 30.1989,
+  "lon": 71.4714,
+  "building": {
+   "name": "Tomb of Shah Rukn-e-Alam",
+   "where": "Multan, Pakistan",
+   "built": "1320–24",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Champaner, Friday Mosque",
+  "photo": "world/w117.jpg",
+  "built": "About 1508–13",
+  "note": "",
+  "hand": null,
+  "turned": [
+   629,
+   603
+  ],
+  "squash": false,
+  "lat": 22.4859,
+  "lon": 73.5371,
+  "building": {
+   "name": "Jama Mosque",
+   "where": "Champaner, India",
+   "built": "About 1508–13",
+   "by": "Built for Mahmud Begada"
+  }
+ },
+ {
+  "place": "Tokyo Station",
+  "photo": "world/w118.jpg",
+  "built": "1914; restored 2012",
+  "note": "",
+  "hand": null,
+  "turned": [
+   622,
+   312
+  ],
+  "squash": false,
+  "lat": 35.6808,
+  "lon": 139.7669,
+  "building": {
+   "name": "Tokyo Station",
+   "where": "Japan",
+   "built": "1914; restored 2012",
+   "by": "Tatsuno Kingo"
+  }
+ },
+ {
+  "place": "Tokyo, Hyokeikan",
+  "photo": "world/w119.jpg",
+  "built": "1909",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   230
+  ],
+  "squash": false,
+  "lat": 35.7186,
+  "lon": 139.7748,
+  "building": {
+   "name": "Hyōkeikan",
+   "where": "Tokyo, Japan",
+   "built": "1909",
+   "by": "Katayama Tōkuma"
+  }
+ },
+ {
+  "place": "Singapore, National Museum",
+  "photo": "world/w120.jpg",
+  "built": "1887",
+  "note": "",
+  "hand": null,
+  "turned": [
+   626,
+   400
+  ],
+  "squash": false,
+  "lat": 1.2967,
+  "lon": 103.8486,
+  "building": {
+   "name": "National Museum of Singapore",
+   "where": "Singapore, Singapore",
+   "built": "1887",
+   "by": "Henry McCallum"
+  }
+ },
+ {
+  "place": "Washington, Capitol",
+  "photo": "world/w121.jpg",
+  "built": "Dome 1855–66",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   470
+  ],
+  "squash": false,
+  "lat": 38.8898,
+  "lon": -77.0091,
+  "building": {
+   "name": "United States Capitol rotunda",
+   "where": "Washington, United States",
+   "built": "Dome 1855–66",
+   "by": "Thomas U. Walter; fresco by Constantino Brumidi"
+  }
+ },
+ {
+  "place": "Washington, Library of Congress",
+  "photo": "world/w122.jpg",
+  "built": "1890–97",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   844
+  ],
+  "squash": false,
+  "lat": 38.8887,
+  "lon": -77.0046,
+  "building": {
+   "name": "Thomas Jefferson Building",
+   "where": "Washington, United States",
+   "built": "1890–97",
+   "by": "John L. Smithmeyer and Paul J. Pelz"
+  }
+ },
+ {
+  "place": "Washington, St Matthew's",
+  "photo": "world/w123.jpg",
+  "built": "1893–1913",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   424
+  ],
+  "squash": false,
+  "lat": 38.9061,
+  "lon": -77.04,
+  "building": {
+   "name": "Cathedral of St. Matthew the Apostle",
+   "where": "Washington, United States",
+   "built": "1893–1913",
+   "by": "Christopher Grant LaFarge"
+  }
+ },
+ {
+  "place": "Baltimore, Basilica",
+  "photo": "world/w124.jpg",
+  "built": "1806–21",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   486
+  ],
+  "squash": false,
+  "lat": 39.2944,
+  "lon": -76.6162,
+  "building": {
+   "name": "Basilica of the National Shrine of the Assumption of the Blessed Virgin Mary",
+   "where": "Baltimore, United States",
+   "built": "1806–21",
+   "by": "Benjamin Henry Latrobe"
+  }
+ },
+ {
+  "place": "Cambridge, MIT Great Dome",
+  "photo": "world/w125.jpg",
+  "built": "1916",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   413
+  ],
+  "squash": false,
+  "lat": 42.3591,
+  "lon": -71.0934,
+  "building": {
+   "name": "Great Dome",
+   "where": "Cambridge, United States",
+   "built": "1916",
+   "by": "William Welles Bosworth"
+  }
+ },
+ {
+  "place": "New York, Gould Memorial Library",
+  "photo": "world/w126.jpg",
+  "built": "1899",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   424
+  ],
+  "squash": false,
+  "lat": 40.8588,
+  "lon": -73.914,
+  "building": {
+   "name": "Gould Memorial Library",
+   "where": "New York, United States",
+   "built": "1899",
+   "by": "Stanford White"
+  }
+ },
+ {
+  "place": "New York, City Hall",
+  "photo": "world/w127.jpg",
+  "built": "1803–12",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   350
+  ],
+  "squash": false,
+  "lat": 40.7127,
+  "lon": -74.0059,
+  "building": {
+   "name": "New York City Hall",
+   "where": "New York, United States",
+   "built": "1803–12",
+   "by": "Joseph-François Mangin and John McComb Jr."
+  }
+ },
+ {
+  "place": "New York, Federal Hall",
+  "photo": "world/w128.jpg",
+  "built": "1834–42",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   475
+  ],
+  "squash": false,
+  "lat": 40.7072,
+  "lon": -74.0103,
+  "building": {
+   "name": "Federal Hall",
+   "where": "New York, United States",
+   "built": "1834–42",
+   "by": "Ithiel Town and Alexander Jackson Davis"
+  }
+ },
+ {
+  "place": "New York, Grant's Tomb",
+  "photo": "world/w129.jpg",
+  "built": "1891–97",
+  "note": "",
+  "hand": null,
+  "turned": [
+   662,
+   336
+  ],
+  "squash": false,
+  "lat": 40.8133,
+  "lon": -73.9631,
+  "building": {
+   "name": "Grant's Tomb",
+   "where": "New York, United States",
+   "built": "1891–97",
+   "by": "John H. Duncan"
+  }
+ },
+ {
+  "place": "Harrisburg, State Capitol",
+  "photo": "world/w132.jpg",
+  "built": "1902–06",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   442
+  ],
+  "squash": false,
+  "lat": 40.2644,
+  "lon": -76.8836,
+  "building": {
+   "name": "Pennsylvania State Capitol",
+   "where": "Harrisburg, United States",
+   "built": "1902–06",
+   "by": "Joseph Miller Huston"
+  }
+ },
+ {
+  "place": "Austin, State Capitol",
+  "photo": "world/w133.jpg",
+  "built": "1882–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   635,
+   640
+  ],
+  "squash": false,
+  "lat": 30.2747,
+  "lon": -97.7406,
+  "building": {
+   "name": "Texas State Capitol",
+   "where": "Austin, United States",
+   "built": "1882–88",
+   "by": "Elijah E. Myers"
+  }
+ },
+ {
+  "place": "Des Moines, State Capitol",
+  "photo": "world/w134.jpg",
+  "built": "1871–86",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   733
+  ],
+  "squash": false,
+  "lat": 41.5912,
+  "lon": -93.6038,
+  "building": {
+   "name": "Iowa State Capitol",
+   "where": "Des Moines, United States",
+   "built": "1871–86",
+   "by": "John C. Cochrane and Alfred H. Piquenard"
+  }
+ },
+ {
+  "place": "Indianapolis, Statehouse",
+  "photo": "world/w135.jpg",
+  "built": "1878–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   627
+  ],
+  "squash": false,
+  "lat": 39.7686,
+  "lon": -86.1628,
+  "building": {
+   "name": "Indiana Statehouse",
+   "where": "Indianapolis, United States",
+   "built": "1878–88",
+   "by": "Edwin May, completed by Adolph Scherrer"
+  }
+ },
+ {
+  "place": "Lansing, State Capitol",
+  "photo": "world/w136.jpg",
+  "built": "1872–78",
+  "note": "",
+  "hand": null,
+  "turned": [
+   646,
+   446
+  ],
+  "squash": false,
+  "lat": 42.7336,
+  "lon": -84.5556,
+  "building": {
+   "name": "Michigan State Capitol",
+   "where": "Lansing, United States",
+   "built": "1872–78",
+   "by": "Elijah E. Myers"
+  }
+ },
+ {
+  "place": "Jefferson City, State Capitol",
+  "photo": "world/w138.jpg",
+  "built": "1913–17",
+  "note": "",
+  "hand": null,
+  "turned": [
+   682,
+   365
+  ],
+  "squash": false,
+  "lat": 38.5792,
+  "lon": -92.1728,
+  "building": {
+   "name": "Missouri State Capitol",
+   "where": "Jefferson City, United States",
+   "built": "1913–17",
+   "by": "Tracy and Swartwout"
+  }
+ },
+ {
+  "place": "Cheyenne, State Capitol",
+  "photo": "world/w140.jpg",
+  "built": "1886–90",
+  "note": "",
+  "hand": null,
+  "turned": [
+   590,
+   462
+  ],
+  "squash": false,
+  "lat": 41.1403,
+  "lon": -104.8197,
+  "building": {
+   "name": "Wyoming State Capitol",
+   "where": "Cheyenne, United States",
+   "built": "1886–90",
+   "by": "David W. Gibbs"
+  }
+ },
+ {
+  "place": "Pierre, State Capitol",
+  "photo": "world/w141.jpg",
+  "built": "1905–10",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   627
+  ],
+  "squash": false,
+  "lat": 44.3672,
+  "lon": -100.3464,
+  "building": {
+   "name": "South Dakota State Capitol",
+   "where": "Pierre, United States",
+   "built": "1905–10",
+   "by": "Charles Emlen Bell and Menno S. Detweiler"
+  }
+ },
+ {
+  "place": "Sacramento, State Capitol",
+  "photo": "world/w142.jpg",
+  "built": "1860–74",
+  "note": "",
+  "hand": null,
+  "turned": [
+   536,
+   437
+  ],
+  "squash": false,
+  "lat": 38.5767,
+  "lon": -121.4936,
+  "building": {
+   "name": "California State Capitol",
+   "where": "Sacramento, United States",
+   "built": "1860–74",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Atlanta, State Capitol",
+  "photo": "world/w143.jpg",
+  "built": "1884–89",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   410
+  ],
+  "squash": false,
+  "lat": 33.749,
+  "lon": -84.3881,
+  "building": {
+   "name": "Georgia State Capitol",
+   "where": "Atlanta, United States",
+   "built": "1884–89",
+   "by": "Edbrooke and Burnham"
+  }
+ },
+ {
+  "place": "Providence, State House",
+  "photo": "world/w144.jpg",
+  "built": "1895–1904",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   638
+  ],
+  "squash": false,
+  "lat": 41.8308,
+  "lon": -71.415,
+  "building": {
+   "name": "Rhode Island State House",
+   "where": "Providence, United States",
+   "built": "1895–1904",
+   "by": "McKim, Mead and White"
+  }
+ },
+ {
+  "place": "Hartford, State Capitol",
+  "photo": "world/w145.jpg",
+  "built": "1872–79",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   647
+  ],
+  "squash": false,
+  "lat": 41.7642,
+  "lon": -72.6822,
+  "building": {
+   "name": "Connecticut State Capitol",
+   "where": "Hartford, United States",
+   "built": "1872–79",
+   "by": "Richard M. Upjohn"
+  }
+ },
+ {
+  "place": "Charleston, State Capitol",
+  "photo": "world/w146.jpg",
+  "built": "1924–32",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   474
+  ],
+  "squash": false,
+  "lat": 38.3361,
+  "lon": -81.6119,
+  "building": {
+   "name": "West Virginia State Capitol",
+   "where": "Charleston, United States",
+   "built": "1924–32",
+   "by": "Cass Gilbert"
+  }
+ },
+ {
+  "place": "Columbus, Statehouse",
+  "photo": "world/w147.jpg",
+  "built": "1839–61",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   634
+  ],
+  "squash": false,
+  "lat": 39.9614,
+  "lon": -82.9989,
+  "building": {
+   "name": "Ohio Statehouse",
+   "where": "Columbus, United States",
+   "built": "1839–61",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Montgomery, State Capitol",
+  "photo": "world/w148.jpg",
+  "built": "1850–51",
+  "note": "",
+  "hand": null,
+  "turned": [
+   641,
+   642
+  ],
+  "squash": false,
+  "lat": 32.3778,
+  "lon": -86.3006,
+  "building": {
+   "name": "Alabama State Capitol",
+   "where": "Montgomery, United States",
+   "built": "1850–51",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Columbia, State House",
+  "photo": "world/w149.jpg",
+  "built": "1855–1907",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   469
+  ],
+  "squash": false,
+  "lat": 34.0004,
+  "lon": -81.0331,
+  "building": {
+   "name": "South Carolina State House",
+   "where": "Columbia, United States",
+   "built": "1855–1907",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Raleigh, State Capitol",
+  "photo": "world/w150.jpg",
+  "built": "1833–40",
+  "note": "",
+  "hand": null,
+  "turned": [
+   661,
+   344
+  ],
+  "squash": false,
+  "lat": 35.7804,
+  "lon": -78.6391,
+  "building": {
+   "name": "North Carolina State Capitol",
+   "where": "Raleigh, United States",
+   "built": "1833–40",
+   "by": "Town and Davis, and David Paton"
+  }
+ },
+ {
+  "place": "Fort Wayne, Allen County Courthouse",
+  "photo": "world/w151.jpg",
+  "built": "1897–1902",
+  "note": "",
+  "hand": null,
+  "turned": [
+   658,
+   454
+  ],
+  "squash": false,
+  "lat": 41.0797,
+  "lon": -85.1392,
+  "building": {
+   "name": "Allen County Courthouse",
+   "where": "Fort Wayne, United States",
+   "built": "1897–1902",
+   "by": "Brentwood S. Tolan"
+  }
+ },
+ {
+  "place": "Chicago, Cultural Center",
+  "photo": "world/w152.jpg",
+  "built": "1893–97",
+  "note": "Stained glass dome",
+  "hand": [
+   596,
+   342
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 41.8839,
+  "lon": -87.625,
+  "building": {
+   "name": "Chicago Cultural Center",
+   "where": "Chicago, United States",
+   "built": "1893–97",
+   "by": "Shepley, Rutan and Coolidge"
+  }
+ },
+ {
+  "place": "St. Louis, Old Courthouse",
+  "photo": "world/w153.jpg",
+  "built": "Dome 1861–64",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   390
+  ],
+  "squash": false,
+  "lat": 38.6258,
+  "lon": -90.1893,
+  "building": {
+   "name": "Old Courthouse",
+   "where": "St. Louis, United States",
+   "built": "Dome 1861–64",
+   "by": "William Rumbold"
+  }
+ },
+ {
+  "place": "Cleveland, Cleveland Trust rotunda",
+  "photo": "world/w154.jpg",
+  "built": "1905–08",
+  "note": "Stained glass dome",
+  "hand": null,
+  "turned": [
+   657,
+   719
+  ],
+  "squash": false,
+  "lat": 41.5,
+  "lon": -81.6861,
+  "building": {
+   "name": "Cleveland Trust Company Building",
+   "where": "Cleveland, United States",
+   "built": "1905–08",
+   "by": "George B. Post"
+  }
+ },
+ {
+  "place": "San Francisco, Emporium dome",
+  "photo": "world/w156.jpg",
+  "built": "1908",
+  "note": "Glass dome",
+  "hand": null,
+  "turned": [
+   654,
+   502
+  ],
+  "squash": false,
+  "lat": 37.7839,
+  "lon": -122.4072,
+  "building": {
+   "name": "Westfield San Francisco Centre",
+   "where": "San Francisco, United States",
+   "built": "1908",
+   "by": "Albert Pissis"
+  }
+ },
+ {
+  "place": "San Francisco, Columbarium",
+  "photo": "world/w157.jpg",
+  "built": "1898",
+  "note": "",
+  "hand": null,
+  "turned": [
+   626,
+   582
+  ],
+  "squash": false,
+  "lat": 37.7806,
+  "lon": -122.4569,
+  "building": {
+   "name": "San Francisco Columbarium & Funeral Home",
+   "where": "San Francisco, United States",
+   "built": "1898",
+   "by": "Bernard J. S. Cahill"
+  }
+ },
+ {
+  "place": "San Francisco, City of Paris rotunda",
+  "photo": "world/w158.jpg",
+  "built": "1909",
+  "note": "Stained glass dome",
+  "hand": null,
+  "turned": [
+   571,
+   767
+  ],
+  "squash": false,
+  "lat": 37.7874,
+  "lon": -122.4065,
+  "building": {
+   "name": "City of Paris Dry Goods Co.",
+   "where": "San Francisco, United States",
+   "built": "1909",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "West Baden Springs Hotel",
+  "photo": "world/w159.jpg",
+  "built": "1901–02",
+  "note": "",
+  "hand": null,
+  "turned": [
+   678,
+   286
+  ],
+  "squash": false,
+  "lat": 38.5672,
+  "lon": -86.6181,
+  "building": {
+   "name": "West Baden Springs Hotel",
+   "where": "United States",
+   "built": "1901–02",
+   "by": "Harrison Albright"
+  }
+ },
+ {
+  "place": "Ottawa, Library of Parliament",
+  "photo": "world/w160.jpg",
+  "built": "1859–76",
+  "note": "",
+  "hand": [
+   653,
+   165
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 45.4255,
+  "lon": -75.7003,
+  "building": {
+   "name": "Library of Parliament",
+   "where": "Ottawa, Canada",
+   "built": "1859–76",
+   "by": "Thomas Fuller and Chilion Jones"
+  }
+ },
+ {
+  "place": "Montreal, Mary Queen of the World",
+  "photo": "world/w161.jpg",
+  "built": "1875–94",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   494
+  ],
+  "squash": false,
+  "lat": 45.4992,
+  "lon": -73.5684,
+  "building": {
+   "name": "Mary, Queen of the World Cathedral",
+   "where": "Montreal, Canada",
+   "built": "1875–94",
+   "by": "Victor Bourgeau"
+  }
+ },
+ {
+  "place": "Winnipeg, Legislative Building",
+  "photo": "world/w162.jpg",
+  "built": "1913–20",
+  "note": "",
+  "hand": null,
+  "turned": [
+   581,
+   948
+  ],
+  "squash": false,
+  "lat": 49.8844,
+  "lon": -97.1469,
+  "building": {
+   "name": "Manitoba Legislative Building",
+   "where": "Winnipeg, Canada",
+   "built": "1913–20",
+   "by": "Frank Worthington Simon"
+  }
+ },
+ {
+  "place": "Victoria, Parliament Buildings",
+  "photo": "world/w163.jpg",
+  "built": "1893–98",
+  "note": "",
+  "hand": null,
+  "turned": [
+   618,
+   416
+  ],
+  "squash": false,
+  "lat": 48.4194,
+  "lon": -123.3703,
+  "building": {
+   "name": "British Columbia Parliament Buildings",
+   "where": "Victoria, Canada",
+   "built": "1893–98",
+   "by": "Francis Rattenbury"
+  }
+ },
+ {
+  "place": "Toronto, Bank of Montreal hall",
+  "photo": "world/w164.jpg",
+  "built": "1885",
+  "note": "Stained glass dome",
+  "hand": null,
+  "turned": [
+   741,
+   467
+  ],
+  "squash": false,
+  "lat": 43.6469,
+  "lon": -79.3772,
+  "building": {
+   "name": "Hockey Hall of Fame",
+   "where": "Toronto, Canada",
+   "built": "1885",
+   "by": "Darling and Curry"
+  }
+ },
+ {
+  "place": "Mexico City, Palace of Fine Arts",
+  "photo": "world/w165.jpg",
+  "built": "1904–34",
+  "note": "",
+  "hand": null,
+  "turned": [
+   552,
+   480
+  ],
+  "squash": false,
+  "lat": 19.4353,
+  "lon": -99.1414,
+  "building": {
+   "name": "Palacio de Bellas Artes",
+   "where": "Mexico City, Mexico",
+   "built": "1904–34",
+   "by": "Adamo Boari, completed by Federico Mariscal"
+  }
+ },
+ {
+  "place": "Oaxaca, Santo Domingo",
+  "photo": "world/w168.jpg",
+  "built": "1575–1608",
+  "note": "",
+  "hand": null,
+  "turned": [
+   618,
+   466
+  ],
+  "squash": false,
+  "lat": 17.0656,
+  "lon": -96.7231,
+  "building": {
+   "name": "Church of Santo Domingo de Guzmán",
+   "where": "Oaxaca, Mexico",
+   "built": "1575–1608",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Havana, El Capitolio",
+  "photo": "world/w169.jpg",
+  "built": "1926–29",
+  "note": "",
+  "hand": null,
+  "turned": [
+   624,
+   472
+  ],
+  "squash": false,
+  "lat": 23.1353,
+  "lon": -82.3594,
+  "building": {
+   "name": "El Capitolio",
+   "where": "Havana, Cuba",
+   "built": "1926–29",
+   "by": "Raúl Otero and Eugenio Rayneri Piedra"
+  }
+ },
+ {
+  "place": "Rio de Janeiro, Candelária",
+  "photo": "world/w170.jpg",
+  "built": "1775–1898",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   410
+  ],
+  "squash": false,
+  "lat": -22.9008,
+  "lon": -43.1779,
+  "building": {
+   "name": "Candelária Church",
+   "where": "Rio de Janeiro, Brazil",
+   "built": "1775–1898",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Melbourne, State Library",
+  "photo": "world/w171.jpg",
+  "built": "1909–13",
+  "note": "Concrete dome",
+  "hand": null,
+  "turned": [
+   914,
+   202
+  ],
+  "squash": false,
+  "lat": -37.8098,
+  "lon": 144.9648,
+  "building": {
+   "name": "State Library Victoria",
+   "where": "Melbourne, Australia",
+   "built": "1909–13",
+   "by": "Bates, Peebles and Smart"
+  }
+ },
+ {
+  "place": "Sydney, Queen Victoria Building",
+  "photo": "world/w172.jpg",
+  "built": "1893–98",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   651
+  ],
+  "squash": false,
+  "lat": -33.8718,
+  "lon": 151.2067,
+  "building": {
+   "name": "Queen Victoria Building",
+   "where": "Sydney, Australia",
+   "built": "1893–98",
+   "by": "George McRae"
+  }
+ }
+]
