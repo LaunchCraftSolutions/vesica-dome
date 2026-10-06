@@ -1,0 +1,223 @@
+{
+ "prague_nicholas": {
+  "centre_in_photo": [
+   374,
+   856
+  ],
+  "photo_size": [
+   1280,
+   1220
+  ],
+  "off_middle_px": [
+   -266,
+   246
+  ],
+  "squash": 0.88,
+  "squash_direction_deg": 60,
+  "size": 1869
+ },
+ "prague_museum": {
+  "centre_in_photo": [
+   650,
+   421
+  ],
+  "photo_size": [
+   1280,
+   856
+  ],
+  "off_middle_px": [
+   10,
+   -7
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1173
+ },
+ "melk": {
+  "centre_in_photo": [
+   572,
+   441
+  ],
+  "photo_size": [
+   1280,
+   961
+  ],
+  "off_middle_px": [
+   -68,
+   -40
+  ],
+  "squash": 0.88,
+  "squash_direction_deg": 90,
+  "size": 1317
+ },
+ "vienna_khm": {
+  "centre_in_photo": [
+   634,
+   474
+  ],
+  "photo_size": [
+   1280,
+   960
+  ],
+  "off_middle_px": [
+   -6,
+   -6
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1212
+ },
+ "esztergom": {
+  "centre_in_photo": [
+   547,
+   1035
+  ],
+  "photo_size": [
+   1280,
+   1707
+  ],
+  "off_middle_px": [
+   -93,
+   182
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1902
+ },
+ "budapest_stephen": {
+  "centre_in_photo": [
+   640,
+   423
+  ],
+  "photo_size": [
+   1280,
+   852
+  ],
+  "off_middle_px": [
+   0,
+   -3
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1155
+ },
+ "subotica": {
+  "centre_in_photo": [
+   631,
+   470
+  ],
+  "photo_size": [
+   1280,
+   960
+  ],
+  "off_middle_px": [
+   -9,
+   -10
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1219
+ },
+ "szeged": {
+  "centre_in_photo": [
+   654,
+   397
+  ],
+  "photo_size": [
+   1280,
+   960
+  ],
+  "off_middle_px": [
+   14,
+   -83
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1294
+ },
+ "sofia_nevsky": {
+  "centre_in_photo": [
+   840,
+   625
+  ],
+  "photo_size": [
+   1280,
+   960
+  ],
+  "off_middle_px": [
+   200,
+   145
+  ],
+  "squash": 0.82,
+  "squash_direction_deg": 150,
+  "size": 1570
+ },
+ "rila": {
+  "centre_in_photo": [
+   381,
+   455
+  ],
+  "photo_size": [
+   1280,
+   1076
+  ],
+  "off_middle_px": [
+   -259,
+   -83
+  ],
+  "squash": 0.82,
+  "squash_direction_deg": 90,
+  "size": 1638
+ },
+ "edirne_uc": {
+  "centre_in_photo": [
+   633,
+   425
+  ],
+  "photo_size": [
+   1280,
+   852
+  ],
+  "off_middle_px": [
+   -7,
+   -1
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 1162
+ },
+ "dresden": {
+  "centre_in_photo": [
+   481,
+   432
+  ],
+  "photo_size": [
+   960,
+   868
+  ],
+  "off_middle_px": [
+   1,
+   -2
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "size": 973
+ },
+ "edirne_selimiye": {
+  "centre_in_photo": [
+   483,
+   333
+  ],
+  "photo_size": [
+   960,
+   638
+  ],
+  "off_middle_px": [
+   3,
+   14
+  ],
+  "squash": 0.94,
+  "squash_direction_deg": 150,
+  "size": 880
+ }
+}

@@ -1,0 +1,62 @@
+{
+ "prague_museum": {
+  "rim_px": 141,
+  "rays": 4,
+  "turn": 15.0,
+  "outer_off_pct": 25.0,
+  "outer_luck_pct": 35.7,
+  "first_circle_px": 40.7,
+  "first_circle_off_pct": 5.6,
+  "flower_ring_off_pct": 5.0
+ },
+ "budapest_stephen": {
+  "rim_px": 203,
+  "rays": 4,
+  "turn": 45.0,
+  "outer_off_pct": 15.4,
+  "outer_luck_pct": 32.0,
+  "first_circle_px": 58.6,
+  "first_circle_off_pct": 4.4,
+  "flower_ring_off_pct": 14.3
+ },
+ "szeged": {
+  "rim_px": 214,
+  "rays": 8,
+  "turn": 22.5,
+  "outer_off_pct": 11.1,
+  "outer_luck_pct": 11.9,
+  "first_circle_px": 61.8,
+  "first_circle_off_pct": 10.1,
+  "flower_ring_off_pct": 6.5
+ },
+ "subotica": {
+  "rim_px": 381,
+  "rays": 4,
+  "turn": 0.0,
+  "outer_off_pct": 28.6,
+  "outer_luck_pct": 70.1,
+  "first_circle_px": 110.0,
+  "first_circle_off_pct": 1.8,
+  "flower_ring_off_pct": 24.4
+ },
+ "vienna_khm": {
+  "rim_px": 257,
+  "rays": 4,
+  "turn": 45.0,
+  "outer_off_pct": 25.0,
+  "outer_luck_pct": 33.3,
+  "first_circle_px": 74.2,
+  "first_circle_off_pct": 9.7,
+  "flower_ring_off_pct": 6.6
+ },
+ "melk": {
+  "rim_px": 652,
+  "rays": 4,
+  "turn": 45.0,
+  "outer_off_pct": 11.1,
+  "outer_luck_pct": 42.5,
+  "first_circle_px": 188.2,
+  "first_circle_off_pct": 5.2,
+  "flower_ring_off_pct": 7.4
+ }
+}

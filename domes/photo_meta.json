@@ -1,0 +1,121 @@
+{
+ "control": {
+  "title": "File:Kuppel Innen Frauenkirche Dresden.jpg",
+  "size": [
+   5507,
+   4979
+  ],
+  "camera": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35": null,
+  "taken": "2017:01:07 10:44:08",
+  "software": "Microsoft ICE v2.0.3.0",
+  "lat": "51.051996",
+  "lon": "13.741320",
+  "desc": "Die Frauenkirche in Dresden. Die Kuppel des nach dem Wiederaufbau zeigt Gemälde. Erstellt ",
+  "page": "https://commons.wikimedia.org/wiki/File:Kuppel_Innen_Frauenkirche_Dresden.jpg"
+ },
+ "striped": {
+  "title": "File:Interior of dome, Selimiye Mosque, Edirne - Tarik Kaan Muslu.jpg",
+  "size": [
+   4288,
+   2848
+  ],
+  "camera": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35": null,
+  "taken": "2010-04-13",
+  "software": null,
+  "lat": null,
+  "lon": null,
+  "desc": "Interior view of the central dome of the Selimiye Mosque, Edirne, Turkey — a UNESCO World ",
+  "page": "https://commons.wikimedia.org/wiki/File:Interior_of_dome,_Selimiye_Mosque,_Edirne_-_Tarik_Kaan_Muslu.jpg"
+ },
+ "drum": {
+  "title": "File:St Paul's Cathedral Interior Dome 3, London, UK - Diliff.jpg",
+  "size": [
+   6000,
+   6009
+  ],
+  "camera": "",
+  "lens": null,
+  "focal_mm": "2147483647/188475636",
+  "focal35": 11,
+  "taken": "2014:05:30 08:41:52",
+  "software": "Adobe Photoshop CC (Windows)",
+  "lat": "51.513662",
+  "lon": "-0.098296",
+  "desc": "A view of St Paul's Cathedral's dome from directly below, showing the symmetry of the dome",
+  "page": "https://commons.wikimedia.org/wiki/File:St_Paul%27s_Cathedral_Interior_Dome_3,_London,_UK_-_Diliff.jpg"
+ },
+ "painted": {
+  "title": "File:Dome of Saint Isaac's Cathedral (20525741173).jpg",
+  "size": [
+   7360,
+   4912
+  ],
+  "camera": "NIKON CORPORATION NIKON D800",
+  "lens": "16.0-28.0 mm f/2.8",
+  "focal_mm": "280/10",
+  "focal35": 28,
+  "taken": "2014:10:07 17:22:31",
+  "software": "Adobe Photoshop Lightroom 5.3 (Macintosh)",
+  "lat": "59.934163",
+  "lon": "30.306313",
+  "desc": "Saint Isaac's Cathedral or Isaakievskiy Sobor (Исаа́киевский Собо́р) in Saint Petersburg, ",
+  "page": "https://commons.wikimedia.org/wiki/File:Dome_of_Saint_Isaac%27s_Cathedral_(20525741173).jpg"
+ },
+ "coffered": {
+  "title": "File:Dome of Pantheon (Rome).jpg",
+  "size": [
+   5970,
+   3954
+  ],
+  "camera": "NIKON CORPORATION NIKON D3200",
+  "lens": "18.0-105.0 mm f/3.5-5.6",
+  "focal_mm": "180/10",
+  "focal35": 27,
+  "taken": "2015:05:16 19:07:12",
+  "software": "Adobe Photoshop CC 2014 (Windows)",
+  "lat": null,
+  "lon": null,
+  "desc": "Dome of Pantheon (Rome)",
+  "page": "https://commons.wikimedia.org/wiki/File:Dome_of_Pantheon_(Rome).jpg"
+ },
+ "tiled": {
+  "title": "File:Isfahan Lotfollah mosque ceiling symmetric.jpg",
+  "size": [
+   2981,
+   1996
+  ],
+  "camera": "PENTAX Corporation  PENTAX K10D",
+  "lens": null,
+  "focal_mm": "2000/100",
+  "focal35": 30,
+  "taken": "2008:08:27 09:55:14",
+  "software": "Adobe Photoshop CS2 Windows",
+  "lat": "32.657389",
+  "lon": "51.678778",
+  "desc": "The interior side of the dome of the Sheikh Lotf-Allah mosque in Isfahan, Iran",
+  "page": "https://commons.wikimedia.org/wiki/File:Isfahan_Lotfollah_mosque_ceiling_symmetric.jpg"
+ },
+ "rayed": {
+  "title": "File:Kuppel Kleine Hagia Sophia.jpg",
+  "size": [
+   4288,
+   2848
+  ],
+  "camera": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35": null,
+  "taken": "2010-10-14",
+  "software": null,
+  "lat": "41.002778",
+  "lon": "28.972222",
+  "desc": "Interior view of the dome of Little Hagia Sophia, Istanbul",
+  "page": "https://commons.wikimedia.org/wiki/File:Kuppel_Kleine_Hagia_Sophia.jpg"
+ }
+}

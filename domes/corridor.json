@@ -1,0 +1,303 @@
+[
+ {
+  "place": "Dresden Academy of Fine Arts",
+  "lat": 51.05277778,
+  "lon": 13.7425,
+  "off_line_km": 0,
+  "along": 0.0
+ },
+ {
+  "place": "Yenidze",
+  "lat": 51.05888889,
+  "lon": 13.72694444,
+  "off_line_km": 0,
+  "along": 0.001
+ },
+ {
+  "place": "St. Nicholas Church (Malá Strana)",
+  "lat": 50.088,
+  "lon": 14.4032,
+  "off_line_km": 48,
+  "along": 0.075
+ },
+ {
+  "place": "National Museum (Prague)",
+  "lat": 50.07883056,
+  "lon": 14.43079722,
+  "off_line_km": 48,
+  "along": 0.076
+ },
+ {
+  "place": "Basilica of St. Peter and St. Paul, Prague",
+  "lat": 50.06436,
+  "lon": 14.41779,
+  "off_line_km": 49,
+  "along": 0.076
+ },
+ {
+  "place": "Melk Abbey",
+  "lat": 48.22805556,
+  "lon": 15.33388889,
+  "off_line_km": 154,
+  "along": 0.208
+ },
+ {
+  "place": "Klosterneuburg Abbey",
+  "lat": 48.30722222,
+  "lon": 16.32583333,
+  "off_line_km": 97,
+  "along": 0.241
+ },
+ {
+  "place": "Kirche am Steinhof",
+  "lat": 48.2105,
+  "lon": 16.2788,
+  "off_line_km": 107,
+  "along": 0.244
+ },
+ {
+  "place": "Karlskirche",
+  "lat": 48.19828056,
+  "lon": 16.3719,
+  "off_line_km": 104,
+  "along": 0.248
+ },
+ {
+  "place": "Kunsthistorisches Museum",
+  "lat": 48.20388056,
+  "lon": 16.3616,
+  "off_line_km": 104,
+  "along": 0.248
+ },
+ {
+  "place": "Peterskirche, Vienna",
+  "lat": 48.2093,
+  "lon": 16.3695,
+  "off_line_km": 103,
+  "along": 0.248
+ },
+ {
+  "place": "Belvedere, Vienna",
+  "lat": 48.19416667,
+  "lon": 16.38027778,
+  "off_line_km": 104,
+  "along": 0.249
+ },
+ {
+  "place": "Fertőd",
+  "lat": 47.61866,
+  "lon": 16.88144,
+  "off_line_km": 124,
+  "along": 0.299
+ },
+ {
+  "place": "Esztergom Basilica",
+  "lat": 47.79888889,
+  "lon": 18.73638889,
+  "off_line_km": 11,
+  "along": 0.357
+ },
+ {
+  "place": "Vác Cathedral",
+  "lat": 47.7759,
+  "lon": 19.1314,
+  "off_line_km": -8,
+  "along": 0.373
+ },
+ {
+  "place": "Hungarian Parliament Building",
+  "lat": 47.50694444,
+  "lon": 19.04555556,
+  "off_line_km": 17,
+  "along": 0.385
+ },
+ {
+  "place": "St. Stephen's Basilica",
+  "lat": 47.500833,
+  "lon": 19.053889,
+  "off_line_km": 17,
+  "along": 0.386
+ },
+ {
+  "place": "Széchenyi thermal bath",
+  "lat": 47.51861111,
+  "lon": 19.08194444,
+  "off_line_km": 14,
+  "along": 0.386
+ },
+ {
+  "place": "Gellért Baths",
+  "lat": 47.48370833,
+  "lon": 19.05097222,
+  "off_line_km": 19,
+  "along": 0.387
+ },
+ {
+  "place": "Cathedral Basilica of Eger",
+  "lat": 47.8994,
+  "lon": 20.3733,
+  "off_line_km": -85,
+  "along": 0.411
+ },
+ {
+  "place": "Downtown Candlemas Church of the Blessed Virgin Mary",
+  "lat": 46.07694444,
+  "lon": 18.22805556,
+  "off_line_km": 173,
+  "along": 0.434
+ },
+ {
+  "place": "Subotica Synagogue",
+  "lat": 46.10361111,
+  "lon": 19.66777778,
+  "off_line_km": 91,
+  "along": 0.487
+ },
+ {
+  "place": "Votive Church, Szeged",
+  "lat": 46.2489,
+  "lon": 20.1491,
+  "off_line_km": 53,
+  "along": 0.496
+ },
+ {
+  "place": "Szeged Synagogue",
+  "lat": 46.25388889,
+  "lon": 20.14277778,
+  "off_line_km": 53,
+  "along": 0.496
+ },
+ {
+  "place": "Novi Sad Synagogue",
+  "lat": 45.25305556,
+  "lon": 19.84083333,
+  "off_line_km": 147,
+  "along": 0.541
+ },
+ {
+  "place": "Timișoara Orthodox Cathedral",
+  "lat": 45.75055556,
+  "lon": 21.22416667,
+  "off_line_km": 30,
+  "along": 0.564
+ },
+ {
+  "place": "Bajrakli Mosque, Belgrade",
+  "lat": 44.8222,
+  "lon": 20.4575,
+  "off_line_km": 144,
+  "along": 0.589
+ },
+ {
+  "place": "Church of Saint Mark, Belgrade",
+  "lat": 44.8101,
+  "lon": 20.4685,
+  "off_line_km": 145,
+  "along": 0.59
+ },
+ {
+  "place": "House of the National Assembly, Belgrade",
+  "lat": 44.81166667,
+  "lon": 20.46583333,
+  "off_line_km": 145,
+  "along": 0.59
+ },
+ {
+  "place": "Church of Saint Sava",
+  "lat": 44.79805556,
+  "lon": 20.46853889,
+  "off_line_km": 146,
+  "along": 0.591
+ },
+ {
+  "place": "Oplenac",
+  "lat": 44.24722222,
+  "lon": 20.68333333,
+  "off_line_km": 175,
+  "along": 0.63
+ },
+ {
+  "place": "Romanian Athenaeum",
+  "lat": 44.4413,
+  "lon": 26.0973,
+  "off_line_km": -164,
+  "along": 0.816
+ },
+ {
+  "place": "Banya Bashi Mosque",
+  "lat": 42.69944444,
+  "lon": 23.3225,
+  "off_line_km": 132,
+  "along": 0.819
+ },
+ {
+  "place": "Sofia Synagogue",
+  "lat": 42.7,
+  "lon": 23.32111111,
+  "off_line_km": 132,
+  "along": 0.819
+ },
+ {
+  "place": "Church of Saint George, Sofia",
+  "lat": 42.69694444,
+  "lon": 23.32277778,
+  "off_line_km": 132,
+  "along": 0.819
+ },
+ {
+  "place": "Saint Nedelya Cathedral, Sofia",
+  "lat": 42.6967,
+  "lon": 23.32137,
+  "off_line_km": 132,
+  "along": 0.819
+ },
+ {
+  "place": "Saint Sophia Church, Sofia",
+  "lat": 42.69650833,
+  "lon": 23.331425,
+  "off_line_km": 131,
+  "along": 0.82
+ },
+ {
+  "place": "Saint Alexander Nevsky Cathedral, Sofia",
+  "lat": 42.695833,
+  "lon": 23.332956,
+  "off_line_km": 131,
+  "along": 0.82
+ },
+ {
+  "place": "Rila Monastery",
+  "lat": 42.13333333,
+  "lon": 23.34027778,
+  "off_line_km": 172,
+  "along": 0.853
+ },
+ {
+  "place": "Dzhumaya Mosque",
+  "lat": 42.1479,
+  "lon": 24.7483,
+  "off_line_km": 83,
+  "along": 0.905
+ },
+ {
+  "place": "Tombul Mosque",
+  "lat": 43.26944444,
+  "lon": 26.91,
+  "off_line_km": -133,
+  "along": 0.916
+ },
+ {
+  "place": "Old Mosque, Edirne",
+  "lat": 41.676712,
+  "lon": 26.555704,
+  "off_line_km": 0,
+  "along": 1.0
+ },
+ {
+  "place": "Üç Şerefeli Mosque",
+  "lat": 41.67808333,
+  "lon": 26.55352778,
+  "off_line_km": 0,
+  "along": 1.0
+ }
+]

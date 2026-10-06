@@ -1,0 +1,68 @@
+# The built site. Rebuild with: python build_map.py
+site/
+
+# Python
+__pycache__/
+*.pyc
+
+# Bulk photo downloads from Wikimedia Commons (their credits stay, in each folder's _index.json).
+# Only the photos actually drawn on are kept, listed below; they match DOMES in draw_all.py.
+domes/candidates/*.jpg
+domes/sample/*.jpg
+domes/corridor/*.jpg
+!domes/candidates/frauenkirche_0.jpg
+!domes/candidates/selimiye_0.jpg
+!domes/candidates/pantheon_0.jpg
+!domes/candidates/lotfollah_0.jpg
+!domes/candidates/hagia_sophia_0.jpg
+!domes/sample/d000.jpg
+!domes/sample/d024.jpg
+!domes/corridor/c001.jpg
+!domes/corridor/c004.jpg
+!domes/corridor/c014.jpg
+!domes/corridor/c020.jpg
+!domes/corridor/c028.jpg
+!domes/corridor/c033.jpg
+!domes/corridor/c034.jpg
+!domes/corridor/c035.jpg
+!domes/corridor/c045.jpg
+!domes/corridor/c048.jpg
+!domes/corridor/c052.jpg
+!domes/corridor/c060.jpg
+!domes/corridor/c102.jpg
+!domes/corridor/c111.jpg
+!domes/corridor/c010.jpg
+!domes/corridor/c117.jpg
+!domes/corridor/c118.jpg
+!domes/corridor/c119.jpg
+!domes/corridor/c120.jpg
+!domes/corridor/c121.jpg
+!domes/corridor/c122.jpg
+!domes/corridor/c123.jpg
+!domes/corridor/c124.jpg
+!domes/corridor/c125.jpg
+!domes/corridor/c126.jpg
+!domes/corridor/c127.jpg
+!domes/corridor/c128.jpg
+!domes/corridor/c129.jpg
+!domes/corridor/c130.jpg
+
+# Generated drawings and contact sheets. The straightened photos the page embeds are kept.
+domes/all/*.jpg
+!domes/all/*_photo.jpg
+!domes/all/*_grid.jpg
+!domes/all/*_thumb.jpg
+domes/straight/
+domes/all/results_before_flower.json
+domes/drawn/*.jpg
+domes/meshed/*.jpg
+domes/chain/*.jpg
+domes/niches/*.jpg
+domes/outward/
+domes/rectified/*.jpg
+*.log
+_log.txt
+
+# Keys never go in the repository.
+private/
+google_key.txt

@@ -1,0 +1,578 @@
+{
+ "corridor/c034.jpg": {
+  "taken": "2014-08-24",
+  "make": "Canon",
+  "model": "Canon PowerShot G15",
+  "lens": null,
+  "focal_mm": 6.1,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4000,
+   3000
+  ],
+  "description": "Ceiling of the New Synagogue of Szeged, Hungary",
+  "artist": "Filip Maljković from Pancevo, Serbia",
+  "license": "CC BY-SA 2.0"
+ },
+ "corridor/c028.jpg": {
+  "taken": "2018-08-24",
+  "make": "FUJIFILM",
+  "model": "X-T2",
+  "lens": "XF10-24mmF4 R OIS",
+  "focal_mm": 10.0,
+  "focal35_mm": 15,
+  "software": "Adobe Photoshop Lightroom Classic 9.0 (Windows)",
+  "original_size": [
+   5999,
+   3991
+  ],
+  "description": "Interior dome view of St. Stephen's Basilica, Budapest, Hungary",
+  "artist": "Jules Verne Times Two",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c020.jpg": {
+  "taken": "2024-10-28",
+  "make": "Apple",
+  "model": "iPhone 15 Pro Max",
+  "lens": null,
+  "focal_mm": 6.9,
+  "focal35_mm": 24,
+  "software": "PaintShop Pro 22,00",
+  "original_size": [
+   4284,
+   5712
+  ],
+  "description": "Esztergom, the Basilica, dome",
+  "artist": "Dguendel",
+  "license": "CC BY 4.0"
+ },
+ "corridor/c014.jpg": {
+  "taken": "2006-01-06",
+  "make": "OLYMPUS IMAGING CORP.",
+  "model": "IR-300",
+  "lens": null,
+  "focal_mm": 6.3,
+  "focal35_mm": null,
+  "software": "Version 1.1",
+  "original_size": [
+   2560,
+   1920
+  ],
+  "description": "Description: View of the grand cuppola in the Kunsthistorisches Museum in Vienna. Hauptkuppel im Kunsthistorischen Museum in Wien. Fall 2005.\n\nSource: Self-made, I release it into the public domain.",
+  "artist": "No machine-readable author provided. Gryffindor assumed (based on copyright clai",
+  "license": "Public domain"
+ },
+ "candidates/frauenkirche_0.jpg": {
+  "taken": "2017-01-07",
+  "make": "",
+  "model": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Microsoft ICE v2.0.3.0",
+  "original_size": [
+   5507,
+   4979
+  ],
+  "description": "Die Frauenkirche in Dresden. Die Kuppel des nach dem Wiederaufbau zeigt Gemälde. Erstellt wurden die Gemälde von Christoph Wetzel.",
+  "artist": "Clemensfranz",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c001.jpg": {
+  "taken": "2017-04-30",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D7100",
+  "lens": "16.0-80.0 mm f/2.8-4.0",
+  "focal_mm": 18.0,
+  "focal35_mm": 27,
+  "software": "Adobe Photoshop Lightroom 6.10.1 (Windows)",
+  "original_size": [
+   3282,
+   3128
+  ],
+  "description": "Dome of St. Nicholas Church (in Czech Kostel sv. Mikuláše), Malá Strana, Prague, Czech Republic",
+  "artist": "Uoaei1",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c004.jpg": {
+  "taken": "2020-03-08",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D750",
+  "lens": null,
+  "focal_mm": 15.0,
+  "focal35_mm": 15,
+  "software": "darktable darktable-2.6.3-2.fc30",
+  "original_size": [
+   6032,
+   4032
+  ],
+  "description": "Roof of the dome in National Museum in Prague",
+  "artist": "Jakub T. Jankiewicz",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c033.jpg": {
+  "taken": "2014-08-22",
+  "make": "SONY",
+  "model": "DSC-WX300",
+  "lens": null,
+  "focal_mm": 4.3,
+  "focal35_mm": null,
+  "software": "DSC-WX300 v1.00",
+  "original_size": [
+   4896,
+   3672
+  ],
+  "description": "Синагога у Суботици је саграђена 1902. године у стилу сецесије, представља споменик културе од изузетног значаја.",
+  "artist": "Mickey Mystique",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c111.jpg": {
+  "taken": "2014-07-26",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D7100",
+  "lens": "18.0-105.0 mm f/3.5-5.6",
+  "focal_mm": 25.0,
+  "focal35_mm": 37,
+  "software": "Adobe Photoshop Lightroom 5.6 (Windows)",
+  "original_size": [
+   3865,
+   3865
+  ],
+  "description": "Dome of Melk Abbey Church with the fresco by Johann Michael Rottmayr (1716/17): The New Jerusalem",
+  "artist": "Uoaei1",
+  "license": "CC BY-SA 3.0 at"
+ },
+ "corridor/c060.jpg": {
+  "taken": "2015-02-11",
+  "make": "Canon",
+  "model": "Canon EOS 600D",
+  "lens": null,
+  "focal_mm": 50.0,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4261,
+   2748
+  ],
+  "description": "Digital copy of slide taken June, 2001. Complete indexed photo collection at WorldHistoryPics.com.",
+  "artist": "Gary Todd from Xinzheng, China",
+  "license": "CC0"
+ },
+ "candidates/pantheon_0.jpg": {
+  "taken": "2015-05-16",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D3200",
+  "lens": "18.0-105.0 mm f/3.5-5.6",
+  "focal_mm": 18.0,
+  "focal35_mm": 27,
+  "software": "Adobe Photoshop CC 2014 (Windows)",
+  "original_size": [
+   5970,
+   3954
+  ],
+  "description": "Dome of Pantheon (Rome)",
+  "artist": "Livioandronico2013",
+  "license": "CC BY-SA 4.0"
+ },
+ "sample/d024.jpg": {
+  "taken": "2014-10-07",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D800",
+  "lens": "16.0-28.0 mm f/2.8",
+  "focal_mm": 28.0,
+  "focal35_mm": 28,
+  "software": "Adobe Photoshop Lightroom 5.3 (Macintosh)",
+  "original_size": [
+   7360,
+   4912
+  ],
+  "description": "Saint Isaac's Cathedral or Isaakievskiy Sobor (Исаа́киевский Собо́р) in Saint Petersburg, Russia is the largest Russian Orthodox cathedral (sobor) in the city. It is the largest orthodox basilica and ",
+  "artist": "Jorge Láscar from Melbourne, Australia",
+  "license": "CC BY 2.0"
+ },
+ "candidates/selimiye_0.jpg": {
+  "taken": "2010-04-13",
+  "make": "",
+  "model": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4288,
+   2848
+  ],
+  "description": "Interior view of the central dome of the Selimiye Mosque, Edirne, Turkey — a UNESCO World Heritage Site designed by the Ottoman architect Mimar Sinan. Photograph by Tarik Kaan Muslu.",
+  "artist": "Tarikkaanmuslu",
+  "license": "CC BY-SA 4.0"
+ },
+ "candidates/lotfollah_0.jpg": {
+  "taken": "2008-08-27",
+  "make": "PENTAX Corporation",
+  "model": "PENTAX K10D",
+  "lens": null,
+  "focal_mm": 20.0,
+  "focal35_mm": 30,
+  "software": "Adobe Photoshop CS2 Windows",
+  "original_size": [
+   2981,
+   1996
+  ],
+  "description": "The interior side of the dome of the Sheikh Lotf-Allah mosque in Isfahan, Iran",
+  "artist": "Phillip Maiwald (Nikopol)",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c102.jpg": {
+  "taken": "2009-06-01",
+  "make": "Canon",
+  "model": "Canon PowerShot A570 IS",
+  "lens": null,
+  "focal_mm": 5.8,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3072,
+   2304
+  ],
+  "description": "Dzhumaya Mosque",
+  "artist": "Explorer1940",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c048.jpg": {
+  "taken": "2013-08-13",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D3100",
+  "lens": null,
+  "focal_mm": 18.0,
+  "focal35_mm": 27,
+  "software": "Ver.1.01",
+  "original_size": [
+   2478,
+   2083
+  ],
+  "description": "Rila Monastery (Рилски манастир), Bulgaria - fresco",
+  "artist": "Pudelek (Marcin Szala)",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c045.jpg": {
+  "taken": "2017-07-25",
+  "make": "SONY",
+  "model": "DSC-HX400V",
+  "lens": null,
+  "focal_mm": 5.5,
+  "focal35_mm": null,
+  "software": "DSC-HX400V v2.10",
+  "original_size": [
+   5184,
+   3888
+  ],
+  "description": "Het interieur van de Alexander Nevski-kathedraal te Sofia, Bulgarije.",
+  "artist": "Pyotr Myasoedov",
+  "license": "Public domain"
+ },
+ "sample/d000.jpg": {
+  "taken": "2014-05-30",
+  "make": "",
+  "model": "",
+  "lens": null,
+  "focal_mm": 11.4,
+  "focal35_mm": 11,
+  "software": "Adobe Photoshop CC (Windows)",
+  "original_size": [
+   6000,
+   6009
+  ],
+  "description": "A view of St Paul's Cathedral's dome from directly below, showing the symmetry of the dome and cathedral. Top right is the eastern side. Bottom left is the western side. Top left is the northern trans",
+  "artist": "Diliff",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c035.jpg": {
+  "taken": "2013-08-19",
+  "make": "FUJIFILM",
+  "model": "X100S",
+  "lens": null,
+  "focal_mm": 23.0,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom 4.4 (Windows)",
+  "original_size": [
+   4896,
+   3264
+  ],
+  "description": "2013-08-19 Szeged, Hungary\n\nWikipedia article: &lt;a href=\"http://en.wikipedia.org/wiki/Szeged_Synagogue\" rel=\"noreferrer nofollow\"&gt;en.wikipedia.org/wiki/Szeged_Synagogue&lt;/a&gt;",
+  "artist": "Sine Pi from Frankfurt am Main, Germany",
+  "license": "CC BY 2.0"
+ },
+ "corridor/c052.jpg": {
+  "taken": "2010-07-26",
+  "make": "",
+  "model": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   720,
+   480
+  ],
+  "description": "Üç Şerefeli Mosque Dome in Edirne, Turkey.",
+  "artist": "Atanas Kumbarov",
+  "license": "CC BY-SA 2.0"
+ },
+ "candidates/hagia_sophia_0.jpg": {
+  "taken": "2010-10-14",
+  "make": "",
+  "model": "",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4288,
+   2848
+  ],
+  "description": "Interior view of the dome of Little Hagia Sophia, Istanbul",
+  "artist": "H005",
+  "license": "Public domain"
+ },
+ "corridor/c117.jpg": {
+  "taken": "2022-10-23",
+  "make": "samsung",
+  "model": "SM-G975F",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 13,
+  "software": "G975FXXUFHVG4",
+  "original_size": [
+   2900,
+   2900
+  ],
+  "description": "View to the dome of the octagon of the Dresden Art Academy to the \"lemon squeezer\"",
+  "artist": "Roderich Kahn",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c118.jpg": {
+  "taken": "2020-01-31",
+  "make": "Canon",
+  "model": "Canon EOS 5DS R",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom Classic 9.2 (Windows)",
+  "original_size": [
+   4864,
+   7363
+  ],
+  "description": "St. Peter's Church, Vienna",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c119.jpg": {
+  "taken": "2025-01-26",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D7500",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Adobe Photoshop 22.5 (Windows)",
+  "original_size": [
+   2400,
+   2400
+  ],
+  "description": "Frescoed dome of the Roman Catholic cathedral of Vác, Pest, Hungary, painted by Anton Maulbertsch in 1771–1772",
+  "artist": "Pasztilla aka Attila Terbócs",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c120.jpg": {
+  "taken": "2011-07-26",
+  "make": "Canon",
+  "model": "Canon EOS 5D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "QuickTime 7.6.6",
+  "original_size": [
+   3931,
+   2620
+  ],
+  "description": "Roof in the Hungarian Parliament",
+  "artist": "Alex Proimos from Sydney, Australia",
+  "license": "CC BY 2.0"
+ },
+ "corridor/c121.jpg": {
+  "taken": "2017-08-19",
+  "make": "Canon",
+  "model": "Canon EOS 400D DIGITAL",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3888,
+   2592
+  ],
+  "description": "Budapest, Széchenyi Bath, the Dome hall of Czigler Wing (lakeside building). Mid part shows Sun God Helios with quadriga. On mid part also are four bathing scenes (Egyptian, Greek, Roman, and Oriental",
+  "artist": "Szojak",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c122.jpg": {
+  "taken": "2023-08-19",
+  "make": "HUAWEI",
+  "model": "HUAWEI Mate 50 Pro",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "DCO-L29 13.0.0.232(C432E10R1P2)",
+  "original_size": [
+   4096,
+   3072
+  ],
+  "description": "Budapest, Gellért fürdő, előcsarnok",
+  "artist": "Random photos 1989",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c123.jpg": {
+  "taken": "2013-05-12",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3444,
+   2586
+  ],
+  "description": "Dome of the Cathedral St. John, Eger, Northern Hungary",
+  "artist": "Zairon",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c124.jpg": {
+  "taken": "2013-05-16",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3444,
+   2586
+  ],
+  "description": "Dome of the former Mosque Gazi Khassim (now Catholic church), Pécs, Southern Hungary",
+  "artist": "Zairon",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c125.jpg": {
+  "taken": "2013-05-11",
+  "make": null,
+  "model": null,
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3444,
+   2586
+  ],
+  "description": "Dome of the Cathedral St. Mary Assumption, Esztergom, Northern Hungary",
+  "artist": "Zairon",
+  "license": "CC BY-SA 3.0"
+ },
+ "corridor/c010.jpg": {
+  "taken": "2018-05-31",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D5300",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 30,
+  "software": "Adobe Photoshop Elements 8.0 Windows",
+  "original_size": [
+   3580,
+   4773
+  ],
+  "description": "Interior of the dome in the Otto-Wagner-Kirche, Vienna.",
+  "artist": "Haeferl",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c126.jpg": {
+  "taken": "2023-05-25",
+  "make": "samsung",
+  "model": "SM-A736B",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 23,
+  "software": null,
+  "original_size": [
+   4000,
+   3000
+  ],
+  "description": "ბელგრადის წმინდა საბას ტაძარი",
+  "artist": "Jaba1977",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c127.jpg": {
+  "taken": "2026-07-30",
+  "make": "Apple",
+  "model": "iPhone 17 Pro Max",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 14,
+  "software": "26.5.2",
+  "original_size": [
+   3876,
+   5168
+  ],
+  "description": "Sofia Synagogue",
+  "artist": "Oleg Yunakov",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c128.jpg": {
+  "taken": "2014-06-16",
+  "make": "OLYMPUS IMAGING CORP.  ",
+  "model": "XZ-2            ",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Version 1.0                    ",
+  "original_size": [
+   3968,
+   2976
+  ],
+  "description": "2014-06-16 in Sofia.",
+  "artist": "Mark Ahsmann",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c129.jpg": {
+  "taken": "2024-06-03",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D850",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Adobe Photoshop CS6 (Windows)",
+  "original_size": [
+   8256,
+   5504
+  ],
+  "description": "One of pictures of the ceiling’s domes and supports, all decorated in paint.",
+  "artist": "Dosseman",
+  "license": "CC BY-SA 4.0"
+ },
+ "corridor/c130.jpg": {
+  "taken": "2020-02-15",
+  "make": "SONY",
+  "model": "DSC-W830",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   5152,
+   3864
+  ],
+  "description": "Bajrakli džamija, Beograd. Kupola",
+  "artist": "Andrija1234567",
+  "license": "GFDL"
+ }
+}

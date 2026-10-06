@@ -1,0 +1,80 @@
+{
+ "control": {
+  "centre": [
+   481,
+   432
+  ],
+  "rays": 4,
+  "turn_deg": 0.0,
+  "niche_centres_px": 432,
+  "niche_radius_px": 108,
+  "centres_over_radius": 3.98,
+  "touch_over_radius": 2.98,
+  "first_circle_px": 63
+ },
+ "selimiye": {
+  "centre": [
+   483,
+   333
+  ],
+  "rays": 4,
+  "turn_deg": 22.5,
+  "niche_centres_px": 521,
+  "niche_radius_px": 309,
+  "centres_over_radius": 1.68,
+  "touch_over_radius": 0.68,
+  "first_circle_px": 179
+ },
+ "d000": {
+  "centre": [
+   638,
+   641
+  ],
+  "rays": 4,
+  "turn_deg": 45.0,
+  "niche_centres_px": 808,
+  "niche_radius_px": 333,
+  "centres_over_radius": 2.43,
+  "touch_over_radius": 1.43,
+  "first_circle_px": 192
+ },
+ "d005": {
+  "centre": [
+   642,
+   423
+  ],
+  "rays": 4,
+  "turn_deg": 45.0,
+  "niche_centres_px": 824,
+  "niche_radius_px": 437,
+  "centres_over_radius": 1.89,
+  "touch_over_radius": 0.89,
+  "first_circle_px": 252
+ },
+ "d024": {
+  "centre": [
+   626,
+   423
+  ],
+  "rays": 4,
+  "turn_deg": 22.5,
+  "niche_centres_px": 296,
+  "niche_radius_px": 68,
+  "centres_over_radius": 4.33,
+  "touch_over_radius": 3.33,
+  "first_circle_px": 39
+ },
+ "d041": {
+  "centre": [
+   608,
+   422
+  ],
+  "rays": 4,
+  "turn_deg": 22.5,
+  "niche_centres_px": 307,
+  "niche_radius_px": 77,
+  "centres_over_radius": 3.99,
+  "touch_over_radius": 2.99,
+  "first_circle_px": 44
+ }
+}
