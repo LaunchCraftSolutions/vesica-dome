@@ -96,6 +96,14 @@ def write(rel, text):
     written.add(os.path.normcase(out))
 
 
+def keep_record(path, made):
+    """Write a record of what was made, but only when it has changed, so a build that makes nothing new leaves the repository untouched."""
+    text = json.dumps(made, indent=1, sort_keys=True) + "\n"
+    if not os.path.exists(path) or open(path, encoding="utf-8").read() != text:
+        with open(path, "w", encoding="utf-8", newline="\n") as f:
+            f.write(text)
+
+
 def digest(path):
     with open(path, "rb") as f:
         return hashlib.sha1(f.read()).hexdigest()[:16]
@@ -161,8 +169,7 @@ def eyes():
                     "cx": round(e["iris"]["cx"] * k, 1), "cy": round(e["iris"]["cy"] * k, 1), "r": round(e["iris"]["r"] * k, 1),
                     "credit": f'{e["by"]}, {e["licence"]}' + (f', {e["note"]}' if e.get("note") else ""), "title": e["title"], "page": e["page"],
                     "by": e["by"], "licence": e["licence"], "licence_url": e.get("licence_url", "")})
-    with open(record, "w", encoding="utf-8") as f:
-        json.dump(made, f, indent=1)
+    keep_record(record, made)
     return out
 
 
@@ -200,8 +207,7 @@ def main():
             r["turn_deg"] = TURN_BY_HAND[r["place"]]
     undrawn = [dict(c, km=round(c["along"] * LINE_KM)) for c in load("corridor.json") if c["place"] not in NOT_DOMES and c["place"] not in DRAWN_KEYS]
     template = open(os.path.join(HERE, "app_template.html"), encoding="utf-8").read()
-    with open(record, "w", encoding="utf-8") as f:
-        json.dump(made, f, indent=1, sort_keys=True)
+    keep_record(record, made)
     html = template.replace("/*DOMES*/[]", json.dumps(results, ensure_ascii=False)).replace("/*UNDRAWN*/[]", json.dumps(undrawn, ensure_ascii=False)).replace("/*EYES*/[]", json.dumps(eyes(), ensure_ascii=False))
     write("index.html", html)
     # The page used to be called map.html. That address still works: it passes straight on, keeping the dome named after the #.
