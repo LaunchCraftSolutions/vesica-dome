@@ -82445,5 +82445,9896 @@
   },
   "outer_circles_in_frame": true,
   "straightened": null
+ },
+ {
+  "place": "Sarajevo, Gazi Husrev-beg Mosque",
+  "slug": "sarajevo__gazi_husrev_beg_mosque",
+  "photo": "world/w258.jpg",
+  "along": null,
+  "built": "1530–31",
+  "note": "",
+  "lat": 43.8592,
+  "lon": 18.429,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   634,
+   486
+  ],
+  "straightened_px": 1212,
+  "view_px": 1100,
+  "first_circle_view_px": 58.34,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -6,
+   6
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 64.3,
+  "turn_deg": 37.5,
+  "landed": 3,
+  "luck": 1.0,
+  "sizes_tried": 30,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 64,
+    "nearest_edge_px": 67,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 111,
+    "nearest_edge_px": 115,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 223,
+    "nearest_edge_px": 302,
+    "off_pct": 35.6,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 334,
+    "nearest_edge_px": 334,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 12,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 19,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 21,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 21,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 37,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 50,
+    "nearest_edge_px": 53,
+    "off_pct": 6.2,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 64,
+    "nearest_edge_px": 67,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 74,
+    "nearest_edge_px": 67,
+    "off_pct": 9.7,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 93,
+    "nearest_edge_px": 95,
+    "off_pct": 2.4,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 111,
+    "nearest_edge_px": 115,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 121,
+    "nearest_edge_px": 115,
+    "off_pct": 4.6,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 129,
+    "nearest_edge_px": 115,
+    "off_pct": 10.5,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 157,
+    "nearest_edge_px": 115,
+    "off_pct": 27.0,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 193,
+    "nearest_edge_px": 115,
+    "off_pct": 40.4,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 223,
+    "nearest_edge_px": 302,
+    "off_pct": 35.6,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 334,
+    "nearest_edge_px": 334,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 445,
+    "nearest_edge_px": 440,
+    "off_pct": 1.2,
+    "landed": true
+   }
+  ],
+  "measured_edges_px": [
+   53,
+   60,
+   67,
+   83,
+   95,
+   103,
+   115,
+   302,
+   334,
+   354,
+   372,
+   379,
+   440,
+   488
+  ],
+  "measured_edges_times_first_circle": [
+   0.82,
+   0.93,
+   1.04,
+   1.29,
+   1.48,
+   1.6,
+   1.79,
+   4.7,
+   5.2,
+   5.51,
+   5.79,
+   5.9,
+   6.85,
+   7.59
+  ],
+  "reach_px": 638,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     17,
+     1.0
+    ],
+    [
+     18,
+     0.91
+    ],
+    [
+     24,
+     0.88
+    ],
+    [
+     35,
+     0.87
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     26,
+     1.0
+    ],
+    [
+     31,
+     0.85
+    ],
+    [
+     28,
+     0.84
+    ],
+    [
+     25,
+     0.77
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     12,
+     0.77
+    ],
+    [
+     6,
+     0.69
+    ],
+    [
+     16,
+     0.63
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Mostar, Koski Mehmed Pasha Mosque",
+  "slug": "mostar__koski_mehmed_pasha_mosque",
+  "photo": "world/w259.jpg",
+  "along": null,
+  "built": "1617–19",
+  "note": "",
+  "lat": 43.3397,
+  "lon": 17.8147,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   661,
+   400
+  ],
+  "straightened_px": 1299,
+  "view_px": 1100,
+  "first_circle_view_px": 98.03,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   21,
+   -80
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 115.8,
+  "turn_deg": 7.5,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 24,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 116,
+    "nearest_edge_px": 120,
+    "off_pct": 3.7,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 201,
+    "nearest_edge_px": 120,
+    "off_pct": 40.2,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 401,
+    "nearest_edge_px": 401,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 602,
+    "nearest_edge_px": 661,
+    "off_pct": 9.9,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 22,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 33,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 37,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 39,
+    "nearest_edge_px": 41,
+    "off_pct": 6.3,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 67,
+    "nearest_edge_px": 79,
+    "off_pct": 18.2,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 90,
+    "nearest_edge_px": 86,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 116,
+    "nearest_edge_px": 120,
+    "off_pct": 3.7,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 134,
+    "nearest_edge_px": 120,
+    "off_pct": 10.2,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 167,
+    "nearest_edge_px": 120,
+    "off_pct": 28.2,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 201,
+    "nearest_edge_px": 120,
+    "off_pct": 40.2,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 217,
+    "nearest_edge_px": 120,
+    "off_pct": 44.7,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 232,
+    "nearest_edge_px": 120,
+    "off_pct": 48.2,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 284,
+    "nearest_edge_px": 401,
+    "off_pct": 41.4,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 347,
+    "nearest_edge_px": 401,
+    "off_pct": 15.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 401,
+    "nearest_edge_px": 401,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 602,
+    "nearest_edge_px": 661,
+    "off_pct": 9.9,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 802,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   41,
+   47,
+   79,
+   86,
+   108,
+   120,
+   401,
+   457,
+   467,
+   474,
+   480,
+   487,
+   661,
+   681
+  ],
+  "measured_edges_times_first_circle": [
+   0.35,
+   0.41,
+   0.68,
+   0.74,
+   0.93,
+   1.04,
+   3.46,
+   3.95,
+   4.03,
+   4.09,
+   4.15,
+   4.21,
+   5.71,
+   5.88
+  ],
+  "reach_px": 683,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     8,
+     1.0
+    ],
+    [
+     16,
+     0.66
+    ],
+    [
+     24,
+     0.38
+    ],
+    [
+     14,
+     0.25
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     8,
+     1.0
+    ],
+    [
+     9,
+     0.74
+    ],
+    [
+     17,
+     0.72
+    ],
+    [
+     26,
+     0.52
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     7,
+     0.51
+    ],
+    [
+     11,
+     0.24
+    ],
+    [
+     20,
+     0.18
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Thessaloniki, Hagia Sophia",
+  "slug": "thessaloniki__hagia_sophia",
+  "photo": "world/w260.jpg",
+  "along": null,
+  "built": "7th–8th centuries; dome mosaic 9th century",
+  "note": "",
+  "lat": 40.6328,
+  "lon": 22.9469,
+  "photo_size": [
+   1280,
+   689
+  ],
+  "middle_in_photo": [
+   637,
+   358
+  ],
+  "straightened_px": 1103,
+  "view_px": 1100,
+  "first_circle_view_px": 52.98,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -3,
+   14
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 53.1,
+  "turn_deg": 33.8,
+  "landed": 3,
+  "luck": 0.6,
+  "sizes_tried": 25,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 53,
+    "nearest_edge_px": 55,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 92,
+    "nearest_edge_px": 69,
+    "off_pct": 25.0,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 184,
+    "nearest_edge_px": 175,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 276,
+    "nearest_edge_px": 276,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 10,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 15,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 17,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 31,
+    "nearest_edge_px": 32,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 41,
+    "nearest_edge_px": 43,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 53,
+    "nearest_edge_px": 55,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 61,
+    "nearest_edge_px": 55,
+    "off_pct": 10.3,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 77,
+    "nearest_edge_px": 69,
+    "off_pct": 10.0,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 92,
+    "nearest_edge_px": 69,
+    "off_pct": 25.0,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 100,
+    "nearest_edge_px": 69,
+    "off_pct": 30.7,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 106,
+    "nearest_edge_px": 69,
+    "off_pct": 35.1,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 130,
+    "nearest_edge_px": 175,
+    "off_pct": 34.5,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 159,
+    "nearest_edge_px": 175,
+    "off_pct": 9.8,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 184,
+    "nearest_edge_px": 175,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 276,
+    "nearest_edge_px": 276,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 368,
+    "nearest_edge_px": 291,
+    "off_pct": 20.9,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   32,
+   43,
+   55,
+   69,
+   175,
+   208,
+   233,
+   243,
+   255,
+   265,
+   276,
+   291
+  ],
+  "measured_edges_times_first_circle": [
+   0.6,
+   0.81,
+   1.04,
+   1.3,
+   3.29,
+   3.92,
+   4.39,
+   4.57,
+   4.8,
+   4.99,
+   5.2,
+   5.48
+  ],
+  "reach_px": 580,
+  "smallest_measurable_px": 27,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     10,
+     0.44
+    ],
+    [
+     5,
+     0.32
+    ],
+    [
+     7,
+     0.3
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     17,
+     1.0
+    ],
+    [
+     15,
+     0.86
+    ],
+    [
+     16,
+     0.59
+    ],
+    [
+     18,
+     0.52
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.62
+    ],
+    [
+     12,
+     0.55
+    ],
+    [
+     5,
+     0.39
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Geghard",
+  "slug": "geghard",
+  "photo": "world/w261.jpg",
+  "along": null,
+  "built": "1215–25",
+  "note": "Stalactite vault with an opening at the crown",
+  "lat": 40.1404,
+  "lon": 44.8185,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   629,
+   266
+  ],
+  "straightened_px": 1314,
+  "view_px": 1100,
+  "first_circle_view_px": 43.98,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -11,
+   -160
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 52.5,
+  "turn_deg": 41.2,
+  "landed": 4,
+  "luck": 0.807,
+  "sizes_tried": 33,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 53,
+    "nearest_edge_px": 54,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 91,
+    "nearest_edge_px": 92,
+    "off_pct": 1.1,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 182,
+    "nearest_edge_px": 182,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 273,
+    "nearest_edge_px": 275,
+    "off_pct": 0.7,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 10,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 15,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 17,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 30,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 41,
+    "nearest_edge_px": 43,
+    "off_pct": 5.4,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 53,
+    "nearest_edge_px": 54,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 61,
+    "nearest_edge_px": 54,
+    "off_pct": 11.0,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 76,
+    "nearest_edge_px": 76,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 91,
+    "nearest_edge_px": 92,
+    "off_pct": 1.1,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 98,
+    "nearest_edge_px": 92,
+    "off_pct": 6.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 105,
+    "nearest_edge_px": 108,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 129,
+    "nearest_edge_px": 120,
+    "off_pct": 6.8,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 158,
+    "nearest_edge_px": 154,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 182,
+    "nearest_edge_px": 182,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 273,
+    "nearest_edge_px": 275,
+    "off_pct": 0.7,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 364,
+    "nearest_edge_px": 275,
+    "off_pct": 24.5,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   43,
+   54,
+   76,
+   83,
+   92,
+   108,
+   120,
+   145,
+   154,
+   165,
+   172,
+   182,
+   265,
+   275
+  ],
+  "measured_edges_times_first_circle": [
+   0.82,
+   1.03,
+   1.45,
+   1.58,
+   1.75,
+   2.06,
+   2.28,
+   2.76,
+   2.93,
+   3.14,
+   3.27,
+   3.46,
+   5.04,
+   5.23
+  ],
+  "reach_px": 691,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.66
+    ],
+    [
+     7,
+     0.58
+    ],
+    [
+     6,
+     0.49
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     10,
+     1.0
+    ],
+    [
+     9,
+     0.83
+    ],
+    [
+     6,
+     0.78
+    ],
+    [
+     8,
+     0.78
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     20,
+     1.0
+    ],
+    [
+     13,
+     0.98
+    ],
+    [
+     14,
+     0.81
+    ],
+    [
+     19,
+     0.74
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Istanbul, Süleymaniye",
+  "slug": "istanbul__süleymaniye",
+  "photo": "world/w262.jpg",
+  "along": null,
+  "built": "1550–57",
+  "note": "",
+  "lat": 41.0161,
+  "lon": 28.9639,
+  "photo_size": [
+   1280,
+   939
+  ],
+  "middle_in_photo": [
+   614,
+   486
+  ],
+  "straightened_px": 1236,
+  "view_px": 1100,
+  "first_circle_view_px": 165.45,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -26,
+   16
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 185.9,
+  "turn_deg": 0.0,
+  "landed": 3,
+  "luck": 0.929,
+  "sizes_tried": 32,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 186,
+    "nearest_edge_px": 186,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 322,
+    "nearest_edge_px": 328,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 644,
+    "nearest_edge_px": 644,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 966,
+    "nearest_edge_px": 644,
+    "off_pct": 33.3,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 36,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 54,
+    "nearest_edge_px": 64,
+    "off_pct": 19.3,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 60,
+    "nearest_edge_px": 64,
+    "off_pct": 7.0,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 62,
+    "nearest_edge_px": 64,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 107,
+    "nearest_edge_px": 64,
+    "off_pct": 40.4,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 144,
+    "nearest_edge_px": 186,
+    "off_pct": 28.8,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 186,
+    "nearest_edge_px": 186,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 215,
+    "nearest_edge_px": 201,
+    "off_pct": 6.4,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 268,
+    "nearest_edge_px": 309,
+    "off_pct": 15.2,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 322,
+    "nearest_edge_px": 328,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 349,
+    "nearest_edge_px": 347,
+    "off_pct": 0.4,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 372,
+    "nearest_edge_px": 347,
+    "off_pct": 6.7,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 455,
+    "nearest_edge_px": 450,
+    "off_pct": 1.2,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 558,
+    "nearest_edge_px": 513,
+    "off_pct": 8.0,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 644,
+    "nearest_edge_px": 644,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 966,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1288,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   64,
+   186,
+   201,
+   309,
+   328,
+   347,
+   450,
+   465,
+   473,
+   513,
+   613,
+   629,
+   635,
+   644
+  ],
+  "measured_edges_times_first_circle": [
+   0.34,
+   1.0,
+   1.08,
+   1.66,
+   1.76,
+   1.87,
+   2.42,
+   2.5,
+   2.54,
+   2.76,
+   3.3,
+   3.38,
+   3.42,
+   3.46
+  ],
+  "reach_px": 650,
+  "smallest_measurable_px": 37,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.71
+    ],
+    [
+     7,
+     0.66
+    ],
+    [
+     9,
+     0.62
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     5,
+     1.0
+    ],
+    [
+     4,
+     0.96
+    ],
+    [
+     8,
+     0.62
+    ],
+    [
+     7,
+     0.45
+    ]
+   ],
+   "rim to next ring out": []
+  },
+  "outer_circles_in_frame": false,
+  "straightened": null
+ },
+ {
+  "place": "Istanbul, New Mosque",
+  "slug": "istanbul__new_mosque",
+  "photo": "world/w263.jpg",
+  "along": null,
+  "built": "1597–1665",
+  "note": "",
+  "lat": 41.017,
+  "lon": 28.9715,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   646,
+   405
+  ],
+  "straightened_px": 1179,
+  "view_px": 1100,
+  "first_circle_view_px": 112.58,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   6,
+   -22
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 120.7,
+  "turn_deg": 0.0,
+  "landed": 3,
+  "luck": 0.958,
+  "sizes_tried": 27,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 121,
+    "nearest_edge_px": 124,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 209,
+    "nearest_edge_px": 144,
+    "off_pct": 31.1,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 418,
+    "nearest_edge_px": 418,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 627,
+    "nearest_edge_px": 597,
+    "off_pct": 4.8,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 35,
+    "nearest_edge_px": 44,
+    "off_pct": 26.3,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 39,
+    "nearest_edge_px": 44,
+    "off_pct": 13.4,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 40,
+    "nearest_edge_px": 44,
+    "off_pct": 9.4,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 70,
+    "nearest_edge_px": 76,
+    "off_pct": 9.1,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 94,
+    "nearest_edge_px": 76,
+    "off_pct": 18.9,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 121,
+    "nearest_edge_px": 124,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 139,
+    "nearest_edge_px": 144,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 174,
+    "nearest_edge_px": 144,
+    "off_pct": 17.3,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 209,
+    "nearest_edge_px": 144,
+    "off_pct": 31.1,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 226,
+    "nearest_edge_px": 144,
+    "off_pct": 36.3,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 241,
+    "nearest_edge_px": 144,
+    "off_pct": 40.3,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 296,
+    "nearest_edge_px": 344,
+    "off_pct": 16.4,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 362,
+    "nearest_edge_px": 351,
+    "off_pct": 3.0,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 418,
+    "nearest_edge_px": 418,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 627,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 836,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   44,
+   62,
+   76,
+   124,
+   133,
+   144,
+   344,
+   351,
+   389,
+   406,
+   418,
+   521,
+   568,
+   597
+  ],
+  "measured_edges_times_first_circle": [
+   0.36,
+   0.51,
+   0.63,
+   1.03,
+   1.1,
+   1.19,
+   2.85,
+   2.91,
+   3.22,
+   3.36,
+   3.46,
+   4.32,
+   4.71,
+   4.95
+  ],
+  "reach_px": 620,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.23
+    ],
+    [
+     12,
+     0.22
+    ],
+    [
+     5,
+     0.21
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     48,
+     0.35
+    ],
+    [
+     24,
+     0.29
+    ],
+    [
+     20,
+     0.28
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.53
+    ],
+    [
+     5,
+     0.41
+    ],
+    [
+     7,
+     0.36
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Istanbul, Bayezid II",
+  "slug": "istanbul__bayezid_ii",
+  "photo": "world/w264.jpg",
+  "along": null,
+  "built": "1501–06",
+  "note": "",
+  "lat": 41.0103,
+  "lon": 28.9653,
+  "photo_size": [
+   1280,
+   851
+  ],
+  "middle_in_photo": [
+   656,
+   322
+  ],
+  "straightened_px": 1264,
+  "view_px": 1100,
+  "first_circle_view_px": 34.84,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   16,
+   -104
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 40.0,
+  "turn_deg": 0.0,
+  "landed": 3,
+  "luck": 0.986,
+  "sizes_tried": 35,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 40,
+    "nearest_edge_px": 42,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 69,
+    "nearest_edge_px": 42,
+    "off_pct": 39.4,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 139,
+    "nearest_edge_px": 141,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 208,
+    "nearest_edge_px": 208,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 8,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 12,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 13,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 13,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 40,
+    "nearest_edge_px": 42,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 46,
+    "nearest_edge_px": 42,
+    "off_pct": 9.1,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 58,
+    "nearest_edge_px": 42,
+    "off_pct": 27.3,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 69,
+    "nearest_edge_px": 42,
+    "off_pct": 39.4,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 75,
+    "nearest_edge_px": 42,
+    "off_pct": 44.0,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 80,
+    "nearest_edge_px": 42,
+    "off_pct": 47.5,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 98,
+    "nearest_edge_px": 141,
+    "off_pct": 43.8,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 120,
+    "nearest_edge_px": 141,
+    "off_pct": 17.4,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 139,
+    "nearest_edge_px": 141,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 208,
+    "nearest_edge_px": 208,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 277,
+    "nearest_edge_px": 305,
+    "off_pct": 10.0,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   42,
+   141,
+   161,
+   171,
+   182,
+   193,
+   201,
+   208,
+   232,
+   245,
+   305,
+   325,
+   349,
+   456
+  ],
+  "measured_edges_times_first_circle": [
+   1.05,
+   3.52,
+   4.02,
+   4.27,
+   4.55,
+   4.82,
+   5.02,
+   5.2,
+   5.8,
+   6.12,
+   7.62,
+   8.12,
+   8.72,
+   11.39
+  ],
+  "reach_px": 665,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     7,
+     1.0
+    ],
+    [
+     14,
+     0.86
+    ],
+    [
+     13,
+     0.65
+    ],
+    [
+     15,
+     0.55
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     6,
+     1.0
+    ],
+    [
+     4,
+     0.86
+    ],
+    [
+     21,
+     0.73
+    ],
+    [
+     20,
+     0.7
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     6,
+     1.0
+    ],
+    [
+     22,
+     0.94
+    ],
+    [
+     21,
+     0.87
+    ],
+    [
+     20,
+     0.76
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Bursa, Green Mosque",
+  "slug": "bursa__green_mosque",
+  "photo": "world/w265.jpg",
+  "along": null,
+  "built": "1412–24",
+  "note": "",
+  "lat": 40.1819,
+  "lon": 29.0744,
+  "photo_size": [
+   1280,
+   977
+  ],
+  "middle_in_photo": [
+   632,
+   402
+  ],
+  "straightened_px": 1299,
+  "view_px": 1100,
+  "first_circle_view_px": 140.81,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -8,
+   -86
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 166.3,
+  "turn_deg": 7.5,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 32,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 166,
+    "nearest_edge_px": 216,
+    "off_pct": 29.9,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 288,
+    "nearest_edge_px": 292,
+    "off_pct": 1.4,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 576,
+    "nearest_edge_px": 576,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 864,
+    "nearest_edge_px": 647,
+    "off_pct": 25.1,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 32,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 48,
+    "nearest_edge_px": 47,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 53,
+    "nearest_edge_px": 47,
+    "off_pct": 12.1,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 55,
+    "nearest_edge_px": 47,
+    "off_pct": 15.2,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 96,
+    "nearest_edge_px": 47,
+    "off_pct": 51.0,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 129,
+    "nearest_edge_px": 47,
+    "off_pct": 63.6,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 166,
+    "nearest_edge_px": 216,
+    "off_pct": 29.9,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 192,
+    "nearest_edge_px": 216,
+    "off_pct": 12.5,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 240,
+    "nearest_edge_px": 237,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 288,
+    "nearest_edge_px": 292,
+    "off_pct": 1.4,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 312,
+    "nearest_edge_px": 299,
+    "off_pct": 4.1,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 333,
+    "nearest_edge_px": 328,
+    "off_pct": 1.4,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 407,
+    "nearest_edge_px": 328,
+    "off_pct": 19.5,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 499,
+    "nearest_edge_px": 576,
+    "off_pct": 15.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 576,
+    "nearest_edge_px": 576,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 864,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1152,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   40,
+   47,
+   216,
+   226,
+   237,
+   261,
+   270,
+   277,
+   292,
+   299,
+   328,
+   576,
+   633,
+   647
+  ],
+  "measured_edges_times_first_circle": [
+   0.24,
+   0.28,
+   1.3,
+   1.36,
+   1.43,
+   1.57,
+   1.62,
+   1.67,
+   1.76,
+   1.8,
+   1.97,
+   3.46,
+   3.81,
+   3.89
+  ],
+  "reach_px": 683,
+  "smallest_measurable_px": 39,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     8,
+     1.0
+    ],
+    [
+     6,
+     0.83
+    ],
+    [
+     10,
+     0.51
+    ],
+    [
+     16,
+     0.48
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.6
+    ],
+    [
+     9,
+     0.36
+    ],
+    [
+     6,
+     0.23
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     5,
+     1.0
+    ],
+    [
+     8,
+     0.46
+    ],
+    [
+     4,
+     0.43
+    ],
+    [
+     6,
+     0.42
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Bursa, Grand Mosque",
+  "slug": "bursa__grand_mosque",
+  "photo": "world/w266.jpg",
+  "along": null,
+  "built": "1396–99",
+  "note": "One of twenty domes",
+  "lat": 40.1839,
+  "lon": 29.0617,
+  "photo_size": [
+   1280,
+   852
+  ],
+  "middle_in_photo": [
+   638,
+   328
+  ],
+  "straightened_px": 1243,
+  "view_px": 1100,
+  "first_circle_view_px": 52.63,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -2,
+   -98
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 59.5,
+  "turn_deg": 22.5,
+  "landed": 4,
+  "luck": 0.544,
+  "sizes_tried": 27,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 59,
+    "nearest_edge_px": 62,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 103,
+    "nearest_edge_px": 103,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 206,
+    "nearest_edge_px": 210,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 309,
+    "nearest_edge_px": 298,
+    "off_pct": 3.6,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 11,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 17,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 19,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 34,
+    "nearest_edge_px": 36,
+    "off_pct": 4.8,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 46,
+    "nearest_edge_px": 45,
+    "off_pct": 2.6,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 59,
+    "nearest_edge_px": 62,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 69,
+    "nearest_edge_px": 70,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 86,
+    "nearest_edge_px": 84,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 103,
+    "nearest_edge_px": 103,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 111,
+    "nearest_edge_px": 103,
+    "off_pct": 7.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 119,
+    "nearest_edge_px": 124,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 146,
+    "nearest_edge_px": 166,
+    "off_pct": 14.0,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 178,
+    "nearest_edge_px": 166,
+    "off_pct": 7.0,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 206,
+    "nearest_edge_px": 210,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 309,
+    "nearest_edge_px": 298,
+    "off_pct": 3.6,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 412,
+    "nearest_edge_px": 298,
+    "off_pct": 27.7,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   36,
+   45,
+   54,
+   62,
+   70,
+   84,
+   103,
+   124,
+   166,
+   210,
+   221,
+   255,
+   268,
+   298
+  ],
+  "measured_edges_times_first_circle": [
+   0.61,
+   0.76,
+   0.91,
+   1.04,
+   1.18,
+   1.41,
+   1.73,
+   2.09,
+   2.79,
+   3.53,
+   3.72,
+   4.29,
+   4.51,
+   5.01
+  ],
+  "reach_px": 654,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.96
+    ],
+    [
+     6,
+     0.91
+    ],
+    [
+     22,
+     0.54
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     7,
+     1.0
+    ],
+    [
+     32,
+     0.99
+    ],
+    [
+     5,
+     0.97
+    ],
+    [
+     27,
+     0.95
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     15,
+     1.0
+    ],
+    [
+     14,
+     0.87
+    ],
+    [
+     17,
+     0.72
+    ],
+    [
+     5,
+     0.71
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Divriği, Great Mosque",
+  "slug": "divriği__great_mosque",
+  "photo": "world/w267.jpg",
+  "along": null,
+  "built": "1228–29",
+  "note": "Carved stone vault",
+  "lat": 39.3713,
+  "lon": 38.1218,
+  "photo_size": [
+   1280,
+   1707
+  ],
+  "middle_in_photo": [
+   617,
+   864
+  ],
+  "straightened_px": 1633,
+  "view_px": 1100,
+  "first_circle_view_px": 45.81,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -23,
+   10
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 68.0,
+  "turn_deg": 37.5,
+  "landed": 3,
+  "luck": 0.851,
+  "sizes_tried": 27,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 68,
+    "nearest_edge_px": 68,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 118,
+    "nearest_edge_px": 121,
+    "off_pct": 2.7,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 236,
+    "nearest_edge_px": 244,
+    "off_pct": 3.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 353,
+    "nearest_edge_px": 291,
+    "off_pct": 17.6,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 13,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 22,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 39,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 53,
+    "nearest_edge_px": 68,
+    "off_pct": 28.8,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 68,
+    "nearest_edge_px": 68,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 79,
+    "nearest_edge_px": 82,
+    "off_pct": 4.4,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 98,
+    "nearest_edge_px": 99,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 118,
+    "nearest_edge_px": 121,
+    "off_pct": 2.7,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 127,
+    "nearest_edge_px": 121,
+    "off_pct": 5.1,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 136,
+    "nearest_edge_px": 121,
+    "off_pct": 11.0,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 167,
+    "nearest_edge_px": 172,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 204,
+    "nearest_edge_px": 207,
+    "off_pct": 1.5,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 236,
+    "nearest_edge_px": 244,
+    "off_pct": 3.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 353,
+    "nearest_edge_px": 291,
+    "off_pct": 17.6,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 471,
+    "nearest_edge_px": 291,
+    "off_pct": 38.2,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   68,
+   82,
+   92,
+   99,
+   121,
+   160,
+   172,
+   192,
+   207,
+   244,
+   268,
+   283,
+   291,
+   664
+  ],
+  "measured_edges_times_first_circle": [
+   1.0,
+   1.21,
+   1.35,
+   1.46,
+   1.78,
+   2.35,
+   2.53,
+   2.82,
+   3.04,
+   3.59,
+   3.94,
+   4.16,
+   4.28,
+   9.76
+  ],
+  "reach_px": 859,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     9,
+     0.45
+    ],
+    [
+     5,
+     0.36
+    ],
+    [
+     11,
+     0.29
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.65
+    ],
+    [
+     9,
+     0.5
+    ],
+    [
+     8,
+     0.41
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     10,
+     0.3
+    ],
+    [
+     11,
+     0.27
+    ],
+    [
+     5,
+     0.26
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Marrakech, Almoravid Koubba",
+  "slug": "marrakech__almoravid_koubba",
+  "photo": "world/w268.jpg",
+  "along": null,
+  "built": "About 1117–25",
+  "note": "",
+  "lat": 31.6315,
+  "lon": -7.9872,
+  "photo_size": [
+   1280,
+   1066
+  ],
+  "middle_in_photo": [
+   645,
+   547
+  ],
+  "straightened_px": 1268,
+  "view_px": 1100,
+  "first_circle_view_px": 91.49,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   5,
+   14
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 105.5,
+  "turn_deg": 11.2,
+  "landed": 3,
+  "luck": 0.941,
+  "sizes_tried": 32,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 105,
+    "nearest_edge_px": 167,
+    "off_pct": 58.4,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 183,
+    "nearest_edge_px": 176,
+    "off_pct": 3.6,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 365,
+    "nearest_edge_px": 372,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 548,
+    "nearest_edge_px": 548,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 30,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 34,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 35,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 61,
+    "nearest_edge_px": 167,
+    "off_pct": 174.3,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 82,
+    "nearest_edge_px": 167,
+    "off_pct": 103.9,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 105,
+    "nearest_edge_px": 167,
+    "off_pct": 58.4,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 122,
+    "nearest_edge_px": 167,
+    "off_pct": 37.1,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 152,
+    "nearest_edge_px": 167,
+    "off_pct": 9.7,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 183,
+    "nearest_edge_px": 176,
+    "off_pct": 3.6,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 198,
+    "nearest_edge_px": 190,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 211,
+    "nearest_edge_px": 226,
+    "off_pct": 7.1,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 258,
+    "nearest_edge_px": 271,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 316,
+    "nearest_edge_px": 294,
+    "off_pct": 7.1,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 365,
+    "nearest_edge_px": 372,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 548,
+    "nearest_edge_px": 548,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 731,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   167,
+   176,
+   190,
+   226,
+   242,
+   271,
+   294,
+   372,
+   387,
+   423,
+   466,
+   484,
+   521,
+   548
+  ],
+  "measured_edges_times_first_circle": [
+   1.58,
+   1.67,
+   1.8,
+   2.14,
+   2.29,
+   2.57,
+   2.79,
+   3.53,
+   3.67,
+   4.01,
+   4.42,
+   4.59,
+   4.94,
+   5.2
+  ],
+  "reach_px": 667,
+  "smallest_measurable_px": 42,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     9,
+     1.0
+    ],
+    [
+     8,
+     0.88
+    ],
+    [
+     6,
+     0.73
+    ],
+    [
+     33,
+     0.6
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     8,
+     1.0
+    ],
+    [
+     24,
+     0.24
+    ],
+    [
+     16,
+     0.23
+    ],
+    [
+     4,
+     0.17
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     16,
+     0.57
+    ],
+    [
+     4,
+     0.39
+    ],
+    [
+     24,
+     0.33
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Isfahan, Hasht Behesht",
+  "slug": "isfahan__hasht_behesht",
+  "photo": "world/w269.jpg",
+  "along": null,
+  "built": "1669",
+  "note": "",
+  "lat": 32.6534,
+  "lon": 51.6701,
+  "photo_size": [
+   1280,
+   1280
+  ],
+  "middle_in_photo": [
+   642,
+   613
+  ],
+  "straightened_px": 1388,
+  "view_px": 1100,
+  "first_circle_view_px": 64.52,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   2,
+   -27
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 81.4,
+  "turn_deg": 30.0,
+  "landed": 4,
+  "luck": 0.409,
+  "sizes_tried": 29,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 81,
+    "nearest_edge_px": 78,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 141,
+    "nearest_edge_px": 141,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 282,
+    "nearest_edge_px": 293,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 423,
+    "nearest_edge_px": 412,
+    "off_pct": 2.6,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 24,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 26,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 27,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 47,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 63,
+    "nearest_edge_px": 78,
+    "off_pct": 23.4,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 81,
+    "nearest_edge_px": 78,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 94,
+    "nearest_edge_px": 86,
+    "off_pct": 8.5,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 118,
+    "nearest_edge_px": 119,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 141,
+    "nearest_edge_px": 141,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 153,
+    "nearest_edge_px": 141,
+    "off_pct": 7.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 163,
+    "nearest_edge_px": 168,
+    "off_pct": 3.2,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 199,
+    "nearest_edge_px": 203,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 244,
+    "nearest_edge_px": 223,
+    "off_pct": 8.7,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 282,
+    "nearest_edge_px": 293,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 423,
+    "nearest_edge_px": 412,
+    "off_pct": 2.6,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 564,
+    "nearest_edge_px": 412,
+    "off_pct": 27.0,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   78,
+   86,
+   109,
+   119,
+   127,
+   141,
+   168,
+   179,
+   203,
+   223,
+   293,
+   305,
+   397,
+   412
+  ],
+  "measured_edges_times_first_circle": [
+   0.96,
+   1.06,
+   1.34,
+   1.46,
+   1.56,
+   1.73,
+   2.06,
+   2.2,
+   2.49,
+   2.74,
+   3.6,
+   3.75,
+   4.88,
+   5.06
+  ],
+  "reach_px": 730,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     11,
+     1.0
+    ],
+    [
+     12,
+     0.59
+    ],
+    [
+     9,
+     0.51
+    ],
+    [
+     10,
+     0.36
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     17,
+     1.0
+    ],
+    [
+     18,
+     0.65
+    ],
+    [
+     36,
+     0.65
+    ],
+    [
+     33,
+     0.65
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     19,
+     1.0
+    ],
+    [
+     18,
+     0.81
+    ],
+    [
+     16,
+     0.71
+    ],
+    [
+     38,
+     0.69
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Shiraz, Tomb of Hafez",
+  "slug": "shiraz__tomb_of_hafez",
+  "photo": "world/w270.jpg",
+  "along": null,
+  "built": "Pavilion 1935",
+  "note": "Tiled dome over an open pavilion",
+  "lat": 29.6254,
+  "lon": 52.5583,
+  "photo_size": [
+   1280,
+   883
+  ],
+  "middle_in_photo": [
+   650,
+   442
+  ],
+  "straightened_px": 1179,
+  "view_px": 1100,
+  "first_circle_view_px": 79.3,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   10,
+   0
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 85.0,
+  "turn_deg": 15.0,
+  "landed": 4,
+  "luck": 0.844,
+  "sizes_tried": 33,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 85,
+    "nearest_edge_px": 85,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 147,
+    "nearest_edge_px": 153,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 294,
+    "nearest_edge_px": 301,
+    "off_pct": 2.2,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 442,
+    "nearest_edge_px": 443,
+    "off_pct": 0.3,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 25,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 27,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 28,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 49,
+    "nearest_edge_px": 49,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 66,
+    "nearest_edge_px": 49,
+    "off_pct": 25.8,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 85,
+    "nearest_edge_px": 85,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 98,
+    "nearest_edge_px": 96,
+    "off_pct": 2.2,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 123,
+    "nearest_edge_px": 96,
+    "off_pct": 21.8,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 147,
+    "nearest_edge_px": 153,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 159,
+    "nearest_edge_px": 153,
+    "off_pct": 4.0,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 170,
+    "nearest_edge_px": 184,
+    "off_pct": 8.2,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 208,
+    "nearest_edge_px": 191,
+    "off_pct": 8.3,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 255,
+    "nearest_edge_px": 258,
+    "off_pct": 1.2,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 294,
+    "nearest_edge_px": 301,
+    "off_pct": 2.2,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 442,
+    "nearest_edge_px": 443,
+    "off_pct": 0.3,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 589,
+    "nearest_edge_px": 443,
+    "off_pct": 24.8,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   41,
+   49,
+   85,
+   96,
+   153,
+   184,
+   191,
+   242,
+   258,
+   301,
+   318,
+   326,
+   350,
+   443
+  ],
+  "measured_edges_times_first_circle": [
+   0.48,
+   0.58,
+   1.0,
+   1.13,
+   1.8,
+   2.16,
+   2.25,
+   2.85,
+   3.04,
+   3.54,
+   3.74,
+   3.84,
+   4.12,
+   5.21
+  ],
+  "reach_px": 620,
+  "smallest_measurable_px": 35,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     15,
+     1.0
+    ],
+    [
+     16,
+     0.9
+    ],
+    [
+     17,
+     0.6
+    ],
+    [
+     14,
+     0.58
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     16,
+     1.0
+    ],
+    [
+     8,
+     0.51
+    ],
+    [
+     17,
+     0.44
+    ],
+    [
+     15,
+     0.38
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     7,
+     0.41
+    ],
+    [
+     9,
+     0.32
+    ],
+    [
+     16,
+     0.32
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Ardabil, Sheikh Safi shrine",
+  "slug": "ardabil__sheikh_safi_shrine",
+  "photo": "world/w271.jpg",
+  "along": null,
+  "built": "16th–17th centuries",
+  "note": "",
+  "lat": 38.2486,
+  "lon": 48.2914,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   630,
+   456
+  ],
+  "straightened_px": 1233,
+  "view_px": 1100,
+  "first_circle_view_px": 117.18,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -10,
+   -24
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 131.3,
+  "turn_deg": 26.2,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 27,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 131,
+    "nearest_edge_px": 157,
+    "off_pct": 19.5,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 228,
+    "nearest_edge_px": 230,
+    "off_pct": 1.1,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 455,
+    "nearest_edge_px": 455,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 683,
+    "nearest_edge_px": 455,
+    "off_pct": 33.3,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 25,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 38,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 42,
+    "nearest_edge_px": 41,
+    "off_pct": 3.0,
+    "landed": true
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 44,
+    "nearest_edge_px": 41,
+    "off_pct": 6.4,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 76,
+    "nearest_edge_px": 60,
+    "off_pct": 20.9,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 102,
+    "nearest_edge_px": 60,
+    "off_pct": 41.2,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 131,
+    "nearest_edge_px": 157,
+    "off_pct": 19.5,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 152,
+    "nearest_edge_px": 157,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 190,
+    "nearest_edge_px": 175,
+    "off_pct": 7.7,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 228,
+    "nearest_edge_px": 230,
+    "off_pct": 1.1,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 246,
+    "nearest_edge_px": 230,
+    "off_pct": 6.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 263,
+    "nearest_edge_px": 230,
+    "off_pct": 12.4,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 322,
+    "nearest_edge_px": 339,
+    "off_pct": 5.4,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 394,
+    "nearest_edge_px": 397,
+    "off_pct": 0.7,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 455,
+    "nearest_edge_px": 455,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 683,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 910,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   41,
+   60,
+   157,
+   175,
+   230,
+   339,
+   368,
+   375,
+   382,
+   390,
+   397,
+   416,
+   424,
+   455
+  ],
+  "measured_edges_times_first_circle": [
+   0.31,
+   0.46,
+   1.2,
+   1.33,
+   1.75,
+   2.58,
+   2.8,
+   2.85,
+   2.91,
+   2.97,
+   3.02,
+   3.17,
+   3.23,
+   3.46
+  ],
+  "reach_px": 649,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     12,
+     1.0
+    ],
+    [
+     11,
+     0.99
+    ],
+    [
+     13,
+     0.88
+    ],
+    [
+     10,
+     0.85
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     7,
+     0.69
+    ],
+    [
+     17,
+     0.53
+    ],
+    [
+     9,
+     0.5
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     6,
+     0.28
+    ],
+    [
+     13,
+     0.27
+    ],
+    [
+     15,
+     0.27
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Samarkand, Gur-e-Amir",
+  "slug": "samarkand__gur_e_amir",
+  "photo": "world/w272.jpg",
+  "along": null,
+  "built": "1403–04",
+  "note": "",
+  "lat": 39.6483,
+  "lon": 66.9689,
+  "photo_size": [
+   1280,
+   886
+  ],
+  "middle_in_photo": [
+   629,
+   474
+  ],
+  "straightened_px": 1207,
+  "view_px": 1100,
+  "first_circle_view_px": 65.77,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -11,
+   31
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 72.2,
+  "turn_deg": 18.8,
+  "landed": 3,
+  "luck": 0.78,
+  "sizes_tried": 28,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 72,
+    "nearest_edge_px": 74,
+    "off_pct": 2.5,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 125,
+    "nearest_edge_px": 125,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 250,
+    "nearest_edge_px": 361,
+    "off_pct": 44.4,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 375,
+    "nearest_edge_px": 361,
+    "off_pct": 3.7,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 14,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 21,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 24,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 42,
+    "nearest_edge_px": 74,
+    "off_pct": 77.6,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 56,
+    "nearest_edge_px": 74,
+    "off_pct": 32.0,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 72,
+    "nearest_edge_px": 74,
+    "off_pct": 2.5,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 83,
+    "nearest_edge_px": 87,
+    "off_pct": 4.4,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 104,
+    "nearest_edge_px": 111,
+    "off_pct": 6.6,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 125,
+    "nearest_edge_px": 125,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 135,
+    "nearest_edge_px": 125,
+    "off_pct": 7.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 144,
+    "nearest_edge_px": 125,
+    "off_pct": 13.4,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 177,
+    "nearest_edge_px": 125,
+    "off_pct": 29.3,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 217,
+    "nearest_edge_px": 125,
+    "off_pct": 42.3,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 250,
+    "nearest_edge_px": 361,
+    "off_pct": 44.4,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 375,
+    "nearest_edge_px": 361,
+    "off_pct": 3.7,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 500,
+    "nearest_edge_px": 491,
+    "off_pct": 1.8,
+    "landed": true
+   }
+  ],
+  "measured_edges_px": [
+   74,
+   87,
+   94,
+   111,
+   125,
+   361,
+   399,
+   409,
+   417,
+   440,
+   449,
+   457,
+   474,
+   491
+  ],
+  "measured_edges_times_first_circle": [
+   1.03,
+   1.21,
+   1.3,
+   1.54,
+   1.73,
+   5.0,
+   5.53,
+   5.67,
+   5.78,
+   6.1,
+   6.22,
+   6.33,
+   6.57,
+   6.8
+  ],
+  "reach_px": 635,
+  "smallest_measurable_px": 35,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     8,
+     1.0
+    ],
+    [
+     16,
+     0.38
+    ],
+    [
+     32,
+     0.18
+    ],
+    [
+     30,
+     0.17
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     10,
+     1.0
+    ],
+    [
+     8,
+     0.77
+    ],
+    [
+     12,
+     0.73
+    ],
+    [
+     7,
+     0.73
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     14,
+     0.89
+    ],
+    [
+     5,
+     0.71
+    ],
+    [
+     26,
+     0.71
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Samarkand, Bibi-Khanym",
+  "slug": "samarkand__bibi_khanym",
+  "photo": "world/w273.jpg",
+  "along": null,
+  "built": "1399–1404",
+  "note": "",
+  "lat": 39.6606,
+  "lon": 66.9792,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   667,
+   378
+  ],
+  "straightened_px": 1228,
+  "view_px": 1100,
+  "first_circle_view_px": 82.06,
+  "placed_by_hand": true,
+  "off_middle_px": [
+   27,
+   -48
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 91.6,
+  "turn_deg": 41.2,
+  "landed": 3,
+  "luck": 0.939,
+  "sizes_tried": 25,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 92,
+    "nearest_edge_px": 93,
+    "off_pct": 1.5,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 159,
+    "nearest_edge_px": 115,
+    "off_pct": 27.5,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 317,
+    "nearest_edge_px": 326,
+    "off_pct": 2.7,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 476,
+    "nearest_edge_px": 476,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 26,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 29,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 53,
+    "nearest_edge_px": 48,
+    "off_pct": 9.2,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 71,
+    "nearest_edge_px": 70,
+    "off_pct": 1.6,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 92,
+    "nearest_edge_px": 93,
+    "off_pct": 1.5,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 106,
+    "nearest_edge_px": 101,
+    "off_pct": 4.5,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 132,
+    "nearest_edge_px": 115,
+    "off_pct": 13.0,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 159,
+    "nearest_edge_px": 115,
+    "off_pct": 27.5,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 172,
+    "nearest_edge_px": 115,
+    "off_pct": 33.0,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 183,
+    "nearest_edge_px": 115,
+    "off_pct": 37.2,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 224,
+    "nearest_edge_px": 326,
+    "off_pct": 45.3,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 275,
+    "nearest_edge_px": 326,
+    "off_pct": 18.6,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 317,
+    "nearest_edge_px": 326,
+    "off_pct": 2.7,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 476,
+    "nearest_edge_px": 476,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 635,
+    "nearest_edge_px": 476,
+    "off_pct": 25.0,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   41,
+   48,
+   63,
+   70,
+   83,
+   93,
+   101,
+   115,
+   326,
+   336,
+   344,
+   353,
+   379,
+   476
+  ],
+  "measured_edges_times_first_circle": [
+   0.45,
+   0.52,
+   0.69,
+   0.76,
+   0.91,
+   1.02,
+   1.1,
+   1.26,
+   3.56,
+   3.67,
+   3.76,
+   3.85,
+   4.14,
+   5.2
+  ],
+  "reach_px": 646,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     15,
+     1.0
+    ],
+    [
+     34,
+     0.86
+    ],
+    [
+     33,
+     0.62
+    ],
+    [
+     35,
+     0.58
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     13,
+     0.61
+    ],
+    [
+     7,
+     0.52
+    ],
+    [
+     10,
+     0.48
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     8,
+     1.0
+    ],
+    [
+     5,
+     0.93
+    ],
+    [
+     6,
+     0.92
+    ],
+    [
+     13,
+     0.44
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Turkistan, Mausoleum of Khoja Ahmed Yasawi",
+  "slug": "turkistan__mausoleum_of_khoja_ahmed_yasawi",
+  "photo": "world/w274.jpg",
+  "along": null,
+  "built": "1389–1405",
+  "note": "",
+  "lat": 43.2978,
+  "lon": 68.2708,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   570,
+   331
+  ],
+  "straightened_px": 1422,
+  "view_px": 1100,
+  "first_circle_view_px": 93.79,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -70,
+   -149
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 121.2,
+  "turn_deg": 33.8,
+  "landed": 4,
+  "luck": 0.585,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 121,
+    "nearest_edge_px": 124,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 210,
+    "nearest_edge_px": 204,
+    "off_pct": 2.9,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 420,
+    "nearest_edge_px": 429,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 630,
+    "nearest_edge_px": 630,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 35,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 39,
+    "nearest_edge_px": 124,
+    "off_pct": 218.0,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 40,
+    "nearest_edge_px": 124,
+    "off_pct": 206.8,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 70,
+    "nearest_edge_px": 124,
+    "off_pct": 77.1,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 94,
+    "nearest_edge_px": 124,
+    "off_pct": 31.7,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 121,
+    "nearest_edge_px": 124,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 140,
+    "nearest_edge_px": 136,
+    "off_pct": 2.9,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 175,
+    "nearest_edge_px": 178,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 210,
+    "nearest_edge_px": 204,
+    "off_pct": 2.9,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 227,
+    "nearest_edge_px": 242,
+    "off_pct": 6.5,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 242,
+    "nearest_edge_px": 242,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 297,
+    "nearest_edge_px": 308,
+    "off_pct": 3.7,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 364,
+    "nearest_edge_px": 360,
+    "off_pct": 1.0,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 420,
+    "nearest_edge_px": 429,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 630,
+    "nearest_edge_px": 630,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 840,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   124,
+   136,
+   157,
+   178,
+   191,
+   204,
+   242,
+   258,
+   308,
+   360,
+   429,
+   487,
+   630
+  ],
+  "measured_edges_times_first_circle": [
+   1.02,
+   1.12,
+   1.29,
+   1.47,
+   1.58,
+   1.68,
+   2.0,
+   2.13,
+   2.54,
+   2.97,
+   3.54,
+   4.02,
+   5.2
+  ],
+  "reach_px": 748,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     32,
+     1.0
+    ],
+    [
+     34,
+     0.94
+    ],
+    [
+     30,
+     0.83
+    ],
+    [
+     37,
+     0.83
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     6,
+     0.93
+    ],
+    [
+     7,
+     0.39
+    ],
+    [
+     8,
+     0.37
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     5,
+     1.0
+    ],
+    [
+     4,
+     0.81
+    ],
+    [
+     9,
+     0.77
+    ],
+    [
+     7,
+     0.72
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Mumbai, Taj Mahal Palace",
+  "slug": "mumbai__taj_mahal_palace",
+  "photo": "world/w275.jpg",
+  "along": null,
+  "built": "1903",
+  "note": "",
+  "lat": 18.922,
+  "lon": 72.8333,
+  "photo_size": [
+   1280,
+   1280
+  ],
+  "middle_in_photo": [
+   542,
+   632
+  ],
+  "straightened_px": 1473,
+  "view_px": 1100,
+  "first_circle_view_px": 98.31,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -98,
+   -8
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 131.6,
+  "turn_deg": 41.2,
+  "landed": 3,
+  "luck": 0.982,
+  "sizes_tried": 30,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 132,
+    "nearest_edge_px": 136,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 228,
+    "nearest_edge_px": 228,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 456,
+    "nearest_edge_px": 435,
+    "off_pct": 4.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 684,
+    "nearest_edge_px": 435,
+    "off_pct": 36.4,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 25,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 38,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 42,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 44,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 76,
+    "nearest_edge_px": 70,
+    "off_pct": 7.9,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 102,
+    "nearest_edge_px": 113,
+    "off_pct": 10.5,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 132,
+    "nearest_edge_px": 136,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 152,
+    "nearest_edge_px": 156,
+    "off_pct": 2.6,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 190,
+    "nearest_edge_px": 186,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 228,
+    "nearest_edge_px": 228,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 247,
+    "nearest_edge_px": 263,
+    "off_pct": 6.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 263,
+    "nearest_edge_px": 263,
+    "off_pct": 0.1,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 322,
+    "nearest_edge_px": 269,
+    "off_pct": 16.6,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 395,
+    "nearest_edge_px": 415,
+    "off_pct": 5.1,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 456,
+    "nearest_edge_px": 435,
+    "off_pct": 4.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 684,
+    "nearest_edge_px": 435,
+    "off_pct": 36.4,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 912,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   70,
+   113,
+   136,
+   143,
+   156,
+   166,
+   174,
+   186,
+   195,
+   228,
+   263,
+   269,
+   415,
+   435
+  ],
+  "measured_edges_times_first_circle": [
+   0.53,
+   0.86,
+   1.03,
+   1.09,
+   1.19,
+   1.26,
+   1.32,
+   1.41,
+   1.48,
+   1.73,
+   2.0,
+   2.04,
+   3.15,
+   3.3
+  ],
+  "reach_px": 775,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.4
+    ],
+    [
+     6,
+     0.38
+    ],
+    [
+     8,
+     0.36
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     6,
+     1.0
+    ],
+    [
+     4,
+     0.92
+    ],
+    [
+     9,
+     0.84
+    ],
+    [
+     24,
+     0.71
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     9,
+     0.65
+    ],
+    [
+     10,
+     0.61
+    ],
+    [
+     25,
+     0.6
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "New York, Low Memorial Library",
+  "slug": "new_york__low_memorial_library",
+  "photo": "world/w276.jpg",
+  "along": null,
+  "built": "1895–97",
+  "note": "",
+  "lat": 40.8083,
+  "lon": -73.9619,
+  "photo_size": [
+   1280,
+   1918
+  ],
+  "middle_in_photo": [
+   647,
+   952
+  ],
+  "straightened_px": 1743,
+  "view_px": 1100,
+  "first_circle_view_px": 123.52,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   7,
+   -7
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 195.7,
+  "turn_deg": 0.0,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 196,
+    "nearest_edge_px": 78,
+    "off_pct": 60.1,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 339,
+    "nearest_edge_px": 339,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 678,
+    "nearest_edge_px": 662,
+    "off_pct": 2.4,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 1017,
+    "nearest_edge_px": 699,
+    "off_pct": 31.3,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 38,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 56,
+    "nearest_edge_px": 52,
+    "off_pct": 8.0,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 63,
+    "nearest_edge_px": 52,
+    "off_pct": 17.4,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 65,
+    "nearest_edge_px": 78,
+    "off_pct": 19.6,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 113,
+    "nearest_edge_px": 78,
+    "off_pct": 31.0,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 152,
+    "nearest_edge_px": 78,
+    "off_pct": 48.7,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 196,
+    "nearest_edge_px": 78,
+    "off_pct": 60.1,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 226,
+    "nearest_edge_px": 328,
+    "off_pct": 45.1,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 282,
+    "nearest_edge_px": 328,
+    "off_pct": 16.1,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 339,
+    "nearest_edge_px": 339,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 367,
+    "nearest_edge_px": 356,
+    "off_pct": 3.0,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 391,
+    "nearest_edge_px": 390,
+    "off_pct": 0.4,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 479,
+    "nearest_edge_px": 414,
+    "off_pct": 13.6,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 587,
+    "nearest_edge_px": 601,
+    "off_pct": 2.4,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 678,
+    "nearest_edge_px": 662,
+    "off_pct": 2.4,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 1017,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1356,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   52,
+   78,
+   328,
+   339,
+   347,
+   356,
+   378,
+   390,
+   414,
+   601,
+   615,
+   645,
+   662,
+   699
+  ],
+  "measured_edges_times_first_circle": [
+   0.27,
+   0.4,
+   1.68,
+   1.73,
+   1.77,
+   1.82,
+   1.93,
+   1.99,
+   2.12,
+   3.07,
+   3.14,
+   3.3,
+   3.38,
+   3.57
+  ],
+  "reach_px": 917,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     5,
+     1.0
+    ],
+    [
+     6,
+     0.94
+    ],
+    [
+     4,
+     0.78
+    ],
+    [
+     8,
+     0.71
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.74
+    ],
+    [
+     12,
+     0.35
+    ],
+    [
+     20,
+     0.34
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     9,
+     0.76
+    ],
+    [
+     7,
+     0.76
+    ],
+    [
+     12,
+     0.73
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "New York, Custom House",
+  "slug": "new_york__custom_house",
+  "photo": "world/w277.jpg",
+  "along": null,
+  "built": "1902–07",
+  "note": "",
+  "lat": 40.7042,
+  "lon": -74.0136,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   586,
+   477
+  ],
+  "straightened_px": 1268,
+  "view_px": 1100,
+  "first_circle_view_px": 49.08,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -54,
+   -3
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 56.6,
+  "turn_deg": 15.0,
+  "landed": 3,
+  "luck": 0.966,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 57,
+    "nearest_edge_px": 59,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 98,
+    "nearest_edge_px": 83,
+    "off_pct": 15.3,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 196,
+    "nearest_edge_px": 196,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 294,
+    "nearest_edge_px": 295,
+    "off_pct": 0.3,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 11,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 19,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 33,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 44,
+    "nearest_edge_px": 44,
+    "off_pct": 0.1,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 57,
+    "nearest_edge_px": 59,
+    "off_pct": 4.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 65,
+    "nearest_edge_px": 59,
+    "off_pct": 9.7,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 82,
+    "nearest_edge_px": 83,
+    "off_pct": 1.6,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 98,
+    "nearest_edge_px": 83,
+    "off_pct": 15.3,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 106,
+    "nearest_edge_px": 115,
+    "off_pct": 8.4,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 113,
+    "nearest_edge_px": 115,
+    "off_pct": 1.6,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 139,
+    "nearest_edge_px": 115,
+    "off_pct": 17.0,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 170,
+    "nearest_edge_px": 196,
+    "off_pct": 15.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 196,
+    "nearest_edge_px": 196,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 294,
+    "nearest_edge_px": 295,
+    "off_pct": 0.3,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 392,
+    "nearest_edge_px": 332,
+    "off_pct": 15.3,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   44,
+   59,
+   83,
+   115,
+   196,
+   216,
+   227,
+   233,
+   241,
+   262,
+   270,
+   283,
+   295,
+   332
+  ],
+  "measured_edges_times_first_circle": [
+   0.78,
+   1.04,
+   1.47,
+   2.03,
+   3.46,
+   3.82,
+   4.01,
+   4.12,
+   4.26,
+   4.63,
+   4.77,
+   5.0,
+   5.21,
+   5.87
+  ],
+  "reach_px": 667,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.67
+    ],
+    [
+     16,
+     0.44
+    ],
+    [
+     33,
+     0.43
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     38,
+     1.0
+    ],
+    [
+     39,
+     0.98
+    ],
+    [
+     40,
+     0.87
+    ],
+    [
+     41,
+     0.82
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     39,
+     0.47
+    ],
+    [
+     6,
+     0.41
+    ],
+    [
+     22,
+     0.41
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Philadelphia, cathedral",
+  "slug": "philadelphia__cathedral",
+  "photo": "world/w278.jpg",
+  "along": null,
+  "built": "1846–64",
+  "note": "",
+  "lat": 39.9575,
+  "lon": -75.1686,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   640,
+   422
+  ],
+  "straightened_px": 1157,
+  "view_px": 1100,
+  "first_circle_view_px": 56.54,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   0,
+   -4
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 59.5,
+  "turn_deg": 37.5,
+  "landed": 2,
+  "luck": 0.991,
+  "sizes_tried": 18,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 59,
+    "nearest_edge_px": 60,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 103,
+    "nearest_edge_px": 121,
+    "off_pct": 17.5,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 206,
+    "nearest_edge_px": 206,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 309,
+    "nearest_edge_px": 218,
+    "off_pct": 29.5,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 11,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 17,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 19,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 34,
+    "nearest_edge_px": 36,
+    "off_pct": 4.8,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 46,
+    "nearest_edge_px": 36,
+    "off_pct": 22.0,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 59,
+    "nearest_edge_px": 60,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 69,
+    "nearest_edge_px": 66,
+    "off_pct": 3.9,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 86,
+    "nearest_edge_px": 66,
+    "off_pct": 23.1,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 103,
+    "nearest_edge_px": 121,
+    "off_pct": 17.5,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 111,
+    "nearest_edge_px": 121,
+    "off_pct": 8.5,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 119,
+    "nearest_edge_px": 121,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 146,
+    "nearest_edge_px": 146,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 178,
+    "nearest_edge_px": 170,
+    "off_pct": 4.7,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 206,
+    "nearest_edge_px": 206,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 309,
+    "nearest_edge_px": 218,
+    "off_pct": 29.5,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 412,
+    "nearest_edge_px": 218,
+    "off_pct": 47.1,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   36,
+   60,
+   66,
+   121,
+   146,
+   159,
+   170,
+   196,
+   206,
+   218
+  ],
+  "measured_edges_times_first_circle": [
+   0.61,
+   1.01,
+   1.11,
+   2.03,
+   2.46,
+   2.67,
+   2.86,
+   3.3,
+   3.46,
+   3.67
+  ],
+  "reach_px": 609,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     24,
+     1.0
+    ],
+    [
+     23,
+     0.86
+    ],
+    [
+     12,
+     0.65
+    ],
+    [
+     25,
+     0.62
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     12,
+     1.0
+    ],
+    [
+     36,
+     0.76
+    ],
+    [
+     24,
+     0.5
+    ],
+    [
+     48,
+     0.36
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.66
+    ],
+    [
+     12,
+     0.6
+    ],
+    [
+     5,
+     0.38
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Madison, State Capitol",
+  "slug": "madison__state_capitol",
+  "photo": "world/w279.jpg",
+  "along": null,
+  "built": "1906–17",
+  "note": "",
+  "lat": 43.0747,
+  "lon": -89.3842,
+  "photo_size": [
+   1280,
+   865
+  ],
+  "middle_in_photo": [
+   637,
+   436
+  ],
+  "straightened_px": 1165,
+  "view_px": 1100,
+  "first_circle_view_px": 77.77,
+  "placed_by_hand": true,
+  "off_middle_px": [
+   -3,
+   4
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 82.4,
+  "turn_deg": 0.0,
+  "landed": 3,
+  "luck": 0.842,
+  "sizes_tried": 32,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 82,
+    "nearest_edge_px": 98,
+    "off_pct": 19.0,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 143,
+    "nearest_edge_px": 146,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 285,
+    "nearest_edge_px": 276,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 428,
+    "nearest_edge_px": 428,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 24,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 26,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 27,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 48,
+    "nearest_edge_px": 98,
+    "off_pct": 106.1,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 64,
+    "nearest_edge_px": 98,
+    "off_pct": 53.2,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 82,
+    "nearest_edge_px": 98,
+    "off_pct": 19.0,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 95,
+    "nearest_edge_px": 98,
+    "off_pct": 3.0,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 119,
+    "nearest_edge_px": 116,
+    "off_pct": 2.4,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 143,
+    "nearest_edge_px": 146,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 154,
+    "nearest_edge_px": 153,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 165,
+    "nearest_edge_px": 153,
+    "off_pct": 7.1,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 202,
+    "nearest_edge_px": 153,
+    "off_pct": 24.2,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 247,
+    "nearest_edge_px": 276,
+    "off_pct": 11.7,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 285,
+    "nearest_edge_px": 276,
+    "off_pct": 3.3,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 428,
+    "nearest_edge_px": 428,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 571,
+    "nearest_edge_px": 441,
+    "off_pct": 22.7,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   98,
+   106,
+   116,
+   130,
+   146,
+   153,
+   276,
+   330,
+   342,
+   379,
+   385,
+   421,
+   428,
+   441
+  ],
+  "measured_edges_times_first_circle": [
+   1.19,
+   1.29,
+   1.41,
+   1.58,
+   1.77,
+   1.86,
+   3.35,
+   4.01,
+   4.15,
+   4.6,
+   4.67,
+   5.11,
+   5.2,
+   5.35
+  ],
+  "reach_px": 613,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     14,
+     0.75
+    ],
+    [
+     6,
+     0.59
+    ],
+    [
+     5,
+     0.51
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     24,
+     1.0
+    ],
+    [
+     23,
+     0.71
+    ],
+    [
+     25,
+     0.38
+    ],
+    [
+     8,
+     0.25
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     24,
+     1.0
+    ],
+    [
+     23,
+     0.35
+    ],
+    [
+     25,
+     0.29
+    ],
+    [
+     4,
+     0.27
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Springfield, State Capitol",
+  "slug": "springfield__state_capitol",
+  "photo": "world/w280.jpg",
+  "along": null,
+  "built": "1868–88",
+  "note": "",
+  "lat": 39.7983,
+  "lon": -89.6547,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   640,
+   430
+  ],
+  "straightened_px": 1156,
+  "view_px": 1100,
+  "first_circle_view_px": 152.25,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   0,
+   4
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 160.0,
+  "turn_deg": 33.8,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 35,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 160,
+    "nearest_edge_px": 160,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 277,
+    "nearest_edge_px": 284,
+    "off_pct": 2.5,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 554,
+    "nearest_edge_px": 391,
+    "off_pct": 29.5,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 831,
+    "nearest_edge_px": 391,
+    "off_pct": 53.0,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 46,
+    "nearest_edge_px": 56,
+    "off_pct": 21.2,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 51,
+    "nearest_edge_px": 56,
+    "off_pct": 8.8,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 53,
+    "nearest_edge_px": 56,
+    "off_pct": 5.0,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 92,
+    "nearest_edge_px": 56,
+    "off_pct": 39.4,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 124,
+    "nearest_edge_px": 160,
+    "off_pct": 28.8,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 160,
+    "nearest_edge_px": 160,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 185,
+    "nearest_edge_px": 174,
+    "off_pct": 5.8,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 231,
+    "nearest_edge_px": 231,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 277,
+    "nearest_edge_px": 284,
+    "off_pct": 2.5,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 300,
+    "nearest_edge_px": 284,
+    "off_pct": 5.3,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 320,
+    "nearest_edge_px": 329,
+    "off_pct": 2.8,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 392,
+    "nearest_edge_px": 391,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 480,
+    "nearest_edge_px": 391,
+    "off_pct": 18.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 554,
+    "nearest_edge_px": 391,
+    "off_pct": 29.5,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 831,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1109,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   56,
+   160,
+   174,
+   231,
+   238,
+   250,
+   262,
+   284,
+   329,
+   349,
+   356,
+   363,
+   382,
+   391
+  ],
+  "measured_edges_times_first_circle": [
+   0.35,
+   1.0,
+   1.09,
+   1.44,
+   1.49,
+   1.56,
+   1.64,
+   1.77,
+   2.06,
+   2.18,
+   2.23,
+   2.27,
+   2.39,
+   2.44
+  ],
+  "reach_px": 608,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     25,
+     0.62
+    ],
+    [
+     23,
+     0.54
+    ],
+    [
+     16,
+     0.48
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     12,
+     0.78
+    ],
+    [
+     8,
+     0.64
+    ],
+    [
+     20,
+     0.6
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     6,
+     1.0
+    ],
+    [
+     5,
+     0.54
+    ],
+    [
+     47,
+     0.48
+    ],
+    [
+     45,
+     0.45
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Denver, State Capitol",
+  "slug": "denver__state_capitol",
+  "photo": "world/w281.jpg",
+  "along": null,
+  "built": "1886–1907",
+  "note": "",
+  "lat": 39.7392,
+  "lon": -104.9849,
+  "photo_size": [
+   1280,
+   854
+  ],
+  "middle_in_photo": [
+   632,
+   424
+  ],
+  "straightened_px": 1166,
+  "view_px": 1100,
+  "first_circle_view_px": 65.36,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -8,
+   -3
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 69.3,
+  "turn_deg": 7.5,
+  "landed": 3,
+  "luck": 0.895,
+  "sizes_tried": 36,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 69,
+    "nearest_edge_px": 122,
+    "off_pct": 76.1,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 120,
+    "nearest_edge_px": 122,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 240,
+    "nearest_edge_px": 240,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 360,
+    "nearest_edge_px": 365,
+    "off_pct": 1.4,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 13,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 22,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 40,
+    "nearest_edge_px": 122,
+    "off_pct": 205.0,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 54,
+    "nearest_edge_px": 122,
+    "off_pct": 126.8,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 69,
+    "nearest_edge_px": 122,
+    "off_pct": 76.1,
+    "landed": false
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 80,
+    "nearest_edge_px": 122,
+    "off_pct": 52.5,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 100,
+    "nearest_edge_px": 122,
+    "off_pct": 22.0,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 120,
+    "nearest_edge_px": 122,
+    "off_pct": 1.7,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 130,
+    "nearest_edge_px": 122,
+    "off_pct": 6.1,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 139,
+    "nearest_edge_px": 150,
+    "off_pct": 8.3,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 170,
+    "nearest_edge_px": 166,
+    "off_pct": 2.2,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 208,
+    "nearest_edge_px": 240,
+    "off_pct": 15.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 240,
+    "nearest_edge_px": 240,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 360,
+    "nearest_edge_px": 365,
+    "off_pct": 1.4,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 480,
+    "nearest_edge_px": 414,
+    "off_pct": 13.7,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   122,
+   150,
+   166,
+   240,
+   269,
+   285,
+   299,
+   309,
+   321,
+   365,
+   381,
+   388,
+   404,
+   414
+  ],
+  "measured_edges_times_first_circle": [
+   1.76,
+   2.17,
+   2.4,
+   3.46,
+   3.88,
+   4.11,
+   4.32,
+   4.46,
+   4.63,
+   5.27,
+   5.5,
+   5.6,
+   5.83,
+   5.98
+  ],
+  "reach_px": 614,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     14,
+     1.0
+    ],
+    [
+     15,
+     0.79
+    ],
+    [
+     18,
+     0.74
+    ],
+    [
+     17,
+     0.7
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     9,
+     1.0
+    ],
+    [
+     7,
+     0.81
+    ],
+    [
+     4,
+     0.78
+    ],
+    [
+     8,
+     0.75
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     32,
+     1.0
+    ],
+    [
+     4,
+     0.72
+    ],
+    [
+     16,
+     0.59
+    ],
+    [
+     17,
+     0.58
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Topeka, State Capitol",
+  "slug": "topeka__state_capitol",
+  "photo": "world/w282.jpg",
+  "along": null,
+  "built": "1866–1903",
+  "note": "",
+  "lat": 39.0481,
+  "lon": -95.6781,
+  "photo_size": [
+   1280,
+   1280
+  ],
+  "middle_in_photo": [
+   643,
+   640
+  ],
+  "straightened_px": 1360,
+  "view_px": 1100,
+  "first_circle_view_px": 86.16,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   3,
+   0
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 106.5,
+  "turn_deg": 33.8,
+  "landed": 3,
+  "luck": 0.859,
+  "sizes_tried": 34,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 107,
+    "nearest_edge_px": 111,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 184,
+    "nearest_edge_px": 181,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 369,
+    "nearest_edge_px": 369,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 553,
+    "nearest_edge_px": 488,
+    "off_pct": 11.8,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 20,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 34,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 36,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 61,
+    "nearest_edge_px": 111,
+    "off_pct": 80.5,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 83,
+    "nearest_edge_px": 111,
+    "off_pct": 34.2,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 107,
+    "nearest_edge_px": 111,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 123,
+    "nearest_edge_px": 122,
+    "off_pct": 0.8,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 154,
+    "nearest_edge_px": 137,
+    "off_pct": 10.9,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 184,
+    "nearest_edge_px": 181,
+    "off_pct": 1.9,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 200,
+    "nearest_edge_px": 190,
+    "off_pct": 4.9,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 213,
+    "nearest_edge_px": 190,
+    "off_pct": 10.8,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 261,
+    "nearest_edge_px": 320,
+    "off_pct": 22.6,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 320,
+    "nearest_edge_px": 320,
+    "off_pct": 0.1,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 369,
+    "nearest_edge_px": 369,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 553,
+    "nearest_edge_px": 488,
+    "off_pct": 11.8,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 738,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   111,
+   122,
+   129,
+   137,
+   181,
+   190,
+   320,
+   340,
+   369,
+   382,
+   399,
+   437,
+   443,
+   488
+  ],
+  "measured_edges_times_first_circle": [
+   1.04,
+   1.15,
+   1.21,
+   1.29,
+   1.7,
+   1.78,
+   3.0,
+   3.19,
+   3.46,
+   3.59,
+   3.75,
+   4.1,
+   4.16,
+   4.58
+  ],
+  "reach_px": 716,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     8,
+     1.0
+    ],
+    [
+     15,
+     0.8
+    ],
+    [
+     22,
+     0.7
+    ],
+    [
+     18,
+     0.69
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     8,
+     1.0
+    ],
+    [
+     16,
+     0.54
+    ],
+    [
+     24,
+     0.5
+    ],
+    [
+     4,
+     0.4
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.64
+    ],
+    [
+     12,
+     0.22
+    ],
+    [
+     5,
+     0.07
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Little Rock, State Capitol",
+  "slug": "little_rock__state_capitol",
+  "photo": "world/w283.jpg",
+  "along": null,
+  "built": "1899–1915",
+  "note": "",
+  "lat": 34.7467,
+  "lon": -92.2892,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   643,
+   498
+  ],
+  "straightened_px": 1219,
+  "view_px": 1100,
+  "first_circle_view_px": 48.97,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   3,
+   18
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 54.3,
+  "turn_deg": 7.5,
+  "landed": 3,
+  "luck": 0.871,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 54,
+    "nearest_edge_px": 55,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 94,
+    "nearest_edge_px": 72,
+    "off_pct": 23.4,
+    "landed": false
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 188,
+    "nearest_edge_px": 188,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 282,
+    "nearest_edge_px": 282,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 10,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 17,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 42,
+    "nearest_edge_px": 39,
+    "off_pct": 7.5,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 54,
+    "nearest_edge_px": 55,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 63,
+    "nearest_edge_px": 55,
+    "off_pct": 12.2,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 78,
+    "nearest_edge_px": 72,
+    "off_pct": 8.1,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 94,
+    "nearest_edge_px": 72,
+    "off_pct": 23.4,
+    "landed": false
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 102,
+    "nearest_edge_px": 72,
+    "off_pct": 29.2,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 109,
+    "nearest_edge_px": 72,
+    "off_pct": 33.7,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 133,
+    "nearest_edge_px": 188,
+    "off_pct": 41.4,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 163,
+    "nearest_edge_px": 188,
+    "off_pct": 15.5,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 188,
+    "nearest_edge_px": 188,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 282,
+    "nearest_edge_px": 282,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 376,
+    "nearest_edge_px": 300,
+    "off_pct": 20.2,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   39,
+   55,
+   72,
+   188,
+   195,
+   203,
+   220,
+   231,
+   238,
+   247,
+   267,
+   282,
+   292,
+   300
+  ],
+  "measured_edges_times_first_circle": [
+   0.72,
+   1.01,
+   1.33,
+   3.46,
+   3.59,
+   3.74,
+   4.05,
+   4.26,
+   4.39,
+   4.55,
+   4.92,
+   5.2,
+   5.38,
+   5.53
+  ],
+  "reach_px": 641,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     16,
+     1.0
+    ],
+    [
+     17,
+     0.31
+    ],
+    [
+     15,
+     0.29
+    ],
+    [
+     32,
+     0.23
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     12,
+     1.0
+    ],
+    [
+     36,
+     0.62
+    ],
+    [
+     47,
+     0.5
+    ],
+    [
+     35,
+     0.47
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     12,
+     1.0
+    ],
+    [
+     4,
+     0.42
+    ],
+    [
+     36,
+     0.35
+    ],
+    [
+     24,
+     0.27
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Salt Lake City, State Capitol",
+  "slug": "salt_lake_city__state_capitol",
+  "photo": "world/w284.jpg",
+  "along": null,
+  "built": "1912–16",
+  "note": "",
+  "lat": 40.7772,
+  "lon": -111.8881,
+  "photo_size": [
+   1280,
+   1271
+  ],
+  "middle_in_photo": [
+   642,
+   634
+  ],
+  "straightened_px": 1356,
+  "view_px": 1100,
+  "first_circle_view_px": 171.98,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   2,
+   -2
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 212.0,
+  "turn_deg": 0.0,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 32,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 212,
+    "nearest_edge_px": 212,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 367,
+    "nearest_edge_px": 370,
+    "off_pct": 0.8,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 734,
+    "nearest_edge_px": 370,
+    "off_pct": 49.6,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 1102,
+    "nearest_edge_px": 370,
+    "off_pct": 66.4,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 41,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 61,
+    "nearest_edge_px": 60,
+    "off_pct": 2.0,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 68,
+    "nearest_edge_px": 60,
+    "off_pct": 12.0,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 71,
+    "nearest_edge_px": 80,
+    "off_pct": 13.2,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 122,
+    "nearest_edge_px": 80,
+    "off_pct": 34.6,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 165,
+    "nearest_edge_px": 167,
+    "off_pct": 1.4,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 212,
+    "nearest_edge_px": 212,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 245,
+    "nearest_edge_px": 241,
+    "off_pct": 1.6,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 306,
+    "nearest_edge_px": 326,
+    "off_pct": 6.5,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 367,
+    "nearest_edge_px": 370,
+    "off_pct": 0.8,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 397,
+    "nearest_edge_px": 370,
+    "off_pct": 6.9,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 424,
+    "nearest_edge_px": 370,
+    "off_pct": 12.7,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 519,
+    "nearest_edge_px": 370,
+    "off_pct": 28.7,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 636,
+    "nearest_edge_px": 370,
+    "off_pct": 41.8,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 734,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 1102,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1469,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   60,
+   80,
+   167,
+   187,
+   212,
+   218,
+   233,
+   241,
+   254,
+   263,
+   269,
+   326,
+   350,
+   370
+  ],
+  "measured_edges_times_first_circle": [
+   0.28,
+   0.38,
+   0.79,
+   0.88,
+   1.0,
+   1.03,
+   1.1,
+   1.14,
+   1.2,
+   1.24,
+   1.27,
+   1.54,
+   1.65,
+   1.75
+  ],
+  "reach_px": 713,
+  "smallest_measurable_px": 50,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     11,
+     0.7
+    ],
+    [
+     10,
+     0.6
+    ],
+    [
+     16,
+     0.51
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     12,
+     1.0
+    ],
+    [
+     20,
+     0.76
+    ],
+    [
+     24,
+     0.75
+    ],
+    [
+     4,
+     0.69
+    ]
+   ],
+   "rim to next ring out": []
+  },
+  "outer_circles_in_frame": false,
+  "straightened": null
+ },
+ {
+  "place": "Helena, State Capitol",
+  "slug": "helena__state_capitol",
+  "photo": "world/w285.jpg",
+  "along": null,
+  "built": "1896–1902",
+  "note": "",
+  "lat": 46.5857,
+  "lon": -112.0184,
+  "photo_size": [
+   1280,
+   1716
+  ],
+  "middle_in_photo": [
+   650,
+   860
+  ],
+  "straightened_px": 1617,
+  "view_px": 1100,
+  "first_circle_view_px": 110.37,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   10,
+   2
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 162.2,
+  "turn_deg": 22.5,
+  "landed": 2,
+  "luck": 1.0,
+  "sizes_tried": 29,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 162,
+    "nearest_edge_px": 169,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 281,
+    "nearest_edge_px": 281,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 562,
+    "nearest_edge_px": 313,
+    "off_pct": 44.3,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 843,
+    "nearest_edge_px": 313,
+    "off_pct": 62.9,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 31,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 47,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 52,
+    "nearest_edge_px": 60,
+    "off_pct": 15.0,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 54,
+    "nearest_edge_px": 60,
+    "off_pct": 10.9,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 94,
+    "nearest_edge_px": 104,
+    "off_pct": 11.0,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 126,
+    "nearest_edge_px": 111,
+    "off_pct": 11.9,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 162,
+    "nearest_edge_px": 169,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 187,
+    "nearest_edge_px": 185,
+    "off_pct": 1.2,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 234,
+    "nearest_edge_px": 232,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 281,
+    "nearest_edge_px": 281,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 304,
+    "nearest_edge_px": 305,
+    "off_pct": 0.3,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 324,
+    "nearest_edge_px": 313,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 397,
+    "nearest_edge_px": 313,
+    "off_pct": 21.2,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 487,
+    "nearest_edge_px": 313,
+    "off_pct": 35.7,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 562,
+    "nearest_edge_px": 313,
+    "off_pct": 44.3,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 843,
+    "nearest_edge_px": 313,
+    "off_pct": 62.9,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1124,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   60,
+   104,
+   111,
+   144,
+   169,
+   185,
+   191,
+   232,
+   249,
+   271,
+   281,
+   294,
+   305,
+   313
+  ],
+  "measured_edges_times_first_circle": [
+   0.37,
+   0.64,
+   0.68,
+   0.89,
+   1.04,
+   1.14,
+   1.18,
+   1.43,
+   1.53,
+   1.67,
+   1.73,
+   1.81,
+   1.88,
+   1.93
+  ],
+  "reach_px": 851,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     16,
+     1.0
+    ],
+    [
+     4,
+     0.47
+    ],
+    [
+     12,
+     0.38
+    ],
+    [
+     8,
+     0.36
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     8,
+     1.0
+    ],
+    [
+     24,
+     0.46
+    ],
+    [
+     40,
+     0.32
+    ],
+    [
+     20,
+     0.31
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     10,
+     1.0
+    ],
+    [
+     8,
+     0.96
+    ],
+    [
+     16,
+     0.9
+    ],
+    [
+     12,
+     0.8
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Lincoln, State Capitol",
+  "slug": "lincoln__state_capitol",
+  "photo": "world/w286.jpg",
+  "along": null,
+  "built": "1922–32",
+  "note": "",
+  "lat": 40.8081,
+  "lon": -96.6997,
+  "photo_size": [
+   1280,
+   1280
+  ],
+  "middle_in_photo": [
+   643,
+   642
+  ],
+  "straightened_px": 1362,
+  "view_px": 1100,
+  "first_circle_view_px": 145.95,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   3,
+   2
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 180.7,
+  "turn_deg": 3.8,
+  "landed": 3,
+  "luck": 0.864,
+  "sizes_tried": 22,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 181,
+    "nearest_edge_px": 183,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 313,
+    "nearest_edge_px": 313,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 626,
+    "nearest_edge_px": 629,
+    "off_pct": 0.5,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 939,
+    "nearest_edge_px": 629,
+    "off_pct": 33.0,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 35,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 52,
+    "nearest_edge_px": 55,
+    "off_pct": 5.4,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 58,
+    "nearest_edge_px": 55,
+    "off_pct": 5.4,
+    "landed": false
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 60,
+    "nearest_edge_px": 64,
+    "off_pct": 6.2,
+    "landed": false
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 104,
+    "nearest_edge_px": 108,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 140,
+    "nearest_edge_px": 132,
+    "off_pct": 5.9,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 181,
+    "nearest_edge_px": 183,
+    "off_pct": 1.3,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 209,
+    "nearest_edge_px": 192,
+    "off_pct": 8.0,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 261,
+    "nearest_edge_px": 313,
+    "off_pct": 20.0,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 313,
+    "nearest_edge_px": 313,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 339,
+    "nearest_edge_px": 327,
+    "off_pct": 3.5,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 361,
+    "nearest_edge_px": 327,
+    "off_pct": 9.5,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 443,
+    "nearest_edge_px": 327,
+    "off_pct": 26.1,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 542,
+    "nearest_edge_px": 629,
+    "off_pct": 16.0,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 626,
+    "nearest_edge_px": 629,
+    "off_pct": 0.5,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 939,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 1252,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "outside the photo"
+   }
+  ],
+  "measured_edges_px": [
+   55,
+   64,
+   75,
+   108,
+   117,
+   132,
+   150,
+   162,
+   171,
+   183,
+   192,
+   313,
+   327,
+   629
+  ],
+  "measured_edges_times_first_circle": [
+   0.3,
+   0.35,
+   0.42,
+   0.6,
+   0.65,
+   0.73,
+   0.83,
+   0.9,
+   0.95,
+   1.01,
+   1.06,
+   1.73,
+   1.81,
+   3.48
+  ],
+  "reach_px": 717,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     8,
+     1.0
+    ],
+    [
+     4,
+     0.86
+    ],
+    [
+     12,
+     0.49
+    ],
+    [
+     5,
+     0.4
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     8,
+     1.0
+    ],
+    [
+     4,
+     0.93
+    ],
+    [
+     6,
+     0.7
+    ],
+    [
+     5,
+     0.6
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.15
+    ],
+    [
+     7,
+     0.15
+    ],
+    [
+     20,
+     0.14
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "St. Louis, Cathedral Basilica",
+  "slug": "st__louis__cathedral_basilica",
+  "photo": "world/w288.jpg",
+  "along": null,
+  "built": "1907–14; mosaics completed 1988",
+  "note": "",
+  "lat": 38.6425,
+  "lon": -90.2547,
+  "photo_size": [
+   1280,
+   853
+  ],
+  "middle_in_photo": [
+   637,
+   424
+  ],
+  "straightened_px": 1159,
+  "view_px": 1100,
+  "first_circle_view_px": 52.06,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -3,
+   -2
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 54.9,
+  "turn_deg": 15.0,
+  "landed": 3,
+  "luck": 0.88,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 55,
+    "nearest_edge_px": 53,
+    "off_pct": 3.4,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 95,
+    "nearest_edge_px": 91,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 190,
+    "nearest_edge_px": 228,
+    "off_pct": 20.0,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 285,
+    "nearest_edge_px": 285,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 11,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 18,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 32,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 43,
+    "nearest_edge_px": 45,
+    "off_pct": 5.6,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 55,
+    "nearest_edge_px": 53,
+    "off_pct": 3.4,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 63,
+    "nearest_edge_px": 53,
+    "off_pct": 16.3,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 79,
+    "nearest_edge_px": 91,
+    "off_pct": 14.9,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 95,
+    "nearest_edge_px": 91,
+    "off_pct": 4.2,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 103,
+    "nearest_edge_px": 102,
+    "off_pct": 0.8,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 110,
+    "nearest_edge_px": 102,
+    "off_pct": 7.0,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 134,
+    "nearest_edge_px": 102,
+    "off_pct": 24.1,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 165,
+    "nearest_edge_px": 102,
+    "off_pct": 38.0,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 190,
+    "nearest_edge_px": 228,
+    "off_pct": 20.0,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 285,
+    "nearest_edge_px": 285,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 380,
+    "nearest_edge_px": 389,
+    "off_pct": 2.4,
+    "landed": true
+   }
+  ],
+  "measured_edges_px": [
+   45,
+   53,
+   91,
+   102,
+   228,
+   252,
+   270,
+   285,
+   336,
+   345,
+   357,
+   370,
+   389,
+   413
+  ],
+  "measured_edges_times_first_circle": [
+   0.82,
+   0.97,
+   1.66,
+   1.86,
+   4.16,
+   4.59,
+   4.92,
+   5.2,
+   6.13,
+   6.29,
+   6.51,
+   6.75,
+   7.09,
+   7.53
+  ],
+  "reach_px": 610,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     4,
+     1.0
+    ],
+    [
+     16,
+     0.66
+    ],
+    [
+     8,
+     0.31
+    ],
+    [
+     24,
+     0.27
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.39
+    ],
+    [
+     44,
+     0.2
+    ],
+    [
+     6,
+     0.2
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     6,
+     0.2
+    ],
+    [
+     5,
+     0.17
+    ],
+    [
+     32,
+     0.17
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Los Angeles, Central Library",
+  "slug": "los_angeles__central_library",
+  "photo": "world/w289.jpg",
+  "along": null,
+  "built": "1926",
+  "note": "",
+  "lat": 34.0503,
+  "lon": -118.255,
+  "photo_size": [
+   1280,
+   854
+  ],
+  "middle_in_photo": [
+   638,
+   427
+  ],
+  "straightened_px": 1156,
+  "view_px": 1100,
+  "first_circle_view_px": 43.4,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -2,
+   0
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 45.6,
+  "turn_deg": 37.5,
+  "landed": 3,
+  "luck": 0.994,
+  "sizes_tried": 29,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 46,
+    "nearest_edge_px": 46,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 79,
+    "nearest_edge_px": 79,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 158,
+    "nearest_edge_px": 159,
+    "off_pct": 0.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 237,
+    "nearest_edge_px": 188,
+    "off_pct": 20.7,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 9,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 13,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 15,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 15,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 26,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 35,
+    "nearest_edge_px": 37,
+    "off_pct": 4.5,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 46,
+    "nearest_edge_px": 46,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 53,
+    "nearest_edge_px": 46,
+    "off_pct": 12.7,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 66,
+    "nearest_edge_px": 69,
+    "off_pct": 4.8,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 79,
+    "nearest_edge_px": 79,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 86,
+    "nearest_edge_px": 92,
+    "off_pct": 7.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 91,
+    "nearest_edge_px": 92,
+    "off_pct": 0.9,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 112,
+    "nearest_edge_px": 116,
+    "off_pct": 3.8,
+    "landed": true
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 137,
+    "nearest_edge_px": 151,
+    "off_pct": 10.4,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 158,
+    "nearest_edge_px": 159,
+    "off_pct": 0.6,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 237,
+    "nearest_edge_px": 188,
+    "off_pct": 20.7,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 316,
+    "nearest_edge_px": 337,
+    "off_pct": 6.6,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   37,
+   46,
+   69,
+   79,
+   92,
+   116,
+   151,
+   159,
+   177,
+   188,
+   337,
+   343,
+   402,
+   429
+  ],
+  "measured_edges_times_first_circle": [
+   0.81,
+   1.01,
+   1.51,
+   1.73,
+   2.02,
+   2.54,
+   3.31,
+   3.49,
+   3.88,
+   4.12,
+   7.39,
+   7.52,
+   8.81,
+   9.41
+  ],
+  "reach_px": 608,
+  "smallest_measurable_px": 34,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     48,
+     1.0
+    ],
+    [
+     24,
+     0.38
+    ],
+    [
+     6,
+     0.22
+    ],
+    [
+     38,
+     0.19
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     47,
+     1.0
+    ],
+    [
+     7,
+     0.84
+    ],
+    [
+     48,
+     0.72
+    ],
+    [
+     15,
+     0.59
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     5,
+     0.24
+    ],
+    [
+     6,
+     0.17
+    ],
+    [
+     9,
+     0.12
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Edmonton, Legislature Building",
+  "slug": "edmonton__legislature_building",
+  "photo": "world/w290.jpg",
+  "along": null,
+  "built": "1907–13",
+  "note": "",
+  "lat": 53.5337,
+  "lon": -113.5066,
+  "photo_size": [
+   1280,
+   960
+  ],
+  "middle_in_photo": [
+   837,
+   464
+  ],
+  "straightened_px": 1459,
+  "view_px": 1100,
+  "first_circle_view_px": 57.02,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   197,
+   -16
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 75.6,
+  "turn_deg": 15.0,
+  "landed": 3,
+  "luck": 0.99,
+  "sizes_tried": 28,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 76,
+    "nearest_edge_px": 77,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 131,
+    "nearest_edge_px": 133,
+    "off_pct": 1.5,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 262,
+    "nearest_edge_px": 240,
+    "off_pct": 8.4,
+    "landed": false
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 393,
+    "nearest_edge_px": 393,
+    "off_pct": 0.0,
+    "landed": true
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 15,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 22,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 24,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 25,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 44,
+    "nearest_edge_px": 52,
+    "off_pct": 19.1,
+    "landed": false
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 59,
+    "nearest_edge_px": 52,
+    "off_pct": 11.5,
+    "landed": false
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 76,
+    "nearest_edge_px": 77,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 87,
+    "nearest_edge_px": 95,
+    "off_pct": 8.8,
+    "landed": false
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 109,
+    "nearest_edge_px": 110,
+    "off_pct": 0.8,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 131,
+    "nearest_edge_px": 133,
+    "off_pct": 1.5,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 142,
+    "nearest_edge_px": 145,
+    "off_pct": 2.3,
+    "landed": true
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 151,
+    "nearest_edge_px": 155,
+    "off_pct": 2.5,
+    "landed": true
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 185,
+    "nearest_edge_px": 155,
+    "off_pct": 16.3,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 227,
+    "nearest_edge_px": 240,
+    "off_pct": 5.8,
+    "landed": false
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 262,
+    "nearest_edge_px": 240,
+    "off_pct": 8.4,
+    "landed": false
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 393,
+    "nearest_edge_px": 393,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 524,
+    "nearest_edge_px": 404,
+    "off_pct": 22.9,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   52,
+   77,
+   95,
+   102,
+   110,
+   126,
+   133,
+   145,
+   155,
+   240,
+   327,
+   381,
+   393,
+   404
+  ],
+  "measured_edges_times_first_circle": [
+   0.69,
+   1.02,
+   1.26,
+   1.35,
+   1.45,
+   1.67,
+   1.76,
+   1.92,
+   2.05,
+   3.17,
+   4.32,
+   5.04,
+   5.2,
+   5.34
+  ],
+  "reach_px": 768,
+  "smallest_measurable_px": 38,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     5,
+     1.0
+    ],
+    [
+     4,
+     0.82
+    ],
+    [
+     7,
+     0.64
+    ],
+    [
+     15,
+     0.38
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     12,
+     1.0
+    ],
+    [
+     7,
+     0.99
+    ],
+    [
+     6,
+     0.98
+    ],
+    [
+     5,
+     0.77
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     12,
+     1.0
+    ],
+    [
+     11,
+     0.27
+    ],
+    [
+     4,
+     0.25
+    ],
+    [
+     5,
+     0.21
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
+ },
+ {
+  "place": "Quito, La Compañía",
+  "slug": "quito__la_compañía",
+  "photo": "world/w291.jpg",
+  "along": null,
+  "built": "1605–1765",
+  "note": "",
+  "lat": -0.2208,
+  "lon": -78.5139,
+  "photo_size": [
+   1280,
+   1627
+  ],
+  "middle_in_photo": [
+   610,
+   820
+  ],
+  "straightened_px": 1588,
+  "view_px": 1100,
+  "first_circle_view_px": 55.99,
+  "placed_by_hand": false,
+  "off_middle_px": [
+   -30,
+   6
+  ],
+  "squash": 1.0,
+  "squash_direction_deg": 0,
+  "first_circle_px": 80.8,
+  "turn_deg": 41.2,
+  "landed": 3,
+  "luck": 0.994,
+  "sizes_tried": 31,
+  "rings": [
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 81,
+    "nearest_edge_px": 81,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "eight-flower ring",
+    "times_first_circle": 1.732,
+    "drawn_px": 140,
+    "nearest_edge_px": 143,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "rim",
+    "times_first_circle": 3.464,
+    "drawn_px": 280,
+    "nearest_edge_px": 280,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out",
+    "times_first_circle": 5.196,
+    "drawn_px": 420,
+    "nearest_edge_px": 346,
+    "off_pct": 17.6,
+    "landed": false
+   }
+  ],
+  "full": [
+   {
+    "ring": "third band inward",
+    "times_first_circle": 0.192,
+    "drawn_px": 16,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "thirteen circles: radius of each",
+    "times_first_circle": 0.289,
+    "drawn_px": 23,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: second inner eight",
+    "times_first_circle": 0.322,
+    "drawn_px": 26,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "second band inward",
+    "times_first_circle": 0.333,
+    "drawn_px": 27,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "first band inward (star's crossings)",
+    "times_first_circle": 0.577,
+    "drawn_px": 47,
+    "nearest_edge_px": null,
+    "off_pct": null,
+    "landed": false,
+    "why": "too small to measure in this photo"
+   },
+   {
+    "ring": "star in the eight: first inner eight",
+    "times_first_circle": 0.777,
+    "drawn_px": 63,
+    "nearest_edge_px": 60,
+    "off_pct": 4.4,
+    "landed": true
+   },
+   {
+    "ring": "first circle",
+    "times_first_circle": 1.0,
+    "drawn_px": 81,
+    "nearest_edge_px": 81,
+    "off_pct": 0.2,
+    "landed": true
+   },
+   {
+    "ring": "cube corners",
+    "times_first_circle": 1.155,
+    "drawn_px": 93,
+    "nearest_edge_px": 95,
+    "off_pct": 1.8,
+    "landed": true
+   },
+   {
+    "ring": "thirteen circles: outer reach",
+    "times_first_circle": 1.443,
+    "drawn_px": 117,
+    "nearest_edge_px": 95,
+    "off_pct": 18.6,
+    "landed": false
+   },
+   {
+    "ring": "eight-flower ring and diamond",
+    "times_first_circle": 1.732,
+    "drawn_px": 140,
+    "nearest_edge_px": 143,
+    "off_pct": 2.1,
+    "landed": true
+   },
+   {
+    "ring": "octagon corners",
+    "times_first_circle": 1.875,
+    "drawn_px": 152,
+    "nearest_edge_px": 143,
+    "off_pct": 5.6,
+    "landed": false
+   },
+   {
+    "ring": "seed's outer reach",
+    "times_first_circle": 2.0,
+    "drawn_px": 162,
+    "nearest_edge_px": 143,
+    "off_pct": 11.5,
+    "landed": false
+   },
+   {
+    "ring": "second square's corners",
+    "times_first_circle": 2.449,
+    "drawn_px": 198,
+    "nearest_edge_px": 225,
+    "off_pct": 13.6,
+    "landed": false
+   },
+   {
+    "ring": "flower of life's edge and doubled circles' reach",
+    "times_first_circle": 3.0,
+    "drawn_px": 242,
+    "nearest_edge_px": 245,
+    "off_pct": 1.0,
+    "landed": true
+   },
+   {
+    "ring": "rim (eight-flower's reach)",
+    "times_first_circle": 3.464,
+    "drawn_px": 280,
+    "nearest_edge_px": 280,
+    "off_pct": 0.0,
+    "landed": true
+   },
+   {
+    "ring": "next ring out (outer circles' centres)",
+    "times_first_circle": 5.196,
+    "drawn_px": 420,
+    "nearest_edge_px": 346,
+    "off_pct": 17.6,
+    "landed": false
+   },
+   {
+    "ring": "outer circles' far side",
+    "times_first_circle": 6.928,
+    "drawn_px": 560,
+    "nearest_edge_px": 512,
+    "off_pct": 8.6,
+    "landed": false
+   }
+  ],
+  "measured_edges_px": [
+   60,
+   81,
+   95,
+   143,
+   225,
+   245,
+   263,
+   280,
+   294,
+   301,
+   323,
+   331,
+   346,
+   512
+  ],
+  "measured_edges_times_first_circle": [
+   0.74,
+   1.0,
+   1.18,
+   1.77,
+   2.78,
+   3.03,
+   3.25,
+   3.46,
+   3.64,
+   3.72,
+   4.0,
+   4.1,
+   4.28,
+   6.33
+  ],
+  "reach_px": 835,
+  "smallest_measurable_px": 51,
+  "folds": {
+   "first circle to eight-flower ring": [
+    [
+     11,
+     1.0
+    ],
+    [
+     13,
+     0.76
+    ],
+    [
+     10,
+     0.68
+    ],
+    [
+     26,
+     0.36
+    ]
+   ],
+   "eight-flower ring to rim": [
+    [
+     12,
+     1.0
+    ],
+    [
+     11,
+     1.0
+    ],
+    [
+     13,
+     0.89
+    ],
+    [
+     39,
+     0.23
+    ]
+   ],
+   "rim to next ring out": [
+    [
+     4,
+     1.0
+    ],
+    [
+     8,
+     0.62
+    ],
+    [
+     12,
+     0.59
+    ],
+    [
+     24,
+     0.25
+    ]
+   ]
+  },
+  "outer_circles_in_frame": true,
+  "straightened": null
  }
 ]

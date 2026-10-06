@@ -4752,5 +4752,665 @@
    "built": "1883–1907",
    "by": "Alfred Parland"
   }
+ },
+ {
+  "place": "Sarajevo, Gazi Husrev-beg Mosque",
+  "photo": "world/w258.jpg",
+  "built": "1530–31",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   486
+  ],
+  "squash": false,
+  "lat": 43.8592,
+  "lon": 18.429,
+  "building": {
+   "name": "Gazi Husrev-beg Mosque",
+   "where": "Sarajevo, Bosnia and Herzegovina",
+   "built": "1530–31",
+   "by": "Acem Esir Ali"
+  }
+ },
+ {
+  "place": "Mostar, Koski Mehmed Pasha Mosque",
+  "photo": "world/w259.jpg",
+  "built": "1617–19",
+  "note": "",
+  "hand": null,
+  "turned": [
+   661,
+   400
+  ],
+  "squash": false,
+  "lat": 43.3397,
+  "lon": 17.8147,
+  "building": {
+   "name": "Koski Mehmed Pasha Mosque",
+   "where": "Mostar, Bosnia and Herzegovina",
+   "built": "1617–19",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Thessaloniki, Hagia Sophia",
+  "photo": "world/w260.jpg",
+  "built": "7th–8th centuries; dome mosaic 9th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   358
+  ],
+  "squash": false,
+  "lat": 40.6328,
+  "lon": 22.9469,
+  "building": {
+   "name": "Hagia Sophia",
+   "where": "Thessaloniki, Greece",
+   "built": "7th–8th centuries; dome mosaic 9th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Geghard",
+  "photo": "world/w261.jpg",
+  "built": "1215–25",
+  "note": "Stalactite vault with an opening at the crown",
+  "hand": null,
+  "turned": [
+   629,
+   266
+  ],
+  "squash": false,
+  "lat": 40.1404,
+  "lon": 44.8185,
+  "building": {
+   "name": "Geghard",
+   "where": "Armenia",
+   "built": "1215–25",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Istanbul, Süleymaniye",
+  "photo": "world/w262.jpg",
+  "built": "1550–57",
+  "note": "",
+  "hand": null,
+  "turned": [
+   614,
+   486
+  ],
+  "squash": false,
+  "lat": 41.0161,
+  "lon": 28.9639,
+  "building": {
+   "name": "Süleymaniye Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1550–57",
+   "by": "Mimar Sinan, for Sultan Suleiman the Magnificent"
+  }
+ },
+ {
+  "place": "Istanbul, New Mosque",
+  "photo": "world/w263.jpg",
+  "built": "1597–1665",
+  "note": "",
+  "hand": null,
+  "turned": [
+   646,
+   405
+  ],
+  "squash": false,
+  "lat": 41.017,
+  "lon": 28.9715,
+  "building": {
+   "name": "New Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1597–1665",
+   "by": "Davut Ağa, Dalgıç Ahmed Çavuş and Mustafa Ağa"
+  }
+ },
+ {
+  "place": "Istanbul, Bayezid II",
+  "photo": "world/w264.jpg",
+  "built": "1501–06",
+  "note": "",
+  "hand": null,
+  "turned": [
+   656,
+   322
+  ],
+  "squash": false,
+  "lat": 41.0103,
+  "lon": 28.9653,
+  "building": {
+   "name": "Bayezid II Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1501–06",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Bursa, Green Mosque",
+  "photo": "world/w265.jpg",
+  "built": "1412–24",
+  "note": "",
+  "hand": null,
+  "turned": [
+   632,
+   402
+  ],
+  "squash": false,
+  "lat": 40.1819,
+  "lon": 29.0744,
+  "building": {
+   "name": "Green Mosque",
+   "where": "Bursa, Turkey",
+   "built": "1412–24",
+   "by": "Hacı İvaz Pasha"
+  }
+ },
+ {
+  "place": "Bursa, Grand Mosque",
+  "photo": "world/w266.jpg",
+  "built": "1396–99",
+  "note": "One of twenty domes",
+  "hand": null,
+  "turned": [
+   638,
+   328
+  ],
+  "squash": false,
+  "lat": 40.1839,
+  "lon": 29.0617,
+  "building": {
+   "name": "Grand Mosque of Bursa",
+   "where": "Bursa, Turkey",
+   "built": "1396–99",
+   "by": "Ali Neccar"
+  }
+ },
+ {
+  "place": "Divriği, Great Mosque",
+  "photo": "world/w267.jpg",
+  "built": "1228–29",
+  "note": "Carved stone vault",
+  "hand": null,
+  "turned": [
+   617,
+   864
+  ],
+  "squash": false,
+  "lat": 39.3713,
+  "lon": 38.1218,
+  "building": {
+   "name": "Great Mosque and Hospital of Divriği",
+   "where": "Divriği, Turkey",
+   "built": "1228–29",
+   "by": "Hürrem Shah of Ahlat"
+  }
+ },
+ {
+  "place": "Marrakech, Almoravid Koubba",
+  "photo": "world/w268.jpg",
+  "built": "About 1117–25",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   547
+  ],
+  "squash": false,
+  "lat": 31.6315,
+  "lon": -7.9872,
+  "building": {
+   "name": "Almoravid Qubba",
+   "where": "Marrakech, Morocco",
+   "built": "About 1117–25",
+   "by": "Built for Ali ibn Yusuf"
+  }
+ },
+ {
+  "place": "Isfahan, Hasht Behesht",
+  "photo": "world/w269.jpg",
+  "built": "1669",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   613
+  ],
+  "squash": false,
+  "lat": 32.6534,
+  "lon": 51.6701,
+  "building": {
+   "name": "Hasht Behesht",
+   "where": "Isfahan, Iran",
+   "built": "1669",
+   "by": "Built for Shah Suleiman I"
+  }
+ },
+ {
+  "place": "Shiraz, Tomb of Hafez",
+  "photo": "world/w270.jpg",
+  "built": "Pavilion 1935",
+  "note": "Tiled dome over an open pavilion",
+  "hand": null,
+  "turned": [
+   650,
+   442
+  ],
+  "squash": false,
+  "lat": 29.6254,
+  "lon": 52.5583,
+  "building": {
+   "name": "Tomb of Hafez",
+   "where": "Shiraz, Iran",
+   "built": "Pavilion 1935",
+   "by": "André Godard"
+  }
+ },
+ {
+  "place": "Ardabil, Sheikh Safi shrine",
+  "photo": "world/w271.jpg",
+  "built": "16th–17th centuries",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   456
+  ],
+  "squash": false,
+  "lat": 38.2486,
+  "lon": 48.2914,
+  "building": {
+   "name": "Sheikh Safi al-Din Khānegāh and Shrine Ensemble",
+   "where": "Ardabil, Iran",
+   "built": "16th–17th centuries",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Samarkand, Gur-e-Amir",
+  "photo": "world/w272.jpg",
+  "built": "1403–04",
+  "note": "",
+  "hand": null,
+  "turned": [
+   629,
+   474
+  ],
+  "squash": false,
+  "lat": 39.6483,
+  "lon": 66.9689,
+  "building": {
+   "name": "Gur-e-Amir",
+   "where": "Samarkand, Uzbekistan",
+   "built": "1403–04",
+   "by": "Built for Timur"
+  }
+ },
+ {
+  "place": "Samarkand, Bibi-Khanym",
+  "photo": "world/w273.jpg",
+  "built": "1399–1404",
+  "note": "",
+  "hand": [
+   667,
+   378
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 39.6606,
+  "lon": 66.9792,
+  "building": {
+   "name": "Bibi-Khanym Mosque",
+   "where": "Samarkand, Uzbekistan",
+   "built": "1399–1404",
+   "by": "Built for Timur"
+  }
+ },
+ {
+  "place": "Turkistan, Mausoleum of Khoja Ahmed Yasawi",
+  "photo": "world/w274.jpg",
+  "built": "1389–1405",
+  "note": "",
+  "hand": null,
+  "turned": [
+   570,
+   331
+  ],
+  "squash": false,
+  "lat": 43.2978,
+  "lon": 68.2708,
+  "building": {
+   "name": "Mausoleum of Khoja Ahmed Yasawi",
+   "where": "Turkistan, Kazakhstan",
+   "built": "1389–1405",
+   "by": "Built for Timur"
+  }
+ },
+ {
+  "place": "Mumbai, Taj Mahal Palace",
+  "photo": "world/w275.jpg",
+  "built": "1903",
+  "note": "",
+  "hand": null,
+  "turned": [
+   542,
+   632
+  ],
+  "squash": false,
+  "lat": 18.922,
+  "lon": 72.8333,
+  "building": {
+   "name": "Taj Mahal Palace Hotel",
+   "where": "Mumbai, India",
+   "built": "1903",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "New York, Low Memorial Library",
+  "photo": "world/w276.jpg",
+  "built": "1895–97",
+  "note": "",
+  "hand": null,
+  "turned": [
+   647,
+   952
+  ],
+  "squash": false,
+  "lat": 40.8083,
+  "lon": -73.9619,
+  "building": {
+   "name": "Low Memorial Library",
+   "where": "New York, United States",
+   "built": "1895–97",
+   "by": "Charles Follen McKim"
+  }
+ },
+ {
+  "place": "New York, Custom House",
+  "photo": "world/w277.jpg",
+  "built": "1902–07",
+  "note": "",
+  "hand": null,
+  "turned": [
+   586,
+   477
+  ],
+  "squash": false,
+  "lat": 40.7042,
+  "lon": -74.0136,
+  "building": {
+   "name": "Alexander Hamilton U.S. Custom House",
+   "where": "New York, United States",
+   "built": "1902–07",
+   "by": "Cass Gilbert"
+  }
+ },
+ {
+  "place": "Philadelphia, cathedral",
+  "photo": "world/w278.jpg",
+  "built": "1846–64",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   422
+  ],
+  "squash": false,
+  "lat": 39.9575,
+  "lon": -75.1686,
+  "building": {
+   "name": "Cathedral Basilica of Saints Peter and Paul",
+   "where": "Philadelphia, United States",
+   "built": "1846–64",
+   "by": "Napoleon LeBrun and John Notman"
+  }
+ },
+ {
+  "place": "Madison, State Capitol",
+  "photo": "world/w279.jpg",
+  "built": "1906–17",
+  "note": "",
+  "hand": [
+   637,
+   436
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 43.0747,
+  "lon": -89.3842,
+  "building": {
+   "name": "Wisconsin State Capitol",
+   "where": "Madison, United States",
+   "built": "1906–17",
+   "by": "George B. Post"
+  }
+ },
+ {
+  "place": "Springfield, State Capitol",
+  "photo": "world/w280.jpg",
+  "built": "1868–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   430
+  ],
+  "squash": false,
+  "lat": 39.7983,
+  "lon": -89.6547,
+  "building": {
+   "name": "Illinois State Capitol",
+   "where": "Springfield, United States",
+   "built": "1868–88",
+   "by": "John C. Cochrane and Alfred H. Piquenard"
+  }
+ },
+ {
+  "place": "Denver, State Capitol",
+  "photo": "world/w281.jpg",
+  "built": "1886–1907",
+  "note": "",
+  "hand": null,
+  "turned": [
+   632,
+   424
+  ],
+  "squash": false,
+  "lat": 39.7392,
+  "lon": -104.9849,
+  "building": {
+   "name": "Colorado State Capitol",
+   "where": "Denver, United States",
+   "built": "1886–1907",
+   "by": "Elijah E. Myers"
+  }
+ },
+ {
+  "place": "Topeka, State Capitol",
+  "photo": "world/w282.jpg",
+  "built": "1866–1903",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   640
+  ],
+  "squash": false,
+  "lat": 39.0481,
+  "lon": -95.6781,
+  "building": {
+   "name": "Kansas State Capitol",
+   "where": "Topeka, United States",
+   "built": "1866–1903",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Little Rock, State Capitol",
+  "photo": "world/w283.jpg",
+  "built": "1899–1915",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   498
+  ],
+  "squash": false,
+  "lat": 34.7467,
+  "lon": -92.2892,
+  "building": {
+   "name": "Arkansas State Capitol",
+   "where": "Little Rock, United States",
+   "built": "1899–1915",
+   "by": "George R. Mann, completed by Cass Gilbert"
+  }
+ },
+ {
+  "place": "Salt Lake City, State Capitol",
+  "photo": "world/w284.jpg",
+  "built": "1912–16",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   634
+  ],
+  "squash": false,
+  "lat": 40.7772,
+  "lon": -111.8881,
+  "building": {
+   "name": "Utah State Capitol",
+   "where": "Salt Lake City, United States",
+   "built": "1912–16",
+   "by": "Richard K. A. Kletting"
+  }
+ },
+ {
+  "place": "Helena, State Capitol",
+  "photo": "world/w285.jpg",
+  "built": "1896–1902",
+  "note": "",
+  "hand": null,
+  "turned": [
+   650,
+   860
+  ],
+  "squash": false,
+  "lat": 46.5857,
+  "lon": -112.0184,
+  "building": {
+   "name": "Montana State Capitol",
+   "where": "Helena, United States",
+   "built": "1896–1902",
+   "by": "Charles Emlen Bell and John Hackett Kent"
+  }
+ },
+ {
+  "place": "Lincoln, State Capitol",
+  "photo": "world/w286.jpg",
+  "built": "1922–32",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   642
+  ],
+  "squash": false,
+  "lat": 40.8081,
+  "lon": -96.6997,
+  "building": {
+   "name": "Nebraska State Capitol",
+   "where": "Lincoln, United States",
+   "built": "1922–32",
+   "by": "Bertram Grosvenor Goodhue"
+  }
+ },
+ {
+  "place": "St. Louis, Cathedral Basilica",
+  "photo": "world/w288.jpg",
+  "built": "1907–14; mosaics completed 1988",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   424
+  ],
+  "squash": false,
+  "lat": 38.6425,
+  "lon": -90.2547,
+  "building": {
+   "name": "Cathedral Basilica of Saint Louis",
+   "where": "St. Louis, United States",
+   "built": "1907–14; mosaics completed 1988",
+   "by": "Barnett, Haynes and Barnett"
+  }
+ },
+ {
+  "place": "Los Angeles, Central Library",
+  "photo": "world/w289.jpg",
+  "built": "1926",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   427
+  ],
+  "squash": false,
+  "lat": 34.0503,
+  "lon": -118.255,
+  "building": {
+   "name": "Los Angeles Central Library",
+   "where": "Los Angeles, United States",
+   "built": "1926",
+   "by": "Bertram Grosvenor Goodhue"
+  }
+ },
+ {
+  "place": "Edmonton, Legislature Building",
+  "photo": "world/w290.jpg",
+  "built": "1907–13",
+  "note": "",
+  "hand": null,
+  "turned": [
+   837,
+   464
+  ],
+  "squash": false,
+  "lat": 53.5337,
+  "lon": -113.5066,
+  "building": {
+   "name": "Alberta Legislature Building",
+   "where": "Edmonton, Canada",
+   "built": "1907–13",
+   "by": "Allan Merrick Jeffers and Richard Blakey"
+  }
+ },
+ {
+  "place": "Quito, La Compañía",
+  "photo": "world/w291.jpg",
+  "built": "1605–1765",
+  "note": "",
+  "hand": null,
+  "turned": [
+   610,
+   820
+  ],
+  "squash": false,
+  "lat": -0.2208,
+  "lon": -78.5139,
+  "building": {
+   "name": "Church of La Compañía",
+   "where": "Quito, Ecuador",
+   "built": "1605–1765",
+   "by": "Not looked up yet"
+  }
  }
 ]
