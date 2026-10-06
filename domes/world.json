@@ -4252,5 +4252,505 @@
    "built": "1911–13",
    "by": "George W. Maher"
   }
+ },
+ {
+  "place": "Rome, Santa Costanza",
+  "photo": "world/w231.jpg",
+  "built": "About 340–350",
+  "note": "",
+  "hand": null,
+  "turned": [
+   826,
+   446
+  ],
+  "squash": false,
+  "lat": 41.9226,
+  "lon": 12.5174,
+  "building": {
+   "name": "Santa Costanza",
+   "where": "Rome, Italy",
+   "built": "About 340–350",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Rome, Santi Luca e Martina",
+  "photo": "world/w232.jpg",
+  "built": "1635–64",
+  "note": "",
+  "hand": null,
+  "turned": [
+   664,
+   243
+  ],
+  "squash": false,
+  "lat": 41.8932,
+  "lon": 12.485,
+  "building": {
+   "name": "Santi Luca e Martina",
+   "where": "Rome, Italy",
+   "built": "1635–64",
+   "by": "Pietro da Cortona"
+  }
+ },
+ {
+  "place": "Rome, Santa Maria degli Angeli",
+  "photo": "world/w233.jpg",
+  "built": "Baths 298–306; church 1563–66",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   576
+  ],
+  "squash": false,
+  "lat": 41.9031,
+  "lon": 12.4969,
+  "building": {
+   "name": "Santa Maria degli Angeli e dei Martiri",
+   "where": "Rome, Italy",
+   "built": "Baths 298–306; church 1563–66",
+   "by": "Church by Michelangelo, in the Baths of Diocletian"
+  }
+ },
+ {
+  "place": "Florence, cathedral",
+  "photo": "world/w234.jpg",
+  "built": "Dome 1420–36",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   474
+  ],
+  "squash": false,
+  "lat": 43.7731,
+  "lon": 11.2569,
+  "building": {
+   "name": "Florence Cathedral",
+   "where": "Florence, Italy",
+   "built": "Dome 1420–36",
+   "by": "Filippo Brunelleschi; frescoes by Giorgio Vasari and Federico Zuccari"
+  }
+ },
+ {
+  "place": "Ravenna, Baptistery of Neon",
+  "photo": "world/w235.jpg",
+  "built": "About 400–458",
+  "note": "",
+  "hand": null,
+  "turned": [
+   645,
+   653
+  ],
+  "squash": false,
+  "lat": 44.4156,
+  "lon": 12.1972,
+  "building": {
+   "name": "Baptistery of Neon",
+   "where": "Ravenna, Italy",
+   "built": "About 400–458",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Parma, baptistery",
+  "photo": "world/w236.jpg",
+  "built": "1196–1270",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   414
+  ],
+  "squash": false,
+  "lat": 44.8031,
+  "lon": 10.3304,
+  "building": {
+   "name": "Parma Baptistery",
+   "where": "Parma, Italy",
+   "built": "1196–1270",
+   "by": "Benedetto Antelami"
+  }
+ },
+ {
+  "place": "Siena, cathedral",
+  "photo": "world/w237.jpg",
+  "built": "Dome 1259–64",
+  "note": "",
+  "hand": null,
+  "turned": [
+   618,
+   483
+  ],
+  "squash": false,
+  "lat": 43.3177,
+  "lon": 11.329,
+  "building": {
+   "name": "Siena Cathedral",
+   "where": "Siena, Italy",
+   "built": "Dome 1259–64",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Turin, Superga",
+  "photo": "world/w238.jpg",
+  "built": "1717–31",
+  "note": "",
+  "hand": null,
+  "turned": [
+   707,
+   413
+  ],
+  "squash": false,
+  "lat": 45.0808,
+  "lon": 7.7675,
+  "building": {
+   "name": "Basilica of Superga",
+   "where": "Turin, Italy",
+   "built": "1717–31",
+   "by": "Filippo Juvarra"
+  }
+ },
+ {
+  "place": "Todi, Santa Maria della Consolazione",
+  "photo": "world/w239.jpg",
+  "built": "1508–1607",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   522
+  ],
+  "squash": false,
+  "lat": 42.7778,
+  "lon": 12.4019,
+  "building": {
+   "name": "Santa Maria della Consolazione",
+   "where": "Todi, Italy",
+   "built": "1508–1607",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Palermo, Martorana",
+  "photo": "world/w240.jpg",
+  "built": "1143–51",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   685
+  ],
+  "squash": false,
+  "lat": 38.1148,
+  "lon": 13.3629,
+  "building": {
+   "name": "Martorana",
+   "where": "Palermo, Italy",
+   "built": "1143–51",
+   "by": "Built for George of Antioch"
+  }
+ },
+ {
+  "place": "Paris, Val-de-Grâce",
+  "photo": "world/w241.jpg",
+  "built": "1645–67",
+  "note": "",
+  "hand": null,
+  "turned": [
+   629,
+   395
+  ],
+  "squash": false,
+  "lat": 48.8408,
+  "lon": 2.3419,
+  "building": {
+   "name": "Val-de-Grâce",
+   "where": "Paris, France",
+   "built": "1645–67",
+   "by": "François Mansart and Jacques Lemercier; fresco by Pierre Mignard"
+  }
+ },
+ {
+  "place": "Paris, Galeries Lafayette",
+  "photo": "world/w242.jpg",
+  "built": "1912",
+  "note": "Glass dome",
+  "hand": null,
+  "turned": [
+   634,
+   459
+  ],
+  "squash": false,
+  "lat": 48.8737,
+  "lon": 2.332,
+  "building": {
+   "name": "Galeries Lafayette Haussmann",
+   "where": "Paris, France",
+   "built": "1912",
+   "by": "Ferdinand Chanut; glass by Jacques Gruber"
+  }
+ },
+ {
+  "place": "El Escorial",
+  "photo": "world/w244.jpg",
+  "built": "1563–84",
+  "note": "",
+  "hand": null,
+  "turned": [
+   595,
+   574
+  ],
+  "squash": false,
+  "lat": 40.59,
+  "lon": -4.15,
+  "building": {
+   "name": "El Escorial",
+   "where": "Spain",
+   "built": "1563–84",
+   "by": "Juan Bautista de Toledo and Juan de Herrera"
+  }
+ },
+ {
+  "place": "London, St Stephen Walbrook",
+  "photo": "world/w245.jpg",
+  "built": "1672–79",
+  "note": "",
+  "hand": null,
+  "turned": [
+   627,
+   394
+  ],
+  "squash": false,
+  "lat": 51.5126,
+  "lon": -0.0899,
+  "building": {
+   "name": "St Stephen Walbrook",
+   "where": "London, United Kingdom",
+   "built": "1672–79",
+   "by": "Sir Christopher Wren"
+  }
+ },
+ {
+  "place": "Belfast, City Hall",
+  "photo": "world/w247.jpg",
+  "built": "1898–1906",
+  "note": "",
+  "hand": null,
+  "turned": [
+   666,
+   357
+  ],
+  "squash": false,
+  "lat": 54.5965,
+  "lon": -5.9301,
+  "building": {
+   "name": "Belfast City Hall",
+   "where": "Belfast, United Kingdom",
+   "built": "1898–1906",
+   "by": "Sir Alfred Brumwell Thomas"
+  }
+ },
+ {
+  "place": "Dublin, City Hall",
+  "photo": "world/w248.jpg",
+  "built": "1769–79",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   323
+  ],
+  "squash": false,
+  "lat": 53.344,
+  "lon": -6.2672,
+  "building": {
+   "name": "City Hall",
+   "where": "Dublin, Ireland",
+   "built": "1769–79",
+   "by": "Thomas Cooley"
+  }
+ },
+ {
+  "place": "Berlin, Bode Museum",
+  "photo": "world/w249.jpg",
+  "built": "1897–1904",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   509
+  ],
+  "squash": false,
+  "lat": 52.5219,
+  "lon": 13.3947,
+  "building": {
+   "name": "Bode Museum",
+   "where": "Berlin, Germany",
+   "built": "1897–1904",
+   "by": "Ernst von Ihne"
+  }
+ },
+ {
+  "place": "Ettal Abbey",
+  "photo": "world/w250.jpg",
+  "built": "1710–52",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   392
+  ],
+  "squash": false,
+  "lat": 47.5717,
+  "lon": 11.095,
+  "building": {
+   "name": "Ettal Abbey",
+   "where": "Germany",
+   "built": "1710–52",
+   "by": "Enrico Zuccalli and Joseph Schmuzer; fresco by Johann Jakob Zeiller"
+  }
+ },
+ {
+  "place": "Vienna, Hofburg, St Michael's Wing",
+  "photo": "world/w251.jpg",
+  "built": "1889–93",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   669
+  ],
+  "squash": false,
+  "lat": 48.2064,
+  "lon": 16.3653,
+  "building": {
+   "name": "Hofburg",
+   "where": "Vienna, Austria",
+   "built": "1889–93",
+   "by": "After a design by Joseph Emanuel Fischer von Erlach"
+  }
+ },
+ {
+  "place": "Vienna, National Library",
+  "photo": "world/w252.jpg",
+  "built": "1723–26",
+  "note": "Oval dome",
+  "hand": null,
+  "turned": [
+   640,
+   430
+  ],
+  "squash": false,
+  "lat": 48.2061,
+  "lon": 16.3664,
+  "building": {
+   "name": "Austrian National Library",
+   "where": "Vienna, Austria",
+   "built": "1723–26",
+   "by": "Johann Bernhard Fischer von Erlach and his son; fresco by Daniel Gran"
+  }
+ },
+ {
+  "place": "Bern, Federal Palace",
+  "photo": "world/w253.jpg",
+  "built": "1894–1902",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   563
+  ],
+  "squash": false,
+  "lat": 46.9467,
+  "lon": 7.4442,
+  "building": {
+   "name": "Federal Palace of Switzerland",
+   "where": "Bern, Switzerland",
+   "built": "1894–1902",
+   "by": "Hans Wilhelm Auer"
+  }
+ },
+ {
+  "place": "Helsinki, cathedral",
+  "photo": "world/w254.jpg",
+  "built": "1830–52",
+  "note": "",
+  "hand": null,
+  "turned": [
+   648,
+   299
+  ],
+  "squash": false,
+  "lat": 60.1703,
+  "lon": 24.9522,
+  "building": {
+   "name": "Helsinki Cathedral",
+   "where": "Helsinki, Finland",
+   "built": "1830–52",
+   "by": "Carl Ludvig Engel"
+  }
+ },
+ {
+  "place": "Brussels, Palace of Justice",
+  "photo": "world/w255.jpg",
+  "built": "1866–83",
+  "note": "",
+  "hand": null,
+  "turned": [
+   642,
+   413
+  ],
+  "squash": false,
+  "lat": 50.8367,
+  "lon": 4.3517,
+  "building": {
+   "name": "Palace of Justice",
+   "where": "Brussels, Belgium",
+   "built": "1866–83",
+   "by": "Joseph Poelaert"
+  }
+ },
+ {
+  "place": "Breda, dome prison",
+  "photo": "world/w256.jpg",
+  "built": "1882–86",
+  "note": "Iron dome over a round prison",
+  "hand": null,
+  "turned": [
+   642,
+   378
+  ],
+  "squash": false,
+  "lat": 51.5903,
+  "lon": 4.7872,
+  "building": {
+   "name": "Koepelgevangenis",
+   "where": "Breda, Netherlands",
+   "built": "1882–86",
+   "by": "Johan Frederik Metzelaar"
+  }
+ },
+ {
+  "place": "St Petersburg, Church of the Savior on Blood",
+  "photo": "world/w257.jpg",
+  "built": "1883–1907",
+  "note": "",
+  "hand": null,
+  "turned": [
+   621,
+   366
+  ],
+  "squash": false,
+  "lat": 59.94,
+  "lon": 30.3286,
+  "building": {
+   "name": "Church of the Savior on Blood",
+   "where": "St Petersburg, Russia",
+   "built": "1883–1907",
+   "by": "Alfred Parland"
+  }
  }
 ]

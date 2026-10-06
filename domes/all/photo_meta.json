@@ -3982,5 +3982,405 @@
   "description": "The dome interior of the J.R. Watkins Headquarters in Winona, Minnesota.",
   "artist": "Farragutful",
   "license": "CC0"
+ },
+ "world/w231.jpg": {
+  "taken": "2016-09-23",
+  "make": "Canon",
+  "model": "Canon EOS DIGITAL REBEL",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   3072,
+   2048
+  ],
+  "description": "Santa Costanza - Rome",
+  "artist": "José Luiz",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w232.jpg": {
+  "taken": "2015-07-18",
+  "make": "Canon",
+  "model": "Canon EOS 600D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   5184,
+   3456
+  ],
+  "description": "Roma. Santi Luca e Martina. Interior.",
+  "artist": "Miguel Hermoso Cuesta",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w233.jpg": {
+  "taken": "2010-04-01",
+  "make": "NIKON",
+  "model": "COOLPIX S570",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "COOLPIX S570V1.0",
+  "original_size": [
+   2524,
+   2247
+  ],
+  "description": "Santa Maria degli Angeli e dei Martiri",
+  "artist": "Erik Drost",
+  "license": "CC BY 2.0"
+ },
+ "world/w234.jpg": {
+  "taken": "2023-04-17",
+  "make": "Panasonic",
+  "model": "DC-G91",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 102,
+  "software": "Ver.1.2  ",
+  "original_size": [
+   4880,
+   3885
+  ],
+  "description": "Dome of the Cathedral of St. Mary of the Flower, Florence, Province of Florence, Region of Tuscany, Italy",
+  "artist": "Zairon",
+  "license": "CC BY 4.0"
+ },
+ "world/w235.jpg": {
+  "taken": "2023-12-24",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D750",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 50,
+  "software": "Adobe Photoshop Camera Raw 17.3.1 (Windows)",
+  "original_size": [
+   10395,
+   10395
+  ],
+  "description": "Ravenna — Baptistery of Neon mosaic",
+  "artist": "Gsimonov",
+  "license": "CC0"
+ },
+ "world/w236.jpg": {
+  "taken": "2022-10-15",
+  "make": "Canon",
+  "model": "Canon EOS 70D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Express (Android)",
+  "original_size": [
+   5472,
+   3648
+  ],
+  "description": "Parma (Emilia-Romagna, Italy) - 13th c. baptistery - Ceiling",
+  "artist": "Benjamin Smith",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w237.jpg": {
+  "taken": "2023-04-19",
+  "make": "Panasonic",
+  "model": "DC-G91",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 84,
+  "software": "Ver.1.2  ",
+  "original_size": [
+   5125,
+   3885
+  ],
+  "description": "Dome of the Cathedral of St. Mary Assumption, Siena, Province of Siena, Region of Tuscany, Italy",
+  "artist": "Zairon",
+  "license": "CC BY 4.0"
+ },
+ "world/w238.jpg": {
+  "taken": "2014-04-12",
+  "make": "Canon",
+  "model": "Canon EOS 600D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Aperture 3.5.1",
+  "original_size": [
+   5184,
+   3456
+  ],
+  "description": "Interno della Basilica di Superga",
+  "artist": "Incola",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w239.jpg": {
+  "taken": "2022-06-22",
+  "make": "Canon",
+  "model": "Canon PowerShot SX540 HS",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop CC 2018 (Windows)",
+  "original_size": [
+   2048,
+   1536
+  ],
+  "description": "tempio di Santa Maria della Consolazione",
+  "artist": "Enric",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w240.jpg": {
+  "taken": "2017-09-09",
+  "make": "Canon",
+  "model": "Canon EOS 50D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom Classic 12.1 (Macintosh)",
+  "original_size": [
+   1686,
+   1686
+  ],
+  "description": "La Martorana (Palermo) - Mosaics - Dome (Christ Pantokrator with Archangels)",
+  "artist": "Matthias Süßen",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w241.jpg": {
+  "taken": "2017-02-05",
+  "make": "SONY",
+  "model": "DSC-RX100M3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "DSC-RX100M3 v1.20",
+  "original_size": [
+   5472,
+   3648
+  ],
+  "description": "Val-de-Grâce, a military hospital and church located at 74 boulevard de Port-Royal in the 5th arrondissement of Paris, France.",
+  "artist": "Guilhem Vellut from Paris, France",
+  "license": "CC BY 2.0"
+ },
+ "world/w242.jpg": {
+  "taken": "2009-08-18",
+  "make": "Canon",
+  "model": "Canon PowerShot G10",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4416,
+   3312
+  ],
+  "description": "Summit of the glass dome of the shopping mall \"Galeries Lafayette\", Boulevard Haussmann, Paris 9th arr.",
+  "artist": "Tangopaso",
+  "license": "Public domain"
+ },
+ "world/w244.jpg": {
+  "taken": "2003-07-26",
+  "make": "OLYMPUS OPTICAL CO.,LTD",
+  "model": "C5050Z",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "v558-78",
+  "original_size": [
+   1195,
+   1185
+  ],
+  "description": "El Escorial, church, cupola.",
+  "artist": "Håkan Svensson",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w245.jpg": {
+  "taken": "2019-09-22",
+  "make": "Panasonic",
+  "model": "DMC-TZ60",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "paint.net 4.2.1",
+  "original_size": [
+   4896,
+   3264
+  ],
+  "description": "The ceiling of the Church of St Stephen Walbrok, City of London.",
+  "artist": "Ethan Doyle White",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w247.jpg": {
+  "taken": "2018-04-27",
+  "make": "Canon",
+  "model": "Canon EOS M2",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   5184,
+   3456
+  ],
+  "description": "Interior of Belfast City Hall",
+  "artist": "Suicasmo",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w248.jpg": {
+  "taken": "2022-05-28",
+  "make": "Panasonic",
+  "model": "DMC-G3",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 28,
+  "software": "Ver.1.0  ",
+  "original_size": [
+   4492,
+   3378
+  ],
+  "description": "Dome of the City Hall, Dublin, Ireland",
+  "artist": "Zairon",
+  "license": "CC BY 4.0"
+ },
+ "world/w249.jpg": {
+  "taken": "2017-04-14",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D800",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 14,
+  "software": "Adobe Photoshop Lightroom Classic 7.4 (Macintosh)",
+  "original_size": [
+   6850,
+   4893
+  ],
+  "description": "Inside the Bode-Museum",
+  "artist": "T meltzer",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w250.jpg": {
+  "taken": "2014-03-22",
+  "make": "Canon",
+  "model": "Canon EOS 5D Mark II",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom 5.4 (Windows)",
+  "original_size": [
+   5503,
+   3639
+  ],
+  "description": "Ettal Abbey, Bavaria, Germany",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 3.0"
+ },
+ "world/w251.jpg": {
+  "taken": "2020-01-31",
+  "make": "Canon",
+  "model": "Canon EOS 5DS R",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom Classic 9.4 (Windows)",
+  "original_size": [
+   4362,
+   4385
+  ],
+  "description": "Cupola, St. Michael's Tower, St. Michael's Wing, Hofburg Palace, Vienna, Austria",
+  "artist": "Diego Delso",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w252.jpg": {
+  "taken": "2016-10-06",
+  "make": "Canon",
+  "model": "Canon EOS 5D Mark IV",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Digital Photo Professional",
+  "original_size": [
+   6156,
+   4549
+  ],
+  "description": "Kuppelfresko des Prunksaales der Österreichischen Nationalbibliothek in der österreichischen Bundeshauptstadt Wien.Die Bibliothek mit dem barocken Prunksaal wurde von 1723 bis 1726 von Joseph Emanuel ",
+  "artist": "C.Stadler/Bwag",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w253.jpg": {
+  "taken": "2019-05-07",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D7500",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Capture NX 2.4.7 W",
+  "original_size": [
+   3136,
+   2792
+  ],
+  "description": "Cupola of the Federal Palace, showing the coats of arms of the Swiss cantons. Jura is excluded, as it did not become a canton until after the cupola's construction.",
+  "artist": "Original: © Jérémy Toma; derivative work: Zacharie Grossen",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w254.jpg": {
+  "taken": "2019-08-11",
+  "make": "Canon",
+  "model": "Canon EOS 1100D",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": null,
+  "original_size": [
+   4272,
+   2848
+  ],
+  "description": "Photo taken in Interior of Helsinki Lutheran Cathedral.",
+  "artist": "John Samuel",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w255.jpg": {
+  "taken": "2016-04-20",
+  "make": "Canon",
+  "model": "Canon EOS 5D Mark III",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": null,
+  "software": "Adobe Photoshop Lightroom 4.4 (Macintosh)",
+  "original_size": [
+   2048,
+   1366
+  ],
+  "description": "500px provided description: Palais De Justice Brussels 2017 Inside Up To The Cupola [#Brussels ,#Bruxelles ,#Justice ,#Palais de Justice ,#Justice Palace Brussels ,#Beglgium]",
+  "artist": "Tasha Carl",
+  "license": "CC BY 3.0"
+ },
+ "world/w256.jpg": {
+  "taken": "2018-10-21",
+  "make": "SONY",
+  "model": "DSC-RX100M5",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 24,
+  "software": "Photos 1.5",
+  "original_size": [
+   5472,
+   3648
+  ],
+  "description": "ceiling of the dom from inside",
+  "artist": "Travelamāns",
+  "license": "CC BY-SA 4.0"
+ },
+ "world/w257.jpg": {
+  "taken": "2017-07-20",
+  "make": "NIKON CORPORATION",
+  "model": "NIKON D7200",
+  "lens": null,
+  "focal_mm": null,
+  "focal35_mm": 27,
+  "software": "Ver.1.00 ",
+  "original_size": [
+   5858,
+   3776
+  ],
+  "description": "Church of the Savior on Spilled Blood, 1883 and later, St. Petersburg (29)",
+  "artist": "Richard Mortel from Riyadh, Saudi Arabia",
+  "license": "CC BY 2.0"
  }
 }
