@@ -576,6 +576,96 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 #tip{position:fixed;inset:auto;margin:0;overflow:visible;z-index:1000;width:max-content;max-width:290px;padding:8px 12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);color:var(--ink);
   box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--line),0 10px 26px rgba(0,0,0,.6);font:400 13px/1.4 var(--text);letter-spacing:0;text-transform:none;text-align:left;pointer-events:none;opacity:0;transition:opacity .12s}
 #tip.on{opacity:1}
+/* ---- phones and tablets (1100 px wide or less) ----
+   Nothing floats over the canvas. Its tools stand in one row beneath it. Each toolbar has a button in a row called "Settings and
+   modes", which opens that toolbar as a sheet at the foot of the screen, clear of the canvas, so the canvas can be watched while a
+   setting is changed. The canvas stays in view while the rest of the page scrolls. layBoxes gives the canvas the class "phone".
+     A phone (640 or less): one column. All domes and the name; the canvas; Play and the caption; Settings and modes; the dome's own
+       box; the thickness; the list of steps.
+     A tablet held upright: the same, with a canvas that leaves room below it, and Play beside Settings and modes.
+     A tablet on its side: the canvas on the left, everything else in a column on the right. */
+#phonebar{display:none} .sheetdone{display:none}
+.canvas.phone{overflow:visible;contain:none;margin:8px auto 60px}
+/* the tools: one row under the canvas */
+.canvas.phone .drawer{top:calc(100% + 9px);left:0;right:0;transform:none;max-height:none;flex-direction:row;align-items:center;justify-content:center;gap:6px;overflow-x:auto;overflow-y:hidden;pointer-events:auto}
+.canvas.phone .dockrow{flex-direction:row;align-items:center;gap:6px}
+.canvas.phone .dock{flex-direction:row;padding:4px;gap:5px;box-shadow:none}
+.canvas.phone .dockline{flex-direction:row;gap:5px}
+.canvas.phone .dock .gg{flex-direction:row;padding:3px;gap:2px}
+.canvas.phone .dock .gg[aria-label="Toolbars"],.canvas.phone .dock .handle,.canvas.phone #circles,.canvas.phone #boxes-back{display:none!important}
+.canvas.phone #align,.canvas.phone #dive-stop{min-height:40px;padding:0 12px}
+/* the toolbars: out of sight until asked for, then a sheet at the foot of the screen */
+.canvas.phone #boxes,.canvas.phone.bare #boxes{position:static;display:block}
+.canvas.phone #boxes>.modebox{display:none!important}
+.canvas.phone #boxes>.modebox:not(.shut):not(#helper){display:flex!important;position:fixed;left:8px!important;right:8px;top:auto!important;bottom:8px;width:auto;box-sizing:border-box;max-height:max(230px,calc(100vh - var(--ch,60vw) - 86px));overflow:auto;z-index:60!important;pointer-events:auto;background:var(--paper);box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--gilt),0 -10px 40px rgba(0,0,0,.7)}
+.canvas.phone #boxes>.modebox .handle{display:none}
+.canvas.phone #boxes>.modebox h4::after{display:none}
+.canvas.phone .sheetdone{display:flex;justify-content:center;flex:none;min-height:40px;margin-top:4px}
+.canvas.phone #boxes .row,.canvas.phone #boxes .pill{min-height:40px}
+/* the cards that name a step or a part: smaller, and across the foot of the canvas */
+.canvas.phone #title{left:8px;right:8px;bottom:8px;width:auto;padding:12px 14px 12px}
+.canvas.phone #title h3,.canvas.phone.cardlone #title h3{font-size:19px;margin-top:6px}
+.canvas.phone #title.big h3,.canvas.phone.cardlone #title.big h3{font-size:26px}
+.canvas.phone #title p,.canvas.phone.cardlone #title p{font-size:13px;margin-top:6px}
+@media (max-width:1100px){
+  .app:not(.over){height:auto;min-height:100vh;grid-template-rows:none}
+  .app:not(.over) .panel.steps{display:contents}
+  .app:not(.over) .steps>.grip,.app:not(.over) .steps>.rail,.app:not(.over) #panel{display:none!important}
+  .app:not(.over) .steps>.panel-head.brand{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px 8px}
+  .app:not(.over) .steps .brand #crumb-over{margin:0;order:-1}
+  .app:not(.over) .steps .brand .logo{width:auto;margin:0;gap:8px}
+  .app:not(.over) .steps .brand .logo .mark{width:42px;height:42px}
+  .app:not(.over) .steps .brand .logo .word{font-size:22px}
+  .app:not(.over) .steps .brand .orn{display:none}
+  .app:not(.over)>.main{position:sticky;top:0;z-index:30;background:var(--paper) var(--grain);background-size:200px;border-bottom:1px solid var(--rule)}
+  .app:not(.over) .steps .cap{height:auto;min-height:78px}
+  .app:not(.over) #phonebar{display:flex;flex-wrap:wrap;align-content:flex-start;gap:6px;padding:10px 12px 12px;border:1px solid var(--rule);border-radius:var(--R);box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--line)}
+  #phonebar .lbl{flex-basis:100%;margin-bottom:2px;font:700 13px var(--caps);color:var(--ink)}
+  #phonebar .pill{flex:1 1 28%;justify-content:center;min-height:40px;padding:0 6px}
+  #phonebar .pill[aria-pressed=true]{border-color:var(--gilt);color:var(--gilt)}
+  #phonebar .pill.is-on::after{content:"";flex:none;width:7px;height:7px;margin-left:7px;border-radius:50%;background:var(--gilt)}
+  .app:not(.over) .steps>#tab-strokes{overflow:visible;flex:none;min-height:0;margin-bottom:24px}
+}
+/* a phone: one column */
+@media (max-width:640px){
+  .app:not(.over){display:flex;flex-direction:column}
+  .app:not(.over) .steps>.panel-head.brand{order:1}
+  .app:not(.over)>.main{order:2}
+  .app:not(.over) .steps>.nav{order:3;margin:12px 12px 0}
+  .app:not(.over) #phonebar{order:4;margin:12px 12px 0}
+  .app:not(.over) .steps>.panel-head.dome{order:5}
+  .app:not(.over) .steps>#picked{order:6}
+  .app:not(.over) .steps>#tab-strokes{order:7}
+  /* All domes on a phone: the list of domes runs its full length (no small scrolling window), then the map and the tables */
+  .side{max-height:none}
+  .side .scroll{overflow:visible}
+  .mast h1 .mark{width:92px;height:92px}
+  #overview{padding:18px 12px}
+}
+/* a tablet held upright: as a phone, with Play and "Settings and modes" side by side under the canvas */
+@media (min-width:641px) and (max-width:1100px) and (orientation:portrait){
+  .app:not(.over){display:flex;flex-flow:row wrap;align-items:flex-start;align-content:flex-start}
+  .app:not(.over) .steps>.panel-head.brand{order:1;flex:0 0 100%;box-sizing:border-box;padding:12px 16px 8px}
+  .app:not(.over)>.main{order:2;flex:0 0 100%}
+  .app:not(.over) .steps>.nav{order:3;flex:0 0 calc(56% - 22px);box-sizing:border-box;margin:14px 6px 0 16px}
+  .app:not(.over) #phonebar{order:4;flex:0 0 calc(44% - 22px);box-sizing:border-box;margin:14px 16px 0 6px}
+  .app:not(.over) .steps>.panel-head.dome{order:5;flex:0 0 calc(100% - 2*var(--m));box-sizing:border-box}
+  .app:not(.over) .steps>#picked{order:6;flex:0 0 calc(100% - 2*var(--m));box-sizing:border-box}
+  .app:not(.over) .steps>#tab-strokes{order:7;flex:0 0 calc(100% - 2*var(--m));box-sizing:border-box}
+  .canvas.phone #boxes>.modebox:not(.shut):not(#helper){left:auto!important;right:14px;width:400px}
+}
+/* a tablet on its side: the canvas on the left and stays put; everything else in a column on the right */
+@media (min-width:641px) and (max-width:1100px) and (orientation:landscape){
+  .app:not(.over){display:grid;grid-template-columns:minmax(0,1fr) 360px;grid-template-areas:"main brand" "main nav" "main bar" "main dome" "main picked" "main list";align-items:start}
+  .app:not(.over)>.main{grid-area:main;border-bottom:0;border-right:1px solid var(--rule);min-height:100vh}
+  .app:not(.over) .steps>.panel-head.brand{grid-area:brand}
+  .app:not(.over) .steps>.nav{grid-area:nav;margin:8px 12px 0}
+  .app:not(.over) #phonebar{grid-area:bar;margin:12px 12px 0}
+  .app:not(.over) .steps>.panel-head.dome{grid-area:dome}
+  .app:not(.over) .steps>#picked{grid-area:picked}
+  .app:not(.over) .steps>#tab-strokes{grid-area:list}
+  .canvas.phone #boxes>.modebox:not(.shut):not(#helper){left:auto!important;right:8px;width:344px;max-height:58vh}
+}
 [hidden]{display:none!important}
 </style>
 </head>
@@ -1166,11 +1256,11 @@ const putBox=(b,x,y)=>{ const W=$('stage').clientWidth, H=$('stage').clientHeigh
 // DRAWERS: the boxes that become drawers on a small canvas (all but the helper and the main toolbar).
 const DRAWERS=()=>[...SETBOXES,...MODEBOXES].filter(b=>b.id!=='helper');
 let wasCompact=false;
-function layBoxes(){ $('boxes-back').hidden=boxesOff||!Object.keys(boxPlaces).length; if(boxesOff) return;
+function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('phone',ph); $('steps').classList.toggle('shut',!ph&&!!shut.l); phoneBar(ph); $('boxes-back').hidden=ph||boxesOff||!Object.keys(boxPlaces).length; if(boxesOff&&!ph) return;
   const st=$('stage'), W=st.clientWidth, H=st.clientHeight, IN=52, G=8, TOP=18, BW=Math.min(280,Math.min(W,H)-2*IN), S=st.getBoundingClientRect(), dock=document.querySelector('.dockrow').getBoundingClientRect();
   const moved=b=>{ const p=boxPlaces[b.dataset.box]; if(!p) return false; putBox(b,p.r!=null?W-p.r-b.offsetWidth:p.l,p.b!=null?H-p.b-b.offsetHeight:p.t); return true; };
   // the toolbar: in its corner at the bottom right unless it has been moved
-  const toolsHome=!boxPlaces.tools; TOOLS.classList.toggle('moved',!toolsHome); if(toolsHome){ TOOLS.style.left=TOOLS.style.top=''; } else moved(TOOLS);
+  const toolsHome=ph||!boxPlaces.tools; TOOLS.classList.toggle('moved',!toolsHome); if(toolsHome){ TOOLS.style.left=TOOLS.style.top=''; } else moved(TOOLS);
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
   // the top row: the four settings boxes, then the Eye box beside Dome (it is switched on and off like 3D, Draw and Fractal, but it is about what the photo shows, so it sits with Dome)
   const base=H-IN, top4=[...['lines','guides','crossings','picture'].map(by),$('mode-eye')];
@@ -1182,15 +1272,17 @@ function layBoxes(){ $('boxes-back').hidden=boxesOff||!Object.keys(boxPlaces).le
   DRAWERS().forEach(b=>{ if(!b.classList.contains('shut')) b._oh=b.offsetHeight; });
   const openH=b=>b._oh||(MODEROW.includes(b)?340:218);
   let topH=0; { let rx=IN, row=0, rh=openH(by('view')); top4.forEach(b=>{ const limit=row===0?W-IN-BW-G:W-IN; if(rx+BW>limit&&rx>IN){ rx=IN; topH+=rh+G; row++; rh=0; } rx+=BW+G; rh=Math.max(rh,openH(b)); }); topH+=rh; }
-  const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=W<2*IN+modesW||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
+  const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=ph||W<2*IN+modesW||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
+  let tabsEnd=0;
   if(compact!==wasCompact){ wasCompact=compact; DRAWERS().forEach(b=>b.classList.toggle('shut',compact)); }
+  if(ph){ BOXES.forEach(b=>{ if(b!==TOOLS){ b.style.left=b.style.top=''; } }); st.style.setProperty('--cardb','8px'); st.style.setProperty('--annt','10px'); st.classList.add('cardlone'); phoneBar(true); return; }
   if(compact){
     // Each drawer has a fixed tab: the settings along the top from the left with View at the right, the modes up the left side
     // from the bottom. A tab's size is taken while it is shut. An open drawer grows from its tab, over whatever is beside it.
     $('mode-eye').style.minHeight=''; DRAWERS().forEach(b=>{ if(b.classList.contains('shut')){ b._tw=b.offsetWidth; b._th=b.offsetHeight; } });
     let x=IN; top4.forEach(b=>{ put(b,x,TOP); x+=(b._tw||110)+G; });
     const v=by('view'); put(v,W-IN-v.offsetWidth,TOP);
-    let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; });
+    let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; }); tabsEnd=mx;
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
     put(by('view'),W-IN-BW,TOP); $('mode-eye').style.minHeight=by('picture').offsetHeight+'px';   // the Eye box is as tall as the boxes it stands beside
@@ -1200,7 +1292,8 @@ function layBoxes(){ $('boxes-back').hidden=boxesOff||!Object.keys(boxPlaces).le
     MODEROW.forEach((b,i)=>put(b,IN+i*(BW+G),base-b.offsetHeight));
   }
   // the helper: in the bottom right corner; lifted clear of the mode toolbars when their row reaches under that corner
-  const hp=by('helper'), hw=Math.min(410,W-2*IN), lift=!compact&&IN+modesW+G>W-IN-hw?Math.max(...MODEROW.map(b=>b.offsetHeight))+G:0;
+  // (as drawers, the modes are only their tabs along the bottom: the helper clears those too)
+  const hp=by('helper'), hw=Math.min(410,W-2*IN), lift=compact?(tabsEnd>W-IN-hw?Math.max(...MODEROW.map(b=>b._th||36))+G:0):IN+modesW+G>W-IN-hw?Math.max(...MODEROW.map(b=>b.offsetHeight))+G:0;
   hp.style.width=hw+'px'; hp.style.minHeight=''; put(hp,W-IN-hw,base-lift-hp.offsetHeight);
   // The cards that name each step and each part as the build plays stand in the bottom right corner, or just above the helper
   // when the helper is up in that corner. The name of a part as it begins is written just under the top row of boxes (or tabs).
@@ -1212,6 +1305,16 @@ function showModes(){ if(!cur){ modeSig=''; return; }
   const sig=on.join()+st.clientWidth+'x'+st.clientHeight+$('dive-stop').hidden+$('align').hidden+$('boxes-back').hidden+mode; if(sig===modeSig) return; modeSig=sig;
   MODEBOXES.forEach((b,i)=>b.classList.toggle('off',!on[i])); layBoxes(); }
 const relay=()=>{ modeSig=''; showModes(); };
+// On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
+// and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
+var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
+  const order=['picture','eye','view','lines','guides','crossings','3d','draw','fractal'], name={picture:'Dome','3d':'3D'};
+  order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
+    b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
+    const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
+  document.querySelector('.steps .nav').after(bar); return bar; })();
+function phoneBar(ph){ if(!ph||!PHONEBAR) return; PHONEBAR.querySelectorAll('button').forEach(b=>{ const box=[...SETBOXES,...MODEBOXES].find(x=>x.dataset.box===b.dataset.for);
+  b.setAttribute('aria-pressed',!box.classList.contains('shut')); b.classList.toggle('is-on',MODEBOXES.includes(box)&&!box.classList.contains('off')); }); }
 // A drawer's heading opens and shuts it (small canvas only). Opening one shuts the others, so only one is ever in the way.
 DRAWERS().forEach(b=>{ const h=b.querySelector('h4'); if(!h) return; h.addEventListener('click',()=>{ if(!$('stage').classList.contains('compact')) return;
   const open=b.classList.contains('shut'); DRAWERS().forEach(x=>x.classList.add('shut')); if(open){ b.classList.remove('shut'); b.style.zIndex=++zTop; } relay(); }); });
@@ -1246,9 +1349,13 @@ new ResizeObserver(()=>{ if(cur) setView(); }).observe(sv);
 // middle lines are crisp. --sq is the shorter side, for the things that have to fit inside the canvas.
 const STEPS_W=340, PANEL_MIN=300, SHUT_W=40;
 let shut=store.get('dome-shut',{}); if(!shut||typeof shut!=='object') shut={};   // which side panels are folded away
-function squareDesk(){ if(!cur) return; const stacked=innerWidth<=1100, odd=v=>{ v=Math.floor(v); return v%2?v:v-1; };
-  const wide=(stacked?innerWidth:innerWidth-(shut.l?SHUT_W:STEPS_W))-42, tall=innerHeight-42;
-  const cw=odd(Math.max(240,wide)), ch=odd(Math.max(240,stacked?Math.min(wide,Math.max(tall,300)):tall)), a=$('app').style;
+function squareDesk(){ if(!cur) return; const W=innerWidth, H=innerHeight, odd=v=>{ v=Math.floor(v); return v%2?v:v-1; }; let cw, ch;
+  // a phone: as wide as the screen. A tablet held upright: as wide as the screen, but leaving 400 px of the height for what is under it.
+  // A tablet on its side: as tall as the screen less its row of tools, beside a column 360 wide. Otherwise: all the room beside the left panel.
+  if(W<=640) cw=ch=odd(Math.max(240,W-18));
+  else if(W<=1100) cw=ch=odd(Math.max(300,W>H?Math.min(H-86,W-360-28):Math.min(W-28,H-400)));
+  else { cw=odd(Math.max(240,W-(shut.l?SHUT_W:STEPS_W)-42)); ch=odd(Math.max(240,H-42)); }
+  const a=$('app').style;
   a.setProperty('--cw',cw+'px'); a.setProperty('--ch',ch+'px'); a.setProperty('--sq',Math.min(cw,ch)+'px'); }
 addEventListener('resize',squareDesk); new ResizeObserver(squareDesk).observe(document.querySelector('.nav'));
 // ---- more first circles ----
@@ -1923,7 +2030,7 @@ function show(d){
   const bd=d.building||{}; rows(document.querySelector('#db tbody'),[['Building',bd.name||d.place],['Where',bd.where||'Not recorded'],['Built',bd.built||d.built],['Built by',bd.by||'Not recorded']]);
   $('gridbox').hidden=!d.grid_img; if(d.grid_img) $('gridimg').src=d.grid_img;
   squareDesk(); squareDesk(); view=fitView(); setView();
-  history.replaceState(null,'','#'+d.slug); starLook($('fav-cur'),isFav(d));
+  history.replaceState(null,'','#'+d.slug); if(innerWidth<=1100) scrollTo(0,0); starLook($('fav-cur'),isFav(d));
   helpEnd(); helpStart();
 }
 const straightNote=s=>`photo taken from off to one side. ${s.rings} rings found, each with its own middle, drifting ${s.drift_px} px along one line between the crown and the outermost ring (radius ${s.outer_ring_px} px)`
@@ -1935,7 +2042,7 @@ function overview(){
   DOMES.forEach(x=>x.card.el.setAttribute('aria-current',false)); history.replaceState(null,'',location.pathname+location.search);
   if(map){ map.invalidateSize(); if(!mapFitted&&$('map').offsetWidth){ mapFitted=true; fitMap(); } }
 }
-$('go-over').onclick=overview; $('crumb-over').onclick=overview; $('logo').onclick=overview;
+$('go-over').onclick=()=>{ overview(); $('overview').scrollIntoView({behavior:'smooth',block:'start'}); }; $('crumb-over').onclick=overview; $('logo').onclick=overview;
 // Building, photo and notes are sheets, opened from the toolbar and closed by their button, the Escape key or a click outside.
 [['open-building','sheet-building'],['open-photo','sheet-photo'],['open-notes','sheet-notes']].forEach(([b,s])=>$(b).onclick=()=>{ if(!cur) return; const dlg=$(s); dlg.querySelector('.sheet-name').textContent=cur.place; dlg.showModal(); });
 document.querySelectorAll('.sheetbox').forEach(dlg=>{ dlg.querySelector('.close').onclick=()=>dlg.close(); dlg.onclick=e=>{ if(e.target===dlg) dlg.close(); }; });
