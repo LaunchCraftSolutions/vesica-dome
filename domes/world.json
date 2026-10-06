@@ -5412,5 +5412,385 @@
    "built": "1605–1765",
    "by": "Not looked up yet"
   }
+ },
+ {
+  "place": "Bologna, Madonna di San Luca",
+  "photo": "world/w292.jpg",
+  "built": "1723–57",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   438
+  ],
+  "squash": false,
+  "lat": 44.4791,
+  "lon": 11.2979,
+  "building": {
+   "name": "Sanctuary of the Madonna di San Luca",
+   "where": "Bologna, Italy",
+   "built": "1723–57",
+   "by": "Carlo Francesco Dotti"
+  }
+ },
+ {
+  "place": "Busto Arsizio, San Giovanni Battista",
+  "photo": "world/w293.jpg",
+  "built": "1609–35",
+  "note": "",
+  "hand": null,
+  "turned": [
+   630,
+   482
+  ],
+  "squash": false,
+  "lat": 45.6121,
+  "lon": 8.8524,
+  "building": {
+   "name": "Basilica of San Giovanni Battista",
+   "where": "Busto Arsizio, Italy",
+   "built": "1609–35",
+   "by": "Francesco Maria Richini"
+  }
+ },
+ {
+  "place": "Castel Gandolfo, San Tommaso da Villanova",
+  "photo": "world/w294.jpg",
+  "built": "1658–61",
+  "note": "",
+  "hand": null,
+  "turned": [
+   636,
+   762
+  ],
+  "squash": false,
+  "lat": 41.7463,
+  "lon": 12.6508,
+  "building": {
+   "name": "Collegiate Church of San Tommaso da Villanova",
+   "where": "Castel Gandolfo, Italy",
+   "built": "1658–61",
+   "by": "Gian Lorenzo Bernini"
+  }
+ },
+ {
+  "place": "Catanzaro, Monte dei Morti",
+  "photo": "world/w295.jpg",
+  "built": "18th century",
+  "note": "",
+  "hand": null,
+  "turned": [
+   638,
+   638
+  ],
+  "squash": false,
+  "lat": 38.9059,
+  "lon": 16.5911,
+  "building": {
+   "name": "Church of the Monte dei Morti e della Misericordia",
+   "where": "Catanzaro, Italy",
+   "built": "18th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Genoa, Santa Maria Immacolata",
+  "photo": "world/w296.jpg",
+  "built": "1856–73",
+  "note": "",
+  "hand": null,
+  "turned": [
+   643,
+   530
+  ],
+  "squash": false,
+  "lat": 44.4117,
+  "lon": 8.9414,
+  "building": {
+   "name": "Basilica of Santa Maria Immacolata",
+   "where": "Genoa, Italy",
+   "built": "1856–73",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Genzano di Roma, Santissima Trinità",
+  "photo": "world/w297.jpg",
+  "built": "Begun 1781",
+  "note": "",
+  "hand": null,
+  "turned": [
+   621,
+   483
+  ],
+  "squash": false,
+  "lat": 41.7065,
+  "lon": 12.6889,
+  "building": {
+   "name": "Church of the Santissima Trinità",
+   "where": "Genzano di Roma, Italy",
+   "built": "Begun 1781",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Isola Vicentina, San Vitale",
+  "photo": "world/w298.jpg",
+  "built": "Late 19th century",
+  "note": "Star vault",
+  "hand": null,
+  "turned": [
+   616,
+   478
+  ],
+  "squash": false,
+  "lat": 45.6126,
+  "lon": 11.4591,
+  "building": {
+   "name": "Church of San Vitale, Castelnovo",
+   "where": "Isola Vicentina, Italy",
+   "built": "Late 19th century",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "L'Aquila, San Bernardino",
+  "photo": "world/w299.jpg",
+  "built": "1454–72; dome rebuilt after the earthquake of 1703",
+  "note": "",
+  "hand": [
+   646,
+   483
+  ],
+  "turned": null,
+  "squash": false,
+  "lat": 42.3502,
+  "lon": 13.4017,
+  "building": {
+   "name": "Basilica of San Bernardino",
+   "where": "L'Aquila, Italy",
+   "built": "1454–72; dome rebuilt after the earthquake of 1703",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Mantua, cathedral",
+  "photo": "world/w300.jpg",
+  "built": "Rebuilt from 1545",
+  "note": "",
+  "hand": null,
+  "turned": [
+   654,
+   422
+  ],
+  "squash": false,
+  "lat": 45.1607,
+  "lon": 10.7974,
+  "building": {
+   "name": "Mantua Cathedral",
+   "where": "Mantua, Italy",
+   "built": "Rebuilt from 1545",
+   "by": "Rebuilt to the design of Giulio Romano"
+  }
+ },
+ {
+  "place": "Pavia, cathedral",
+  "photo": "world/w301.jpg",
+  "built": "Begun 1488; dome 1882–85",
+  "note": "",
+  "hand": null,
+  "turned": [
+   657,
+   817
+  ],
+  "squash": false,
+  "lat": 45.1846,
+  "lon": 9.1536,
+  "building": {
+   "name": "Pavia Cathedral",
+   "where": "Pavia, Italy",
+   "built": "Begun 1488; dome 1882–85",
+   "by": "Dome by Carlo Maciachini"
+  }
+ },
+ {
+  "place": "Potenza, cathedral",
+  "photo": "world/w302.jpg",
+  "built": "Rebuilt 1783–99",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   387
+  ],
+  "squash": false,
+  "lat": 40.6403,
+  "lon": 15.8063,
+  "building": {
+   "name": "Cathedral of San Gerardo",
+   "where": "Potenza, Italy",
+   "built": "Rebuilt 1783–99",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Predappio, Sant'Antonio",
+  "photo": "world/w303.jpg",
+  "built": "1931–34",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   453
+  ],
+  "squash": false,
+  "lat": 44.1015,
+  "lon": 11.9815,
+  "building": {
+   "name": "Church of Sant'Antonio",
+   "where": "Predappio, Italy",
+   "built": "1931–34",
+   "by": "Cesare Bazzani"
+  }
+ },
+ {
+  "place": "Rome, Chigi Chapel",
+  "photo": "world/w304.jpg",
+  "built": "1513–16; completed 1652–56",
+  "note": "Mosaics to Raphael's design",
+  "hand": null,
+  "turned": [
+   643,
+   514
+  ],
+  "squash": false,
+  "lat": 41.9114,
+  "lon": 12.4764,
+  "building": {
+   "name": "Chigi Chapel, Santa Maria del Popolo",
+   "where": "Rome, Italy",
+   "built": "1513–16; completed 1652–56",
+   "by": "Raphael, completed by Gian Lorenzo Bernini"
+  }
+ },
+ {
+  "place": "Rome, Sant'Andrea delle Fratte",
+  "photo": "world/w305.jpg",
+  "built": "1604–1826; dome and bell tower 1653–65",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   366
+  ],
+  "squash": false,
+  "lat": 41.9036,
+  "lon": 12.4836,
+  "building": {
+   "name": "Sant'Andrea delle Fratte",
+   "where": "Rome, Italy",
+   "built": "1604–1826; dome and bell tower 1653–65",
+   "by": "Dome and bell tower by Francesco Borromini"
+  }
+ },
+ {
+  "place": "Lisbon, Igreja da Memória",
+  "photo": "world/w306.jpg",
+  "built": "1760–88",
+  "note": "",
+  "hand": null,
+  "turned": [
+   637,
+   437
+  ],
+  "squash": false,
+  "lat": 38.703,
+  "lon": -9.202,
+  "building": {
+   "name": "Igreja da Memória",
+   "where": "Lisbon, Portugal",
+   "built": "1760–88",
+   "by": "Giovanni Carlo Galli da Bibbiena, completed by Mateus Vicente de Oliveira"
+  }
+ },
+ {
+  "place": "Levoča, Evangelical church",
+  "photo": "world/w307.jpg",
+  "built": "1825–37",
+  "note": "",
+  "hand": null,
+  "turned": [
+   659,
+   322
+  ],
+  "squash": false,
+  "lat": 49.0252,
+  "lon": 20.5883,
+  "building": {
+   "name": "Evangelical Church",
+   "where": "Levoča, Slovakia",
+   "built": "1825–37",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Zamora, cathedral",
+  "photo": "world/w308.jpg",
+  "built": "1151–74",
+  "note": "Ribbed stone dome on sixteen ribs",
+  "hand": null,
+  "turned": [
+   640,
+   363
+  ],
+  "squash": false,
+  "lat": 41.4989,
+  "lon": -5.7544,
+  "building": {
+   "name": "Zamora Cathedral",
+   "where": "Zamora, Spain",
+   "built": "1151–74",
+   "by": "Not looked up yet"
+  }
+ },
+ {
+  "place": "Istanbul, Sinan Pasha (Beşiktaş)",
+  "photo": "world/w309.jpg",
+  "built": "1554–55",
+  "note": "",
+  "hand": null,
+  "turned": [
+   634,
+   341
+  ],
+  "squash": false,
+  "lat": 41.0423,
+  "lon": 29.0062,
+  "building": {
+   "name": "Sinan Pasha Mosque",
+   "where": "Istanbul, Turkey",
+   "built": "1554–55",
+   "by": "Mimar Sinan"
+  }
+ },
+ {
+  "place": "Liverpool, Town Hall",
+  "photo": "world/w310.jpg",
+  "built": "1749–54; dome 1802",
+  "note": "",
+  "hand": null,
+  "turned": [
+   640,
+   480
+  ],
+  "squash": false,
+  "lat": 53.4071,
+  "lon": -2.9916,
+  "building": {
+   "name": "Liverpool Town Hall",
+   "where": "Liverpool, United Kingdom",
+   "built": "1749–54; dome 1802",
+   "by": "John Wood the Elder; dome by James Wyatt"
+  }
  }
 ]

@@ -1365,5 +1365,256 @@
  },
  "Quito, La Compañía": {
   "title": "File:Iglesia de La Compañía, Quito, Ecuador, 2015-07-22, DD 122-124 HDR.JPG"
+ },
+ "Bologna, Madonna di San Luca": {
+  "title": "File:Bologna, santuario della Madonna di San Luca (42).jpg",
+  "own": {
+   "name": "Sanctuary of the Madonna di San Luca",
+   "built": "1723–57",
+   "by": "Carlo Francesco Dotti",
+   "note": "",
+   "lat": 44.4791,
+   "lon": 11.2979,
+   "country": "Italy",
+   "item": "Q2004104"
+  }
+ },
+ "Busto Arsizio, San Giovanni Battista": {
+  "title": "File:Busto Arsizio Basilica di San Giovanni Battista Interno Cupola 1.jpg",
+  "own": {
+   "name": "Basilica of San Giovanni Battista",
+   "built": "1609–35",
+   "by": "Francesco Maria Richini",
+   "note": "",
+   "lat": 45.6121,
+   "lon": 8.8524,
+   "country": "Italy",
+   "item": "Q2887005"
+  }
+ },
+ "Castel Gandolfo, San Tommaso da Villanova": {
+  "title": "File:Dome of Bernini's Parish Church in Castel Gandolfo.jpg",
+  "own": {
+   "name": "Collegiate Church of San Tommaso da Villanova",
+   "built": "1658–61",
+   "by": "Gian Lorenzo Bernini",
+   "note": "",
+   "lat": 41.7463,
+   "lon": 12.6508,
+   "country": "Italy",
+   "item": "Q3682906"
+  }
+ },
+ "Catanzaro, Monte dei Morti": {
+  "title": "File:Cantazaro - Chiesa del Monte dei Morti e della Misericordia - 05.jpg",
+  "own": {
+   "name": "Church of the Monte dei Morti e della Misericordia",
+   "built": "18th century",
+   "by": "",
+   "note": "",
+   "lat": 38.9059,
+   "lon": 16.5911,
+   "country": "Italy",
+   "item": "Q30349382"
+  }
+ },
+ "Genoa, Santa Maria Immacolata": {
+  "title": "File:Genova Basilica di Santa Maria Immacolata Interno Cupola 2.jpg",
+  "own": {
+   "name": "Basilica of Santa Maria Immacolata",
+   "built": "1856–73",
+   "by": "",
+   "note": "",
+   "lat": 44.4117,
+   "lon": 8.9414,
+   "country": "Italy",
+   "item": "Q2223048"
+  }
+ },
+ "Genzano di Roma, Santissima Trinità": {
+  "title": "File:Genzano Trinita Cupola.jpg",
+  "own": {
+   "name": "Church of the Santissima Trinità",
+   "built": "Begun 1781",
+   "by": "",
+   "note": "",
+   "lat": 41.7065,
+   "lon": 12.6889,
+   "country": "Italy",
+   "item": "Q3682870"
+  }
+ },
+ "Isola Vicentina, San Vitale": {
+  "title": "File:Castelnovo San Vitale decorazioni cupola.jpg",
+  "own": {
+   "name": "Church of San Vitale, Castelnovo",
+   "built": "Late 19th century",
+   "by": "",
+   "note": "Star vault",
+   "lat": 45.6126,
+   "lon": 11.4591,
+   "country": "Italy",
+   "item": "Q20009565"
+  }
+ },
+ "L'Aquila, San Bernardino": {
+  "title": "File:L'Aquila, basilica di San Bernardino - Cupola.jpg",
+  "own": {
+   "name": "Basilica of San Bernardino",
+   "built": "1454–72; dome rebuilt after the earthquake of 1703",
+   "by": "",
+   "note": "",
+   "lat": 42.3502,
+   "lon": 13.4017,
+   "country": "Italy",
+   "item": "Q2886989"
+  },
+  "hand": [
+   646,
+   483
+  ]
+ },
+ "Mantua, cathedral": {
+  "title": "File:Mantua, Duomo di Mantova 006.JPG",
+  "own": {
+   "name": "Mantua Cathedral",
+   "built": "Rebuilt from 1545",
+   "by": "Rebuilt to the design of Giulio Romano",
+   "note": "",
+   "lat": 45.1607,
+   "lon": 10.7974,
+   "country": "Italy",
+   "item": "Q650678"
+  }
+ },
+ "Pavia, cathedral": {
+  "title": "File:Cupola-del-duomo-di-pavia.jpg",
+  "own": {
+   "name": "Pavia Cathedral",
+   "built": "Begun 1488; dome 1882–85",
+   "by": "Dome by Carlo Maciachini",
+   "note": "",
+   "lat": 45.1846,
+   "lon": 9.1536,
+   "country": "Italy",
+   "item": "Q602102"
+  }
+ },
+ "Potenza, cathedral": {
+  "title": "File:SanGerardoPotenza6.jpg",
+  "own": {
+   "name": "Cathedral of San Gerardo",
+   "built": "Rebuilt 1783–99",
+   "by": "",
+   "note": "",
+   "lat": 40.6403,
+   "lon": 15.8063,
+   "country": "Italy",
+   "item": "Q2942757"
+  }
+ },
+ "Predappio, Sant'Antonio": {
+  "title": "File:Predappio, chiesa di sant'antonio da padova, int. 03 cupola.JPG",
+  "own": {
+   "name": "Church of Sant'Antonio",
+   "built": "1931–34",
+   "by": "Cesare Bazzani",
+   "note": "",
+   "lat": 44.1015,
+   "lon": 11.9815,
+   "country": "Italy",
+   "item": "Q3672609"
+  }
+ },
+ "Rome, Chigi Chapel": {
+  "title": "File:Dome Cappella Chigi, Santa Maria del Popolo (Rome).jpg",
+  "own": {
+   "name": "Chigi Chapel, Santa Maria del Popolo",
+   "built": "1513–16; completed 1652–56",
+   "by": "Raphael, completed by Gian Lorenzo Bernini",
+   "note": "Mosaics to Raphael's design",
+   "lat": 41.9114,
+   "lon": 12.4764,
+   "country": "Italy",
+   "item": "Q676788"
+  }
+ },
+ "Rome, Sant'Andrea delle Fratte": {
+  "title": "File:Sant'Andrea delle Fratte - Dome HDR.jpg",
+  "own": {
+   "name": "Sant'Andrea delle Fratte",
+   "built": "1604–1826; dome and bell tower 1653–65",
+   "by": "Dome and bell tower by Francesco Borromini",
+   "note": "",
+   "lat": 41.9036,
+   "lon": 12.4836,
+   "country": "Italy",
+   "item": "Q1809794"
+  }
+ },
+ "Lisbon, Igreja da Memória": {
+  "title": "File:Igreja da Memória - cúpula.jpg",
+  "own": {
+   "name": "Igreja da Memória",
+   "built": "1760–88",
+   "by": "Giovanni Carlo Galli da Bibbiena, completed by Mateus Vicente de Oliveira",
+   "note": "",
+   "lat": 38.703,
+   "lon": -9.202,
+   "country": "Portugal",
+   "item": "Q10300252"
+  }
+ },
+ "Levoča, Evangelical church": {
+  "title": "File:Levoča Evangelic church interior 2015 2.jpg",
+  "own": {
+   "name": "Evangelical Church",
+   "built": "1825–37",
+   "by": "",
+   "note": "",
+   "lat": 49.0252,
+   "lon": 20.5883,
+   "country": "Slovakia",
+   "item": "Q104867105"
+  }
+ },
+ "Zamora, cathedral": {
+  "title": "File:Catedral de Zamora. Cimborrio.jpg",
+  "own": {
+   "name": "Zamora Cathedral",
+   "built": "1151–74",
+   "by": "",
+   "note": "Ribbed stone dome on sixteen ribs",
+   "lat": 41.4989,
+   "lon": -5.7544,
+   "country": "Spain",
+   "item": "Q2942864"
+  }
+ },
+ "Istanbul, Sinan Pasha (Beşiktaş)": {
+  "title": "File:Central dome of Sinan Paşa Mosque, Istanbul.jpg",
+  "own": {
+   "name": "Sinan Pasha Mosque",
+   "built": "1554–55",
+   "by": "Mimar Sinan",
+   "note": "",
+   "lat": 41.0423,
+   "lon": 29.0062,
+   "country": "Turkey",
+   "item": "Q1572395"
+  }
+ },
+ "Liverpool, Town Hall": {
+  "title": "File:Liverpool Town Hall 17.jpg",
+  "own": {
+   "name": "Liverpool Town Hall",
+   "built": "1749–54; dome 1802",
+   "by": "John Wood the Elder; dome by James Wyatt",
+   "note": "",
+   "lat": 53.4071,
+   "lon": -2.9916,
+   "country": "United Kingdom",
+   "item": "Q1855296"
+  }
  }
 }
