@@ -1593,7 +1593,11 @@ function setFig(){
 const SKYDIR='lib/sky/';
 let skyPic=null, skyCat=null;
 const skyBig=()=>(navigator.deviceMemory||8)>=8&&Math.max(screen.width,screen.height)*(devicePixelRatio||1)>=1800;   // the large picture only where there is the screen and the memory for it
-const skyImage=()=>skyPic||(skyPic=(cur?photoOf(cur).catch(()=>{}):Promise.resolve()).then(()=>new Promise(ok=>{ const im=new Image(); im.onload=()=>ok(im); im.onerror=()=>ok(null); im.src=SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'); })));   // after the open dome's own photo, which matters more
+// The picture is fetched and unpacked away from the page's own work, into a form the graphics card takes as it is (already the right way
+// up for it, which is upside down for everyone else). So neither its arrival nor its first use holds a frame up. It comes after the
+// open dome's own photo, which matters more.
+const skyImage=()=>skyPic||(skyPic=(cur?photoOf(cur).catch(()=>{}):Promise.resolve()).then(()=>fetch(SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'))).then(r=>r.ok?r.blob():null)
+  .then(b=>b?createImageBitmap(b,{imageOrientation:'flipY',premultiplyAlpha:'none',colorSpaceConversion:'none'}):null).catch(()=>null));
 const skyStars=()=>skyCat||(skyCat=fetch(SKYDIR+'stars.bin').then(r=>r.ok?r.arrayBuffer():null).catch(()=>null));
 let starsOn=store.get('dome-sky-stars',true)!==false, starGrid=store.get('dome-sky-grid',true)!==false;
 const starsShown=()=>starsOn, SPACEINK='#03040a';   // the stars are their own switch (Canvas, Stars): until 2026-10-06 they showed only while Nebula was on
@@ -1610,7 +1614,9 @@ function paintSpace(){ const cv=$('space'); if(cv.dataset.done) return; cv.datas
 // On the desk the backdrop is one square piece of the real sky, a quarter of the way round each way, where the Milky Way runs
 // down from the Swan toward the Archer.
 function realSpace(){ const cv=$('space'); if(cv.dataset.real) return; cv.dataset.real='1';
-  skyImage().then(im=>{ if(!im) return; const k=im.naturalWidth/8192, c=cv.getContext('2d'); c.globalCompositeOperation='source-over'; c.globalAlpha=1; c.drawImage(im,4476*k,876*k,2048*k,2048*k,0,0,cv.width,cv.height); }); }
+  skyImage().then(im=>{ if(!im) return; if(!cv.width||cv.width<2048){ cv.width=cv.height=2048; } cv.dataset.done='1';   // the made-up backdrop is not needed once the real one is here
+    const k=im.width/8192, c=cv.getContext('2d'); c.save(); c.globalCompositeOperation='source-over'; c.globalAlpha=1; c.translate(0,cv.height); c.scale(1,-1);   // the picture comes upside down (see skyImage)
+    c.drawImage(im,4476*k,im.height-(876+2048)*k,2048*k,2048*k,0,0,cv.width,cv.height); c.restore(); }); }
 function showSpace(){ const on=starsShown(), st=$('stage'); if(on){ paintSpace(); realSpace(); } st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid;
   $('sky-grid').closest('label').classList.toggle('idle',!starsOn); }   // Grid acts on the stars only
 $('sky-stars').onchange=()=>{ starsOn=$('sky-stars').checked; store.set('dome-sky-stars',starsOn); showSpace(); dirty3(); };
@@ -1660,11 +1666,11 @@ function makeSpace(T,R){ const g=new T.Group(), gal=new T.Group(), r=rnd(11), ga
   // draw the sky, if the stars are out (or the tunnel is showing), and say whether it was drawn; the caller then draws its own things over it
   // The real sky, when it has come: the picture on the inside of a ball, and the catalogue's stars as points. The ball is
   // turned inside out (the picture is drawn as seen from the Earth, looking out), and the made-up sky is put away.
-  const real=new T.Group(); real.scale.z=-1; gal.add(real); let asked=false, realTex=null;
-  function fetchSky(ren){ asked=true;
+  const real=new T.Group(); real.scale.z=-1; gal.add(real); let asked=false, realTex=null, gone=false;
+  function fetchSky(ren,wait){ asked=true;
     skyImage().then(im=>{ if(!im) return; let src=im; const cap=ren.capabilities.maxTextureSize;
-      if(im.naturalWidth>cap){ src=document.createElement('canvas'); src.width=cap; src.height=cap/2; src.getContext('2d').drawImage(im,0,0,cap,cap/2); }   // a graphics card that cannot hold the large picture gets it made smaller
-      realTex=new T.Texture(src); realTex.anisotropy=ren.capabilities.getMaxAnisotropy(); realTex.needsUpdate=true;
+      if(im.width>cap){ src=document.createElement('canvas'); src.width=cap; src.height=cap/2; src.getContext('2d').drawImage(im,0,0,cap,cap/2); }   // a graphics card that cannot hold the large picture gets it made smaller
+      realTex=new T.Texture(src); realTex.flipY=false; realTex.anisotropy=ren.capabilities.getMaxAnisotropy(); realTex.needsUpdate=true; setTimeout(()=>{ try{ ren.initTexture(realTex); }catch(_){} },wait||0);
       const ball=new T.Mesh(new T.SphereGeometry(R,64,32),new T.MeshBasicMaterial({map:realTex,side:T.BackSide,depthTest:false,depthWrite:false})); ball.renderOrder=-1000; ball.frustumCulled=false; real.add(ball);
       haze.visible=false; stars.visible=false; dirty3(); });
     skyStars().then(buf=>{ if(!buf) return; const v=new DataView(buf), m=buf.byteLength/8|0, p=new Float32Array(m*3), c=new Float32Array(m*3), s=new Float32Array(m);
@@ -1676,8 +1682,9 @@ function makeSpace(T,R){ const g=new T.Group(), gal=new T.Group(), r=rnd(11), ga
       const geo=new T.BufferGeometry(); geo.setAttribute('position',new T.BufferAttribute(p,3)); geo.setAttribute('tint',new T.BufferAttribute(c,3)); geo.setAttribute('size',new T.BufferAttribute(s,1));
       const pts=new T.Points(geo,mat); pts.renderOrder=-999; pts.frustumCulled=false; real.add(pts); dirty3(); }); }
   return { turn(q){ g.quaternion.copy(q).invert(); },
-    rest(){ if(realTex) realTex.dispose(); },   // let the graphics card drop the picture while this view is shut; it is handed over again when next drawn
-    warm(ren,cam){ if(starsShown()) this.draw(ren,cam); },   // turn the stars so that what was straight ahead through a camera turned q is straight ahead through one that is not turned
+    rest(){ if(realTex){ realTex.dispose(); gone=true; } },   // let the graphics card drop the picture while this view is shut; it is handed over again when next drawn
+    prep(ren,wait){ if(!asked) fetchSky(ren,wait); else if(realTex&&gone){ gone=false; setTimeout(()=>{ try{ ren.initTexture(realTex); }catch(_){} },wait||0); } },   // fetch the sky now, before it is wanted, so nothing stalls when the stars come on
+    warm(ren,cam,wait){ this.prep(ren,wait); if(starsShown()) this.draw(ren,cam); },
     draw(ren,cam){ const warp=WARP.k>0.003, stars=starsShown(); if(!stars&&!warp) return false; g.visible=stars; grid.visible=starGrid; mat.uniforms.k.value=ren.getPixelRatio(); if(stars&&!asked) fetchSky(ren);
     eye.copy(cam,false); eye.position.set(0,0,0); eye.near=0.3; eye.far=R*2; eye.updateProjectionMatrix(); eye.updateMatrixWorld(true);
     tun.visible=warp; if(warp){ tun.quaternion.copy(eye.quaternion); rings.position.z=((WARP.z%SP)+SP)%SP; tunMat.opacity=Math.min(1,WARP.k); }
@@ -2629,7 +2636,7 @@ $('pics-off').onclick=()=>{ if(!cur) return; pressOff(['pic3','eye-on','sky-on']
 $('lines-off').onclick=()=>{ if(!cur) return; pressOff(['lines-on','xpts-on']); };
 $('d3-off').onclick=()=>{ if(!cur) return; if(ORB&&ORB.on) ORB.close(); if(T3&&T3.on) T3.close(); pressOff(['arch-on']); };
 let mixBack=null;
-function spaceMixIn(){ if(!SKIES.length||!cur) return; mixBack={mixOn,mix:mix.slice(),fade,eyeFade,skyFade,picOn,eyeOn,skyOn}; mix=LANDING.mix.slice(); store.set('dome-mix',mix); setMix(true); }
+function spaceMixIn(){ if(!SKIES.length||!cur||mixBack) return; mixBack={mixOn,mix:mix.slice(),fade,eyeFade,skyFade,picOn,eyeOn,skyOn}; mix=LANDING.mix.slice(); store.set('dome-mix',mix); setMix(true); }
 function spaceMixOut(){ const b=mixBack; mixBack=null; if(!b||!mixOn||mix.some((v,i)=>Math.abs(v-LANDING.mix[i])>1e-6)) return;
   mix=b.mix; mixOn=b.mixOn; fade=b.fade; eyeFade=b.eyeFade; skyFade=b.skyFade;
   store.set('dome-mix',mix); store.set('dome-mix-on',mixOn); store.set('dome-eye-opacity',eyeFade); store.set('dome-photo-opacity',fade); store.set('dome-sky-opacity',skyFade);
@@ -3045,7 +3052,7 @@ function make3d(){
   async function sheet(quick){   // the photo and the strokes as they stand on the desk
     const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return; const n=quick?TL:TS, tx=quick?texL:tex;
     deskTo((quick?tcL:tc).getContext('2d'),n,PAD*n/TS,d,im,fig.cx,fig.cy,reach3(),n/1860,true); if(mesh.material.map!==tx) mesh.material.map=tx; tx.needsUpdate=true;
-    { const thru=starsShown(), m=mesh.material; if(m.transparent!==thru){ m.transparent=thru; m.alphaTest=thru?0.02:0.5; m.needsUpdate=true; } }   // see-through only while the stars are out
+    { const thru=starsShown()||!!S.launch, m=mesh.material; if(m.transparent!==thru){ m.transparent=thru; m.alphaTest=thru?0.02:0.5; m.needsUpdate=true; } }   // see-through only while the stars are out
     S.need=true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(S.key!==keyOf()){ const was=S.skey; fit3(); if(S.skey!==was) S.stale=true; }   // Opening, Rounding and the arches bend the sheet without a new painting
@@ -3055,8 +3062,8 @@ function make3d(){
     if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; S.sharp=t+260; sheet(true); if(S.stale){ S.stale=false; spheres(); } } }
     else { if(S.live){ S.live=false; S.stale=true; }
       // one change by itself is painted in full straight away; changes that keep coming get the quick sheet, and the full one when they stop
-      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; sheet(more); spheres(); }
-      else if(S.sharp&&t>S.sharp&&!S.stale){ S.sharp=0; sheet(false); } }
+      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=!!S.launch||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; sheet(more); spheres(); }
+      else if(S.sharp&&t>S.sharp&&!S.stale&&!S.launch){ S.sharp=0; sheet(false); } }   // (no full painting in the middle of the launch: it would hold a frame up)
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(S.launch){ launchStep(t); S.need=true; }
@@ -3102,13 +3109,20 @@ function make3d(){
     S.pol=Math.min(Math.PI-0.04,Math.max(0.04,Math.acos(Math.max(-1,Math.min(1,-d.y))))); S.az=Math.atan2(-d.z,-d.x); S.pan.copy(cam.position).addScaledVector(d,S.dist); S.pan.y-=0.3*S.lift*shape3().top;
     $('fly3').checked=false; $('fly3-note').hidden=true; S.need=true; }});
   $('fly3').onchange=()=>{ if(!S.on||S.launch){ $('fly3').checked=false; return; } if($('fly3').checked){ dg=null; lightUp(null); litLine(null); fly.enter(); $('fly3-note').hidden=false; } else fly.leave(); };
+  // On a machine that gets the large sky picture, handing it to the graphics card takes a fifth of a second, twice (3D's sky and Space's).
+  // That is done a little after 3D opens, one and then the other, while nothing is moving, so that Go to space has nothing left to wait for.
+  const skyEarly=()=>{ if(!skyBig()) return; clearTimeout(S.early); S.early=setTimeout(()=>{ if(!S.on||S.launch) return; space3.prep(R);
+    S.early=setTimeout(()=>{ if(!S.on||S.launch) return; if(!ORB) ORB=makeOrb(); ORB.warm(); },1500); },1900); };
   const TA=1.5, TB=1.4, PULSE=[[0.72,66],[0.58,64],[0.46,62]], TZ=PULSE.reduce((n,p)=>n+p[0],0), TC=1.9, FIN=72, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
   function launch3(){ return new Promise(done=>{ if(!S.on||S.launch){ done(null); return; } fly.leave(); dg=null; lightUp(null); litLine(null);
     const s0=parseFloat($('spire3').value)||0, c0=parseFloat($('cone3').value)||0, C=Math.max(c0,3), top=S.lift*shape3().top;   // in proportion to the dome: the cone at least three of its radii tall, the spire at least one
     S.spireView=false; S.back=null; coneBtn();
     S.launch={done,s0,c0,H:Math.max(s0,1),C,t0:0,last:0,free:false,o:{pol:S.pol,az:S.az,dist:S.dist,pan:S.pan.clone(),fov:cam.fov},d1:Math.min(12,C*0.74/Math.tan(25*DEG)),pan1:new THREE.Vector3(0,0.7*top+C/2,0)};
+    // Everything the launch will need is got ready now, while the spire is still rising and a held frame would not be noticed: the sky's picture
+    // and its stars are fetched and handed to the graphics card, and the sheet is made see-through.
+    space3.prep(R); skyStars(); realSpace(); { const m=mesh.material; if(!m.transparent){ m.transparent=true; m.alphaTest=0.02; m.needsUpdate=true; } }
     WARP.k=0; WARP.v=0; S.need=true; }); }
-  function launchEnd(q){ const Ln=S.launch; if(!Ln) return; S.launch=null; $('spire3').value=Ln.s0; $('cone3').value=Ln.c0; spire(); if(!q) WARP.k=0; Ln.done(q); }
+  function launchEnd(q){ const Ln=S.launch; if(!Ln) return; S.launch=null; $('spire3').value=Ln.s0; $('cone3').value=Ln.c0; spire(); if(!q){ WARP.k=0; if(Ln.mixed) spaceMixOut(); S.stale=true; } Ln.done(q); }
   // The launch, from 3D to Space. Four parts.
   // 1. The spire and the sight cone go up (to a height in proportion to the dome, if they are lower) while the view draws back to take them in.
   // 2. The camera shoots back down and in under the dome, to where the photo was taken from, and tips back to look straight up into it.
@@ -3117,7 +3131,7 @@ function make3d(){
   // 4. Blast off: straight up through the crown, the spire and the cone and out of its tip, faster and faster, the lens opening wide, and the
   //    tunnel of grid lines comes up round it. At the end it hands over the way it was facing, and Space takes it from there (see land).
   // Closing 3D on the way stops it. The spire and cone are put back as they were when it ends.
-  function launchStep(t){ const Ln=S.launch; if(!Ln.t0){ Ln.t0=Ln.last=t; } const s=(t-Ln.t0)/1000, dt=Math.min(0.05,(t-Ln.last)/1000), y0=S.lift*shape3().top, C=Ln.C; Ln.last=t;
+  function launchStep(t){ const Ln=S.launch; if(!Ln.t0){ Ln.t0=Ln.last=t; Ln.s=0; } const dt=Math.min(0.034,(t-Ln.last)/1000), s=Ln.s+=dt, y0=S.lift*shape3().top, C=Ln.C; Ln.last=t;   // its own clock, never more than a thirtieth of a second on in one frame: a held frame is a short pause, not a jump
     if(s<TA){ const u=ez(s/TA), o=Ln.o;
       $('spire3').value=Ln.s0+(Ln.H-Ln.s0)*u; $('cone3').value=Ln.c0+(C-Ln.c0)*u; spire();
       S.pol=o.pol+(1.25-o.pol)*u; S.az=o.az+0.5*u; S.dist=o.dist+(Ln.d1-o.dist)*u; S.pan.lerpVectors(o.pan,Ln.pan1,u); cam.fov=o.fov+(50-o.fov)*u; cam.updateProjectionMatrix(); return; }
@@ -3137,6 +3151,7 @@ function make3d(){
     const u=Math.min(1,(s-TA-TB-TZ)/TC), k=(Math.exp(4.4*u)-1)/(Math.exp(4.4)-1);
     cam.position.set(0,p1.y+k*(y0+C+7-p1.y),0); cam.quaternion.copy(Ln.q1); cam.fov=FIN+(130-FIN)*ez(u); cam.updateProjectionMatrix();
     WARP.k=ez((u-0.5)/0.42); WARP.v=80*u*u; WARP.z+=WARP.v*dt;
+    if(u>0.8&&!Ln.mixed){ Ln.mixed=true; spaceMixIn(); }   // the pictures are changed to Space's mix now, with the dome out of sight behind, so the hand-over has less to do
     if(u>=1) launchEnd(cam.quaternion.clone()); }
   cv.addEventListener('pointerdown',e=>{ if(fly.on||S.launch) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
   cv.addEventListener('pointermove',e=>{ if(fly.on) return; if(!dg){ hover3(e); return; } const dx=e.clientX-dg[0], dy=e.clientY-dg[1]; dg[0]=e.clientX; dg[1]=e.clientY; S.need=true;
@@ -3150,7 +3165,7 @@ function make3d(){
   $('pic3').onchange=()=>setPicOn($('pic3').checked); $('sph3').onchange=spheres; $('embryo3').onchange=spheres;
   const api={
     get on(){ return S.on; }, get atCone(){ return !!S.spireView; },
-    open(d,balls){ orbClose(); S.d=d; S.on=true; S.archT=archOf(d).on; S.archL=S.archT?1:0; S.archAnim=null; showEdge(); S.step=-1; S.stale=true; box.hidden=false; $('place').hidden=true; $('go3d').checked=true; $('align').hidden=true; showModes();
+    open(d,balls){ orbClose(); S.d=d; S.on=true; S.archT=archOf(d).on; S.archL=S.archT?1:0; S.archAnim=null; skyEarly(); showEdge(); S.step=-1; S.stale=true; box.hidden=false; $('place').hidden=true; $('go3d').checked=true; $('align').hidden=true; showModes();
       $('sph3').checked=!!balls; $('lift3').value=balls?0:1;                                     // spheres stand on the flat picture; the dome can still be raised under them with the slider
       // raising the dome opens under it at an angle; spheres open from above
       fit3(); api.view(balls?'out':'under'); if(balls){ S.dist=5.2; S.pol=0.95; } const full=parseFloat($('lift3').value), t0=performance.now();
@@ -3309,7 +3324,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     cam.fov=S.fov; cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
-    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; paintT(more); }
+    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||!!S.landF||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; paintT(more); }
     else if(S.sharp&&t>S.sharp){ S.sharp=0; paintT(false); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
@@ -3349,7 +3364,8 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   // slows and fades on the way, and the stars are turned so that those straight ahead at the end of the launch are straight ahead now.
   function land(q){ if(!S.on) return; spaceO.turn(q); const R1=S.R, f1=S.fov, R0=Math.min(0.3,R1), t0=performance.now(), v0=WARP.v, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x); let last=t0;
     const set=(Rn,fn)=>{ S.R=Rn; S.fov=fn; sizeShown(); lens(); S.need=true; S.stale=true; }; S.landF=f1; set(R0,130);
-    const tick=now=>{ if(!S.on){ S.R=R1; S.fov=f1; S.landF=0; WARP.k=0; return; } const s=(now-t0)/1000, u=Math.min(1,s/4.2), e=u*u*(3-2*u), w=Math.min(1,s/2.2), dt=Math.min(0.05,(now-last)/1000); last=now;
+    let clock=0;   // as in the launch: its own clock, so a held frame does not skip the landing on
+    const tick=now=>{ if(!S.on){ S.R=R1; S.fov=f1; S.landF=0; WARP.k=0; return; } const dt=Math.min(0.034,(now-last)/1000), s=clock+=dt, u=Math.min(1,s/4.2), e=u*u*(3-2*u), w=Math.min(1,s/2.2); last=now;
       WARP.v=v0*(1-w)*(1-w); WARP.z+=WARP.v*dt; WARP.k=1-ez(w);
       set(R0*Math.pow(R1/R0,e),130+(f1-130)*e);
       if(u<1) requestAnimationFrame(tick); else { WARP.k=0; S.landF=0; set(R1,f1); } };
@@ -3358,7 +3374,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     open(){ S.d=cur; S.on=true; frame(); S.R=LANDING.size; S.fov=LANDING.fov; orbRound=LANDING.round; sizeShown(); lens(); g.quaternion.identity();
       { const st=$('stage'), w=st.clientWidth, h=st.clientHeight; S.sx=w/2; S.sy=h/2; S.zoom=Math.max(0.05,LANDING.fill*Math.min(w,h)/Math.max(1,S.R*fig.u*S.k)); S.mid=true; } S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
-    warm(){ spaceO.warm(ren,cam); },
+    warm(){ spaceO.warm(ren,cam,700); shape(); },
     close(){ if(!S.on) return; fly.leave(); spaceO.rest(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
 $('ball-round').value=orbRound;
 // Space is reached by its button, Go to space, and by nothing else. From 3D it is the launch. From the flat desk the dome is stood
