@@ -1196,11 +1196,12 @@ let eyeUrl=null;
 function soften(want,still,got){ const im=new Image();
   im.onload=()=>{ if(!still()) return;
     const w=im.naturalWidth, h=im.naturalHeight, c=document.createElement('canvas'); c.width=w; c.height=h; const x=c.getContext('2d'); x.drawImage(im,0,0);
-    const k=w/want.w, len=(size,room)=>Math.max(0.05*size,Math.min(0.3*size,0.8*room))/size, EASE=[[0,0],[.2,.104],[.4,.352],[.6,.648],[.8,.896],[1,1]];
-    const ramp=(g,a,b)=>{ EASE.forEach(([p,v])=>g.addColorStop(a*p,`rgba(0,0,0,${v})`)); EASE.slice().reverse().forEach(([p,v])=>g.addColorStop(1-b*p,`rgba(0,0,0,${v})`)); return g; };
-    x.globalCompositeOperation='destination-in';
-    x.fillStyle=ramp(x.createLinearGradient(0,0,w,0),len(w,(want.cx-want.r)*k),len(w,w-(want.cx+want.r)*k)); x.fillRect(0,0,w,h);
-    x.fillStyle=ramp(x.createLinearGradient(0,0,0,h),len(h,(want.cy-want.r)*k),len(h,h-(want.cy+want.r)*k)); x.fillRect(0,0,w,h);
+    // A soft round edge: an oval about the picture's circle that reaches the nearer side each way. Inside it the picture is
+    // whole out to a little past its circle (and at least six tenths of the way), then it thins evenly to nothing at the oval.
+    const k=w/want.w, mx=want.cx*k, my=want.cy*k, ax=Math.max(1,Math.min(mx,w-mx)), ay=Math.max(1,Math.min(my,h-my)), full=Math.min(0.9,Math.max(0.6,1.1*want.r*k/Math.min(ax,ay)));
+    const EASE=[[0,0],[.2,.104],[.4,.352],[.6,.648],[.8,.896],[1,1]], g=x.createRadialGradient(0,0,0,0,0,1);
+    g.addColorStop(0,'rgba(0,0,0,1)'); EASE.slice().reverse().forEach(([p,v])=>g.addColorStop(1-(1-full)*p,`rgba(0,0,0,${v})`));
+    x.globalCompositeOperation='destination-in'; x.save(); x.translate(mx,my); x.scale(ax,ay); x.fillStyle=g; x.fillRect(-mx/ax-1,-my/ay-1,w/ax+2,h/ay+2); x.restore();
     got(c,null); c.toBlob(b=>{ if(still()&&b) got(c,URL.createObjectURL(b)); },'image/webp',0.92); };
   im.src=want.src; }
 function loadEye(){
