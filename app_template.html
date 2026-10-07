@@ -900,6 +900,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
               <label class="row" title="From lying flat to raised into the dome">Raise <input type="range" id="lift3" min="0" max="1" step="0.01" value="1" aria-label="How far the photo is raised, from flat to dome"></label>
               <label class="row">Spire <input type="range" id="spire3" min="0" max="2.5" step="0.05" value="0" aria-label="Height of the lantern and spire, in dome radii"></label>
               <label class="row">Sight cone <input type="range" id="cone3" min="0" max="6" step="0.05" value="0" aria-label="Height of the cone of sight over the dome"></label>
+              <label class="row" title="Grass on the ground round the dome"><input type="checkbox" id="grass3"> Grass</label>
               <label class="row"><input type="checkbox" id="map3"> Map</label>
               <label class="row">Dome width <input type="number" id="domew3" min="3" max="300" step="0.5" value="25" aria-label="How wide the real dome is, in metres"><span class="tv">m</span></label>
               <label class="row">Turn map <input type="range" id="mapturn3" min="-180" max="180" step="1" value="0" aria-label="Turn the map under the dome"></label>
@@ -1527,6 +1528,10 @@ function paintSpace(){ const cv=$('space'); if(cv.dataset.done) return; cv.datas
 function showSpace(){ const on=starsShown(), st=$('stage'); if(on) paintSpace(); st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid; }
 $('sky-stars').onchange=()=>{ starsOn=$('sky-stars').checked; store.set('dome-sky-stars',starsOn); showSpace(); dirty3(); };
 $('sky-grid').onchange=()=>{ starGrid=$('sky-grid').checked; store.set('dome-sky-grid',starGrid); showSpace(); dirty3(); };
+// The launch (see launch3 in make3d): going from 3D to Space, a tunnel of grid lines rushes past you. WARP says how strongly it
+// shows (k, 0 to 1), how far along it you have come (z) and how fast you are going (v). 3D starts it and Space brings it to rest,
+// so the two share it.
+const WARP={k:0,z:0,v:0};
 // The sky for 3D and Space: a ball of stars with you at its middle. It is drawn first, by itself, through a camera that looks the
 // same way as yours but never leaves the middle, so it can never be reached and everything else is drawn in front of it. The band of the Milky Way is a painted haze with thousands of faint stars in it; the grid
 // is a globe's lines, every fifteen degrees, upright as the drawing is.
@@ -1552,9 +1557,20 @@ function makeSpace(T,R){ const g=new T.Group(), gal=new T.Group(), r=rnd(11), ga
   [[weak,0.13],[strong,0.34]].forEach(([v,op])=>{ const o=new T.LineSegments(new T.BufferGeometry().setFromPoints(v),new T.LineBasicMaterial({color:0xD4AF5A,transparent:true,opacity:op,depthWrite:false})); o.renderOrder=-998; o.frustumCulled=false; grid.add(o); });
   g.add(grid);
   const sky=new T.Scene(), eye=new T.PerspectiveCamera(); sky.add(g); g.visible=true;
-  // draw the sky, if the stars are out, and say whether it was drawn; the caller then draws its own things over it
-  return { draw(ren,cam){ if(!starsShown()) return false; grid.visible=starGrid; mat.uniforms.k.value=ren.getPixelRatio();
-    eye.copy(cam,false); eye.position.set(0,0,0); eye.near=R*0.1; eye.far=R*2; eye.updateProjectionMatrix(); eye.updateMatrixWorld(true);
+  // The tunnel: rings and long lines, a squared sheet rolled into a tube, always straight ahead of you. Only the rings move,
+  // toward you, and a ring that passes is put back at the far end, where the lines are too faint for the change to show.
+  const tun=new T.Group(), rings=new T.Group(), SP=5, NRING=36, RT=7, tv=[], tc=[], shade=z=>{ const f=Math.pow(1-Math.min(1,-z/(SP*NRING)),2); tc.push(0.83*f,0.69*f,0.35*f); };
+  for(let k=0;k<=NRING;k++){ const z=-k*SP; for(let i=0;i<48;i++){ const a=i/48*2*Math.PI, b=(i+1)/48*2*Math.PI; tv.push(RT*Math.cos(a),RT*Math.sin(a),z,RT*Math.cos(b),RT*Math.sin(b),z); shade(z); shade(z); } }
+  const ringGeo=new T.BufferGeometry(); ringGeo.setAttribute('position',new T.BufferAttribute(new Float32Array(tv),3)); ringGeo.setAttribute('color',new T.BufferAttribute(new Float32Array(tc),3));
+  tv.length=0; tc.length=0; for(let j=0;j<16;j++){ const a=j/16*2*Math.PI, x=RT*Math.cos(a), y=RT*Math.sin(a); for(let k=0;k<NRING;k++){ tv.push(x,y,-k*SP,x,y,-(k+1)*SP); shade(-k*SP); shade(-(k+1)*SP); } }
+  const lineGeo=new T.BufferGeometry(); lineGeo.setAttribute('position',new T.BufferAttribute(new Float32Array(tv),3)); lineGeo.setAttribute('color',new T.BufferAttribute(new Float32Array(tc),3));
+  const tunMat=new T.LineBasicMaterial({vertexColors:true,transparent:true,blending:T.AdditiveBlending,depthTest:false,depthWrite:false});
+  rings.add(new T.LineSegments(ringGeo,tunMat)); tun.add(rings); tun.add(new T.LineSegments(lineGeo,tunMat)); tun.children.forEach(o=>{ o.frustumCulled=false; }); rings.children[0].frustumCulled=false; tun.visible=false; sky.add(tun);
+  // draw the sky, if the stars are out (or the tunnel is showing), and say whether it was drawn; the caller then draws its own things over it
+  return { turn(q){ g.quaternion.copy(q).invert(); },   // turn the stars so that what was straight ahead through a camera turned q is straight ahead through one that is not turned
+    draw(ren,cam){ const warp=WARP.k>0.003, stars=starsShown(); if(!stars&&!warp) return false; g.visible=stars; grid.visible=starGrid; mat.uniforms.k.value=ren.getPixelRatio();
+    eye.copy(cam,false); eye.position.set(0,0,0); eye.near=0.3; eye.far=R*2; eye.updateProjectionMatrix(); eye.updateMatrixWorld(true);
+    tun.visible=warp; if(warp){ tun.quaternion.copy(eye.quaternion); rings.position.z=((WARP.z%SP)+SP)%SP; tunMat.opacity=Math.min(1,WARP.k); }
     ren.autoClear=true; ren.render(sky,eye); return true; } }; }
 function setSky(){ showSpace();
   const im=$('si'), on=skyShown()&&!!cur&&!!fig&&!!skyUrl; im.style.display=on?'':'none'; $('sky-fade').value=skyFade; $('sky-on').checked=skyShown(); $('sky-place').disabled=!SKIES.length; $('sky-unplace').disabled=!(sky&&eyePlaces[sky.id]); if(!on) return;
@@ -2780,6 +2796,22 @@ function make3d(){
   // "Turn map" turns the ground under the dome, since a photo taken looking up does not say which way is north. Both are kept for
   // each dome. The rings of eight circles are carried on across the ground to the edge of the map.
   const GT=1280, gcv=document.createElement('canvas'); gcv.width=gcv.height=GT; const gtex=new THREE.CanvasTexture(gcv);
+  // Grass: the ground the dome stands on, out to where it fades away. A small painted square of grass is laid again and again,
+  // and a second, much larger laying of the same square lightens and darkens it in patches so the repeat does not show. It is
+  // seen from above only, so the view from under the dome looks up through it. With the stars out it is grass at night.
+  const grassTex=(()=>{ const gc=document.createElement('canvas'), W=gc.width=gc.height=512, c=gc.getContext('2d'), r=rnd(23); c.fillStyle='#345f2a'; c.fillRect(0,0,W,W);
+    const round=(x,y,m,f)=>{ for(let dx=-1;dx<=1;dx++) for(let dy=-1;dy<=1;dy++){ const X=x+dx*W, Y=y+dy*W; if(X>-m&&X<W+m&&Y>-m&&Y<W+m) f(X,Y); } };   // also past the edges, so the square joins itself
+    for(let i=0;i<220;i++){ const rad=24+r()*70, col=r()<0.5?'86,140,60':'22,58,24', a=0.10+0.2*r(); round(r()*W,r()*W,rad,(x,y)=>softBlob(c,x,y,rad,col,a)); }
+    c.lineWidth=1; c.lineCap='round';
+    for(let i=0;i<15000;i++){ const len=2.5+r()*6.5, an=r()*2*Math.PI, ex=Math.cos(an)*len, ey=Math.sin(an)*len; c.strokeStyle=`hsl(${82+r()*46},${34+r()*30}%,${18+r()*32}%)`;
+      round(r()*W,r()*W,8,(x,y)=>{ c.beginPath(); c.moveTo(x,y); c.lineTo(x+ex,y+ey); c.stroke(); }); }
+    const tx=new THREE.CanvasTexture(gc); tx.wrapS=tx.wrapT=THREE.RepeatWrapping; tx.anisotropy=R.capabilities.getMaxAnisotropy(); return tx; })();
+  const grassMat=new THREE.ShaderMaterial({transparent:true,uniforms:{map:{value:grassTex},dim:{value:1}},
+    vertexShader:'varying vec2 p; void main(){ p=position.xy; gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.0); }',
+    fragmentShader:'uniform sampler2D map; uniform float dim; varying vec2 p; void main(){ vec3 c=texture2D(map,p*70.0).rgb; float n=texture2D(map,p*3.7+0.31).g; c*=0.62+1.1*n; c=mix(c,c*vec3(0.42,0.5,0.72),1.0-dim); gl_FragColor=vec4(c,1.0-smoothstep(0.5,1.0,length(p))); }'});
+  const grass=new THREE.Mesh(new THREE.CircleGeometry(1,96),grassMat); grass.rotation.x=-Math.PI/2; grass.scale.setScalar(42); grass.renderOrder=-5; grass.frustumCulled=false; grass.visible=false; scene.add(grass);
+  $('grass3').checked=store.get('dome-3d-grass',true)!==false;
+  $('grass3').onchange=()=>{ store.set('dome-3d-grass',$('grass3').checked); placeGround(); };
   const ground=new THREE.Mesh(new THREE.PlaneGeometry(1,1),new THREE.MeshBasicMaterial({map:gtex})); ground.rotation.order='YXZ'; ground.rotation.x=-Math.PI/2; ground.visible=false; scene.add(ground);
   const ringsG=new THREE.Group(); scene.add(ringsG);
   let gFor='', gMetres=0, gAt=[0,0], maps=store.get('dome-map',{}); if(!maps||typeof maps!=='object') maps={};
@@ -2794,6 +2826,7 @@ function make3d(){
     if(!GSESSION) googleReady().then(ok=>{ if(ok&&gFor===d.slug){ gFor=''; placeGround(); } });
   }
   function placeGround(){
+    { const A=S.arch; grass.visible=$('grass3').checked&&!!S.d&&!$('map3').checked; grass.position.y=-0.015-(A&&A.on?S.lift*A.Hc*1.03:0); }   // under the dome's foot, or with the arches up, under where the photo was taken from
     const on=$('map3').checked&&!!S.d; ground.visible=on; ringsG.visible=on; $('mapcredit').hidden=!on; S.need=true;
     while(ringsG.children.length){ const o=ringsG.children[0]; ringsG.remove(o); o.geometry.dispose(); o.material.dispose(); }
     if(!on) return; if(gFor!==S.d.slug){ loadGround(); return; }
@@ -2841,8 +2874,9 @@ function make3d(){
       if(S.stale&&t-S.last>90){ S.stale=false; S.last=t; sheet(); spheres(); } }
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
-    if(S.need){ S.need=false;
-      if(!fly.on){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
+    if(S.launch){ launchStep(t); S.need=true; }
+    if(S.need){ S.need=false; grassMat.uniforms.dim.value=starsShown()?0:1;
+      if(!fly.on&&!(S.launch&&S.launch.free)){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
         cam.position.set(tgt.x+S.dist*sp*Math.cos(S.az),tgt.y+S.dist*Math.cos(S.pol),tgt.z+S.dist*sp*Math.sin(S.az)); cam.lookAt(tgt); }
       if(space3.draw(R,cam)){ R.autoClear=false; R.clearDepth(); R.render(scene,cam); R.autoClear=true; } else R.render(scene,cam); } }
   new ResizeObserver(()=>{ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; R.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix(); S.need=true; }).observe(box);
@@ -2881,14 +2915,42 @@ function make3d(){
   const fly=makeFly(cv,cam,{speed:()=>Math.max(0.5,S.dist*0.55), changed:()=>{ S.need=true; }, ended:()=>{ const d=new THREE.Vector3(); cam.getWorldDirection(d);
     S.pol=Math.min(Math.PI-0.04,Math.max(0.04,Math.acos(Math.max(-1,Math.min(1,-d.y))))); S.az=Math.atan2(-d.z,-d.x); S.pan.copy(cam.position).addScaledVector(d,S.dist); S.pan.y-=0.3*S.lift*shape3().top;
     $('fly3').checked=false; $('fly3-note').hidden=true; S.need=true; }});
-  $('fly3').onchange=()=>{ if(!S.on){ $('fly3').checked=false; return; } if($('fly3').checked){ dg=null; lightUp(null); litLine(null); fly.enter(); $('fly3-note').hidden=false; } else fly.leave(); };
-  cv.addEventListener('pointerdown',e=>{ if(fly.on) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
+  $('fly3').onchange=()=>{ if(!S.on||S.launch){ $('fly3').checked=false; return; } if($('fly3').checked){ dg=null; lightUp(null); litLine(null); fly.enter(); $('fly3-note').hidden=false; } else fly.leave(); };
+  // The launch, from 3D to Space. Three parts. First the spire and the sight cone go up (to a height in proportion to the dome, if they are lower) while the
+  // view draws back to take them in. Then the camera swoops in to the crown of the dome and tips back to look straight up the
+  // cone. Then it shoots up through the cone and out of its tip, faster and faster, the lens opening wide, and the tunnel of
+  // grid lines comes up round it. At the end it hands over the way it was facing, and Space takes it from there (see land).
+  // Closing 3D on the way stops it. The spire and cone are put back as they were when it ends.
+  const TA=1.5, TB=1.5, TC=1.6, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
+  function launch3(){ return new Promise(done=>{ if(!S.on||S.launch){ done(null); return; } fly.leave(); dg=null; lightUp(null); litLine(null);
+    const s0=parseFloat($('spire3').value)||0, c0=parseFloat($('cone3').value)||0, C=Math.max(c0,3), top=S.lift*shape3().top;   // in proportion to the dome: the cone at least three of its radii tall, the spire at least one
+    S.spireView=false; S.back=null; coneBtn();
+    S.launch={done,s0,c0,H:Math.max(s0,1),C,t0:0,last:0,free:false,o:{pol:S.pol,az:S.az,dist:S.dist,pan:S.pan.clone(),fov:cam.fov},d1:Math.min(12,C*0.74/Math.tan(25*DEG)),pan1:new THREE.Vector3(0,0.7*top+C/2,0)};
+    WARP.k=0; WARP.v=0; S.need=true; }); }
+  function launchEnd(q){ const Ln=S.launch; if(!Ln) return; S.launch=null; $('spire3').value=Ln.s0; $('cone3').value=Ln.c0; spire(); if(!q) WARP.k=0; Ln.done(q); }
+  function launchStep(t){ const Ln=S.launch; if(!Ln.t0){ Ln.t0=Ln.last=t; } const s=(t-Ln.t0)/1000, dt=Math.min(0.05,(t-Ln.last)/1000), y0=S.lift*shape3().top, C=Ln.C; Ln.last=t;
+    if(s<TA){ const u=ez(s/TA), o=Ln.o;   // the spire and cone rise; the view draws back and swings a little round
+      $('spire3').value=Ln.s0+(Ln.H-Ln.s0)*u; $('cone3').value=Ln.c0+(C-Ln.c0)*u; spire();
+      S.pol=o.pol+(1.25-o.pol)*u; S.az=o.az+0.5*u; S.dist=o.dist+(Ln.d1-o.dist)*u; S.pan.lerpVectors(o.pan,Ln.pan1,u); cam.fov=o.fov+(50-o.fov)*u; cam.updateProjectionMatrix(); return; }
+    if(!Ln.p0){ $('spire3').value=Ln.H; $('cone3').value=C; spire();
+      cam.updateMatrixWorld(); Ln.p0=cam.position.clone(); Ln.q0=cam.quaternion.clone();
+      const fh=new THREE.Vector3(-Ln.p0.x,0,-Ln.p0.z); if(fh.lengthSq()<1e-6) fh.set(0,0,-1); fh.normalize();
+      const up=fh.clone().negate(), back=new THREE.Vector3(0,-1,0), right=new THREE.Vector3().crossVectors(up,back).normalize();   // looking straight up, with the way you came from at the foot of the screen
+      Ln.q1=new THREE.Quaternion().setFromRotationMatrix(new THREE.Matrix4().makeBasis(right,up,back)); Ln.p1=new THREE.Vector3(0,y0+0.03,0); Ln.pc=new THREE.Vector3(Ln.p0.x*0.3,y0+0.25*C,Ln.p0.z*0.3); Ln.free=true; }
+    const p0=Ln.p0, p1=Ln.p1, pc=Ln.pc;
+    if(s<TA+TB){ const u=ez((s-TA)/TB), a=(1-u)*(1-u), b=2*u*(1-u), c=u*u;   // the swoop to the crown, tipping back
+      cam.position.set(a*p0.x+b*pc.x+c*p1.x,a*p0.y+b*pc.y+c*p1.y,a*p0.z+b*pc.z+c*p1.z); cam.quaternion.copy(Ln.q0).slerp(Ln.q1,u*u); return; }
+    const u=Math.min(1,(s-TA-TB)/TC), k=(Math.exp(4*u)-1)/(Math.exp(4)-1);   // up through the cone and out
+    cam.position.set(0,p1.y+k*(C+7),0); cam.quaternion.copy(Ln.q1); cam.fov=50+80*ez(u); cam.updateProjectionMatrix();
+    WARP.k=ez((u-0.45)/0.45); WARP.v=80*u*u; WARP.z+=WARP.v*dt;
+    if(u>=1) launchEnd(cam.quaternion.clone()); }
+  cv.addEventListener('pointerdown',e=>{ if(fly.on||S.launch) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
   cv.addEventListener('pointermove',e=>{ if(fly.on) return; if(!dg){ hover3(e); return; } const dx=e.clientX-dg[0], dy=e.clientY-dg[1]; dg[0]=e.clientX; dg[1]=e.clientY; S.need=true;
     if(dg[2]===2){ S.az+=dx*0.006; S.pol=Math.min(Math.PI-0.04,Math.max(0.04,S.pol-dy*0.006)); return; }
     const m=cam.matrixWorld.elements, k=2*S.dist*Math.tan(cam.fov*Math.PI/360)/cv.clientHeight;   // scene units per pixel at the point looked at
     S.pan.x-=(m[0]*dx-m[4]*dy)*k; S.pan.y-=(m[1]*dx-m[5]*dy)*k; S.pan.z-=(m[2]*dx-m[6]*dy)*k; });
   ['pointerup','pointercancel'].forEach(k=>cv.addEventListener(k,()=>dg=null));
-  cv.addEventListener('wheel',e=>{ e.preventDefault(); if(!fly.on) api.zoom(Math.exp(e.deltaY*0.0012)); },{passive:false});
+  cv.addEventListener('wheel',e=>{ e.preventDefault(); if(!fly.on&&!S.launch) api.zoom(Math.exp(e.deltaY*0.0012)); },{passive:false});
   $('lift3').oninput=e=>{ S.lift=parseFloat(e.target.value); raise(); };
   $('v-out').onclick=()=>api.view('out'); $('v-in').onclick=()=>api.view('in'); $('spin3').onchange=()=>S.need=true;
   $('pic3').onchange=()=>setPicOn($('pic3').checked); $('sph3').onchange=spheres; $('embryo3').onchange=spheres;
@@ -2900,13 +2962,14 @@ function make3d(){
       fit3(); api.view(balls?'out':'under'); if(balls){ S.dist=5.2; S.pol=0.95; } const full=parseFloat($('lift3').value), t0=performance.now();
       const rise=()=>{ if(!S.on) return; const t=Math.min(1,(performance.now()-t0)/1500); S.lift=full*t*t*(3-2*t); raise(); if(t<1) requestAnimationFrame(rise); }; rise();   // the flat picture rises into the dome
       requestAnimationFrame(loop); },
-    close(){ if(!S.on) return; fly.leave(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
+    launch:launch3,
+    close(){ if(!S.on) return; launchEnd(null); fly.leave(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
     redraw(){ if(S.on) spheres(); },
     dirty(){ S.stale=true; },
     flash(){ S.stale=true; S.last=0; },
     zoom(f){ S.dist=Math.min($('map3').checked?160:12,Math.max(0.05,S.dist*f)); S.need=true; },
     // From outside: standing off, looking down on the dome. From inside: on the floor under the crown, looking straight up, as the photo was taken. Seen from this side the picture stands the way the photo does.
-    view(w){ fly.leave();
+    view(w){ if(S.launch) return; fly.leave();
       // To the sight cone: side on and a little above, with the whole cone filling the view from its foot on the crown to its tip.
       // If the cone is down it is stood up first. The foot is taken at the height the dome is being raised to, so this also
       // holds while the dome is still rising.
@@ -3081,14 +3144,28 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   $('ball-round').oninput=e=>{ orbRound=Math.max(0,Math.min(1,parseFloat(e.target.value)||0)); store.set('dome-ball-round',orbRound); shape(); };
   $('ball-size').oninput=e=>{ S.R=Math.max(0.05,parseFloat(e.target.value)||1); $('ball-size-v').textContent=S.R.toFixed(2); S.stale=true; S.need=true; };
   $('ball-spin').onchange=()=>{ S.spin=$('ball-spin').checked; };
-  return { get on(){ return S.on; }, dirty(){ S.stale=true; },
+  // The landing, after the launch from 3D. Space opens with Size as small as it goes and the lens as wide as it goes, and both
+  // ease to where they would have been, the sliders moving with them, while the tunnel slows and fades. The stars are turned
+  // so that the ones that were straight ahead at the end of the launch are straight ahead now.
+  function land(q){ if(!S.on) return; spaceO.turn(q); const R1=S.R, f1=S.fov, R0=Math.min(0.3,R1), t0=performance.now(), v0=WARP.v, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x); let last=t0, painted=0;
+    const set=(Rn,fn)=>{ S.R=Rn; S.fov=fn; sizeShown(); lens(); S.need=true; }; set(R0,130); S.stale=true;
+    const tick=now=>{ if(!S.on){ S.R=R1; S.fov=f1; WARP.k=0; return; } const s=(now-t0)/1000, u=Math.min(1,s/3.6), e=1-Math.pow(1-u,3), w=Math.min(1,s/2), dt=Math.min(0.05,(now-last)/1000); last=now;
+      WARP.v=v0*(1-w)*(1-w); WARP.z+=WARP.v*dt; WARP.k=1-ez(w);
+      set(R0*Math.pow(R1/R0,e),130+(f1-130)*e); if(now-painted>90||u>=1){ painted=now; S.stale=true; }   // the picture on the ball is painted afresh about ten times a second on the way
+      if(u<1) requestAnimationFrame(tick); else { WARP.k=0; set(R1,f1); S.stale=true; } };
+    requestAnimationFrame(tick); }
+  return { get on(){ return S.on; }, dirty(){ S.stale=true; }, land,
     open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); lens(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
     close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); } }; }
 $('ball-round').value=orbRound;
 $('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); return; }
-  if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close(); b.disabled=true;
-  try{ await loadThree(); if(!ORB) ORB=makeOrb(); ORB.open(); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
+  // From 3D, Space is reached by the launch: up through the spire and sight cone, and out. (Not for anyone who has asked their
+  // computer for less motion, and not if 3D is closed on the way.)
+  let facing=null; b.disabled=true;
+  if(T3&&T3.on&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ b.checked=true; facing=await T3.launch(); if(!T3.on){ b.checked=false; b.disabled=false; return; } }
+  if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close();
+  try{ await loadThree(); if(!ORB) ORB=makeOrb(); ORB.open(); if(facing) ORB.land(facing); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
   b.disabled=false; };
 const open3d=async balls=>{ if(!cur){ $('go3d').checked=false; return; } if(mode!=='pan') setMode('pan'); const b=$('go3d'); b.disabled=true;
   try{ await loadThree(); if(!T3) T3=make3d(); T3.open(cur,balls); }
