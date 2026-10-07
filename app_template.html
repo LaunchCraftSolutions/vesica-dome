@@ -779,7 +779,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
     </section>
 
     <section id="desk" hidden>
-      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="si" style="display:none"/><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div id="orbbox" hidden><canvas id="orb" aria-label="The circle as a ball: drag to turn it, wheel to bring it closer"></canvas></div><div class="drawer" id="drawer">
+      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="si" style="display:none"/><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div id="orbbox" hidden><canvas id="orb" aria-label="The circle as a ball: drag to move it, right-drag to turn it, wheel to bring it closer"></canvas></div><div class="drawer" id="drawer">
         <div class="dockrow"><button class="pill accent" id="dive-stop" hidden>Stop fractalling</button><button class="pill accent" id="align" hidden title="Back to the middle, unturned">Centre</button><button class="pill" id="boxes-back" hidden title="Put every toolbar back where it belongs">Put toolbars back</button><div class="dock"><section class="grp" id="circles" aria-label="Circles" hidden><h4>Circles</h4><div id="circle-list"></div><div class="btns"><button class="pill" id="circle-add" aria-pressed="false">Add a circle</button></div></section>
           <div class="dockline">
             <div class="gg" role="toolbar" aria-label="Pointer"><button id="m-pan" aria-pressed="true" title="Point"><svg viewBox="0 0 24 24"><path d="M5 3l5.5 16 2.3-6.2L19 10.5z"/></svg></button><button id="m-hand" aria-pressed="false" title="Move and turn"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></button></div>
@@ -862,6 +862,8 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row" title="From a flat disc to a full ball">Round <input type="range" id="ball-round" min="0" max="1" step="0.01" aria-label="How round it is, from a flat disc to a full ball"></label>
             <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
             <label class="row"><input type="checkbox" id="ball-spin"> Spin</label>
+            <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label>
+            <p class="note" id="ball-fly-note" hidden>Move the mouse to look round. W A S D to move, E up, Q down, Shift faster. Esc or F to stop.</p>
             <div class="btns"><button class="pill" id="ball-front" title="Turn it to face you again, at the size it began">Face on</button></div>
         </section>
         <section class="grp modebox" data-box="eye" id="mode-eye" aria-label="Eye"><div class="modehead"><h4>Eye</h4><label class="onoff"><input type="checkbox" id="eye-on"> On</label></div>
@@ -888,6 +890,8 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
               <label class="row"><input type="checkbox" id="sph3"> Circles as spheres</label>
               <label class="row"><input type="checkbox" id="embryo3"> Embryo</label>
               <label class="row"><input type="checkbox" id="spin3"> Spin</label>
+              <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="fly3"> Free fly</label>
+              <p class="note" id="fly3-note" hidden>Move the mouse to look round. W A S D to move, E up, Q down, Shift faster. Esc or F to stop.</p>
               <div class="btns"><button class="pill" id="v-out">From outside</button><button class="pill" id="v-in">From inside</button></div>
               <div class="btns"><button class="pill" id="v-cone">To the sight cone</button></div>
             </div>
@@ -2657,8 +2661,11 @@ function make3d(){
     else { if(S.live){ S.live=false; S.stale=true; }
       if(S.stale&&t-S.last>90){ S.stale=false; S.last=t; sheet(); spheres(); } }
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
-    if(S.need){ S.need=false; tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
-      cam.position.set(tgt.x+S.dist*sp*Math.cos(S.az),tgt.y+S.dist*Math.cos(S.pol),tgt.z+S.dist*sp*Math.sin(S.az)); cam.lookAt(tgt); R.render(scene,cam); } }
+    if(fly.on&&fly.step(t)) S.need=true;
+    if(S.need){ S.need=false;
+      if(!fly.on){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
+        cam.position.set(tgt.x+S.dist*sp*Math.cos(S.az),tgt.y+S.dist*Math.cos(S.pol),tgt.z+S.dist*sp*Math.sin(S.az)); cam.lookAt(tgt); }
+      R.render(scene,cam); } }
   new ResizeObserver(()=>{ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; R.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix(); S.need=true; }).observe(box);
   // Hover in 3D. A line from the eye through the pointer is followed to where it meets the dome's sheet; that spot on the sheet
   // is a spot on the picture, and so a point of the drawing. A second line four pixels along says how large the drawing stands
@@ -2691,13 +2698,18 @@ function make3d(){
   // The same hands as on the flat desk: the left button moves you about (across, up and down), free of the centre point;
   // the right button turns the view round whatever you are looking at.
   cv.addEventListener('contextmenu',e=>e.preventDefault());
-  cv.addEventListener('pointerdown',e=>{ try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
-  cv.addEventListener('pointermove',e=>{ if(!dg){ hover3(e); return; } const dx=e.clientX-dg[0], dy=e.clientY-dg[1]; dg[0]=e.clientX; dg[1]=e.clientY; S.need=true;
+  // Free fly. Ending it leaves the view where it is: the point it then turns about is put straight ahead, as far off as before.
+  const fly=makeFly(cv,cam,{speed:()=>Math.max(0.5,S.dist*0.55), changed:()=>{ S.need=true; }, ended:()=>{ const d=new THREE.Vector3(); cam.getWorldDirection(d);
+    S.pol=Math.min(Math.PI-0.04,Math.max(0.04,Math.acos(Math.max(-1,Math.min(1,-d.y))))); S.az=Math.atan2(-d.z,-d.x); S.pan.copy(cam.position).addScaledVector(d,S.dist); S.pan.y-=0.3*S.lift*shape3().top;
+    $('fly3').checked=false; $('fly3-note').hidden=true; S.need=true; }});
+  $('fly3').onchange=()=>{ if(!S.on){ $('fly3').checked=false; return; } if($('fly3').checked){ dg=null; lightUp(null); litLine(null); fly.enter(); $('fly3-note').hidden=false; } else fly.leave(); };
+  cv.addEventListener('pointerdown',e=>{ if(fly.on) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
+  cv.addEventListener('pointermove',e=>{ if(fly.on) return; if(!dg){ hover3(e); return; } const dx=e.clientX-dg[0], dy=e.clientY-dg[1]; dg[0]=e.clientX; dg[1]=e.clientY; S.need=true;
     if(dg[2]===2){ S.az+=dx*0.006; S.pol=Math.min(Math.PI-0.04,Math.max(0.04,S.pol-dy*0.006)); return; }
     const m=cam.matrixWorld.elements, k=2*S.dist*Math.tan(cam.fov*Math.PI/360)/cv.clientHeight;   // scene units per pixel at the point looked at
     S.pan.x-=(m[0]*dx-m[4]*dy)*k; S.pan.y-=(m[1]*dx-m[5]*dy)*k; S.pan.z-=(m[2]*dx-m[6]*dy)*k; });
   ['pointerup','pointercancel'].forEach(k=>cv.addEventListener(k,()=>dg=null));
-  cv.addEventListener('wheel',e=>{ e.preventDefault(); api.zoom(Math.exp(e.deltaY*0.0012)); },{passive:false});
+  cv.addEventListener('wheel',e=>{ e.preventDefault(); if(!fly.on) api.zoom(Math.exp(e.deltaY*0.0012)); },{passive:false});
   $('lift3').oninput=e=>{ S.lift=parseFloat(e.target.value); raise(); };
   $('v-out').onclick=()=>api.view('out'); $('v-in').onclick=()=>api.view('in'); $('spin3').onchange=()=>S.need=true;
   $('pic3').onchange=()=>setPicOn($('pic3').checked); $('sph3').onchange=spheres; $('embryo3').onchange=spheres;
@@ -2709,13 +2721,13 @@ function make3d(){
       fit3(); api.view(balls?'out':'under'); if(balls){ S.dist=5.2; S.pol=0.95; } const full=parseFloat($('lift3').value), t0=performance.now();
       const rise=()=>{ if(!S.on) return; const t=Math.min(1,(performance.now()-t0)/1500); S.lift=full*t*t*(3-2*t); raise(); if(t<1) requestAnimationFrame(rise); }; rise();   // the flat picture rises into the dome
       requestAnimationFrame(loop); },
-    close(){ if(!S.on) return; S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
+    close(){ if(!S.on) return; fly.leave(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
     redraw(){ if(S.on) spheres(); },
     dirty(){ S.stale=true; },
     flash(){ S.stale=true; S.last=0; },
     zoom(f){ S.dist=Math.min($('map3').checked?160:12,Math.max(0.05,S.dist*f)); S.need=true; },
     // From outside: standing off, looking down on the dome. From inside: on the floor under the crown, looking straight up, as the photo was taken. Seen from this side the picture stands the way the photo does.
-    view(w){
+    view(w){ fly.leave();
       // To the sight cone: side on and a little above, with the whole cone filling the view from its foot on the crown to its tip.
       // If the cone is down it is stood up first. The foot is taken at the height the dome is being raised to, so this also
       // holds while the dome is still rising.
@@ -2756,6 +2768,31 @@ function deskTo(c,TS,PAD,d,im,mx,my,half,px,dome,ground){ const V=d.view_px, k=(
     if(xGlow>0.005){ c.globalCompositeOperation='screen'; HALO.slice().reverse().forEach(([k,a])=>disc(rr*(1+k*xGlow),a*xGlow*xAlpha)); c.globalCompositeOperation='source-over'; }
     disc(rr,xAlpha); c.restore(); } }
 
+// ---- Free fly ----
+// The view becomes a camera you carry: moving the mouse turns it (the pointer is taken while this is on), W A S D move it
+// forward, left, back and right, E and Q up and down, Shift three times as fast. Esc, or F, gives the pointer back and ends it.
+// One rig serves 3D and the Ball. It starts from wherever the view is, so switching it on changes nothing until you move.
+function makeFly(cv,cam,opts){ const F={on:false,locked:false,held:false,p:new THREE.Vector3(),yaw:0,pitch:0,keys:new Set(),last:0}, KEYS=['w','a','s','d','q','e','c','shift'];
+  const typing=e=>{ const g=e.target; return !!g&&(/^(TEXTAREA|SELECT)$/.test(g.tagName)||(g.tagName==='INPUT'&&!/^(checkbox|range|button)$/.test(g.type))); };
+  addEventListener('keydown',e=>{ if(!F.on||typing(e)) return; const k=e.key.toLowerCase(); if(k==='escape'){ api.leave(); return; } if(KEYS.includes(k)&&!e.ctrlKey&&!e.metaKey){ F.keys.add(k); e.preventDefault(); e.stopPropagation(); } },true);
+  addEventListener('keyup',e=>{ F.keys.delete(e.key.toLowerCase()); },true); addEventListener('blur',()=>F.keys.clear());
+  document.addEventListener('mousemove',e=>{ if(!F.on||(document.pointerLockElement!==cv&&!F.held)) return; F.yaw-=e.movementX*0.0022; F.pitch=Math.max(-1.55,Math.min(1.55,F.pitch-e.movementY*0.0022)); opts.changed(); });
+  document.addEventListener('pointerlockchange',()=>{ if(document.pointerLockElement===cv) F.locked=true; else if(F.on&&F.locked) api.leave(); });
+  const take=()=>{ try{ const r=cv.requestPointerLock(); if(r&&r.catch) r.catch(()=>{}); }catch(_){} };
+  cv.addEventListener('pointerdown',()=>{ if(!F.on) return; F.held=true; if(document.pointerLockElement!==cv) take(); }); addEventListener('pointerup',()=>{ F.held=false; });
+  const api={ get on(){ return F.on; },
+    enter(){ if(F.on) return; F.on=true; F.locked=false; F.keys.clear(); F.p.copy(cam.position); const e=new THREE.Euler().setFromQuaternion(cam.quaternion,'YXZ'); F.yaw=e.y; F.pitch=e.x; F.last=performance.now(); take(); opts.changed(); },
+    leave(){ if(!F.on) return; F.on=false; F.keys.clear(); if(document.pointerLockElement===cv) document.exitPointerLock(); opts.ended(); },
+    step(now){ if(!F.on) return false; const dt=Math.min(0.05,Math.max(0,(now-F.last)/1000)); F.last=now; let moved=false;
+      const cp=Math.cos(F.pitch), fx=-Math.sin(F.yaw)*cp, fy=Math.sin(F.pitch), fz=-Math.cos(F.yaw)*cp, rx=Math.cos(F.yaw), rz=-Math.sin(F.yaw), v=opts.speed()*(F.keys.has('shift')?3:1)*dt;
+      const go=(k,x,y,z)=>{ if(F.keys.has(k)){ F.p.x+=x*v; F.p.y+=y*v; F.p.z+=z*v; moved=true; } };
+      go('w',fx,fy,fz); go('s',-fx,-fy,-fz); go('d',rx,0,rz); go('a',-rx,0,-rz); go('e',0,1,0); go('q',0,-1,0); go('c',0,-1,0);
+      cam.position.copy(F.p); cam.rotation.set(F.pitch,F.yaw,0,'YXZ'); return moved; } };
+  return api; }
+// F switches Free fly on and off in whichever of 3D and the Ball is open.
+document.addEventListener('keydown',e=>{ if((e.key!=='f'&&e.key!=='F')||e.ctrlKey||e.metaKey||e.altKey) return; const g=e.target; if(g&&(/^(TEXTAREA|SELECT)$/.test(g.tagName)||(g.tagName==='INPUT'&&!/^(checkbox|range|button)$/.test(g.type)))) return;
+  if(T3&&T3.on){ e.preventDefault(); $('fly3').click(); } else if(ORB&&ORB.on){ e.preventDefault(); $('ball-fly').click(); } });
+
 // ---- Ball ----
 // The circle on the screen made into a ball that can be turned where it stands. Switched on, it takes the largest circle of
 // the drawing (about the middle) that is wholly on screen, and stands a ball of that size in that place, facing you, so at first
@@ -2779,7 +2816,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   const half=sign=>{ const geo=new T.BufferGeometry(); geo.setIndex(idx); ['position','normal'].forEach(k=>geo.setAttribute(k,new T.BufferAttribute(new Float32Array(nv*3),3))); geo.setAttribute('uv',new T.BufferAttribute(new Float32Array(nv*2),2));
     const m=new T.Mesh(geo,mat); m.frustumCulled=false; g.add(m); return {geo,m,sign}; };
   const front=half(1), back=half(-1), YAX=new T.Vector3(0,1,0), XAX=new T.Vector3(1,0,0), ZAX=new T.Vector3(0,0,1);
-  const S={on:false,d:null,R:1,zoom:1,spin:false,stale:true,need:true,step:-1,last:0,sx:0,sy:0,k:1,w:0,h:0,drag:null};
+  const S={on:false,d:null,R:1,zoom:1,spin:false,stale:true,need:true,step:-1,last:0,sx:0,sy:0,k:1,w:0,h:0,drag:null,D0:4};
   function shape(){ const t=orbRound, m=PAD/TS;
     [front,back].forEach(h=>{ const p=h.geo.attributes.position.array, u=h.geo.attributes.uv.array, nn=h.geo.attributes.normal.array;
       for(let i=0;i<=NR;i++){ const th=i/NR*Math.PI/2, rho=Math.sin(th), z=Math.cos(th);
@@ -2798,18 +2835,32 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   async function paintT(){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return; deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,S.R*fig.u,TS/1500,picOn,'#0D1019'); tex.needsUpdate=true; S.need=true; }
   function place(){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return false; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; }
     const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan(14*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));
-    cam.aspect=w/h; cam.position.set(0,0,D); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
+    cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
     if((S.stale||run)&&t-S.last>(run?70:0)){ S.stale=false; S.last=t; paintT(); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
-    if(!S.need) return; if(!place()) return; S.need=false; ren.render(scene,cam); }
-  cv.addEventListener('pointerdown',e=>{ S.drag={x:e.clientX,y:e.clientY,roll:e.button===2||e.shiftKey}; try{ cv.setPointerCapture(e.pointerId); }catch(_){} cv.classList.add('turning'); });
-  cv.addEventListener('pointermove',e=>{ const d=S.drag; if(!d) return; const dx=e.clientX-d.x, dy=e.clientY-d.y; d.x=e.clientX; d.y=e.clientY;
-    if(d.roll) g.rotateOnWorldAxis(ZAX,-dx*0.006); else { g.rotateOnWorldAxis(YAX,dx*0.006); g.rotateOnWorldAxis(XAX,dy*0.006); } S.need=true; });
+    if(fly.on&&fly.step(t)) S.need=true;
+    if(!S.need) return;
+    if(fly.on){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; } cam.aspect=w/h; cam.near=0.01; cam.far=400; cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+    else if(!place()) return;
+    S.need=false; ren.render(scene,cam); }
+  // Getting about, as in 3D: the left button moves it across the screen, the right button turns it, the wheel brings it closer.
+  // (Shift with either button rolls it.) Turning goes the way it does when you look up into the dome in 3D: the picture slides
+  // against the drag, as it would if you were the one moving.
+  const FLYFOV=62, fly=makeFly(cv,cam,{speed:()=>Math.max(0.3,S.D0*0.5), changed:()=>{ S.need=true; }, ended:()=>{ cam.fov=28; $('ball-fly').checked=false; $('ball-fly-note').hidden=true; S.need=true; }});
+  $('ball-fly').onchange=()=>{ if(!S.on){ $('ball-fly').checked=false; return; } if(!$('ball-fly').checked){ fly.leave(); return; }
+    // the same view, through a camera that looks straight ahead: turned toward where the ball stands on the screen
+    // (and through a wider lens, brought closer so the ball looks the size it did)
+    S.drag=null; if(!place()) return; const w=S.w, h=S.h, th=Math.tan(FLYFOV/2*Math.PI/180), yaw=Math.atan((S.sx-w/2)/(h/2)*th), pitch=-Math.atan(-(S.sy-h/2)/(h/2)*th*Math.cos(yaw));
+    const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(1.6,rpx*th/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));
+    cam.clearViewOffset(); cam.fov=FLYFOV; cam.position.set(0,0,D); cam.rotation.set(pitch,yaw,0,'YXZ'); cam.updateMatrixWorld(); S.D0=D; fly.enter(); $('ball-fly-note').hidden=false; };
+  cv.addEventListener('pointerdown',e=>{ if(fly.on) return; S.drag={x:e.clientX,y:e.clientY,b:e.button,roll:e.shiftKey}; try{ cv.setPointerCapture(e.pointerId); }catch(_){} cv.classList.add('turning'); });
+  cv.addEventListener('pointermove',e=>{ const d=S.drag; if(!d||fly.on) return; const dx=e.clientX-d.x, dy=e.clientY-d.y; d.x=e.clientX; d.y=e.clientY;
+    if(d.roll) g.rotateOnWorldAxis(ZAX,-dx*0.006); else if(d.b===2){ g.rotateOnWorldAxis(YAX,-dx*0.006); g.rotateOnWorldAxis(XAX,-dy*0.006); } else { S.sx+=dx; S.sy+=dy; } S.need=true; });
   const drop=()=>{ S.drag=null; cv.classList.remove('turning'); }; cv.addEventListener('pointerup',drop); cv.addEventListener('pointercancel',drop); cv.addEventListener('contextmenu',e=>e.preventDefault());
-  cv.addEventListener('wheel',e=>{ e.preventDefault(); S.zoom=Math.max(0.15,Math.min(10,S.zoom*Math.exp(-e.deltaY*0.0012))); S.need=true; },{passive:false});
-  const faceOn=()=>{ g.quaternion.identity(); S.zoom=1; S.need=true; }; cv.addEventListener('dblclick',faceOn); $('ball-front').onclick=faceOn;
+  cv.addEventListener('wheel',e=>{ e.preventDefault(); if(fly.on) return; S.zoom=Math.max(0.15,Math.min(10,S.zoom*Math.exp(-e.deltaY*0.0012))); S.need=true; },{passive:false});
+  const faceOn=()=>{ fly.leave(); frame(); g.quaternion.identity(); S.zoom=1; S.need=true; }; cv.addEventListener('dblclick',faceOn); $('ball-front').onclick=faceOn;
   new ResizeObserver(()=>{ if(S.on){ frame(); S.need=true; } }).observe(box);
   $('ball-round').oninput=e=>{ orbRound=Math.max(0,Math.min(1,parseFloat(e.target.value)||0)); store.set('dome-ball-round',orbRound); shape(); };
   $('ball-size').oninput=e=>{ S.R=Math.max(0.05,parseFloat(e.target.value)||1); $('ball-size-v').textContent=S.R.toFixed(2); S.stale=true; S.need=true; };
@@ -2817,7 +2868,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   return { get on(){ return S.on; }, dirty(){ S.stale=true; },
     open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
-    close(){ if(!S.on) return; S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); } }; }
+    close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); } }; }
 $('ball-round').value=orbRound;
 $('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); return; }
   if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close(); b.disabled=true;
