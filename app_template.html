@@ -841,7 +841,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             <div class="col" id="col-canvas" role="group" aria-label="Canvas"><div class="modehead"><h4>Canvas</h4></div>
             <label class="row" title="The lines through the middle of the drawing: tick to show them, slide for how strong"><input type="checkbox" id="axes-on" checked> Guides <input type="range" id="axes-str" min="0.1" max="1" step="0.01" aria-label="How strong the guide lines are"></label>
             <label class="row" title="How strong the squared paper is">Paper <input type="range" id="paper-str" min="0" max="3" step="0.05" aria-label="How strong the squared paper is"></label>
-            <div class="row2"><label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars</label><label class="row" title="The grid lines over the stars, while Nebula is on"><input type="checkbox" id="sky-grid"> Grid</label></div>
+            <div class="row2"><label class="row" title="Stars all round, behind everything"><input type="checkbox" id="sky-stars"> Stars</label><label class="row" title="The grid lines over the stars"><input type="checkbox" id="sky-grid"> Grid</label></div>
             </div>
             <i class="colrule" aria-hidden="true"></i>
             <div class="col" id="col-view" role="group" aria-label="View"><div class="modehead"><h4>View</h4><span class="headbtns"><button class="pill" id="z-fit" title="The whole photo">Fit</button><button class="pill" id="centre-btn" title="Back to the middle, unturned">Centre</button></span></div>
@@ -1581,7 +1581,7 @@ function setFig(){
   setEye();
 }
 // ---- stars behind ----
-// With Sky on, what lies behind everything is space: on the desk a field of stars under the squared paper, and in 3D and Space
+// With Stars ticked (in Canvas), what lies behind everything is space: on the desk a field of stars under the squared paper, and in 3D and Space
 // a sky of stars all round you that turns as you look about. Grid lines keeps the lines or takes them away: on the desk they
 // are the squared paper; in 3D and Space they are the lines of a globe drawn on the sky, level with the drawing.
 // The sky is the real one: NASA's Deep Star Maps 2020 (the whole sky as one picture, the Milky Way in it), and over it the
@@ -1596,7 +1596,7 @@ const skyBig=()=>(navigator.deviceMemory||8)>=8&&Math.max(screen.width,screen.he
 const skyImage=()=>skyPic||(skyPic=(cur?photoOf(cur).catch(()=>{}):Promise.resolve()).then(()=>new Promise(ok=>{ const im=new Image(); im.onload=()=>ok(im); im.onerror=()=>ok(null); im.src=SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'); })));   // after the open dome's own photo, which matters more
 const skyStars=()=>skyCat||(skyCat=fetch(SKYDIR+'stars.bin').then(r=>r.ok?r.arrayBuffer():null).catch(()=>null));
 let starsOn=store.get('dome-sky-stars',true)!==false, starGrid=store.get('dome-sky-grid',true)!==false;
-const starsShown=()=>skyShown()&&starsOn, SPACEINK='#03040a';
+const starsShown=()=>starsOn, SPACEINK='#03040a';   // the stars are their own switch (Canvas, Stars): until 2026-10-06 they showed only while Nebula was on
 const rnd=seed=>()=>{ seed=seed+0x6D2B79F5|0; let v=Math.imul(seed^seed>>>15,1|seed); v=v+Math.imul(v^v>>>7,61|v)^v; return ((v^v>>>14)>>>0)/4294967296; };
 const STARTINT=[[.8,.87,1],[.8,.87,1],[1,1,1],[1,.93,.8],[1,.82,.62],[.7,.8,1]];
 function softBlob(c,x,y,r,col,a){ const g=c.createRadialGradient(x,y,0,x,y,r); g.addColorStop(0,`rgba(${col},${a})`); g.addColorStop(1,`rgba(${col},0)`); c.fillStyle=g; c.fillRect(x-r,y-r,2*r,2*r); }
@@ -1612,7 +1612,7 @@ function paintSpace(){ const cv=$('space'); if(cv.dataset.done) return; cv.datas
 function realSpace(){ const cv=$('space'); if(cv.dataset.real) return; cv.dataset.real='1';
   skyImage().then(im=>{ if(!im) return; const k=im.naturalWidth/8192, c=cv.getContext('2d'); c.globalCompositeOperation='source-over'; c.globalAlpha=1; c.drawImage(im,4476*k,876*k,2048*k,2048*k,0,0,cv.width,cv.height); }); }
 function showSpace(){ const on=starsShown(), st=$('stage'); if(on){ paintSpace(); realSpace(); } st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid;
-  $('sky-stars').closest('label').classList.toggle('idle',!skyShown()); $('sky-grid').closest('label').classList.toggle('idle',!skyShown()||!starsOn); }
+  $('sky-grid').closest('label').classList.toggle('idle',!starsOn); }   // Grid acts on the stars only
 $('sky-stars').onchange=()=>{ starsOn=$('sky-stars').checked; store.set('dome-sky-stars',starsOn); showSpace(); dirty3(); };
 $('sky-grid').onchange=()=>{ starGrid=$('sky-grid').checked; store.set('dome-sky-grid',starGrid); showSpace(); dirty3(); };
 // The launch (see launch3 in make3d): going from 3D to Space, a tunnel of grid lines rushes past you. WARP says how strongly it
