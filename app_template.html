@@ -688,7 +688,6 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 #boxes>.modebox.picsbox{width:auto;max-width:calc(100% - 2*var(--in,52px))}
 .picsbox>.boxname{display:none} .canvas.compact .picsbox>.boxname,.canvas.phone .picsbox>.boxname{display:flex}
 .picsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
-.picsbox #mix{max-width:194px}
 .btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
 label.row.idle{opacity:.5}   /* a setting that acts only while something else is on: still there to be set, but quiet */
 .picsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
@@ -699,13 +698,13 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
 .picsbox .colrule::after{content:"";position:absolute;left:7px;top:50%;width:6px;height:6px;margin-top:-4px;transform:rotate(45deg);background:var(--paper);border:1px solid var(--gilt)}
 .canvas.phone .picsbox .cols{flex-direction:column;flex-wrap:nowrap} .canvas.phone .picsbox .col{flex:none}
 .canvas.phone .picsbox .colrule{flex:0 0 17px} .canvas.phone .picsbox .colrule::before{left:2px;right:2px;top:8px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent)} .canvas.phone .picsbox .colrule::after{left:50%;top:5px;margin:0 0 0 -4px}
-#mix{display:block;width:100%;max-width:230px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
+#mix{display:block;width:100%;max-width:228px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
 #mix .tri{fill:color-mix(in srgb,var(--gilt) 7%,transparent);stroke:var(--gilt);stroke-width:1.6;stroke-linejoin:round}
 #mix .med{fill:none;stroke:var(--line);stroke-width:1} #mix .mid{fill:none;stroke:var(--gilt);stroke-width:1.2;opacity:.8}
-#mix text{font:600 13px var(--text);fill:var(--ink)}
+#mix text{font:600 12px var(--text);fill:var(--ink)}
 #mix .knob{fill:var(--gilt);stroke:var(--paper);stroke-width:3;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
 #mix.off .knob{fill:var(--soft)} #mix.off .tri{stroke:var(--rule)} #mix.off text{fill:var(--soft)}
-#mix-says{margin:0;text-align:center;color:var(--soft);min-height:1.4em}
+#mix .pc{fill:var(--soft);font-weight:500}
 /* ---- the front page ----
    A band across the top (the name, the search, the filter). Under it the top half of the window is the Earth, with a dot for
    every dome; then the dome photos, large, with nothing drawn on them; then the flat map, the tables and the credits. */
@@ -886,11 +885,12 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             </div>
             <i class="colrule" aria-hidden="true"></i>
             <div class="col mixgrp" id="col-mix" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally. Switching Mix on switches all three on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
-              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the nebula shows">
-                <path class="tri" d="M110 26L22 178H198Z"/><path class="med" d="M110 26V178M22 178L154 102M198 178L66 102"/><circle class="mid" cx="110" cy="127.3" r="5"/>
-                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="218" y="198" text-anchor="end">Nebula</text>
-                <circle class="knob" id="mix-knob" cx="110" cy="127.3" r="9"/></svg>
-              <p class="note" id="mix-says"></p>
+              <svg id="mix" viewBox="0 0 228 122" role="img" aria-label="How much of the dome, the eye and the nebula shows">
+                <path class="tri" d="M114 12L58 108H170Z"/><path class="med" d="M114 12V108M58 108L142 60M170 108L86 60"/><circle class="mid" cx="114" cy="76" r="4"/>
+                <text x="126" y="20">Dome <tspan class="pc" id="mix-pd"></tspan></text>
+                <text x="50" y="96" text-anchor="end">Eye</text><text class="pc" id="mix-pe" x="50" y="111" text-anchor="end"></text>
+                <text x="178" y="96">Nebula</text><text class="pc" id="mix-ps" x="178" y="111"></text>
+                <circle class="knob" id="mix-knob" cx="114" cy="76" r="8"/></svg>
             </div>
             </div>
           </section>
@@ -1408,7 +1408,7 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
   // the top row: the pictures' toolbar first, in the top left corner (it is as wide as its four columns), then the three settings boxes
   const base=H-IN, top4=['picture','lines','guides','crossings'].map(by), PICS=by('picture'), wOf=b=>b===PICS?(PICS.classList.contains('shut')?PICS._ow||1000:PICS._ow=PICS.offsetWidth):BW;
-  [...top4,by('view')].forEach(b=>{ b.style.minHeight=''; });   // each at its own height while they are measured
+  [...top4,by('view')].forEach(b=>{ b.style.minHeight=''; });
   // The boxes become drawers only when they truly do not fit open: when the row of mode toolbars is wider than the canvas, or when
   // the top boxes (which wrap on to a second row on a narrower canvas) and the tallest mode toolbar would leave less than 220
   // pixels of bare canvas between them. Going small shuts them all; going large again opens them all.
@@ -1430,9 +1430,6 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
     let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; }); tabsEnd=mx;
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
-    // the boxes of the first row (View at its right end among them) are all made as tall as the tallest, so the row is one height
-    { const row1=[by('view')]; let rx=IN; for(const b of top4){ const w=wOf(b); if(rx+w>W-IN-BW-G&&rx>IN) break; row1.push(b); rx+=w+G; }
-      const free=row1.filter(b=>!boxPlaces[b.dataset.box]), tall=Math.max(0,...free.map(b=>b.offsetHeight)); free.forEach(b=>{ b.style.minHeight=tall+'px'; }); }
     put(by('view'),W-IN-BW,TOP);
     let x=IN, y=TOP, rowH=0;
     top4.forEach(b=>{ const limit=y===TOP?W-IN-BW-G:W-IN, w=wOf(b); if(x+w>limit&&x>IN){ x=IN; y+=rowH+G; rowH=0; } put(b,x,y); x+=w+G; rowH=Math.max(rowH,b.offsetHeight); });
@@ -2524,10 +2521,10 @@ function setEyeOn(on){ eyeOn=on&&!!eye; store.set('dome-eye-on',eyeOn); if(eyeOn
 // share of what the eye leaves, and the sky all of the rest. The three Strength sliders are moved to those values. Moving a
 // Strength slider by hand, or switching one of the three off, switches Mix off, since the dot would no longer say what shows.
 let mixOn=store.get('dome-mix-on',false)===true, mix=store.get('dome-mix',null); if(!(Array.isArray(mix)&&mix.length===3&&mix.every(v=>v>=0&&v<=1)&&Math.abs(mix[0]+mix[1]+mix[2]-1)<0.01)) mix=[1/3,1/3,1/3];
-const MIXP=[[110,26],[22,178],[198,178]];
+const MIXP=[[114,12],[58,108],[170,108]];
 function showMix(){ const [d,e,s]=mix, x=d*MIXP[0][0]+e*MIXP[1][0]+s*MIXP[2][0], y=d*MIXP[0][1]+e*MIXP[1][1]+s*MIXP[2][1];
   $('mix-knob').setAttribute('cx',x); $('mix-knob').setAttribute('cy',y); $('mix').classList.toggle('off',!mixOn); $('mix-on').checked=mixOn;
-  const pc=v=>Math.round(v*100)+'%'; $('mix-says').textContent=mixOn?`Dome ${pc(d)} · Eye ${pc(e)} · Nebula ${pc(s)}`:''; }
+  const pc=v=>mixOn?Math.round(v*100)+'%':''; $('mix-pd').textContent=pc(d); $('mix-pe').textContent=pc(e); $('mix-ps').textContent=pc(s); }
 function applyMix(){ if(!mixOn||!cur) return; const [d,e,s]=mix, r2=v=>Math.round(Math.max(0,Math.min(1,v))*100)/100;
   eyeFade=r2(e); fade=d+s>1e-6?r2(d/(d+s)):0; skyFade=1;
   store.set('dome-eye-opacity',eyeFade); store.set('dome-photo-opacity',fade); store.set('dome-sky-opacity',skyFade);
@@ -2537,7 +2534,7 @@ function setMix(on){ mixOn=on; store.set('dome-mix-on',mixOn);
   showMix(); }
 $('mix-on').onchange=()=>setMix($('mix-on').checked);
 { const sv3=$('mix'); let down=false;
-  const put=e=>{ const r=sv3.getBoundingClientRect(); let x=(e.clientX-r.left)*220/r.width, y=(e.clientY-r.top)*204/r.height;
+  const put=e=>{ const r=sv3.getBoundingClientRect(); let x=(e.clientX-r.left)*228/r.width, y=(e.clientY-r.top)*122/r.height;
     const [A,B,C]=MIXP, det=(B[1]-C[1])*(A[0]-C[0])+(C[0]-B[0])*(A[1]-C[1]);
     let d=((B[1]-C[1])*(x-C[0])+(C[0]-B[0])*(y-C[1]))/det, ee=((C[1]-A[1])*(x-C[0])+(A[0]-C[0])*(y-C[1]))/det, s=1-d-ee;
     d=Math.max(0,d); ee=Math.max(0,ee); s=Math.max(0,s); const sum=d+ee+s||1; d/=sum; ee/=sum; s/=sum;
