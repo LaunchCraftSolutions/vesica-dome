@@ -2807,10 +2807,9 @@ function make3d(){
   const scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(50,1,0.01,600), tgt=new THREE.Vector3();
   const TS=Math.min(4096,R.capabilities.maxTextureSize), PAD=4, tc=document.createElement('canvas'); tc.width=tc.height=TS;   // the sheet; its clear border is what lies beyond the photo
   const tex=new THREE.CanvasTexture(tc); tex.anisotropy=R.capabilities.getMaxAnisotropy();
-  // Painting the full sheet and handing it to the graphics card takes about a tenth of a second, too long to do on every move of
-  // a slider. So there is a second sheet half the size each way, four times as quick: it is used while changes keep coming (a
-  // slider being dragged, the build playing), and the full sheet is painted once when they stop.
-  const TL=Math.min(2048,TS), tcL=document.createElement('canvas'); tcL.width=tcL.height=TL; const texL=new THREE.CanvasTexture(tcL); texL.anisotropy=tex.anisotropy;
+  // (For a day there was a second sheet half the size each way, used while a slider was moving. Blown up to full size it blurred, and the
+  // blurred lines read as fatter, so everything seemed to swell while a slider moved. Measured again once the crossings were drawn by the
+  // graphics card, the full sheet costs next to nothing to paint, so there is only the one.)
   const LIVE3=45;   // while the build plays, the least time between two paintings of the sheet, in thousandths of a second
   // how far from the middle the sheet reaches, in first circles: just past the far side of whatever is drawn so far
   // It stops at the photo's furthest corner: past that there is no picture to lay the drawing on, and a wider sheet would only blur the photo.
@@ -3057,9 +3056,9 @@ function make3d(){
       for(let i=0;i<rowsA;i++){ const x=(i-NA)/NB, r=i<=NA?A.a+(rA-A.a)*i/NA:rA+(rF-rA)*x*(0.45+0.55*x), v=i*(NS+1)+j; flatA[v]=r;
         uvA[v*2]=m+(half+r*rim*ct)*s; uvA[v*2+1]=1-(m+(half+r*rim*st)*s); } }
     geoA.attributes.uv.needsUpdate=true; S.key=keyOf(); S.skey=sheetKey(); raise(); }
-  async function sheet(quick){   // the photo and the strokes as they stand on the desk
-    const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return; const n=quick?TL:TS, tx=quick?texL:tex;
-    deskTo((quick?tcL:tc).getContext('2d'),n,PAD*n/TS,d,im,fig.cx,fig.cy,reach3(),n/1860,true); if(mesh.material.map!==tx) mesh.material.map=tx; tx.needsUpdate=true;
+  async function sheet(){   // the photo and the strokes as they stand on the desk
+    const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return;
+    deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,reach3(),TS/1860,true); tex.needsUpdate=true;
     { const thru=starsShown()||!!S.launch, m=mesh.material; if(m.transparent!==thru){ m.transparent=thru; m.alphaTest=thru?0.02:0.5; m.needsUpdate=true; } }   // see-through only while the stars are out
     S.need=true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
@@ -3067,11 +3066,9 @@ function make3d(){
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
     // While the build plays the sheet is painted again and again from the live strokes; the spheres are rebuilt only when the
     // step changes. When the play ends the sheet is painted once more from the finished steps.
-    if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; S.sharp=t+260; sheet(true); if(S.stale){ S.stale=false; spheres(); } } }
+    if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; sheet(); if(S.stale){ S.stale=false; spheres(); } } }
     else { if(S.live){ S.live=false; S.stale=true; }
-      // one change by itself is painted in full straight away; changes that keep coming get the quick sheet, and the full one when they stop
-      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=!!S.launch||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; sheet(more); spheres(); }
-      else if(S.sharp&&t>S.sharp&&!S.stale&&!S.launch){ S.sharp=0; sheet(false); } }   // (no full painting in the middle of the launch: it would hold a frame up)
+      if(S.stale&&t-S.last>30){ S.stale=false; S.last=t; sheet(); spheres(); } }
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(S.launch){ launchStep(t); S.need=true; }
@@ -3300,7 +3297,6 @@ let orbRound=+store.get('dome-ball-round',1); if(!(orbRound>=0&&orbRound<=1)) or
 function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); ren.setPixelRatio(Math.min(devicePixelRatio||1,2));
   const scene=new T.Scene(), cam=new T.PerspectiveCamera(28,1,0.05,200), g=new T.Group(); scene.add(g); const spaceO=makeSpace(T,100);
   const TS=Math.min(2048,ren.capabilities.maxTextureSize), PAD=2, tc=document.createElement('canvas'); tc.width=tc.height=TS; const tex=new T.CanvasTexture(tc); tex.anisotropy=ren.capabilities.getMaxAnisotropy();
-  const TL=Math.min(1024,TS), tcL=document.createElement('canvas'); tcL.width=tcL.height=TL; const texL=new T.CanvasTexture(tcL); texL.anisotropy=tex.anisotropy;   // the quick, smaller picture, used while changes keep coming (as on the 3D sheet)
   const NR=64, NS=160, nv=(NR+1)*(NS+1), idx=[]; for(let i=0;i<NR;i++) for(let j=0;j<NS;j++){ const a=i*(NS+1)+j, b=a+NS+1; idx.push(a,b,a+1,a+1,b,b+1); }
   // lit from where you stand: full in the middle, falling away toward the rim, so it reads as a ball however it is turned
   const mat=new T.ShaderMaterial({uniforms:{map:{value:tex},ballness:{value:1}},side:T.DoubleSide,
@@ -3325,15 +3321,14 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     for(let i=0;i<n&&i<STEPS.length;i++) STEPS[i].s.forEach(sh=>{ if(sh.t==='c'&&Math.hypot(sh.ctr[0],sh.ctr[1])<1e-6) rings.push(sh.r); });
     if(!(room>0.2)) return rings.length?Math.max(...rings):1; const fit=rings.filter(r=>r<=room*1.002); return fit.length?Math.max(...fit):room*0.95; }
   function sizeShown(){ const e=$('ball-size'); e.max=Math.max(12,Math.ceil(S.R*1.5)); e.value=S.R; $('ball-size-v').textContent=S.R.toFixed(2); }
-  async function paintT(quick){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return; const n=quick?TL:TS, tx=quick?texL:tex;
-    deskTo((quick?tcL:tc).getContext('2d'),n,PAD*n/TS,d,im,fig.cx,fig.cy,S.R*fig.u,n/1500,picOn,'#0D1019'); mat.uniforms.map.value=tx; tx.needsUpdate=true; S.need=true; }
+  async function paintT(){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return;
+    deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,S.R*fig.u,TS/1500,picOn,'#0D1019'); tex.needsUpdate=true; S.need=true; }
   function place(){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return false; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; }
     const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan((S.landF||S.fov)/2*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));   // while landing, the camera stands where the lens it will end with would put it
     cam.fov=S.fov; cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
-    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||!!S.landF||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; paintT(more); }
-    else if(S.sharp&&t>S.sharp){ S.sharp=0; paintT(false); }
+    if((S.stale||run)&&t-S.last>(run?70:0)){ S.stale=false; S.last=t; paintT(); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(!S.need) return;
