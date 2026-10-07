@@ -2231,9 +2231,16 @@ async function animate(sh,quick,tok,kw,i){
   parts.forEach(e=>e.remove()); done();
 }
 // REACH (how far from the middle each step reaches) keeps the view close on what is being drawn.
+// Close, but clear of the toolbars: the drawing is kept inside the largest circle about the middle of the canvas that touches none
+// of them (clearK says how much further out that puts the view than a bare canvas would need; 1 with the toolbars hidden or on a phone).
+function clearK(){ const st=$('stage'); if(st.classList.contains('phone')||st.classList.contains('bare')) return 1;
+  const S=st.getBoundingClientRect(), cx=S.left+S.width/2, cy=S.top+S.height/2, usual=0.4*S.width; let room=usual;
+  document.querySelectorAll('#boxes>.modebox,#drawer .dock').forEach(b=>{ if(b.hidden||!b.offsetWidth) return; const r=b.getBoundingClientRect();
+    const dx=Math.max(r.left-cx,0,cx-r.right), dy=Math.max(r.top-cy,0,cy-r.bottom), d=Math.hypot(dx,dy); if(d>0) room=Math.min(room,d-14); });
+  return usual/Math.max(0.22*Math.min(S.width,S.height),room); }
 async function frameOn(i,tok){
   if(!$('follow').checked) return;
-  const far=Math.max(1.6,...REACH.slice(0,i+1)), a={...view}, b=boxView(fig.cx,fig.cy,Math.min(cur.view_px*1.15,2*far*fig.u*1.25));
+  const far=Math.max(1.6,...REACH.slice(0,i+1)), a={...view}, ck=clearK(), b=boxView(fig.cx,fig.cy,Math.min(cur.view_px*1.15,2*far*fig.u*1.25)*ck);
   if(Math.abs(a.w-b.w)<1&&Math.abs(a.x-b.x)<1&&Math.abs(a.y-b.y)<1) return;
   await tween(500,t=>{const k=t*t*(3-2*t); view={x:a.x+(b.x-a.x)*k,y:a.y+(b.y-a.y)*k,w:a.w+(b.w-a.w)*k}; setView();},tok);
 }
