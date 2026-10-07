@@ -687,7 +687,10 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
    shut to a tab on a small canvas. On a phone the columns stand one under another. */
 #boxes>.modebox.picsbox{width:auto;max-width:calc(100% - 2*var(--in,52px))}
 .picsbox>.boxname{display:none} .canvas.compact .picsbox>.boxname,.canvas.phone .picsbox>.boxname{display:flex}
-.picsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px}
+.picsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
+.picsbox #mix{max-width:194px}
+.btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
+label.row.idle{opacity:.5}   /* a setting that acts only while something else is on: still there to be set, but quiet */
 .picsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
 .picsbox .col h4{cursor:default!important;margin:0} .picsbox .col h4::after{display:none!important}
 .picsbox .col.off>:not(.modehead){opacity:.4;pointer-events:none}
@@ -812,6 +815,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <div class="gg" role="toolbar" aria-label="First circle"><button id="m-circle" aria-pressed="false" title="First circle"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="1.4" fill="currentColor"/><circle cx="17.7" cy="6.3" r="1.4" fill="currentColor"/></svg></button><button id="m-more" aria-pressed="false" title="Add a first circle"><svg viewBox="0 0 24 24"><circle cx="10" cy="14" r="6.5"/><path d="M18.5 3.5v6M15.5 6.5h6"/></svg></button><button id="reset-circle" title="Reset circle"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v5h5"/><circle cx="12" cy="12" r="3"/></svg></button><button id="eye" hidden title="First drawing"><svg viewBox="0 0 24 24"><path d="M12 3.5l2.6 5.4 5.9.8-4.3 4.1 1 5.9L12 16.9 6.8 19.7l1-5.9L3.5 9.7l5.9-.8z"/></svg></button></div>
             <div class="gg" role="toolbar" aria-label="Level line"><button id="m-line" aria-pressed="false" title="Level line"><svg viewBox="0 0 24 24"><path d="M3 19L21 5"/><circle cx="7.5" cy="15.5" r="1.4" fill="currentColor"/><circle cx="16.5" cy="8.5" r="1.4" fill="currentColor"/></svg></button><button id="reset-line" title="Reset level line"><svg viewBox="0 0 24 24"><path d="M4 12a8 8 0 1 0 2.6-5.9"/><path d="M4 4v5h5"/><path d="M9 15l6-6"/></svg></button></div>
             <div class="gg" role="toolbar" aria-label="Toolbars"><button id="hide-boxes" aria-pressed="false" title="Hide toolbars"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><path d="M3.5 10h17M9.5 10v9"/><path class="slash" d="M4 21L20 3"/></svg></button><button id="home-boxes" title="Put every toolbar back where it belongs"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="14" rx="1.5"/><path d="M3.5 10h17"/><path d="M16.5 14.6h-8M11 12.2l-2.5 2.4 2.5 2.4"/></svg></button></div>
+            <div class="gg" role="toolbar" aria-label="Helper"><button id="helper-on" aria-pressed="false" title="Helper"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9.7a2.6 2.6 0 1 1 3.8 2.3c-.8.5-1.3 1-1.3 2"/><circle cx="12" cy="16.7" r=".9" fill="currentColor" stroke="none"/></svg></button></div>
             <div class="gg" role="toolbar" aria-label="Reset"><button id="reset-all" title="Reset settings"><svg viewBox="0 0 24 24"><path d="M5 9a8 8 0 0 1 14.2-2.2M19 15a8 8 0 0 1-14.2 2.2"/><path d="M19.6 3v4.2h-4.2M4.4 21v-4.2h4.2"/></svg></button></div>
             
           </div>
@@ -829,17 +833,18 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <div class="btns"><button class="pill" id="z-fit" title="The whole photo">Fit</button><button class="pill" id="centre-btn" title="Back to the middle, unturned">Centre</button></div>
             <span hidden><button id="z-out"></button><button id="z-in"></button><button id="turn-dn"></button><button id="turn-up"></button><button id="turn-0"></button><button id="vturn-dn"></button><button id="vturn-up"></button><button id="vturn-0"></button></span>
           </section>
-          <section class="grp modebox" data-box="guides" aria-label="Guides"><h4>Guides</h4>
+          <section class="grp modebox" data-box="guides" aria-label="Canvas"><h4>Canvas</h4>
             <label class="row"><input type="checkbox" id="axes-on" checked> Guide lines</label>
             <label class="row">Strength <input type="range" id="axes-str" min="0.1" max="1" step="0.01" aria-label="How strong the guide lines are"></label>
             <label class="row">Paper <input type="range" id="paper-str" min="0" max="3" step="0.05" aria-label="How strong the squared paper is"></label>
-            <label class="row" title="Walks you through lining up each dome you open"><input type="checkbox" id="helper-on"> Helper</label>
+            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
+            <label class="row" title="The grid lines over the stars, while Nebula is on"><input type="checkbox" id="sky-grid"> Grid lines</label>
           </section>
           <section class="grp modebox" data-box="helper" id="helper" aria-label="Helper" hidden>
             <div class="modehead"><h4>Helper</h4><span class="helpdots" id="help-n"></span></div>
             <p class="helpt" id="help-t"></p>
             <p class="helpp" id="help-p"></p>
-            <div class="helpfoot"><span class="helpquiet"><button type="button" id="help-close" title="Put the helper away for this dome">Not now</button><button type="button" id="help-off" title="No helper on any dome, until it is ticked again in Guides">Turn off</button></span><span class="helpgo"><button class="pill" id="help-back">Back</button><button class="pill accent" id="help-next">Next</button></span></div>
+            <div class="helpfoot"><span class="helpquiet"><button type="button" id="help-close" title="Put the helper away for this dome">Not now</button><button type="button" id="help-off" title="No helper on any dome, until it is switched on again in the toolbar">Turn off</button></span><span class="helpgo"><button class="pill" id="help-back">Back</button><button class="pill accent" id="help-next">Next</button></span></div>
           </section>
           <section class="grp modebox" data-box="lines" aria-label="Lines"><h4>Lines</h4>
             <label class="row">Thickness <input type="range" id="all-thk" min="0" max="1" step="0.005" aria-label="Thickness of every line together"><span class="tv" id="all-val"></span></label>
@@ -867,8 +872,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
         <div class="bound placebar" id="eyebar" hidden><span class="lbl">Place eye</span><span class="who">Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.</span><p class="note">Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.</p><div class="btns"><button class="pill" id="eye-reset">Reset</button><button class="pill accent" id="eye-done">Done</button></div></div>
             <label class="row">Strength <input type="range" id="eye-fade2" min="0" max="1" step="0.01" aria-label="How strong the eye is"></label>
             <div class="row pick" id="eye-row"><span>Which</span><button type="button" class="pickbtn" id="eye-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
-            <div class="btns"><button class="pill" id="eye-place">Place eye</button></div>
-            <div class="btns"><button class="pill" id="eye-unplace" disabled>Reset eye</button></div>
+            <div class="btns pair"><button class="pill" id="eye-place" title="Fit the eye's iris to the first circle">Place</button><button class="pill" id="eye-unplace" title="Put the eye back where it was found" disabled>Reset</button></div>
             <input type="file" id="eye-file" accept="image/*" hidden>
         
             </div>
@@ -876,10 +880,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <div class="col" id="mode-sky" role="group" aria-label="Nebula"><div class="modehead"><h4>Nebula</h4><label class="onoff"><input type="checkbox" id="sky-on"> On</label></div>
             <label class="row" title="How strong the nebula is, under the dome">Strength <input type="range" id="sky-fade" min="0" max="1" step="0.01" aria-label="How strong the nebula is"></label>
             <div class="row pick" id="sky-row"><span>Which</span><button type="button" class="pickbtn" id="sky-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
-            <div class="btns"><button class="pill" id="sky-place">Place picture</button></div>
-            <div class="btns"><button class="pill" id="sky-unplace" disabled>Reset picture</button></div>
-            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
-            <label class="row" title="The grid lines over the stars"><input type="checkbox" id="sky-grid"> Grid lines</label>
+            <div class="btns pair"><button class="pill" id="sky-place" title="Fit the nebula to the first circle">Place</button><button class="pill" id="sky-unplace" title="Put the nebula back where it was found" disabled>Reset</button></div>
 
         
             </div>
@@ -1407,6 +1408,7 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
   // the top row: the pictures' toolbar first, in the top left corner (it is as wide as its four columns), then the three settings boxes
   const base=H-IN, top4=['picture','lines','guides','crossings'].map(by), PICS=by('picture'), wOf=b=>b===PICS?(PICS.classList.contains('shut')?PICS._ow||1000:PICS._ow=PICS.offsetWidth):BW;
+  [...top4,by('view')].forEach(b=>{ b.style.minHeight=''; });   // each at its own height while they are measured
   // The boxes become drawers only when they truly do not fit open: when the row of mode toolbars is wider than the canvas, or when
   // the top boxes (which wrap on to a second row on a narrower canvas) and the tallest mode toolbar would leave less than 220
   // pixels of bare canvas between them. Going small shuts them all; going large again opens them all.
@@ -1428,6 +1430,9 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
     let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; }); tabsEnd=mx;
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
+    // the boxes of the first row (View at its right end among them) are all made as tall as the tallest, so the row is one height
+    { const row1=[by('view')]; let rx=IN; for(const b of top4){ const w=wOf(b); if(rx+w>W-IN-BW-G&&rx>IN) break; row1.push(b); rx+=w+G; }
+      const free=row1.filter(b=>!boxPlaces[b.dataset.box]), tall=Math.max(0,...free.map(b=>b.offsetHeight)); free.forEach(b=>{ b.style.minHeight=tall+'px'; }); }
     put(by('view'),W-IN-BW,TOP);
     let x=IN, y=TOP, rowH=0;
     top4.forEach(b=>{ const limit=y===TOP?W-IN-BW-G:W-IN, w=wOf(b); if(x+w>limit&&x>IN){ x=IN; y+=rowH+G; rowH=0; } put(b,x,y); x+=w+G; rowH=Math.max(rowH,b.offsetHeight); });
@@ -1453,7 +1458,7 @@ const relay=()=>{ modeSig=''; showModes(); };
 // On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
 // and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
 var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
-  const order=['picture','view','lines','guides','crossings','3d','draw','fractal','ball'], name={picture:'Pictures','3d':'3D',ball:'Space'};
+  const order=['picture','view','lines','guides','crossings','3d','draw','fractal','ball'], name={picture:'Pictures',guides:'Canvas','3d':'3D',ball:'Space'};
   order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
     b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
     const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
@@ -1576,7 +1581,8 @@ function paintSpace(){ const cv=$('space'); if(cv.dataset.done) return; cv.datas
 // down from the Swan toward the Archer.
 function realSpace(){ const cv=$('space'); if(cv.dataset.real) return; cv.dataset.real='1';
   skyImage().then(im=>{ if(!im) return; const k=im.naturalWidth/8192, c=cv.getContext('2d'); c.globalCompositeOperation='source-over'; c.globalAlpha=1; c.drawImage(im,4476*k,876*k,2048*k,2048*k,0,0,cv.width,cv.height); }); }
-function showSpace(){ const on=starsShown(), st=$('stage'); if(on){ paintSpace(); realSpace(); } st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid; }
+function showSpace(){ const on=starsShown(), st=$('stage'); if(on){ paintSpace(); realSpace(); } st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid;
+  $('sky-stars').closest('label').classList.toggle('idle',!skyShown()); $('sky-grid').closest('label').classList.toggle('idle',!skyShown()||!starsOn); }
 $('sky-stars').onchange=()=>{ starsOn=$('sky-stars').checked; store.set('dome-sky-stars',starsOn); showSpace(); dirty3(); };
 $('sky-grid').onchange=()=>{ starGrid=$('sky-grid').checked; store.set('dome-sky-grid',starGrid); showSpace(); dirty3(); };
 // The launch (see launch3 in make3d): going from 3D to Space, a tunnel of grid lines rushes past you. WARP says how strongly it
@@ -3508,7 +3514,7 @@ function showResets(){ resetBtns.forEach(([b,off])=>{ let on=false; try{ on=!!cu
 // ---- the helper ----
 // A short walk-through shown each time a dome is opened, for lining the drawing up on that dome before it is built: is the first
 // circle on the ring round the dome's middle, and is the drawing turned to the dome's own lines. It is on until the user turns it
-// off, and off means off for every dome opened afterwards (the Helper tick in the Guides box brings it back). "Not now" puts it
+// off, and off means off for every dome opened afterwards (the Helper button in the main toolbar brings it back). "Not now" puts it
 // away for this dome only. While it is up, the build shows just the step being checked, and the tool it speaks of is ringed.
 let helperOn=store.get('dome-helper',true)!==false, helpAt=-1, helpStep0=0;
 const HELP=[
@@ -3528,8 +3534,10 @@ function helpLeave(){ if(helpAt<0) return; const s=helpStep0; helpEnd(); if(cur&
 $('help-next').onclick=()=>{ if(helpAt===HELP.length-1){ helpEnd(); play(0); } else helpShow(helpAt+1); };
 $('help-back').onclick=()=>helpShow(helpAt-1);
 $('help-close').onclick=helpLeave;
-$('help-off').onclick=()=>{ helperOn=false; store.set('dome-helper',false); $('helper-on').checked=false; helpLeave(); };
-$('helper-on').checked=helperOn; $('helper-on').onchange=()=>{ helperOn=$('helper-on').checked; store.set('dome-helper',helperOn); if(helperOn) helpStart(); else helpLeave(); };
+// The Helper's switch is a button in the main toolbar, lit while the helper is on.
+const showHelperOn=()=>{ const b=$('helper-on'), tip=helperOn?'Helper is on: it walks you through lining up each dome you open. Press to turn it off.':'Helper is off. Press to have it walk you through lining up each dome you open.'; b.setAttribute('aria-pressed',helperOn); b.title=tip; b.setAttribute('aria-label',helperOn?'Turn the helper off':'Turn the helper on'); };
+$('help-off').onclick=()=>{ helperOn=false; store.set('dome-helper',false); showHelperOn(); helpLeave(); };
+$('helper-on').onclick=e=>{ if(!e||e.detail<1) return; helperOn=!helperOn; store.set('dome-helper',helperOn); showHelperOn(); if(helperOn) helpStart(); else helpLeave(); }; showHelperOn();
 
 // ---- back to the zero point ----
 // The last button on the toolbar puts the page's settings back as a new visitor finds them and loads the page afresh. It does
