@@ -7,14 +7,14 @@ circle of the drawing, so the eye needs no placing by hand (it can still be re-p
 
     python fetch_eyes.py            fetch what is missing, find every iris, write eyes/_index.json and eyes/_check.jpg
 """
-import json, math, os, re, sys, time
+import html, json, math, os, re, sys, time
 import requests
 from PIL import Image, ImageDraw, ImageFilter
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(ROOT, "eyes")
 API = "https://commons.wikimedia.org/w/api.php"
-UA = {"User-Agent": "DomeDesk/1.0 (private study of dome geometry)"}
+UA = {"User-Agent": "VesicaDome/1.0 (https://github.com/LaunchCraftSolutions/vesica-dome)"}
 WIDTH = 2000
 
 # (Commons title, the name shown on the desk)
@@ -49,6 +49,35 @@ OTHERS = [
     ("File:Embryo, 8 cells.jpg", "Embryo, 8 cells", "c01", (0.497, 0.3375, 0.189), None, [], ""),
     ("File:PoroNuclear Xenopus2020.jpg", "Nuclear pore, face on", "c02", (0.508, 0.480, 0.158), (46, 0, 451, 390), [(0, 160, 24, 208)], "cropped"),
 ]
+
+# The sky: nebulae, galaxies and other round things overhead that look like an eye. The Sky box lists them. Each is laid under the
+# drawing the way an eye is, with one circle of the picture on the first circle. That circle is set by hand here, as (cx, cy, r) in
+# shares of the picture's width: the outer edge of the bright ring where there is one, the disc of a spiral galaxy.
+# All are from NASA, ESA, ESO or the Event Horizon Telescope, public domain or CC BY, by way of
+# Wikimedia Commons, fetched no wider than 2000 px into eyes/sNN.jpg.
+# Each: (Commons title, name on the desk, id, circle, and optionally the part to keep as (left, top, right, bottom) in shares of the
+# fetched width, where the picture carries lettering; the circle is then given in the cut picture)
+SKY = [
+    ("File:NGC7293 (2004).jpg", "Helix Nebula", "s01", (0.5, 0.545, 0.27)),
+    ("File:NGC6543.jpg", "Cat's Eye Nebula", "s02", (0.495, 0.49, 0.2)),
+    ("File:Hubble image of the Ring Nebula (Messier 57).jpg", "Ring Nebula", "s03", (0.5, 0.5, 0.29)),
+    ("File:Hoag's object.jpg", "Hoag's Object, a ring galaxy", "s04", (0.525, 0.48, 0.29)),
+    ("File:Planetary Nebula MyCn18- An Hourglass Pattern Around a Dying Star (1996-07-398).jpg", "Hourglass Nebula", "s05", (0.5, 0.5, 0.12)),
+    ("File:The Glowing Eye of Planetary Nebula NGC 6751 (2000-12-956).jpg", "Glowing Eye Nebula", "s06", (0.5, 0.435, 0.3), (0, 0.125, 1, 1.085)),
+    ("File:Cartwheel Galaxy (NIRCam and MIRI Composite Image) (weic2211a).jpeg", "Cartwheel Galaxy", "s07", (0.635, 0.47, 0.25)),
+    ("File:Southern Ring Nebula by Webb Telescope (2022).jpg", "Southern Ring Nebula", "s08", (0.5, 0.44, 0.19)),
+    ("File:Messier51 sRGB.jpg", "Whirlpool Galaxy", "s09", (0.375, 0.325, 0.28)),
+    ("File:Spiral Galaxy NGC 1232.jpg", "Spiral galaxy NGC 1232", "s10", (0.5, 0.49, 0.21)),
+    ("File:Black hole - Messier 87 crop max res.jpg", "Black hole in the galaxy M87", "s11", (0.5, 0.47, 0.17)),
+    ("File:Ngc2392.jpg", "Eskimo Nebula", "s13", (0.48, 0.49, 0.25)),
+    ("File:Hubble’s Spirograph (34503878404).jpg", "Spirograph Nebula", "s14", (0.5, 0.44, 0.3)),
+    ("File:Blackeyegalaxy.jpg", "Black Eye Galaxy", "s16", (0.53, 0.52, 0.2)),
+    ("File:SN 1987A HST.jpg", "Ring round the supernova of 1987", "s17", (0.5, 0.505, 0.05)),
+]
+
+# Where Commons gives a paragraph in place of the author, the credit the picture is published with.
+BY = {"s01": "NASA, NOAO, ESA, the Hubble Helix Nebula Team, M. Meixner (STScI) and T. A. Rector (NRAO)",
+      "s08": "NASA, ESA, CSA and STScI"}
 
 
 def info(title):
@@ -111,24 +140,37 @@ def main():
         im = Image.open(f)
         if im.width > WIDTH:                                    # Commons hands back its nearest standard size, which can be larger than asked for
             im = im.convert("RGB").resize((WIDTH, round(im.height * WIDTH / im.width)), Image.LANCZOS); im.save(f, quality=88)
-        w, h = Image.open(f).size; cx, cy, r, clear = find_iris(f, LARGER.get(title, 0.05))
+        w, h = Image.open(f).size
+        if old and os.path.exists(f) and (old.get("iris") or {}).get("clear") is not None:   # an iris already found is not looked for again
+            cx, cy, r, clear = (old["iris"][k] for k in ("cx", "cy", "r", "clear"))
+        else:
+            cx, cy, r, clear = find_iris(f, LARGER.get(title, 0.05))
         index.append({"id": f"e{n:02d}", "name": name, "file": f"eyes/e{n:02d}.jpg", "w": w, "h": h, "iris": {"cx": cx, "cy": cy, "r": r, "clear": clear},
                       "title": title.replace("File:", ""), "by": meta["by"][:80], "licence": meta["licence"], "licence_url": meta["licence_url"], "page": meta["page"]})
         print(f"e{n:02d} {w}x{h} {os.path.getsize(f)//1024} KB  iris ({cx}, {cy}) r {r}  clear {clear}  {name}")
-    for title, name, eid, (fx, fy, fr), crop, blanks, note in OTHERS:
+    for title, name, eid, (fx, fy, fr), crop, blanks, note in OTHERS + [s[:4] + (None, [], "cropped" if len(s) > 4 else "") for s in SKY]:
+        cut = next((s[4] for s in SKY if s[2] == eid and len(s) > 4), None)
         f = os.path.join(OUT, f"{eid}.jpg"); old = known.get(title.replace("File:", ""))
         meta = old if old and os.path.exists(f) else info(title)
         if not os.path.exists(f):
-            r = requests.get(meta["thumb"], headers=UA, timeout=120); r.raise_for_status()
+            for wait in (0, 20, 60, 120):   # Commons asks for patience now and then
+                time.sleep(wait); r = requests.get(meta["thumb"], headers=UA, timeout=120)
+                if r.status_code != 429: break
+            r.raise_for_status()
             with open(f, "wb") as fh: fh.write(r.content)
             if crop:
                 im = Image.open(f).convert("RGB").crop(crop); d = ImageDraw.Draw(im)
                 for box in blanks: d.rectangle(box, fill=(255, 255, 255))
                 im.save(f, quality=92)
+            if cut:
+                im = Image.open(f).convert("RGB"); W = im.width; im.crop(tuple(round(v * W) for v in cut)).save(f, quality=92)
             time.sleep(1)
+        im = Image.open(f)
+        if im.width > WIDTH:   # Commons hands back its nearest standard size, which can be larger than asked for
+            im = im.convert("RGB").resize((WIDTH, round(im.height * WIDTH / im.width)), Image.LANCZOS); im.save(f, quality=88)
         w, h = Image.open(f).size
         index.append({"id": eid, "name": name, "file": f"eyes/{eid}.jpg", "w": w, "h": h, "iris": {"cx": round(fx * w, 1), "cy": round(fy * w, 1), "r": round(fr * w, 1), "clear": None},
-                      "title": title.replace("File:", ""), "by": meta["by"][:80], "licence": meta["licence"], "licence_url": meta["licence_url"], "page": meta["page"], "note": note})
+                      "title": title.replace("File:", ""), "by": BY.get(eid) or html.unescape(re.sub(r"\s+", " ", meta["by"]))[:110], "licence": meta["licence"], "licence_url": meta["licence_url"], "page": meta["page"], "note": note})
         print(f"{eid} {w}x{h} {os.path.getsize(f)//1024} KB  circle set by hand  {name}")
     json.dump(index, open(os.path.join(OUT, "_index.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     # one sheet to check the found circles by eye

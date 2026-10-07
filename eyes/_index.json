@@ -288,5 +288,290 @@
   "licence_url": "https://creativecommons.org/licenses/by/4.0",
   "page": "https://commons.wikimedia.org/wiki/File:PoroNuclear_Xenopus2020.jpg",
   "note": "cropped"
+ },
+ {
+  "id": "s01",
+  "name": "Helix Nebula",
+  "file": "eyes/s01.jpg",
+  "w": 2000,
+  "h": 2156,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 1090.0,
+   "r": 540.0,
+   "clear": null
+  },
+  "title": "NGC7293 (2004).jpg",
+  "by": "NASA, NOAO, ESA, the Hubble Helix Nebula Team, M. Meixner (STScI) and T. A. Rector (NRAO)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:NGC7293_(2004).jpg",
+  "note": ""
+ },
+ {
+  "id": "s02",
+  "name": "Cat's Eye Nebula",
+  "file": "eyes/s02.jpg",
+  "w": 2000,
+  "h": 2000,
+  "iris": {
+   "cx": 990.0,
+   "cy": 980.0,
+   "r": 400.0,
+   "clear": null
+  },
+  "title": "NGC6543.jpg",
+  "by": "J.P. Harrington and K.J. Borkowski (University of Maryland), and NASA",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:NGC6543.jpg",
+  "note": ""
+ },
+ {
+  "id": "s03",
+  "name": "Ring Nebula",
+  "file": "eyes/s03.jpg",
+  "w": 2000,
+  "h": 2000,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 1000.0,
+   "r": 580.0,
+   "clear": null
+  },
+  "title": "Hubble image of the Ring Nebula (Messier 57).jpg",
+  "by": "NASA, ESA, and C. Robert O’Dell (Vanderbilt University)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Hubble_image_of_the_Ring_Nebula_(Messier_57).jpg",
+  "note": ""
+ },
+ {
+  "id": "s04",
+  "name": "Hoag's Object, a ring galaxy",
+  "file": "eyes/s04.jpg",
+  "w": 1521,
+  "h": 1489,
+  "iris": {
+   "cx": 798.5,
+   "cy": 730.1,
+   "r": 441.1,
+   "clear": null
+  },
+  "title": "Hoag's object.jpg",
+  "by": "NASA and The Hubble Heritage Team (STScI/AURA); Acknowledgment: Ray A. Lucas (STScI/AURA)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Hoag%27s_object.jpg",
+  "note": ""
+ },
+ {
+  "id": "s05",
+  "name": "Hourglass Nebula",
+  "file": "eyes/s05.jpg",
+  "w": 1280,
+  "h": 1280,
+  "iris": {
+   "cx": 640.0,
+   "cy": 640.0,
+   "r": 153.6,
+   "clear": null
+  },
+  "title": "Planetary Nebula MyCn18- An Hourglass Pattern Around a Dying Star (1996-07-398).jpg",
+  "by": "Raghvendra Sahai and John Trauger (JPL), the WFPC2 science team, and NASA",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Planetary_Nebula_MyCn18-_An_Hourglass_Pattern_Around_a_Dying_Star_(1996-07-398).jpg",
+  "note": ""
+ },
+ {
+  "id": "s06",
+  "name": "Glowing Eye Nebula",
+  "file": "eyes/s06.jpg",
+  "w": 2000,
+  "h": 1920,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 870.0,
+   "r": 600.0,
+   "clear": null
+  },
+  "title": "The Glowing Eye of Planetary Nebula NGC 6751 (2000-12-956).jpg",
+  "by": "NASA, The Hubble Heritage Team (STScI/AURA)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:The_Glowing_Eye_of_Planetary_Nebula_NGC_6751_(2000-12-956).jpg",
+  "note": "cropped"
+ },
+ {
+  "id": "s07",
+  "name": "Cartwheel Galaxy",
+  "file": "eyes/s07.jpg",
+  "w": 2000,
+  "h": 1841,
+  "iris": {
+   "cx": 1270.0,
+   "cy": 940.0,
+   "r": 500.0,
+   "clear": null
+  },
+  "title": "Cartwheel Galaxy (NIRCam and MIRI Composite Image) (weic2211a).jpeg",
+  "by": "NASA, ESA, CSA, STScI",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Cartwheel_Galaxy_(NIRCam_and_MIRI_Composite_Image)_(weic2211a).jpeg",
+  "note": ""
+ },
+ {
+  "id": "s08",
+  "name": "Southern Ring Nebula",
+  "file": "eyes/s08.jpg",
+  "w": 2000,
+  "h": 1862,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 880.0,
+   "r": 380.0,
+   "clear": null
+  },
+  "title": "Southern Ring Nebula by Webb Telescope (2022).jpg",
+  "by": "NASA, ESA, CSA and STScI",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Southern_Ring_Nebula_by_Webb_Telescope_(2022).jpg",
+  "note": ""
+ },
+ {
+  "id": "s09",
+  "name": "Whirlpool Galaxy",
+  "file": "eyes/s09.jpg",
+  "w": 2000,
+  "h": 1388,
+  "iris": {
+   "cx": 750.0,
+   "cy": 650.0,
+   "r": 560.0,
+   "clear": null
+  },
+  "title": "Messier51 sRGB.jpg",
+  "by": "NASA and European Space Agency",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Messier51_sRGB.jpg",
+  "note": ""
+ },
+ {
+  "id": "s10",
+  "name": "Spiral galaxy NGC 1232",
+  "file": "eyes/s10.jpg",
+  "w": 2000,
+  "h": 1969,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 980.0,
+   "r": 420.0,
+   "clear": null
+  },
+  "title": "Spiral Galaxy NGC 1232.jpg",
+  "by": "ESO/IDA/Danish 1.5 m/R.Gendler and A. Hornstrup.",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Spiral_Galaxy_NGC_1232.jpg",
+  "note": ""
+ },
+ {
+  "id": "s11",
+  "name": "Black hole in the galaxy M87",
+  "file": "eyes/s11.jpg",
+  "w": 2000,
+  "h": 2000,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 940.0,
+   "r": 340.0,
+   "clear": null
+  },
+  "title": "Black hole - Messier 87 crop max res.jpg",
+  "by": "Event Horizon Telescope, uploader cropped and converted TIF to JPG",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:Black_hole_-_Messier_87_crop_max_res.jpg",
+  "note": ""
+ },
+ {
+  "id": "s13",
+  "name": "Eskimo Nebula",
+  "file": "eyes/s13.jpg",
+  "w": 1500,
+  "h": 1500,
+  "iris": {
+   "cx": 720.0,
+   "cy": 735.0,
+   "r": 375.0,
+   "clear": null
+  },
+  "title": "Ngc2392.jpg",
+  "by": "NASA, ESA, Andrew Fruchter (STScI), and the ERO team (STScI + ST-ECF)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Ngc2392.jpg",
+  "note": ""
+ },
+ {
+  "id": "s14",
+  "name": "Spirograph Nebula",
+  "file": "eyes/s14.jpg",
+  "w": 2000,
+  "h": 1905,
+  "iris": {
+   "cx": 1000.0,
+   "cy": 880.0,
+   "r": 600.0,
+   "clear": null
+  },
+  "title": "Hubble’s Spirograph (34503878404).jpg",
+  "by": "NASA Goddard Space Flight Center from Greenbelt, MD, USA",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Hubble%E2%80%99s_Spirograph_(34503878404).jpg",
+  "note": ""
+ },
+ {
+  "id": "s16",
+  "name": "Black Eye Galaxy",
+  "file": "eyes/s16.jpg",
+  "w": 897,
+  "h": 1065,
+  "iris": {
+   "cx": 475.4,
+   "cy": 466.4,
+   "r": 179.4,
+   "clear": null
+  },
+  "title": "Blackeyegalaxy.jpg",
+  "by": "NASA and The Hubble Heritage Team (AURA/STScI)",
+  "licence": "Public domain",
+  "licence_url": "",
+  "page": "https://commons.wikimedia.org/wiki/File:Blackeyegalaxy.jpg",
+  "note": ""
+ },
+ {
+  "id": "s17",
+  "name": "Ring round the supernova of 1987",
+  "file": "eyes/s17.jpg",
+  "w": 850,
+  "h": 850,
+  "iris": {
+   "cx": 425.0,
+   "cy": 429.2,
+   "r": 42.5,
+   "clear": null
+  },
+  "title": "SN 1987A HST.jpg",
+  "by": "ESA/Hubble & NASA",
+  "licence": "CC BY 4.0",
+  "licence_url": "https://creativecommons.org/licenses/by/4.0",
+  "page": "https://commons.wikimedia.org/wiki/File:SN_1987A_HST.jpg",
+  "note": ""
  }
 ]
