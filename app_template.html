@@ -863,7 +863,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
             <label class="row"><input type="checkbox" id="ball-spin"> Spin</label>
             <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label>
-            <p class="note" id="ball-fly-note" hidden>Move the mouse to look round. W A S D to move, E up, Q down, Shift faster. Esc or F to stop.</p>
+            <p class="note" id="ball-fly-note" hidden>Move the mouse to look round. W A S D to move, Q and E to roll left and right, Space up, C down, Shift faster. The wheel widens and narrows the lens. Esc or F to stop.</p>
             <div class="btns"><button class="pill" id="ball-front" title="Turn it to face you again, at the size it began">Face on</button></div>
         </section>
         <section class="grp modebox" data-box="eye" id="mode-eye" aria-label="Eye"><div class="modehead"><h4>Eye</h4><label class="onoff"><input type="checkbox" id="eye-on"> On</label></div>
@@ -891,7 +891,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
               <label class="row"><input type="checkbox" id="embryo3"> Embryo</label>
               <label class="row"><input type="checkbox" id="spin3"> Spin</label>
               <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="fly3"> Free fly</label>
-              <p class="note" id="fly3-note" hidden>Move the mouse to look round. W A S D to move, E up, Q down, Shift faster. Esc or F to stop.</p>
+              <p class="note" id="fly3-note" hidden>Move the mouse to look round. W A S D to move, Q and E to roll left and right, Space up, C down, Shift faster. The wheel widens and narrows the lens. Esc or F to stop.</p>
               <div class="btns"><button class="pill" id="v-out">From outside</button><button class="pill" id="v-in">From inside</button></div>
               <div class="btns"><button class="pill" id="v-cone">To the sight cone</button></div>
             </div>
@@ -2770,24 +2770,30 @@ function deskTo(c,TS,PAD,d,im,mx,my,half,px,dome,ground){ const V=d.view_px, k=(
 
 // ---- Free fly ----
 // The view becomes a camera you carry: moving the mouse turns it (the pointer is taken while this is on), W A S D move it
-// forward, left, back and right, E and Q up and down, Shift three times as fast. Esc, or F, gives the pointer back and ends it.
+// forward, left, back and right, Q and E roll it to the left and to the right, Space and C lift and lower it, Shift goes three
+// times as fast, and the wheel widens and narrows the lens. Esc, or F, gives the pointer back and ends it. Every turn is about the camera's own axes, as in a ship.
 // One rig serves 3D and the Ball. It starts from wherever the view is, so switching it on changes nothing until you move.
-function makeFly(cv,cam,opts){ const F={on:false,locked:false,held:false,p:new THREE.Vector3(),yaw:0,pitch:0,keys:new Set(),last:0}, KEYS=['w','a','s','d','q','e','c','shift'];
+function makeFly(cv,cam,opts){ const F={on:false,locked:false,held:false,p:new THREE.Vector3(),q:new THREE.Quaternion(),keys:new Set(),last:0}, KEYS=['w','a','s','d','q','e','c','x',' ','shift'];
+  const XA=new THREE.Vector3(1,0,0), YA=new THREE.Vector3(0,1,0), ZA=new THREE.Vector3(0,0,1), turn=new THREE.Quaternion(), v3=new THREE.Vector3();
+  const about=(axis,a)=>{ F.q.multiply(turn.setFromAxisAngle(axis,a)).normalize(); };   // a turn about one of the camera's own axes
   const typing=e=>{ const g=e.target; return !!g&&(/^(TEXTAREA|SELECT)$/.test(g.tagName)||(g.tagName==='INPUT'&&!/^(checkbox|range|button)$/.test(g.type))); };
-  addEventListener('keydown',e=>{ if(!F.on||typing(e)) return; const k=e.key.toLowerCase(); if(k==='escape'){ api.leave(); return; } if(KEYS.includes(k)&&!e.ctrlKey&&!e.metaKey){ F.keys.add(k); e.preventDefault(); e.stopPropagation(); } },true);
+  addEventListener('keydown',e=>{ if(!F.on||typing(e)) return; const k=e.key.toLowerCase(); if(k==='escape'){ api.leave(); return; } if(KEYS.includes(k)&&!e.ctrlKey&&!e.metaKey){ F.keys.add(k); e.preventDefault(); e.stopImmediatePropagation(); } },true);
   addEventListener('keyup',e=>{ F.keys.delete(e.key.toLowerCase()); },true); addEventListener('blur',()=>F.keys.clear());
-  document.addEventListener('mousemove',e=>{ if(!F.on||(document.pointerLockElement!==cv&&!F.held)) return; F.yaw-=e.movementX*0.0022; F.pitch=Math.max(-1.55,Math.min(1.55,F.pitch-e.movementY*0.0022)); opts.changed(); });
+  document.addEventListener('mousemove',e=>{ if(!F.on||(document.pointerLockElement!==cv&&!F.held)) return; about(YA,-e.movementX*0.0022); about(XA,-e.movementY*0.0022); opts.changed(); });
   document.addEventListener('pointerlockchange',()=>{ if(document.pointerLockElement===cv) F.locked=true; else if(F.on&&F.locked) api.leave(); });
   const take=()=>{ try{ const r=cv.requestPointerLock(); if(r&&r.catch) r.catch(()=>{}); }catch(_){} };
   cv.addEventListener('pointerdown',()=>{ if(!F.on) return; F.held=true; if(document.pointerLockElement!==cv) take(); }); addEventListener('pointerup',()=>{ F.held=false; });
+  // the wheel is the lens: rolled forward it narrows (things come nearer), rolled back it widens
+  cv.addEventListener('wheel',e=>{ if(!F.on) return; e.preventDefault(); cam.fov=Math.max(8,Math.min(130,cam.fov*Math.exp(e.deltaY*0.0012))); cam.updateProjectionMatrix(); opts.changed(); },{passive:false});
   const api={ get on(){ return F.on; },
-    enter(){ if(F.on) return; F.on=true; F.locked=false; F.keys.clear(); F.p.copy(cam.position); const e=new THREE.Euler().setFromQuaternion(cam.quaternion,'YXZ'); F.yaw=e.y; F.pitch=e.x; F.last=performance.now(); take(); opts.changed(); },
+    enter(){ if(F.on) return; F.on=true; F.locked=false; F.keys.clear(); F.p.copy(cam.position); F.q.copy(cam.quaternion); F.last=performance.now(); take(); opts.changed(); },
     leave(){ if(!F.on) return; F.on=false; F.keys.clear(); if(document.pointerLockElement===cv) document.exitPointerLock(); opts.ended(); },
     step(now){ if(!F.on) return false; const dt=Math.min(0.05,Math.max(0,(now-F.last)/1000)); F.last=now; let moved=false;
-      const cp=Math.cos(F.pitch), fx=-Math.sin(F.yaw)*cp, fy=Math.sin(F.pitch), fz=-Math.cos(F.yaw)*cp, rx=Math.cos(F.yaw), rz=-Math.sin(F.yaw), v=opts.speed()*(F.keys.has('shift')?3:1)*dt;
-      const go=(k,x,y,z)=>{ if(F.keys.has(k)){ F.p.x+=x*v; F.p.y+=y*v; F.p.z+=z*v; moved=true; } };
-      go('w',fx,fy,fz); go('s',-fx,-fy,-fz); go('d',rx,0,rz); go('a',-rx,0,-rz); go('e',0,1,0); go('q',0,-1,0); go('c',0,-1,0);
-      cam.position.copy(F.p); cam.rotation.set(F.pitch,F.yaw,0,'YXZ'); return moved; } };
+      // Q and E roll the camera to the left and to the right, about the line it looks along
+      if(F.keys.has('q')){ about(ZA,1.3*dt); moved=true; } if(F.keys.has('e')){ about(ZA,-1.3*dt); moved=true; }
+      const v=opts.speed()*(F.keys.has('shift')?3:1)*dt, go=(k,axis,s)=>{ if(F.keys.has(k)){ F.p.addScaledVector(v3.copy(axis).applyQuaternion(F.q),s*v); moved=true; } };
+      go('w',ZA,-1); go('s',ZA,1); go('d',XA,1); go('a',XA,-1); go(' ',YA,1); go('c',YA,-1); go('x',YA,-1);
+      cam.position.copy(F.p); cam.quaternion.copy(F.q); return moved; } };
   return api; }
 // F switches Free fly on and off in whichever of 3D and the Ball is open.
 document.addEventListener('keydown',e=>{ if((e.key!=='f'&&e.key!=='F')||e.ctrlKey||e.metaKey||e.altKey) return; const g=e.target; if(g&&(/^(TEXTAREA|SELECT)$/.test(g.tagName)||(g.tagName==='INPUT'&&!/^(checkbox|range|button)$/.test(g.type)))) return;
