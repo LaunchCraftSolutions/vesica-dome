@@ -3072,9 +3072,11 @@ function make3d(){
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(S.launch){ launchStep(t); S.need=true; }
+    // A filmed path (T3.film): a function is handed the camera on every frame and puts it where it likes, until it answers false.
+    if(S.film){ let keep=false; try{ keep=S.film(t,cam,S)!==false; }catch(e){ console.error(e); } cam.updateProjectionMatrix(); if(!keep){ S.film=null; poseToOrbit(); } S.need=true; }
     if(S.archAnim){ const m=S.archAnim, u=Math.min(1,Math.max(0,(t-m.t0)/1500)); S.archL=m.from+(m.to-m.from)*u*u*(3-2*u); if(u>=1){ S.archAnim=null; S.archL=m.to; archShow(); } raiseArch(); placeGround(); S.need=true; }
     if(S.need){ S.need=false; grassMat.uniforms.dim.value=starsShown()?0:1;
-      if(!fly.on&&!(S.launch&&S.launch.free)){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
+      if(!fly.on&&!(S.launch&&S.launch.free)&&!S.film){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
         cam.position.set(tgt.x+S.dist*sp*Math.cos(S.az),tgt.y+S.dist*Math.cos(S.pol),tgt.z+S.dist*sp*Math.sin(S.az)); cam.lookAt(tgt); }
       if(space3.draw(R,cam)){ R.autoClear=false; R.clearDepth(); R.render(scene,cam); R.autoClear=true; } else R.render(scene,cam); } }
   new ResizeObserver(()=>{ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; R.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix(); S.need=true; }).observe(box);
@@ -3110,16 +3112,17 @@ function make3d(){
   // the right button turns the view round whatever you are looking at.
   cv.addEventListener('contextmenu',e=>e.preventDefault());
   // Free fly. Ending it leaves the view where it is: the point it then turns about is put straight ahead, as far off as before.
-  const fly=makeFly(cv,cam,{speed:()=>Math.max(0.5,S.dist*0.55), changed:()=>{ S.need=true; }, ended:()=>{ const d=new THREE.Vector3(); cam.getWorldDirection(d);
-    S.pol=Math.min(Math.PI-0.04,Math.max(0.04,Math.acos(Math.max(-1,Math.min(1,-d.y))))); S.az=Math.atan2(-d.z,-d.x); S.pan.copy(cam.position).addScaledVector(d,S.dist); S.pan.y-=0.3*S.lift*shape3().top;
-    $('fly3').checked=false; $('fly3-note').hidden=true; S.need=true; }});
+  // The view is left where a free camera (Free fly, or a filmed path) put it: the point it then turns about is set straight ahead, as far off as before.
+  const poseToOrbit=()=>{ const d=new THREE.Vector3(); cam.getWorldDirection(d);
+    S.pol=Math.min(Math.PI-0.04,Math.max(0.04,Math.acos(Math.max(-1,Math.min(1,-d.y))))); S.az=Math.atan2(-d.z,-d.x); S.pan.copy(cam.position).addScaledVector(d,S.dist); S.pan.y-=0.3*S.lift*shape3().top; S.need=true; };
+  const fly=makeFly(cv,cam,{speed:()=>Math.max(0.5,S.dist*0.55), changed:()=>{ S.need=true; }, ended:()=>{ poseToOrbit(); $('fly3').checked=false; $('fly3-note').hidden=true; }});
   $('fly3').onchange=()=>{ if(!S.on||S.launch){ $('fly3').checked=false; return; } if($('fly3').checked){ dg=null; lightUp(null); litLine(null); fly.enter(); $('fly3-note').hidden=false; } else fly.leave(); };
   // On a machine that gets the large sky picture, handing it to the graphics card takes a fifth of a second, twice (3D's sky and Space's).
   // That is done a little after 3D opens, one and then the other, while nothing is moving, so that Go to space has nothing left to wait for.
   const skyEarly=()=>{ if(!skyBig()) return; clearTimeout(S.early); S.early=setTimeout(()=>{ if(!S.on||S.launch) return; space3.prep(R);
     S.early=setTimeout(()=>{ if(!S.on||S.launch) return; if(!ORB) ORB=makeOrb(); ORB.warm(); },1500); },1900); };
   const TA=1.5, TB=1.4, PULSE=[[0.72,66],[0.58,64],[0.46,62]], TZ=PULSE.reduce((n,p)=>n+p[0],0), TC=1.9, FIN=72, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x);
-  function launch3(){ return new Promise(done=>{ if(!S.on||S.launch){ done(null); return; } fly.leave(); dg=null; lightUp(null); litLine(null);
+  function launch3(){ return new Promise(done=>{ if(!S.on||S.launch){ done(null); return; } if(S.film){ S.film=null; poseToOrbit(); } fly.leave(); dg=null; lightUp(null); litLine(null);
     const s0=parseFloat($('spire3').value)||0, c0=parseFloat($('cone3').value)||0, C=Math.max(c0,3), top=S.lift*shape3().top;   // in proportion to the dome: the cone at least three of its radii tall, the spire at least one
     S.spireView=false; S.back=null; coneBtn();
     S.launch={done,s0,c0,H:Math.max(s0,1),C,t0:0,last:0,free:false,o:{pol:S.pol,az:S.az,dist:S.dist,pan:S.pan.clone(),fov:cam.fov},d1:Math.min(12,C*0.74/Math.tan(25*DEG)),pan1:new THREE.Vector3(0,0.7*top+C/2,0)};
@@ -3158,7 +3161,7 @@ function make3d(){
     WARP.k=ez((u-0.5)/0.42); WARP.v=80*u*u; WARP.z+=WARP.v*dt;
     if(u>0.8&&!Ln.mixed){ Ln.mixed=true; spaceMixIn(); }   // the pictures are changed to Space's mix now, with the dome out of sight behind, so the hand-over has less to do
     if(u>=1) launchEnd(cam.quaternion.clone()); }
-  cv.addEventListener('pointerdown',e=>{ if(fly.on||S.launch) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
+  cv.addEventListener('pointerdown',e=>{ if(fly.on||S.launch||S.film) return; try{cv.setPointerCapture(e.pointerId);}catch(_){} dg=[e.clientX,e.clientY,e.button]; if(!lineBox.hidden) hideLineBox(); });
   cv.addEventListener('pointermove',e=>{ if(fly.on) return; if(!dg){ hover3(e); return; } const dx=e.clientX-dg[0], dy=e.clientY-dg[1]; dg[0]=e.clientX; dg[1]=e.clientY; S.need=true;
     if(dg[2]===2){ S.az+=dx*0.006; S.pol=Math.min(Math.PI-0.04,Math.max(0.04,S.pol-dy*0.006)); return; }
     const m=cam.matrixWorld.elements, k=2*S.dist*Math.tan(cam.fov*Math.PI/360)/cv.clientHeight;   // scene units per pixel at the point looked at
@@ -3177,7 +3180,8 @@ function make3d(){
       const rise=()=>{ if(!S.on) return; const t=Math.min(1,(performance.now()-t0)/1500); S.lift=full*t*t*(3-2*t); raise(); if(t<1) requestAnimationFrame(rise); }; rise();   // the flat picture rises into the dome
       requestAnimationFrame(loop); },
     launch:launch3,
-    close(){ if(!S.on) return; launchEnd(null); fly.leave(); space3.rest(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
+    film(fn){ if(!S.on||S.launch) return; fly.leave(); dg=null; if(S.film&&!fn) poseToOrbit(); S.film=fn||null; S.need=true; }, get filming(){ return !!S.film; },
+    close(){ if(!S.on) return; launchEnd(null); S.film=null; fly.leave(); space3.rest(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
     redraw(){ if(S.on) spheres(); },
     dirty(){ S.stale=true; },
     flash(){ S.stale=true; S.last=0; },
@@ -3331,8 +3335,10 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     if((S.stale||run)&&t-S.last>(run?70:0)){ S.stale=false; S.last=t; paintT(); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
+    if(S.film) S.need=true;
     if(!S.need) return;
-    if(fly.on){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; } cam.aspect=w/h; cam.near=0.01; cam.far=400; cam.clearViewOffset(); cam.updateProjectionMatrix(); }
+    if(fly.on||S.film){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; } cam.aspect=w/h; cam.near=0.01; cam.far=400; cam.clearViewOffset(); cam.updateProjectionMatrix();
+      if(S.film){ let keep=false; try{ keep=S.film(t,cam,g,S)!==false; }catch(e){ console.error(e); } cam.updateProjectionMatrix(); if(!keep) S.film=null; } }   // a filmed path, as in 3D: the function is handed the camera (and the ball) on every frame
     else if(!place()) return;
     S.need=false; if(spaceO.draw(ren,cam)){ ren.autoClear=false; ren.clearDepth(); ren.render(scene,cam); ren.autoClear=true; } else ren.render(scene,cam); }
   // Getting about, as in 3D: the left button moves it across the screen, the right button turns it, the wheel brings it closer.
@@ -3373,12 +3379,12 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
       set(R0*Math.pow(R1/R0,e),130+(f1-130)*e);
       if(u<1) requestAnimationFrame(tick); else { WARP.k=0; S.landF=0; set(R1,f1); } };
     requestAnimationFrame(tick); }
-  return { get on(){ return S.on; }, dirty(){ S.stale=true; }, land,
+  return { get on(){ return S.on; }, dirty(){ S.stale=true; }, land, film(fn){ if(!S.on) return; fly.leave(); S.film=fn||null; S.need=true; }, get filming(){ return !!S.film; }, get landing(){ return !!S.landF; },
     open(){ S.d=cur; S.on=true; frame(); S.R=LANDING.size; S.fov=LANDING.fov; orbRound=LANDING.round; sizeShown(); lens(); g.quaternion.identity();
       { const st=$('stage'), w=st.clientWidth, h=st.clientHeight; S.sx=w/2; S.sy=h/2; S.zoom=Math.max(0.05,LANDING.fill*Math.min(w,h)/Math.max(1,S.R*fig.u*S.k)); S.mid=true; } S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
     warm(){ spaceO.warm(ren,cam,700); shape(); },
-    close(){ if(!S.on) return; fly.leave(); spaceO.rest(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
+    close(){ if(!S.on) return; S.film=null; fly.leave(); spaceO.rest(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
 $('ball-round').value=orbRound;
 // Space is reached by its button, Go to space, and by nothing else. From 3D it is the launch. From the flat desk the dome is stood
 // up first and then it goes. In space the same button reads Back to the dome, and stands the dome up again in 3D.
