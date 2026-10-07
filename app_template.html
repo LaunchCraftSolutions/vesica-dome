@@ -453,6 +453,11 @@ input.field{border:1px solid var(--rule);background:var(--paper);padding:0 12px}
 :is(.drawer,.modes) .zoom .val input[type=number]{width:auto;flex:0 1 34px;min-width:0;text-align:right}
 :is(.drawer,.modes) .btns{margin-top:0} :is(.drawer,.modes) .pill{justify-content:center} :is(.drawer,.modes) .btns .pill{flex:1;padding:0 8px} :is(.drawer,.modes) .zoom{justify-content:space-between}
 #d3-more{display:flex;flex-direction:column;gap:var(--s)}
+/* The 3D toolbar's groups. Two short settings can share a row. A group that has nothing to act on (3D off, or not in space) is
+   dimmed, all but what is marked to keep (the Go to space button). Space is the larger group: a mode inside the toolbar. */
+.row2{display:flex;gap:var(--s)} .row2>label.row{flex:1 1 0;min-width:0}
+.subgrp.off>:not(h4):not(.modehead):not(.keep){opacity:.4;pointer-events:none}
+.subgrp.big{margin-top:4px;padding:10px 9px 11px;border-color:var(--gilt);box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px color-mix(in srgb,var(--gilt) 45%,var(--line))}
 /* a group inside a box: its own gold-trimmed frame and heading, for settings that belong together (the dome's opening and rounding) */
 .subgrp{display:flex;flex-direction:column;gap:var(--s);padding:8px 8px 9px;border:1px solid var(--rule);border-radius:var(--R);background:color-mix(in srgb,var(--paper) 60%,transparent);box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--line)}
 .subgrp h4{margin:0 2px}
@@ -921,40 +926,43 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             <label class="row"><input type="checkbox" id="rings-on"> Circles</label>
             <div class="btns"><button class="pill" id="dive-in">Dive in</button><button class="pill" id="dive-out">Dive out</button></div>
         </section>
-        <section class="grp modebox" data-box="ball" id="mode-ball" aria-label="Space"><div class="modehead"><h4>Space<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="ball-on"> On</label></div>
-            <label class="row" title="From a flat disc to a full ball">Round <input type="range" id="ball-round" min="0" max="1" step="0.01" aria-label="How round it is, from a flat disc to a full ball"></label>
-            <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
-            <label class="row" title="How wide the lens is. Narrow is flatter and closer; wide takes in more and deepens the ball. In Free fly the wheel moves it too.">Field of view <span class="tv" id="ball-fov-v"></span><input type="range" id="ball-fov" min="8" max="130" step="1" aria-label="Field of view, in degrees"></label>
-            <label class="row"><input type="checkbox" id="ball-spin"> Spin</label>
-            <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label>
-            <p class="note" id="ball-fly-note" hidden>Hold the left button and move the mouse to look round, or hold the right button and pull the dot from the ring to turn that way. W A S D to move, Q and E to roll left and right, Space up, Shift down. The wheel widens and narrows the lens. Esc or F to stop.</p>
-            <div class="btns"><button class="pill" id="ball-front" title="Turn it to face you again, at the size it began">Face on</button></div>
-        </section>
-        <section class="grp modebox" data-box="3d" id="mode-3d" aria-label="3D"><div class="modehead"><h4>3D<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="go3d"> On</label></div>
+        <section class="grp modebox" data-box="3d" id="mode-3d" aria-label="3D and Space"><div class="modehead"><h4>3D<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="go3d"> On</label></div>
             <div id="d3-more">
-              <div class="subgrp" role="group" aria-label="Dome"><h4>Dome</h4>
+              <div class="subgrp g3" role="group" aria-label="Dome"><h4>Dome</h4>
               <label class="row" title="Where the dome meets the ground: the foot of its wall">Opening <span class="tv numv"><input type="number" id="edge-num" min="1" max="7" step="0.01" aria-label="Dome opening, exact value"></span><input type="range" id="edge3" min="1" max="7" step="0.005" aria-label="Where the dome's opening is, in first circles from the centre"></label>
               <label class="row" title="Where the straight wall ends and the dome starts to curve. Equal to the opening: no straight wall">Rounding <span class="tv numv"><input type="number" id="round-num" min="0.3" max="7" step="0.01" aria-label="Dome rounding, exact value"></span><input type="range" id="round3" min="0.3" max="7" step="0.005" aria-label="Where the dome starts to curve, in first circles from the centre"></label>
+              <label class="row" title="From lying flat to raised into the dome">Raise <input type="range" id="lift3" min="0" max="1" step="0.01" value="1" aria-label="How far the photo is raised, from flat to dome"></label>
+              <label class="row" title="How wide the real dome is. It sets the scale of the map under it.">Dome width <input type="number" id="domew3" min="3" max="300" step="0.5" value="25" aria-label="How wide the real dome is, in metres"><span class="tv">m</span></label>
+              <label class="row">Spire <input type="range" id="spire3" min="0" max="2.5" step="0.05" value="0" aria-label="Height of the lantern and spire, in dome radii"></label>
+              <label class="row">Sight cone <input type="range" id="cone3" min="0" max="6" step="0.05" value="0" aria-label="Height of the cone of sight over the dome"></label>
               </div>
-              <div class="subgrp" role="group" aria-label="Arches" title="For a dome that stands on four arches. The photo round the dome is shaped into them."><div class="modehead"><h4>Arches</h4><label class="onoff"><input type="checkbox" id="arch-on"> On</label></div>
+              <div class="subgrp g3" role="group" aria-label="Arches" title="For a dome that stands on four arches. The photo round the dome is shaped into them."><div class="modehead"><h4>Arches</h4><label class="onoff"><input type="checkbox" id="arch-on"> On</label></div>
               <label class="row" title="A square on the photo. Put its corners where the arches meet, at the top of the four piers.">Size <span class="tv numv"><input type="number" id="arch-num" min="1" max="14" step="0.01" aria-label="Arches size, exact value"></span><input type="range" id="arch3" min="1" max="14" step="0.005" aria-label="Half the side of the arches' square, in first circles from the centre"></label>
               <label class="row" title="Turn the square until the dotted arches lie on the arches in the photo">Turn <input type="range" id="archturn3" min="-45" max="45" step="0.25" value="0" aria-label="Turn the arches' square"></label>
               </div>
-              <label class="row" title="From lying flat to raised into the dome">Raise <input type="range" id="lift3" min="0" max="1" step="0.01" value="1" aria-label="How far the photo is raised, from flat to dome"></label>
-              <label class="row">Spire <input type="range" id="spire3" min="0" max="2.5" step="0.05" value="0" aria-label="Height of the lantern and spire, in dome radii"></label>
-              <label class="row">Sight cone <input type="range" id="cone3" min="0" max="6" step="0.05" value="0" aria-label="Height of the cone of sight over the dome"></label>
-              <label class="row" title="Grass on the ground round the dome"><input type="checkbox" id="grass3"> Grass</label>
-              <label class="row"><input type="checkbox" id="map3"> Map</label>
-              <label class="row">Dome width <input type="number" id="domew3" min="3" max="300" step="0.5" value="25" aria-label="How wide the real dome is, in metres"><span class="tv">m</span></label>
+              <div class="subgrp g3" role="group" aria-label="Landscape"><h4>Landscape</h4>
+              <div class="row2"><label class="row" title="Grass on the ground round the dome"><input type="checkbox" id="grass3"> Grass</label><label class="row" title="A satellite map on the ground under the dome"><input type="checkbox" id="map3"> Map</label></div>
               <label class="row">Turn map <input type="range" id="mapturn3" min="-180" max="180" step="1" value="0" aria-label="Turn the map under the dome"></label>
               <p class="note" id="mapcredit" hidden>Imagery: Esri, Maxar, Earthstar Geographics</p>
-              <label class="row"><input type="checkbox" id="sph3"> Circles as spheres</label>
-              <label class="row"><input type="checkbox" id="embryo3"> Embryo</label>
-              <label class="row"><input type="checkbox" id="spin3"> Spin</label>
-              <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="fly3"> Free fly</label>
+              </div>
+              <div class="subgrp g3" role="group" aria-label="Circles"><h4>Circles</h4>
+              <div class="row2"><label class="row" title="Every circle of the drawing as a sphere"><input type="checkbox" id="sph3"> Spheres</label><label class="row" title="The spheres cut where they meet, as cells are"><input type="checkbox" id="embryo3"> Embryo</label></div>
+              </div>
+              <div class="subgrp g3" role="group" aria-label="Camera"><h4>Camera</h4>
+              <div class="row2"><label class="row"><input type="checkbox" id="spin3"> Spin</label><label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="fly3"> Free fly</label></div>
               <p class="note" id="fly3-note" hidden>Hold the left button and move the mouse to look round, or hold the right button and pull the dot from the ring to turn that way. W A S D to move, Q and E to roll left and right, Space up, Shift down. The wheel widens and narrows the lens. Esc or F to stop.</p>
-              <div class="btns"><button class="pill" id="v-out">From outside</button><button class="pill" id="v-in">From inside</button></div>
-              <div class="btns"><button class="pill" id="v-cone">To the sight cone</button></div>
+              <div class="btns pair"><button class="pill" id="v-out">From outside</button><button class="pill" id="v-in">From inside</button></div>
+              <div class="btns pair"><button class="pill" id="v-cone">To the sight cone</button></div>
+              </div>
+              <div class="subgrp big" id="g-space" role="group" aria-label="Space"><h4>Space<span class="modetag">mode</span></h4><input type="checkbox" id="ball-on" hidden>
+              <div class="btns pair keep"><button class="pill accent" id="ball-go">Go to space</button></div>
+              <label class="row" title="From a flat disc to a full ball">Round <input type="range" id="ball-round" min="0" max="1" step="0.01" aria-label="How round it is, from a flat disc to a full ball"></label>
+              <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
+              <label class="row" title="How wide the lens is. Narrow is flatter and closer; wide takes in more and deepens the ball. In Free fly the wheel moves it too.">Field of view <span class="tv" id="ball-fov-v"></span><input type="range" id="ball-fov" min="8" max="130" step="1" aria-label="Field of view, in degrees"></label>
+              <div class="row2"><label class="row"><input type="checkbox" id="ball-spin"> Spin</label><label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label></div>
+              <p class="note" id="ball-fly-note" hidden>Hold the left button and move the mouse to look round, or hold the right button and pull the dot from the ring to turn that way. W A S D to move, Q and E to roll left and right, Space up, Shift down. The wheel widens and narrows the lens. Esc or F to stop.</p>
+              <div class="btns pair"><button class="pill" id="ball-front" title="Turn it to face you again, at the size it began">Face on</button></div>
+              </div>
             </div>
         </section>
         <section class="grp modebox" data-box="draw" id="mode-draw" aria-label="Draw"><div class="modehead"><h4>Draw<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="draw-on"> On</label></div>
@@ -1403,7 +1411,7 @@ function aligned(){ if(!cur||!fig) return true; const k=sv.getBoundingClientRect
 //   Each box has a handle at its top. Dragged by it, the box stays where it is dropped. The place is remembered from the nearer
 //   side and the nearer of top and bottom, so the box keeps its corner when the window changes size. Double-click the handle and
 //   the box goes back to its usual place.
-const LAYER=$('boxes'), SETBOXES=[...$('setcol').children], MODEBOXES=['mode-3d','mode-fractal','mode-draw','mode-ball'].map(i=>$(i)), MODEROW=['mode-3d','mode-draw','mode-fractal','mode-ball'].map(i=>$(i)), TOOLS=$('drawer'), BOXES=[...SETBOXES,...MODEBOXES,TOOLS];
+const LAYER=$('boxes'), SETBOXES=[...$('setcol').children], MODEBOXES=['mode-3d','mode-fractal','mode-draw'].map(i=>$(i)), MODEROW=['mode-3d','mode-draw','mode-fractal'].map(i=>$(i)), TOOLS=$('drawer'), BOXES=[...SETBOXES,...MODEBOXES,TOOLS];
 [...SETBOXES,...MODEBOXES].forEach(b=>LAYER.appendChild(b)); $('setcol').hidden=true; $('modes').hidden=true; TOOLS.dataset.box='tools';
 let boxDrag=false;   // a box is being dragged: pointing at lines is off until it is dropped
 let boxPlaces=store.get('dome-box-places',{}), modeSig='', zTop=1; if(!boxPlaces||typeof boxPlaces!=='object') boxPlaces={};
@@ -1463,7 +1471,9 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   st.style.setProperty('--annt',(TOP+(compact?40:PICS.offsetHeight+G+LINES.offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
-  const on=[!!(T3&&T3.on),depthOn,mode==='draw',!!(ORB&&ORB.on)], st=$('stage');   // each box is dimmed while its own switch is off
+  const in3=!!(T3&&T3.on), up=!!(ORB&&ORB.on), on=[true,depthOn,mode==='draw',in3,up], st=$('stage');   // each box is dimmed while its own switch is off
+  // The 3D toolbar is never dimmed as a whole: its groups are, the ones for the dome while 3D is off and Space's while not in space (Go to space always answers).
+  document.querySelectorAll('#mode-3d .g3').forEach(g=>g.classList.toggle('off',!in3)); $('g-space').classList.toggle('off',!up); if(typeof goShow==='function') goShow();
   const cols=[['col-lines',linesOn!==false],['col-cross',showX],['col-dome',picOn],['mode-eye',eyeShown()||(mode==='iris'&&placing==='eye')],['mode-sky',skyShown()||(mode==='iris'&&placing==='sky')]];   // and so is each column of the pictures' toolbar
   cols.forEach(([id,o])=>$(id).classList.toggle('off',!o));
   const sig=on.join()+st.clientWidth+'x'+st.clientHeight+$('dive-stop').hidden+$('align').hidden+$('boxes-back').hidden+mode; if(sig===modeSig) return; modeSig=sig;
@@ -1472,13 +1482,13 @@ const relay=()=>{ modeSig=''; showModes(); };
 // On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
 // and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
 var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
-  const order=['picture','lines','view','guides','3d','draw','fractal','ball'], name={picture:'Pictures',guides:'Canvas','3d':'3D',ball:'Space'};
+  const order=['picture','lines','view','guides','3d','draw','fractal'], name={picture:'Pictures',guides:'Canvas','3d':'3D'};
   order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
     b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
     const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
   document.querySelector('.steps .nav').after(bar); return bar; })();
 function phoneBar(ph){ if(!ph||!PHONEBAR) return; PHONEBAR.querySelectorAll('button').forEach(b=>{ const box=[...SETBOXES,...MODEBOXES].find(x=>x.dataset.box===b.dataset.for);
-  b.setAttribute('aria-pressed',!box.classList.contains('shut')); b.classList.toggle('is-on',MODEBOXES.includes(box)&&!box.classList.contains('off')); }); }
+  b.setAttribute('aria-pressed',!box.classList.contains('shut')); b.classList.toggle('is-on',MODEBOXES.includes(box)&&!box.classList.contains('off')&&(box.id!=='mode-3d'||!!(T3&&T3.on)||!!(ORB&&ORB.on))); }); }
 // A drawer's heading opens and shuts it (small canvas only). Opening one shuts the others, so only one is ever in the way.
 DRAWERS().forEach(b=>{ const h=b.querySelector('h4'); if(!h) return; h.addEventListener('click',()=>{ if(!$('stage').classList.contains('compact')) return;
   const open=b.classList.contains('shut'); DRAWERS().forEach(x=>x.classList.add('shut')); if(open){ b.classList.remove('shut'); b.style.zIndex=++zTop; } relay(); }); });
@@ -3320,15 +3330,20 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     warm(){ spaceO.warm(ren,cam); },
     close(){ if(!S.on) return; fly.leave(); spaceO.rest(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
 $('ball-round').value=orbRound;
-$('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); return; }
-  // From 3D, Space is reached by the launch: up through the spire and sight cone, and out. (Not for anyone who has asked their
-  // computer for less motion, and not if 3D is closed on the way.)
-  let facing=null; b.disabled=true;
-  if(T3&&T3.on&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ b.checked=true; if(!ORB) ORB=makeOrb(); ORB.warm();   // Space gets its sky ready now, while the spire is still rising
-    facing=await T3.launch(); if(!T3.on){ b.checked=false; b.disabled=false; return; } }
+// Space is reached by its button, Go to space, and by nothing else. From 3D it is the launch. From the flat desk the dome is stood
+// up first and then it goes. In space the same button reads Back to the dome, and stands the dome up again in 3D.
+// (The launch is left out for anyone who has asked their computer for less motion, and stops if 3D is closed on the way.)
+function goShow(){ const g=$('ball-go'), up=!!(ORB&&ORB.on), busy=$('ball-on').disabled; g.textContent=up?'Back to the dome':busy?'Going up':'Go to space'; g.disabled=busy||!cur;
+  g.title=up?'Leave space and stand the dome up again':'Up through the spire and the sight cone, and out'; }
+$('ball-go').onclick=()=>{ const b=$('ball-on'); if(b.disabled) return; b.checked=!(ORB&&ORB.on); b.onchange(); };
+$('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); goShow(); open3d(false); return; }
+  const calm=matchMedia('(prefers-reduced-motion: reduce)').matches, quit=()=>{ b.checked=false; b.disabled=false; goShow(); }; let facing=null; b.disabled=true; goShow();
+  if(!calm&&!(T3&&T3.on)){ await open3d(false); await new Promise(r=>setTimeout(r,1700)); if(!(T3&&T3.on)){ quit(); return; } }
+  if(T3&&T3.on&&!calm){ b.checked=true; if(!ORB) ORB=makeOrb(); ORB.warm();
+    facing=await T3.launch(); if(!T3.on){ quit(); return; } }
   if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close();
   try{ await loadThree(); if(!ORB) ORB=makeOrb(); spaceMixIn(); ORB.open(); if(facing) ORB.land(facing); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
-  b.disabled=false; };
+  b.disabled=false; goShow(); };
 const open3d=async balls=>{ if(!cur){ $('go3d').checked=false; return; } if(mode!=='pan') setMode('pan'); const b=$('go3d'); b.disabled=true;
   try{ await loadThree(); if(!T3) T3=make3d(); T3.open(cur,balls); }
   catch(e){ b.checked=false; $('place').textContent=window.THREE?'3D is not available in this browser':'3D needs an internet connection the first time'; }
