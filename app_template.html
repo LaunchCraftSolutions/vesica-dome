@@ -2822,7 +2822,11 @@ function make3d(){
   const meshA=new THREE.Mesh(geoA,mesh.material); meshA.frustumCulled=false; meshA.visible=false; scene.add(meshA);
   const arch3=()=>{ const m=archOf(S.d), a=edgeOf(S.d)/RIM0, s=m.size/RIM0, Hc=s*a/(s-a); return {on:m.on,a,s,Hc,g:Hc-a,tau:m.turn*Math.PI/180}; };   // a: ring and half square; s: the square as the photo shows it; Hc: the standing point, below the ring; g: the same, below the foot of the arches
   const fold8=ph=>{ const q=Math.PI/2; return ((ph+q/2)%q+q)%q-q/2; };   // the angle from the nearest of the four arms
-  const archShow=()=>{ const on=!!(S.arch&&S.arch.on); meshA.visible=on&&picOn; archRing.visible=on; geo.setDrawRange(0,on?NR*NS*6:Infinity); };
+  // The arches come and go slowly, as the dome does when 3D opens: switched on, the flat photo round the dome sinks into the
+  // crossing over a second and a half, and switched off it rises flat again. S.archL is how far that has gone (0 flat, 1 full),
+  // and the arches' sheet is kept until it is flat again.
+  const archUp=()=>!!(S.arch&&(S.arch.on||S.archL>0.001));
+  const archShow=()=>{ const on=archUp(); meshA.visible=on&&picOn; archRing.visible=on; geo.setDrawRange(0,on?NR*NS*6:Infinity); };
   // The shape, with the drawing's own rim as 1. E is the opening: the foot of the wall, on the ground. Rr is where the rounding
   // begins. Between them the picture stands straight up as a wall of height H; inside Rr it is a half-sphere of the opening's size
   // sitting on that wall. The wall keeps the plain dome's measure: a distance in the picture becomes that distance times a quarter
@@ -2911,7 +2915,7 @@ function make3d(){
     geo.attributes.position.needsUpdate=true; geo.boundingSphere=null; geo.boundingBox=null; raiseArch(); S.need=true; spire(); placeGround(); }
   // Each spot of the flat photo, r from the middle, goes to t of the way from the standing point to where it lay: t is 1 on the
   // ring and on the crowns of the four vaults, which stay where the flat photo was, and less everywhere else, which hangs below.
-  function raiseArch(){ const A=S.arch; if(!A||!A.on) return; const {a,s,Hc,g,tau}=A, L=S.lift;
+  function raiseArch(){ const A=S.arch; if(!archUp()) return; const {a,s,Hc,g,tau}=A, L=S.lift*S.archL;
     for(let j=0;j<=NS;j++){ const ph=2*Math.PI*j/NS, sf=Math.abs(Math.sin(fold8(ph))), ct=Math.cos(ph+tau), st=Math.sin(ph+tau);
       for(let i=0;i<rowsA;i++){ const v=i*(NS+1)+j, r=flatA[v]; let t;
         if(i<=NA){ const q=Hc*Hc+r*r; t=(Hc*g+Math.sqrt(Math.max(0,Hc*Hc*g*g-q*(g*g-2*a*a))))/q; }                 // a curved corner: on the ball
@@ -2998,7 +3002,7 @@ function make3d(){
     if(!GSESSION) googleReady().then(ok=>{ if(ok&&gFor===d.slug){ gFor=''; placeGround(); } });
   }
   function placeGround(){
-    { const A=S.arch; grass.visible=$('grass3').checked&&!!S.d&&!$('map3').checked; grass.position.y=-0.015-(A&&A.on?S.lift*A.Hc*1.03:0); }   // under the dome's foot, or with the arches up, under where the photo was taken from
+    { const A=S.arch; grass.visible=$('grass3').checked&&!!S.d&&!$('map3').checked; grass.position.y=-0.015-(archUp()?S.lift*S.archL*A.Hc*1.03:0); }   // under the dome's foot, or with the arches up, under where the photo was taken from
     const on=$('map3').checked&&!!S.d; ground.visible=on; ringsG.visible=on; $('mapcredit').hidden=!on; S.need=true;
     while(ringsG.children.length){ const o=ringsG.children[0]; ringsG.remove(o); o.geometry.dispose(); o.material.dispose(); }
     if(!on) return; if(gFor!==S.d.slug){ loadGround(); return; }
@@ -3026,8 +3030,10 @@ function make3d(){
     geo.attributes.uv.needsUpdate=true;
     // The arches' sheet: from the ring out to the arches (where each shows in the flat photo), then on out to a square that
     // covers the picture, closer together near the arches.
-    const A=S.arch=arch3(); archShow();
-    if(A.on) for(let j=0;j<=NS;j++){ const ph=2*Math.PI*j/NS, f=fold8(ph), cf=Math.cos(f), tf=Math.tan(f), th=ph+A.tau, ct=Math.cos(th), st=Math.sin(th);
+    const A=S.arch=arch3();
+    if(A.on!==S.archT){ S.archT=A.on; S.archAnim={from:S.archL,to:A.on?1:0,t0:performance.now()}; }   // just switched: ease to it
+    archShow();
+    if(archUp()) for(let j=0;j<=NS;j++){ const ph=2*Math.PI*j/NS, f=fold8(ph), cf=Math.cos(f), tf=Math.tan(f), th=ph+A.tau, ct=Math.cos(th), st=Math.sin(th);
       const rA=A.Hc*A.a/(cf*(A.g+A.a*Math.sqrt(Math.max(0,1-tf*tf)))), rF=Math.max(rA*1.05,far/cf);
       for(let i=0;i<rowsA;i++){ const x=(i-NA)/NB, r=i<=NA?A.a+(rA-A.a)*i/NA:rA+(rF-rA)*x*(0.45+0.55*x), v=i*(NS+1)+j; flatA[v]=r;
         uvA[v*2]=m+(half+r*rim*ct)*s; uvA[v*2+1]=1-(m+(half+r*rim*st)*s); } }
@@ -3050,6 +3056,7 @@ function make3d(){
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(S.launch){ launchStep(t); S.need=true; }
+    if(S.archAnim){ const m=S.archAnim, u=Math.min(1,Math.max(0,(t-m.t0)/1500)); S.archL=m.from+(m.to-m.from)*u*u*(3-2*u); if(u>=1){ S.archAnim=null; S.archL=m.to; archShow(); } raiseArch(); placeGround(); S.need=true; }
     if(S.need){ S.need=false; grassMat.uniforms.dim.value=starsShown()?0:1;
       if(!fly.on&&!(S.launch&&S.launch.free)){ tgt.set(0,0.3*S.lift*shape3().top,0).add(S.pan); const sp=Math.sin(S.pol);
         cam.position.set(tgt.x+S.dist*sp*Math.cos(S.az),tgt.y+S.dist*Math.cos(S.pol),tgt.z+S.dist*sp*Math.sin(S.az)); cam.lookAt(tgt); }
@@ -3131,7 +3138,7 @@ function make3d(){
   $('pic3').onchange=()=>setPicOn($('pic3').checked); $('sph3').onchange=spheres; $('embryo3').onchange=spheres;
   const api={
     get on(){ return S.on; }, get atCone(){ return !!S.spireView; },
-    open(d,balls){ orbClose(); S.d=d; S.on=true; showEdge(); S.step=-1; S.stale=true; box.hidden=false; $('place').hidden=true; $('go3d').checked=true; $('align').hidden=true; showModes();
+    open(d,balls){ orbClose(); S.d=d; S.on=true; S.archT=archOf(d).on; S.archL=S.archT?1:0; S.archAnim=null; showEdge(); S.step=-1; S.stale=true; box.hidden=false; $('place').hidden=true; $('go3d').checked=true; $('align').hidden=true; showModes();
       $('sph3').checked=!!balls; $('lift3').value=balls?0:1;                                     // spheres stand on the flat picture; the dome can still be raised under them with the slider
       // raising the dome opens under it at an angle; spheres open from above
       fit3(); api.view(balls?'out':'under'); if(balls){ S.dist=5.2; S.pol=0.95; } const full=parseFloat($('lift3').value), t0=performance.now();
