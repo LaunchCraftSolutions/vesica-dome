@@ -3020,14 +3020,15 @@ function make3d(){
     if(!GSESSION) googleReady().then(ok=>{ if(ok&&gFor===d.slug){ gFor=''; placeGround(); } });
   }
   function placeGround(){
-    { const A=S.arch; grass.visible=$('grass3').checked&&!!S.d&&!$('map3').checked; grass.position.y=-0.015-(archUp()?S.lift*S.archL*A.Hc*1.03:0); }   // under the dome's foot, or with the arches up, under where the photo was taken from
+    const drop=archUp()?S.lift*S.archL*S.arch.Hc*1.03:0;   // how far the ground lies below the dome's foot: nothing, or with the arches up, down where the photo was taken from
+    grass.visible=$('grass3').checked&&!!S.d&&!$('map3').checked; grass.position.y=-0.015-drop; ringsG.position.y=-drop;   // under the dome's foot, or with the arches up, under where the photo was taken from
     const on=$('map3').checked&&!!S.d; ground.visible=on; ringsG.visible=on; $('mapcredit').hidden=!on; S.need=true;
     while(ringsG.children.length){ const o=ringsG.children[0]; ringsG.remove(o); o.geometry.dispose(); o.material.dispose(); }
     if(!on) return; if(gFor!==S.d.slug){ loadGround(); return; }
     const m=maps[S.d.slug]||{}, wide=m.w||25, turn=(m.turn||0)*DEG, E=edgeOf(S.d)/RIM0, G=gMetres*2*E/wide;
     $('domew3').value=wide; $('mapturn3').value=m.turn||0;
     const px=gAt[0]*G, pz=gAt[1]*G, ct=Math.cos(turn), st=Math.sin(turn);
-    ground.scale.set(G,G,1); ground.rotation.y=turn; ground.position.set(-(px*ct+pz*st),-0.006,-(-px*st+pz*ct));
+    ground.scale.set(G,G,1); ground.rotation.y=turn; ground.position.set(-(px*ct+pz*st),-0.006-drop,-(-px*st+pz*ct));
     const K=ownScale()/RIM0, rr=S3*K, last=Math.min(120,Math.floor(G*0.5/(S3*K))), a=fig.turn*DEG, ca=Math.cos(a), sa=Math.sin(a), v=[];
     for(let k=4;k<=last;k++) for(let j=0;j<8;j++){ const X0=k*S3*K*Math.cos(j*45*DEG), Y0=k*S3*K*Math.sin(j*45*DEG);
       for(let s=0;s<40;s++){ const p=u=>{ const X=X0+rr*Math.cos(u), Y=Y0+rr*Math.sin(u); return new THREE.Vector3(-(X*ca-Y*sa),0.002,X*sa+Y*ca); }; v.push(p(s/40*2*Math.PI),p((s+1)/40*2*Math.PI)); } }
