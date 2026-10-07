@@ -1512,7 +1512,17 @@ function setFig(){
 // With Sky on, what lies behind everything is space: on the desk a field of stars under the squared paper, and in 3D and Space
 // a sky of stars all round you that turns as you look about. Grid lines keeps the lines or takes them away: on the desk they
 // are the squared paper; in 3D and Space they are the lines of a globe drawn on the sky, level with the drawing.
-// The stars are made here, not photographed: the same ones every time, thicker along one band as along the Milky Way.
+// The sky is the real one: NASA's Deep Star Maps 2020 (the whole sky as one picture, the Milky Way in it), and over it the
+// 9,096 stars of the Yale Bright Star Catalogue, the ones the eye can see, each drawn as a sharp point at its own place,
+// brightness and colour, so they stay crisp however narrow the lens. Both are fetched the first time the stars are wanted
+// (lib/sky). Until they arrive, and if they cannot be had, a made-up sky stands in: stars thicker along one band.
+// The picture is laid out by the sky's own measure: right ascension across, growing to the left from the middle, and
+// declination up and down. A star at (ra, dec) is at the same spot of the picture and of the ball of sky.
+const SKYDIR='lib/sky/';
+let skyPic=null, skyCat=null;
+const skyBig=()=>(navigator.deviceMemory||8)>=8&&Math.max(screen.width,screen.height)*(devicePixelRatio||1)>=1800;   // the large picture only where there is the screen and the memory for it
+const skyImage=()=>skyPic||(skyPic=new Promise(ok=>{ const im=new Image(); im.onload=()=>ok(im); im.onerror=()=>ok(null); im.src=SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'); }));
+const skyStars=()=>skyCat||(skyCat=fetch(SKYDIR+'stars.bin').then(r=>r.ok?r.arrayBuffer():null).catch(()=>null));
 let starsOn=store.get('dome-sky-stars',true)!==false, starGrid=store.get('dome-sky-grid',true)!==false;
 const starsShown=()=>skyShown()&&starsOn, SPACEINK='#03040a';
 const rnd=seed=>()=>{ seed=seed+0x6D2B79F5|0; let v=Math.imul(seed^seed>>>15,1|seed); v=v+Math.imul(v^v>>>7,61|v)^v; return ((v^v>>>14)>>>0)/4294967296; };
@@ -1525,7 +1535,11 @@ function paintSpace(){ const cv=$('space'); if(cv.dataset.done) return; cv.datas
   c.globalCompositeOperation='source-over'; for(let i=0;i<90;i++){ const u=r()*1.3-0.15, [x,y]=band(u,gauss()*0.02); softBlob(c,x,y,20+r()*70,'3,4,10',0.10+0.18*r()); } c.globalCompositeOperation='lighter';
   for(let i=0;i<5200;i++){ let x=r()*W, y=r()*W; if(i%2){ const u=r()*1.3-0.15; [x,y]=band(u,gauss()*0.09); } const b=Math.pow(r(),5), tint=STARTINT[r()*6|0].map(v=>Math.round(v*255)).join();
     c.fillStyle=`rgba(${tint},${0.3+0.7*Math.pow(r(),2)})`; c.beginPath(); c.arc(x,y,0.4+0.9*b,0,7); c.fill(); if(b>0.86) softBlob(c,x,y,3+5*b,tint,0.3*b); } }
-function showSpace(){ const on=starsShown(), st=$('stage'); if(on) paintSpace(); st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid; }
+// On the desk the backdrop is one square piece of the real sky, a quarter of the way round each way, where the Milky Way runs
+// down from the Swan toward the Archer.
+function realSpace(){ const cv=$('space'); if(cv.dataset.real) return; cv.dataset.real='1';
+  skyImage().then(im=>{ if(!im) return; const k=im.naturalWidth/8192, c=cv.getContext('2d'); c.globalCompositeOperation='source-over'; c.globalAlpha=1; c.drawImage(im,4476*k,876*k,2048*k,2048*k,0,0,cv.width,cv.height); }); }
+function showSpace(){ const on=starsShown(), st=$('stage'); if(on){ paintSpace(); realSpace(); } st.classList.toggle('space',on); st.classList.toggle('nogrid',on&&!starGrid); $('sky-stars').checked=starsOn; $('sky-grid').checked=starGrid; }
 $('sky-stars').onchange=()=>{ starsOn=$('sky-stars').checked; store.set('dome-sky-stars',starsOn); showSpace(); dirty3(); };
 $('sky-grid').onchange=()=>{ starGrid=$('sky-grid').checked; store.set('dome-sky-grid',starGrid); showSpace(); dirty3(); };
 // The launch (see launch3 in make3d): going from 3D to Space, a tunnel of grid lines rushes past you. WARP says how strongly it
@@ -1567,8 +1581,27 @@ function makeSpace(T,R){ const g=new T.Group(), gal=new T.Group(), r=rnd(11), ga
   const tunMat=new T.LineBasicMaterial({vertexColors:true,transparent:true,blending:T.AdditiveBlending,depthTest:false,depthWrite:false});
   rings.add(new T.LineSegments(ringGeo,tunMat)); tun.add(rings); tun.add(new T.LineSegments(lineGeo,tunMat)); tun.children.forEach(o=>{ o.frustumCulled=false; }); rings.children[0].frustumCulled=false; tun.visible=false; sky.add(tun);
   // draw the sky, if the stars are out (or the tunnel is showing), and say whether it was drawn; the caller then draws its own things over it
-  return { turn(q){ g.quaternion.copy(q).invert(); },   // turn the stars so that what was straight ahead through a camera turned q is straight ahead through one that is not turned
-    draw(ren,cam){ const warp=WARP.k>0.003, stars=starsShown(); if(!stars&&!warp) return false; g.visible=stars; grid.visible=starGrid; mat.uniforms.k.value=ren.getPixelRatio();
+  // The real sky, when it has come: the picture on the inside of a ball, and the catalogue's stars as points. The ball is
+  // turned inside out (the picture is drawn as seen from the Earth, looking out), and the made-up sky is put away.
+  const real=new T.Group(); real.scale.z=-1; gal.add(real); let asked=false, realTex=null;
+  function fetchSky(ren){ asked=true;
+    skyImage().then(im=>{ if(!im) return; let src=im; const cap=ren.capabilities.maxTextureSize;
+      if(im.naturalWidth>cap){ src=document.createElement('canvas'); src.width=cap; src.height=cap/2; src.getContext('2d').drawImage(im,0,0,cap,cap/2); }   // a graphics card that cannot hold the large picture gets it made smaller
+      realTex=new T.Texture(src); realTex.anisotropy=ren.capabilities.getMaxAnisotropy(); realTex.needsUpdate=true;
+      const ball=new T.Mesh(new T.SphereGeometry(R,64,32),new T.MeshBasicMaterial({map:realTex,side:T.BackSide,depthTest:false,depthWrite:false})); ball.renderOrder=-1000; ball.frustumCulled=false; real.add(ball);
+      haze.visible=false; stars.visible=false; dirty3(); });
+    skyStars().then(buf=>{ if(!buf) return; const v=new DataView(buf), m=buf.byteLength/8|0, p=new Float32Array(m*3), c=new Float32Array(m*3), s=new Float32Array(m);
+      for(let i=0;i<m;i++){ const ra=v.getUint16(8*i,true)/65536*2*Math.PI, de=v.getInt16(8*i+2,true)/32767*Math.PI/2, mag=v.getInt16(8*i+4,true)/1000, bv=v.getInt16(8*i+6,true)/1000;
+        p[3*i]=Rs*Math.cos(de)*Math.cos(ra); p[3*i+1]=Rs*Math.sin(de); p[3*i+2]=Rs*Math.cos(de)*Math.sin(ra);
+        const f=Math.max(0,Math.min(1,(6.6-mag)/8.1)), lum=0.45+0.55*Math.pow(f,0.6), w=Math.max(0,Math.min(1,(bv+0.4)/2.4));   // f: how bright, from the faintest the eye can see to Sirius; w: its colour, from blue through white to red
+        const cr=w<0.35?0.62+0.38*w/0.35:1, cg=w<0.35?0.72+0.28*w/0.35:1-(w-0.35)*0.75, cb=w<0.35?1:Math.max(0.3,1-(w-0.35)*1.6);
+        c[3*i]=lum*(0.35+0.65*cr); c[3*i+1]=lum*(0.35+0.65*cg); c[3*i+2]=lum*(0.35+0.65*cb); s[i]=1.6+8*Math.pow(f,1.7); }
+      const geo=new T.BufferGeometry(); geo.setAttribute('position',new T.BufferAttribute(p,3)); geo.setAttribute('tint',new T.BufferAttribute(c,3)); geo.setAttribute('size',new T.BufferAttribute(s,1));
+      const pts=new T.Points(geo,mat); pts.renderOrder=-999; pts.frustumCulled=false; real.add(pts); dirty3(); }); }
+  return { turn(q){ g.quaternion.copy(q).invert(); },
+    rest(){ if(realTex) realTex.dispose(); },   // let the graphics card drop the picture while this view is shut; it is handed over again when next drawn
+    warm(ren,cam){ if(starsShown()) this.draw(ren,cam); },   // turn the stars so that what was straight ahead through a camera turned q is straight ahead through one that is not turned
+    draw(ren,cam){ const warp=WARP.k>0.003, stars=starsShown(); if(!stars&&!warp) return false; g.visible=stars; grid.visible=starGrid; mat.uniforms.k.value=ren.getPixelRatio(); if(stars&&!asked) fetchSky(ren);
     eye.copy(cam,false); eye.position.set(0,0,0); eye.near=0.3; eye.far=R*2; eye.updateProjectionMatrix(); eye.updateMatrixWorld(true);
     tun.visible=warp; if(warp){ tun.quaternion.copy(eye.quaternion); rings.position.z=((WARP.z%SP)+SP)%SP; tunMat.opacity=Math.min(1,WARP.k); }
     ren.autoClear=true; ren.render(sky,eye); return true; } }; }
@@ -2984,7 +3017,7 @@ function make3d(){
       const rise=()=>{ if(!S.on) return; const t=Math.min(1,(performance.now()-t0)/1500); S.lift=full*t*t*(3-2*t); raise(); if(t<1) requestAnimationFrame(rise); }; rise();   // the flat picture rises into the dome
       requestAnimationFrame(loop); },
     launch:launch3,
-    close(){ if(!S.on) return; launchEnd(null); fly.leave(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
+    close(){ if(!S.on) return; launchEnd(null); fly.leave(); space3.rest(); S.on=false; S.spireView=false; S.back=null; coneBtn(); box.hidden=true; $('place').hidden=false; $('go3d').checked=false; $('sph3').checked=false; $('embryo3').checked=false; setView(); },
     redraw(){ if(S.on) spheres(); },
     dirty(){ S.stale=true; },
     flash(){ S.stale=true; S.last=0; },
@@ -3185,13 +3218,15 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   return { get on(){ return S.on; }, dirty(){ S.stale=true; }, land,
     open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); lens(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
-    close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
+    warm(){ spaceO.warm(ren,cam); },
+    close(){ if(!S.on) return; fly.leave(); spaceO.rest(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
 $('ball-round').value=orbRound;
 $('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); return; }
   // From 3D, Space is reached by the launch: up through the spire and sight cone, and out. (Not for anyone who has asked their
   // computer for less motion, and not if 3D is closed on the way.)
   let facing=null; b.disabled=true;
-  if(T3&&T3.on&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ b.checked=true; facing=await T3.launch(); if(!T3.on){ b.checked=false; b.disabled=false; return; } }
+  if(T3&&T3.on&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ b.checked=true; if(!ORB) ORB=makeOrb(); ORB.warm();   // Space gets its sky ready now, while the spire is still rising
+    facing=await T3.launch(); if(!T3.on){ b.checked=false; b.disabled=false; return; } }
   if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close();
   try{ await loadThree(); if(!ORB) ORB=makeOrb(); spaceMixIn(); ORB.open(); if(facing) ORB.land(facing); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
   b.disabled=false; };
@@ -3389,7 +3424,9 @@ const creditRow=(what,title,page,by,lic,licUrl)=>{ const tr=el('tr'), t1=el('td'
   tr.appendChild(el('td',by||'Not recorded')); t2.appendChild(linkTo(lic||'See source',licUrl)); tr.appendChild(t2); crb.appendChild(tr); };
 DOMES.forEach(d=>creditRow(d.place,d.file_title,d.page,(d.meta||{}).artist,(d.meta||{}).license,d.licence_url));
 creditRow('The globe on the front page','Blue Marble 2002.png','https://commons.wikimedia.org/wiki/File:Blue_Marble_2002.png','NASA Goddard Space Flight Center','Public domain','https://creativecommons.org/publicdomain/mark/1.0/');
-EYES.forEach(e=>creditRow((e.id[0]==='c'?'Under the drawing: ':isSky(e.id)?'Sky: ':'Eye: ')+e.name,(e.title||'').replace(/^File:/,''),e.page,e.by,e.licence,e.licence_url));
+creditRow('The stars behind','Deep Star Maps 2020','https://svs.gsfc.nasa.gov/4851','NASA/Goddard Space Flight Center Scientific Visualization Studio','Public domain','https://creativecommons.org/publicdomain/mark/1.0/');
+creditRow('The stars behind (bright stars)','Yale Bright Star Catalogue, 5th revised edition','http://tdc-www.harvard.edu/catalogs/bsc5.html','D. Hoffleit and W. H. Warren Jr','Public domain','https://creativecommons.org/publicdomain/mark/1.0/');
+EYES.forEach(e=>creditRow((e.id[0]==='c'?'Under the drawing: ':isSky(e.id)?'Nebula: ':'Eye: ')+e.name,(e.title||'').replace(/^File:/,''),e.page,e.by,e.licence,e.licence_url));
 
 // ---- resets ----
 // Every slider has a small reset at the top right corner of its plate, shown only while the slider is off its usual setting.

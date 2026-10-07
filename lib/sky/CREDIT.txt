@@ -1,0 +1,8 @@
+starmap_8k.jpg, starmap_4k.jpg: "Deep Star Maps 2020", NASA/Goddard Space Flight Center Scientific Visualization Studio. Public domain.
+https://svs.gsfc.nasa.gov/4851
+Made from starmap_2020_8k.exr (8192 x 4096, celestial coordinates), brightened and saved as JPEG; the 4k one made smaller.
+
+stars.bin: the Yale Bright Star Catalogue, 5th revised edition (Hoffleit and Warren, 1991). Public domain.
+http://tdc-www.harvard.edu/catalogs/bsc5.html
+9,096 stars, brightest first. Eight bytes each, little-endian: right ascension (0..65535 for 0..360 degrees),
+declination (-32767..32767 for -90..90 degrees), V magnitude x 1000, B-V colour x 1000 (0.6 where the catalogue gives none).
