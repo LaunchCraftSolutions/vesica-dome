@@ -135,6 +135,7 @@ tbody tr.go td:first-child{font:700 14px var(--serif)}
    setGuides). It is always placed on whole pixels, so its lines stay one crisp pixel wide while the view is dragged. */
 .paper{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
 .paper path{fill:none;stroke-width:1;stroke:rgb(212 175 90 / calc(.07 * var(--pk,1)))} .paper path.strong{stroke:rgb(212 175 90 / calc(.17 * var(--pk,1)))}   /* --pk: the Paper slider */
+#xgl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}   /* the crossings' dots, drawn by the graphics card over the drawing */
 #sv{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:pointer;display:block;user-select:none;transform:translateZ(0)}   /* its own sheet on the graphics card */
 /* the dome raised in 3D */
 #three{position:absolute;inset:0;background:radial-gradient(circle at 50% 42%,#1C2238,#0D1019 72%)}
@@ -786,7 +787,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
     </section>
 
     <section id="desk" hidden>
-      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="si" style="display:none"/><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div id="orbbox" hidden><canvas id="orb" aria-label="The circle as a ball: drag to move it, right-drag to turn it, wheel to bring it closer"></canvas></div><div class="drawer" id="drawer">
+      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="si" style="display:none"/><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="xgl" aria-hidden="true" style="display:none"></canvas><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div id="orbbox" hidden><canvas id="orb" aria-label="The circle as a ball: drag to move it, right-drag to turn it, wheel to bring it closer"></canvas></div><div class="drawer" id="drawer">
         <div class="dockrow"><button class="pill accent" id="dive-stop" hidden>Stop fractalling</button><button class="pill accent" id="align" hidden title="Back to the middle, unturned">Centre</button><button class="pill" id="boxes-back" hidden title="Put every toolbar back where it belongs">Put toolbars back</button><div class="dock"><section class="grp" id="circles" aria-label="Circles" hidden><h4>Circles</h4><div id="circle-list"></div><div class="btns"><button class="pill" id="circle-add" aria-pressed="false">Add a circle</button></div></section>
           <div class="dockline">
             <div class="gg" role="toolbar" aria-label="Pointer"><button id="m-pan" aria-pressed="true" title="Point"><svg viewBox="0 0 24 24"><path d="M5 3l5.5 16 2.3-6.2L19 10.5z"/></svg></button><button id="m-hand" aria-pressed="false" title="Move and turn"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></button></div>
@@ -1492,7 +1493,7 @@ function showCircles(){ const box=$('circles'), list=moreNow(), on=!!cur&&!!fig&
   $('circle-add').setAttribute('aria-pressed',mode==='more'); $('circle-add').textContent=mode==='more'?'Done adding':'Add a circle'; }
 function addMore(x,y,r){ const S=cur.view_px; (moreCircles[cur.slug]=moreCircles[cur.slug]||[]).push({cx:x/S,cy:y/S,u:r/S}); store.set('dome-more-circles',moreCircles); layMore(); dirty3(); }
 function setFig(){
-  gC.setAttribute('transform',transformOf(fig)); gL.setAttribute('transform',transformOf(fig)); $('figx').setAttribute('transform',transformOf(fig));
+  gC.setAttribute('transform',transformOf(fig)); gL.setAttribute('transform',transformOf(fig)); $('figx').setAttribute('transform',transformOf(fig)); xPaint();
   gO.setAttribute('transform',transformOf(fig)); gGrid.setAttribute('transform',transformOf(fig)); if($('figot')) $('figot').setAttribute('transform',transformOf(fig));
   $('world').setAttribute('transform',`rotate(${viewTurn-fig.turn} ${fig.cx} ${fig.cy})`); layMore();
   if(document.activeElement!==$('vturn')) $('vturn').value=Math.round(viewTurn*10)/10;   // the drawing's level line lies on the canvas's level line; the picture turns under it
@@ -1794,7 +1795,7 @@ function drawDepth(){
   const g=cv.getContext('2d'); g.clearRect(0,0,W,H);
   const live=depthOn&&!!cur&&!!fig&&mode==='pan'&&!(T3&&T3.on);
   if(!live) diveLn=0;
-  const dived=diveLn>0; deepNow=live&&(dived||view.w<cur.view_px/300); $('world').style.visibility=deepNow?'hidden':'';
+  const dived=diveLn>0; deepNow=live&&(dived||view.w<cur.view_px/300); $('world').style.visibility=deepNow?'hidden':''; xPaint();
   cv.dataset.drawn=0; if(!live) return;
   const k=W/view.w, cx=dived?W/2:(fig.cx-view.x)*k, cy=dived?H/2:(fig.cy-view.y)*k, rot=viewTurn*DEG, lnS=Math.log(fig.u*k)+diveLn;
   const far=Math.hypot(Math.max(cx,W-cx),Math.max(cy,H-cy)), near=Math.hypot(Math.max(-cx,0,cx-W),Math.max(-cy,0,cy-H));
@@ -1908,7 +1909,44 @@ let xGlow=+store.get('dome-crossing-glow',0.45), xAlpha=+store.get('dome-crossin
 // The glow: three halos under each dot, each wider and fainter than the last, which add their light to the picture beneath.
 // HALO gives each halo's width (as so many dot-widths more, at full glow) and its strength. One list serves the desk and 3D.
 const HALO=[[1.5,.34],[3.4,.17],[6.2,.085]];
-function dressDots(){ const p=$('xpts'), w=cur&&fig?Math.max(1,Math.min(xSize,0.06*(xSize/4.5)*fig.u*sv.getBoundingClientRect().width/view.w)):xSize, ink=darkLines?'#1E63C8':'#FFF6D8';
+// The dots are drawn by the graphics card: every crossing is one point, and all of them go down in a single draw however many
+// there are. Each point is painted as the dot with its three halos round it, and where dots overlap the brightest wins, so a
+// crowd of dots glows no brighter than one. (They used to be four drawn paths, one for the dots and one for each halo; with
+// thousands of crossings every change, and every pan or zoom coming to rest, held the whole desk up while they were painted
+// again.) makeDots gives a painter for one canvas: the desk has one, and the 3D sheet has its own. Where the graphics card
+// cannot do it, the old drawn paths are used instead.
+function makeDots(cv){ let gl=null; try{ gl=cv.getContext('webgl2',{antialias:false,depth:false,stencil:false,alpha:true,premultipliedAlpha:true}); }catch(_){} if(!gl) return null;
+  const sh=(type,src)=>{ const s=gl.createShader(type); gl.shaderSource(s,src); gl.compileShader(s); return s; }, pr=gl.createProgram();
+  gl.attachShader(pr,sh(gl.VERTEX_SHADER,'#version 300 es\nin vec2 p; uniform vec4 m; uniform vec2 t; uniform vec2 size; uniform float ps; void main(){ vec2 s=vec2(m.x*p.x+m.y*p.y,m.z*p.x+m.w*p.y)+t; gl_Position=vec4(s.x/size.x*2.0-1.0,1.0-s.y/size.y*2.0,0.0,1.0); gl_PointSize=ps; }'));
+  gl.attachShader(pr,sh(gl.FRAGMENT_SHADER,'#version 300 es\nprecision highp float; uniform float ps; uniform vec4 r; uniform vec4 a; uniform vec3 ink; out vec4 o; void main(){ float d=length(gl_PointCoord-0.5)*ps; vec4 c=a*clamp(r-d+0.5,0.0,1.0); float k=1.0-(1.0-c.x)*(1.0-c.y)*(1.0-c.z)*(1.0-c.w); o=vec4(ink*k,k); }'));
+  gl.linkProgram(pr); if(!gl.getProgramParameter(pr,gl.LINK_STATUS)) return null;
+  const U=n=>gl.getUniformLocation(pr,n), u={m:U('m'),t:U('t'),size:U('size'),ps:U('ps'),r:U('r'),a:U('a'),ink:U('ink')}, buf=gl.createBuffer(), loc=gl.getAttribLocation(pr,'p'), maxPs=gl.getParameter(gl.ALIASED_POINT_SIZE_RANGE)[1]||64;
+  let held=null, count=0; const PADPX=96;   // drawn a little past every edge, so a dot is not dropped the moment its middle leaves the canvas
+  return { canvas:cv,
+    // pts: the crossings, in the drawing's own measure. M and T carry them to the canvas's pixels. radii and alphas: the dot and its three halos.
+    draw(pts,M,T,radii,alphas,ink){ const W=cv.width, H=cv.height;
+      if(pts!==held){ held=pts; count=pts.length; const f=new Float32Array(count*2); for(let i=0;i<count;i++){ f[2*i]=pts[i][0]; f[2*i+1]=pts[i][1]; } gl.bindBuffer(gl.ARRAY_BUFFER,buf); gl.bufferData(gl.ARRAY_BUFFER,f,gl.DYNAMIC_DRAW); }
+      gl.viewport(-PADPX,-PADPX,W+2*PADPX,H+2*PADPX); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT); if(!count) return;
+      gl.useProgram(pr); gl.bindBuffer(gl.ARRAY_BUFFER,buf); gl.enableVertexAttribArray(loc); gl.vertexAttribPointer(loc,2,gl.FLOAT,false,0,0);
+      gl.enable(gl.BLEND); gl.blendEquation(gl.MAX);
+      const big=Math.max(radii[0],radii[1],radii[2],radii[3]), ps=Math.min(maxPs,2*big+3), n=parseInt(ink.slice(1),16);
+      gl.uniform4f(u.m,M[0],M[1],M[2],M[3]); gl.uniform2f(u.t,T[0]+PADPX,T[1]+PADPX); gl.uniform2f(u.size,W+2*PADPX,H+2*PADPX); gl.uniform1f(u.ps,ps);
+      gl.uniform4f(u.r,radii[0],radii[1],radii[2],radii[3]); gl.uniform4f(u.a,alphas[0],alphas[1],alphas[2],alphas[3]); gl.uniform3f(u.ink,(n>>16&255)/255,(n>>8&255)/255,(n&255)/255);
+      gl.drawArrays(gl.POINTS,0,count); },
+    clear(){ gl.viewport(0,0,cv.width,cv.height); gl.clearColor(0,0,0,0); gl.clear(gl.COLOR_BUFFER_BIT); } }; }
+const XGL=makeDots($('xgl'));
+// The dots on the desk. They stand where the drawing stands: the first circle's middle, its size and the view's turn carry
+// each crossing to its place on the canvas, with no need to ask the page where anything is.
+let xW=0, xH=0;
+function xPaint(){ if(!XGL) return; const cv=$('xgl'), on=showX&&!!cur&&!!fig&&xNow.length>0&&(mode==='pan'||mode==='draw')&&!ownOnly&&!deepNow;
+  cv.style.display=on?'':'none'; if(!on) return;
+  if(!xW){ const r=sv.getBoundingClientRect(); xW=r.width; xH=r.height; } if(!xW) return;
+  const dpr=Math.min(devicePixelRatio||1,2), W=Math.round(xW*dpr), H=Math.round(xH*dpr); if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
+  const k=W/view.w, s=fig.u*k, a=viewTurn*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a);
+  const w=Math.max(1,Math.min(xSize,0.06*(xSize/4.5)*fig.u*xW/view.w))*dpr/2, g=xGlow>0.005?xGlow:0;   // half the dot's width, in the canvas's pixels
+  XGL.draw(xNow,[s*ca,-s*sa,s*sa,s*ca],[(fig.cx-view.x)*k,(fig.cy-view.y)*k],[w,w*(1+HALO[0][0]*g),w*(1+HALO[1][0]*g),w*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha],darkLines?'#1E63C8':'#FFF6D8'); }
+new ResizeObserver(()=>{ const r=sv.getBoundingClientRect(); xW=r.width; xH=r.height; xPaint(); }).observe($('stage'));
+function dressDots(){ xPaint(); const p=$('xpts'), w=cur&&fig?Math.max(1,Math.min(xSize,0.06*(xSize/4.5)*fig.u*sv.getBoundingClientRect().width/view.w)):xSize, ink=darkLines?'#1E63C8':'#FFF6D8';
   p.setAttribute('stroke-width',w.toFixed(2)); p.setAttribute('stroke',ink); p.setAttribute('opacity',xAlpha);
   HALO.forEach(([k,a],i)=>{ const g=$('xg'+(i+1)); g.style.display=xGlow>0.005?'':'none'; g.setAttribute('stroke',ink); g.setAttribute('stroke-width',(w*(1+k*xGlow)).toFixed(2)); g.setAttribute('opacity',(a*xGlow*xAlpha).toFixed(3)); }); }
 // Three halos on thousands of dots are a lot to paint on every frame of a drag or a zoom. While the view is moving only the
@@ -1916,31 +1954,49 @@ function dressDots(){ const p=$('xpts'), w=cur&&fig?Math.max(1,Math.min(xSize,0.
 let xMoveT=0;
 function xMoving(){ const g=$('figx'); if(!g.classList.contains('moving')) g.classList.add('moving'); clearTimeout(xMoveT); xMoveT=setTimeout(()=>g.classList.remove('moving'),170); }
 let xSize=+store.get('dome-crossing-size',4.5); if(!(xSize>=1&&xSize<=10)) xSize=4.5;   // the Dot size slider: the dots' width in pixels at full size
-function crossPoints(n,solo){
-  const segs=[], circs=[];
-  STEPS.slice(0,n).forEach((st,i)=>{ if((solo&&i!==n-1)||hiddenSteps.has(i)) return;
-    st.s.forEach(sh=>{ if(sh.t==='c') circs.push(sh); else if(sh.t==='l') segs.push([sh.p,sh.q]); else if(sh.t==='p') sh.pts.forEach((p,j)=>segs.push([p,sh.pts[(j+1)%sh.pts.length]])); }); });
-  const lim=8*Math.pow(GROW,(n>0?FR[Math.min(n,N)-1]:1)-1), lim2=lim*lim;   // 8 first circles of the fractal the build stands in
-  const seen=new Set(), out=[], add=(x,y)=>{ if(x*x+y*y>lim2) return; const k=Math.round(x*1e4)+','+Math.round(y*1e4); if(!seen.has(k)){ seen.add(k); out.push([x,y]); } };
-  const on=v=>v>-1e-7&&v<1+1e-7;
-  for(let a=0;a<segs.length;a++){ const [p,q]=segs[a], rx=q[0]-p[0], ry=q[1]-p[1];
-    for(let b=a+1;b<segs.length;b++){ const [u,v]=segs[b], sx=v[0]-u[0], sy=v[1]-u[1], den=rx*sy-ry*sx; if(Math.abs(den)<1e-9) continue;
-      const k=((u[0]-p[0])*sy-(u[1]-p[1])*sx)/den, w=((u[0]-p[0])*ry-(u[1]-p[1])*rx)/den; if(on(k)&&on(w)) add(p[0]+k*rx,p[1]+k*ry); }
-    for(const c of circs){ const fx=p[0]-c.ctr[0], fy=p[1]-c.ctr[1], A=rx*rx+ry*ry, B=2*(fx*rx+fy*ry), C=fx*fx+fy*fy-c.r*c.r, D=B*B-4*A*C; if(A<1e-12||D<-1e-9) continue;
-      const root=Math.sqrt(Math.max(0,D)); for(const k of root<1e-5?[-B/(2*A)]:[(-B-root)/(2*A),(-B+root)/(2*A)]) if(on(k)) add(p[0]+k*rx,p[1]+k*ry); } }
-  for(let a=0;a<circs.length;a++) for(let b=a+1;b<circs.length;b++){ const c1=circs[a], c2=circs[b], dx=c2.ctr[0]-c1.ctr[0], dy=c2.ctr[1]-c1.ctr[1], d=Math.hypot(dx,dy);
+// The crossings are kept as the build goes: each step only meets its own lines and circles with those already down, and what
+// was found for the steps before it is kept. So stepping on, or playing, works out the new crossings only, not all of them again.
+// The list starts over when the set of hidden steps changes. Each point is kept with its distance from the middle (squared),
+// so the ones past the edge of the fractal the build stands in can be left out when the list is read.
+const XLIM=8*Math.pow(GROW,Math.max(...FR)-1)+1e-6, XC={sig:null,upto:0,segs:[],circs:[],seen:new Set(),pts:[],cuts:[0]};
+const xOn=v=>v>-1e-7&&v<1+1e-7;
+// one new line (u to v), or one new circle, met with the lines and circles already down
+function xSeg(u,v,segs,circs,add){ const sx=v[0]-u[0], sy=v[1]-u[1];
+  for(const [p,q] of segs){ const rx=q[0]-p[0], ry=q[1]-p[1], den=rx*sy-ry*sx; if(Math.abs(den)<1e-9) continue;
+    const k=((u[0]-p[0])*sy-(u[1]-p[1])*sx)/den, w=((u[0]-p[0])*ry-(u[1]-p[1])*rx)/den; if(xOn(k)&&xOn(w)) add(p[0]+k*rx,p[1]+k*ry); }
+  for(const c of circs) xSegCirc(u,v,c,add); }
+function xSegCirc(p,q,c,add){ const rx=q[0]-p[0], ry=q[1]-p[1], fx=p[0]-c.ctr[0], fy=p[1]-c.ctr[1], A=rx*rx+ry*ry, B=2*(fx*rx+fy*ry), C=fx*fx+fy*fy-c.r*c.r, D=B*B-4*A*C; if(A<1e-12||D<-1e-9) return;
+  const root=Math.sqrt(Math.max(0,D)); if(root<1e-5){ const k=-B/(2*A); if(xOn(k)) add(p[0]+k*rx,p[1]+k*ry); return; }
+  const k1=(-B-root)/(2*A), k2=(-B+root)/(2*A); if(xOn(k1)) add(p[0]+k1*rx,p[1]+k1*ry); if(xOn(k2)) add(p[0]+k2*rx,p[1]+k2*ry); }
+function xCirc(c2,segs,circs,add){ for(const [p,q] of segs) xSegCirc(p,q,c2,add);
+  for(const c1 of circs){ const dx=c2.ctr[0]-c1.ctr[0], dy=c2.ctr[1]-c1.ctr[1], d=Math.hypot(dx,dy);
     if(d<1e-9||d>c1.r+c2.r+1e-7||d<Math.abs(c1.r-c2.r)-1e-7) continue;
     const k=(d*d+c1.r*c1.r-c2.r*c2.r)/(2*d), h=Math.sqrt(Math.max(0,c1.r*c1.r-k*k)), mx=c1.ctr[0]+k*dx/d, my=c1.ctr[1]+k*dy/d;
-    if(h<1e-5) add(mx,my); else { add(mx-h*dy/d,my+h*dx/d); add(mx+h*dy/d,my-h*dx/d); } }
-  return out;
+    if(h<1e-5) add(mx,my); else { add(mx-h*dy/d,my+h*dx/d); add(mx+h*dy/d,my-h*dx/d); } } }
+// points that fall on the same spot (to a ten-thousandth of a first circle) are counted once
+const xAdder=(seen,pts)=>(x,y)=>{ const r2=x*x+y*y; if(r2>XLIM*XLIM) return; const k=Math.round(x*1e4)*16777216+Math.round(y*1e4); if(!seen.has(k)){ seen.add(k); pts.push([x,y,r2]); } };
+function xStep(st,segs,circs,add){ st.s.forEach(sh=>{
+  if(sh.t==='c'){ xCirc(sh,segs,circs,add); circs.push(sh); }
+  else if(sh.t==='l'){ xSeg(sh.p,sh.q,segs,circs,add); segs.push([sh.p,sh.q]); }
+  else if(sh.t==='p') sh.pts.forEach((p,j)=>{ const q=sh.pts[(j+1)%sh.pts.length]; xSeg(p,q,segs,circs,add); segs.push([p,q]); }); }); }
+function crossPoints(n,solo){
+  const lim=8*Math.pow(GROW,(n>0?FR[Math.min(n,N)-1]:1)-1), lim2=lim*lim+1e-9;   // 8 first circles of the fractal the build stands in
+  n=Math.max(0,Math.min(n,N));
+  if(solo){ const pts=[]; if(n>0&&!hiddenSteps.has(n-1)) xStep(STEPS[n-1],[],[],xAdder(new Set(),pts)); return pts.filter(p=>p[2]<=lim2); }
+  const sig=[...hiddenSteps].sort((a,b)=>a-b).join();
+  if(XC.sig!==sig){ XC.sig=sig; XC.upto=0; XC.segs=[]; XC.circs=[]; XC.seen=new Set(); XC.pts=[]; XC.cuts=[0]; }
+  if(XC.upto<n){ const add=xAdder(XC.seen,XC.pts); while(XC.upto<n){ const i=XC.upto++; if(!hiddenSteps.has(i)) xStep(STEPS[i],XC.segs,XC.circs,add); XC.cuts[XC.upto]=XC.pts.length; } }
+  const m=XC.cuts[n], out=[]; for(let i=0;i<m;i++){ const p=XC.pts[i]; if(p[2]<=lim2) out.push(p); } return out;
 }
 // xNow: the crossings on the desk at this moment, kept so the 3D sheet can paint the same dots. While the build plays the dots
 // are those of the steps already drawn, and the step being drawn adds its own when its last stroke is down.
 let xNow=[];
 function drawCrossings(upTo){ ['xpts-size','xpts-glow','xpts-alpha'].forEach(id=>$(id).closest('label').classList.toggle('dimrow',!showX));   // these only mean anything while Crossings is on
-  const e=$('xpts'), halos=d=>HALO.forEach((_,i)=>$('xg'+(i+1)).setAttribute('d',d)); if(!showX||!cur){ xNow=[]; e.setAttribute('d',''); halos(''); $('xpts-n').textContent=''; dirty3(); return; }
+  const e=$('xpts'), halos=d=>HALO.forEach((_,i)=>$('xg'+(i+1)).setAttribute('d',d)); if(!showX||!cur){ xNow=[]; e.setAttribute('d',''); halos(''); $('xpts-n').textContent=''; xPaint(); dirty3(); return; }
   const pts=xNow=crossPoints(upTo==null?+stepEl.value:upTo,$('solo').checked); dirty3();
-  { const d=pts.map(p=>`M${p[0].toFixed(5)} ${p[1].toFixed(5)}h.00001`).join(''); e.setAttribute('d',d); halos(d); } dressDots(); $('xpts-n').textContent=pts.length.toLocaleString();
+  if(XGL){ if(e.getAttribute('d')){ e.setAttribute('d',''); halos(''); } }
+  else { const d=pts.map(p=>`M${p[0].toFixed(5)} ${p[1].toFixed(5)}h.00001`).join(''); e.setAttribute('d',d); halos(d); }
+  dressDots(); $('xpts-n').textContent=pts.length.toLocaleString();
 }
 
 // ---- playing the build: each point is marked, each circle grows out of its centre and lands on a point, each line runs point to point ----
@@ -2177,7 +2233,7 @@ function setMode(m){ if(m!=='pan') stop(); if(T3&&m!=='pan') T3.close(); if(m!==
     bar.querySelector('.lbl').textContent=sky?'Place picture':'Place eye';
     bar.querySelector('.who').textContent=sky?'Fit the ring in the picture to the first circle.':'Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.';
     bar.querySelector('.note').textContent=sky?'Drag to move the picture. Zoom in to make it bigger, zoom out to make it smaller, until its ring just fills the first circle.':'Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.'; }
-  $('eyebar').hidden=m!=='iris'; sv.style.cursor=m==='iris'?'move':''; $('figx').style.display=m==='pan'||m==='draw'?'':'none'; drawDepth();
+  $('eyebar').hidden=m!=='iris'; sv.style.cursor=m==='iris'?'move':''; $('figx').style.display=m==='pan'||m==='draw'?'':'none'; xPaint(); drawDepth();
   gFig.style.opacity=gMore.style.opacity=m==='pan'||m==='iris'||m==='more'||m==='draw'?1:0;                                                      // with a drawing tool in hand (first circle, level line, straighten) the whole drawing is hidden, leaving the bare photo to draw on
   gTool.style.opacity=m==='circle'?0:1;                                                  // the line being dragged stays visible for the two line tools
   if(m==='circle') $('place').textContent='Drag from the centre to the edge'; if(m==='more') $('place').textContent='Drag from a centre to its edge'; if(m==='line') $('place').textContent='Drag along a level line'; if(m==='level') $('place').textContent='Straighten the photo: drag along something that should be level or upright';
@@ -2818,6 +2874,8 @@ function make3d(){
 }
 // The desk as it stands (sky, dome photo, eye, the strokes, the crossings) painted on a square canvas: the square of the picture
 // reaching `half` to each side of (mx, my), in the picture's pixels. The 3D sheet and the ball are both made from it.
+let SDOTS=null, sdotsTried=false;   // the sheet's own dots painter, made the first time it is wanted
+function sheetDots(TS){ if(!sdotsTried){ sdotsTried=true; SDOTS=makeDots(document.createElement('canvas')); } if(!SDOTS) return false; const cv=SDOTS.canvas; if(cv.width!==TS||cv.height!==TS){ cv.width=cv.height=TS; } return true; }
 function deskTo(c,TS,PAD,d,im,mx,my,half,px,dome,ground){ const V=d.view_px, k=(TS-2*PAD)/(2*half);
   c.clearRect(0,0,TS,TS); if(ground){ c.fillStyle=ground; c.fillRect(0,0,TS,TS); }
   c.save(); c.beginPath(); c.rect(PAD,PAD,TS-2*PAD,TS-2*PAD); c.clip();
@@ -2831,7 +2889,10 @@ function deskTo(c,TS,PAD,d,im,mx,my,half,px,dome,ground){ const V=d.view_px, k=(
   const on={cx:PAD+(fig.cx-mx+half)*k,cy:PAD+(fig.cy-my+half)*k,u:fig.u*k,turn:fig.turn};
   paintLive(c,on,px);
   moreNow().forEach(m=>paintLive(c,{cx:PAD+(m.cx-mx+half)*k,cy:PAD+(m.cy-my+half)*k,u:m.u*k,turn:fig.turn},px));
-  if(showX&&xNow.length){ const rr=Math.max(1.2,Math.min(4.95,on.u*0.018)*xSize/4.5)/on.u;
+  if(showX&&xNow.length&&sheetDots(TS)){ const rp=Math.max(1.2,Math.min(4.95,on.u*0.018)*xSize/4.5), g=xGlow>0.005?xGlow:0, a=on.turn*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a);   // one draw by the graphics card, then laid on the sheet
+    SDOTS.draw(xNow,[on.u*ca,-on.u*sa,on.u*sa,on.u*ca],[on.cx,on.cy],[rp,rp*(1+HALO[0][0]*g),rp*(1+HALO[1][0]*g),rp*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha],darkLines?'#1E63C8':'#FFF6D8');
+    c.drawImage(SDOTS.canvas,0,0); }
+  else if(showX&&xNow.length){ const rr=Math.max(1.2,Math.min(4.95,on.u*0.018)*xSize/4.5)/on.u;
     c.save(); c.translate(on.cx,on.cy); c.rotate(on.turn*Math.PI/180); c.scale(on.u,on.u); c.fillStyle=darkLines?'#1E63C8':'#FFF6D8';
     const disc=(r,a)=>{ c.globalAlpha=a; c.beginPath(); for(const p of xNow){ c.moveTo(p[0]+r,p[1]); c.arc(p[0],p[1],r,0,7); } c.fill(); };
     if(xGlow>0.005){ c.globalCompositeOperation='screen'; HALO.slice().reverse().forEach(([k,a])=>disc(rr*(1+k*xGlow),a*xGlow*xAlpha)); c.globalCompositeOperation='source-over'; }
@@ -3403,7 +3464,7 @@ $('own-pts').onchange=()=>{ ownSnapPts=$('own-pts').checked; store.set('dome-own
 $('own-show').onchange=()=>{ ownShow=$('own-show').checked; store.set('dome-own-show',ownShow); drawOwn(); };
 // Only my drawing: everything else on the canvas is put out of sight (the photo, the eye, the steps and their crossings, the fractal
 // and the guide lines), and nothing hidden can be snapped to or pointed at. It brings the drawing itself back if that was hidden.
-const ownOnlyShow=()=>{ $('stage').classList.toggle('onlyown',ownOnly); $('own-only').checked=ownOnly; ownGrid(); };
+const ownOnlyShow=()=>{ $('stage').classList.toggle('onlyown',ownOnly); $('own-only').checked=ownOnly; ownGrid(); xPaint(); };
 $('own-only').onchange=()=>{ ownOnly=$('own-only').checked; store.set('dome-own-only',ownOnly);
   if(ownOnly&&!ownShow){ ownShow=true; $('own-show').checked=true; store.set('dome-own-show',true); drawOwn(); }
   ownOnlyShow(); lightUp(null); if(!lineBox.hidden) hideLineBox(); };
