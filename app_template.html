@@ -474,7 +474,7 @@ body.grabbing,body.grabbing *{cursor:grabbing!important;user-select:none}
 :is(.drawer,.modes) .pill.zoom.slid .under{grid-column:1/-1;width:calc(100% - 14px);height:14px;margin:0 8px 5px 4px;accent-color:var(--accent)}
 /* Only my drawing: the photo, the eye, the steps, the crossings, the fractal and the guide lines are put out of sight. The squared
    paper and the drawing grid stay. */
-.canvas.onlyown :is(#di,#ei,#figc,#figl,#figx,#frac,#axes){display:none!important}
+.canvas.onlyown :is(#di,#ei,#si,#figc,#figl,#figx,#frac,#axes){display:none!important}
 .canvas.gridon #paper{visibility:hidden}
 /* Draw: the row of drawing tools and the row of colours */
 .owntools{display:flex;justify-content:space-between;gap:2px;padding:3px} .owntools button{width:32px;height:32px} .owntools svg{width:19px;height:19px}
@@ -766,7 +766,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
     </section>
 
     <section id="desk" hidden>
-      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div class="drawer" id="drawer">
+      <div class="canvas" id="stage"><svg class="paper" id="paper" aria-hidden="true"><defs><pattern id="paper-tile" width="120" height="120" patternUnits="userSpaceOnUse"><path d="M0 .5H120M0 24.5H120M0 48.5H120M0 72.5H120M0 96.5H120M.5 0V120M24.5 0V120M48.5 0V120M72.5 0V120M96.5 0V120"/><path class="strong" d="M0 .5H120M.5 0V120"/></pattern></defs><rect width="100%" height="100%" fill="url(#paper-tile)"/></svg><svg id="sv" role="img"><g id="world"><image id="si" style="display:none"/><image id="di"/><image id="ei" style="display:none"/><g id="figgrid"></g><g id="fig"><g id="figc"></g><g id="figl"></g><g id="figo"></g><g id="figx"><path class="xglow" id="xg3" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg2" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path class="xglow" id="xg1" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/><path id="xpts" fill="none" stroke-width="4.5" stroke-linecap="round" vector-effect="non-scaling-stroke" opacity=".92"/></g></g><g id="tool"></g><g id="prev"></g></g></svg><canvas id="frac" aria-hidden="true"></canvas><svg class="axes" id="axes" aria-hidden="true"><line/><line/><line/><line/></svg><div id="three" hidden><canvas id="gl" aria-label="3D view: drag to spin, wheel to zoom"></canvas></div><div class="drawer" id="drawer">
         <div class="dockrow"><button class="pill accent" id="dive-stop" hidden>Stop fractalling</button><button class="pill accent" id="align" hidden title="Back to the middle, unturned">Centre</button><button class="pill" id="boxes-back" hidden title="Put every toolbar back where it belongs">Put toolbars back</button><div class="dock"><section class="grp" id="circles" aria-label="Circles" hidden><h4>Circles</h4><div id="circle-list"></div><div class="btns"><button class="pill" id="circle-add" aria-pressed="false">Add a circle</button></div></section>
           <div class="dockline">
             <div class="gg" role="toolbar" aria-label="Pointer"><button id="m-pan" aria-pressed="true" title="Point"><svg viewBox="0 0 24 24"><path d="M5 3l5.5 16 2.3-6.2L19 10.5z"/></svg></button><button id="m-hand" aria-pressed="false" title="Move and turn"><svg viewBox="0 0 24 24"><path d="M18 11V6a2 2 0 0 0-4 0"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.9-6-2.3l-3.6-3.6a2 2 0 0 1 2.8-2.8L7 15"/></svg></button></div>
@@ -904,9 +904,10 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 <script src="lib/leaflet/leaflet.min.js"></script>
 <script>
 const DOMES=/*DOMES*/[], UNDRAWN=/*UNDRAWN*/[], EYES=/*EYES*/[];
-// The sky pictures (nebulae, galaxies) come in the same list as the eyes; their ids begin with s. One layer under the dome photo
-// serves both: it holds an eye or a sky picture, never both at once. The Eye box and the Sky box each list their own.
-const isSky=id=>typeof id==='string'&&id[0]==='s', SKIES=EYES.filter(e=>isSky(e.id)), firstEye=()=>(EYES.find(e=>!isSky(e.id))||{}).id||(ownEye?'own':null);
+// The sky pictures (nebulae, galaxies) come in the same list as the eyes; their ids begin with s. They have a layer of their own,
+// under the dome photo, with its own switch and strength, so the sky, the dome and the eye can all be on together: the eye lies
+// over the dome, the dome over the sky. The Eye box and the Sky box each list their own pictures.
+const isSky=id=>typeof id==='string'&&id[0]==='s', SKIES=EYES.filter(e=>isSky(e.id));
 const $=id=>document.getElementById(id);
 const store={ get(k,d){ try{ const v=JSON.parse(localStorage.getItem(k)); return v===null?d:v; }catch(_){ return d; } }, set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(_){} } };
 
@@ -1166,21 +1167,31 @@ if(!eyePlaces||typeof eyePlaces!=='object') eyePlaces={};
 // The eye photo has no hard edge: it is clear at its outer edges and grows solid toward the middle. The fade on each side runs
 // 30% of the way in, or stops short of the iris if the iris is nearer the edge than that, so the iris itself is always solid.
 // The faded photo is made once, when an eye is chosen, and that is what the desk and the 3D sheet draw.
-let eyeUrl=null, lastEye=store.get('dome-eye-last',null), lastSky=store.get('dome-sky-id',null);
-function loadEye(){
-  eyeImg=null; if(eyeUrl){ URL.revokeObjectURL(eyeUrl); eyeUrl=null; } if(!eye) return;
-  const want=eye, im=new Image();
-  im.onload=()=>{ if(eye!==want) return;
+let eyeUrl=null;
+function soften(want,still,got){ const im=new Image();
+  im.onload=()=>{ if(!still()) return;
     const w=im.naturalWidth, h=im.naturalHeight, c=document.createElement('canvas'); c.width=w; c.height=h; const x=c.getContext('2d'); x.drawImage(im,0,0);
     const k=w/want.w, len=(size,room)=>Math.max(0.05*size,Math.min(0.3*size,0.8*room))/size, EASE=[[0,0],[.2,.104],[.4,.352],[.6,.648],[.8,.896],[1,1]];
     const ramp=(g,a,b)=>{ EASE.forEach(([p,v])=>g.addColorStop(a*p,`rgba(0,0,0,${v})`)); EASE.slice().reverse().forEach(([p,v])=>g.addColorStop(1-b*p,`rgba(0,0,0,${v})`)); return g; };
     x.globalCompositeOperation='destination-in';
     x.fillStyle=ramp(x.createLinearGradient(0,0,w,0),len(w,(want.cx-want.r)*k),len(w,w-(want.cx+want.r)*k)); x.fillRect(0,0,w,h);
     x.fillStyle=ramp(x.createLinearGradient(0,0,0,h),len(h,(want.cy-want.r)*k),len(h,h-(want.cy+want.r)*k)); x.fillRect(0,0,w,h);
-    eyeImg=c; if(T3) T3.dirty();
-    c.toBlob(b=>{ if(eye!==want||!b) return; eyeUrl=URL.createObjectURL(b); eyeVer++; if(cur&&fig) setEye(); },'image/webp',0.92); };
-  im.src=eye.src;
+    got(c,null); c.toBlob(b=>{ if(still()&&b) got(c,URL.createObjectURL(b)); },'image/webp',0.92); };
+  im.src=want.src; }
+function loadEye(){
+  eyeImg=null; if(eyeUrl){ URL.revokeObjectURL(eyeUrl); eyeUrl=null; } if(!eye) return; const want=eye;
+  soften(want,()=>eye===want,(c,url)=>{ eyeImg=c; if(T3) T3.dirty(); if(url){ eyeUrl=url; eyeVer++; if(cur&&fig) setEye(); } });
 }
+// The sky picture: kept the way the eye is (which one, whether it is on, how strong), and placed the same way.
+let skyId=store.get('dome-sky-id',null), skyOn=store.get('dome-sky-on',false)===true, skyFade=+store.get('dome-sky-opacity',0.85), sky=null, skyImg=null, skyUrl=null, skyVer=1, placing='eye';
+if(!(skyFade>=0&&skyFade<=1)) skyFade=0.85;
+function loadSky(){
+  skyImg=null; if(skyUrl){ URL.revokeObjectURL(skyUrl); skyUrl=null; } if(!sky) return; const want=sky;
+  soften(want,()=>sky===want,(c,url)=>{ skyImg=c; if(T3) T3.dirty(); if(url){ skyUrl=url; skyVer++; if(cur&&fig){ setSky(); drawDepth(); } } });
+}
+function useSky(id){ const E=SKIES.find(e=>e.id===id)||SKIES[0]; if(!E){ sky=null; skyId=null; return; }
+  const p=eyePlaces[E.id]||E; sky={id:E.id,src:E.img,w:E.w,h:E.h,cx:p.cx,cy:p.cy,r:p.r}; skyId=E.id; skyVer++; loadSky(); }
+const skyShown=()=>!!(sky&&skyOn);
 function useEye(id){
   const E=EYES.find(e=>e.id===id);
   if(id==='own'&&ownEye) eye=ownEye;
@@ -1188,9 +1199,11 @@ function useEye(id){
   else if(EYES.length) return useEye(EYES[0].id);
   else if(ownEye){ id='own'; eye=ownEye; }
   else { id=null; eye=null; }
-  eyeId=id; eyeVer++; if(id){ if(isSky(id)) lastSky=id; else lastEye=id; } loadEye();
+  eyeId=id; eyeVer++; loadEye();
 }
-useEye(eyeId);
+// For a day the sky picture was kept in the eye's own place: if that is what was saved, it is moved to the sky's.
+if(isSky(eyeId)){ skyId=eyeId; skyOn=eyeOn; eyeId=store.get('dome-eye-last',null); eyeOn=false; store.set('dome-eye-id',eyeId); store.set('dome-eye-on',false); store.set('dome-sky-id',skyId); store.set('dome-sky-on',skyOn); }
+useEye(eyeId); if(skyOn) useSky(skyId);
 const eyeShown=()=>!!(eye&&eyeOn);
 const spin=(x,y,deg,c)=>{ const a=deg*Math.PI/180, dx=x-c, dy=y-c; return [c+dx*Math.cos(a)-dy*Math.sin(a), c+dx*Math.sin(a)+dy*Math.cos(a)]; };
 // The separate "Photo" rotation box was removed on 2026-10-03: the Turn box and the Line tool do the same job. Any photo rotation
@@ -1348,7 +1361,7 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   st.style.setProperty('--annt',(TOP+(compact?40:by('lines').offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
-  const under=eyeShown()||mode==='iris', on=[!!(T3&&T3.on),depthOn,under&&!isSky(eyeId),mode==='draw',under&&isSky(eyeId)], st=$('stage');   // each box is dimmed while its own switch is off
+  const on=[!!(T3&&T3.on),depthOn,eyeShown()||(mode==='iris'&&placing==='eye'),mode==='draw',skyShown()||(mode==='iris'&&placing==='sky')], st=$('stage');   // each box is dimmed while its own switch is off
   const sig=on.join()+st.clientWidth+'x'+st.clientHeight+$('dive-stop').hidden+$('align').hidden+$('boxes-back').hidden+mode; if(sig===modeSig) return; modeSig=sig;
   MODEBOXES.forEach((b,i)=>b.classList.toggle('off',!on[i])); layBoxes(); }
 const relay=()=>{ modeSig=''; showModes(); };
@@ -1447,10 +1460,16 @@ function setFig(){
   [['reset-circle',ownCircle()],['reset-line',ownTurn()]].forEach(([id,on])=>{ $(id).classList.toggle('dim',!on); $(id).setAttribute('aria-disabled',!on); });   // dimmed, not disabled, so the hover help still shows
   setEye();
 }
+function setSky(){
+  const im=$('si'), on=skyShown()&&!!cur&&!!fig&&!!skyUrl; im.style.display=on?'':'none'; $('sky-fade').value=skyFade; $('sky-on').checked=skyShown(); $('sky-place').disabled=!SKIES.length; $('sky-unplace').disabled=!(sky&&eyePlaces[sky.id]); if(!on) return;
+  if(im.dataset.v!==String(skyVer)){ im.setAttribute('href',skyUrl); im.dataset.v=skyVer; }
+  im.setAttribute('width',sky.w); im.setAttribute('height',sky.h);
+  im.setAttribute('transform',`translate(${fig.cx} ${fig.cy}) rotate(${fig.turn}) scale(${fig.u/sky.r}) translate(${-sky.cx} ${-sky.cy})`);
+  im.setAttribute('opacity',mode==='iris'?(placing==='sky'?1:0):skyFade);
+}
 function setEye(){   // lay the eye photo so its iris is the first circle
-  showModes();
-  const im=$('ei'), on=eyeShown()&&!!cur&&!!fig&&!!eyeUrl; im.style.display=on?'':'none'; $('eye-fade').value=$('eye-fade2').value=$('sky-fade').value=eyeFade; $('eye-on').checked=eyeShown()&&!isSky(eyeId); $('sky-on').checked=eyeShown()&&isSky(eyeId);
-  $('eye-place').disabled=!firstEye(); $('eye-unplace').disabled=isSky(eyeId)||!eyePlaced(); $('sky-place').disabled=!SKIES.length; $('sky-unplace').disabled=!isSky(eyeId)||!eyePlaced(); if(!on) return;
+  showModes(); setSky();
+  const im=$('ei'), on=eyeShown()&&!!cur&&!!fig&&!!eyeUrl&&!(mode==='iris'&&placing==='sky'); im.style.display=on?'':'none'; $('eye-fade').value=$('eye-fade2').value=eyeFade; $('eye-on').checked=eyeShown(); $('eye-place').disabled=!eye; $('eye-unplace').disabled=!eyePlaced(); if(!on) return;
   if(im.dataset.v!==String(eyeVer)){ im.setAttribute('href',eyeUrl); im.dataset.v=eyeVer; }
   im.setAttribute('width',eye.w); im.setAttribute('height',eye.h);
   im.setAttribute('transform',`translate(${fig.cx} ${fig.cy}) rotate(${fig.turn}) scale(${fig.u/eye.r}) translate(${-eye.cx} ${-eye.cy})`);
@@ -1747,12 +1766,13 @@ function drawDepth(){
   // six), so the photo (and the eye under it, as the Dome/Eye slider has them) is laid down again at each of those sizes, each
   // copy cut to the dome's edge and sitting inside the lantern of the one before. Inward copies show once the dive has gone past
   // the photo; outward copies show once the view is well outside it, with a window left for the photo itself.
-  const eyeIn=eyeShown()&&!!eyeImg, domeIn=!!depthImg&&picOn, out=!deepNow&&view.w>fitView().w*1.5;
-  if((deepNow||out)&&(eyeIn||domeIn)){
+  const eyeIn=eyeShown()&&!!eyeImg, skyIn=skyShown()&&!!skyImg, domeIn=!!depthImg&&picOn, out=!deepNow&&view.w>fitView().w*1.5;
+  if((deepNow||out)&&(eyeIn||skyIn||domeIn)){
     const L3=Math.log(3), edge=edgeOf(cur)/ownScale(), lr=Math.log(edge)+lnS, j0=Math.ceil((lr-Math.log(3*far))/L3), j1=Math.min(Math.floor((lr-Math.log(3*dpr))/L3),j0+40);
     for(let j=j0;j<=j1;j++){ if(!deepNow&&j>=0) break;
       const R=Math.exp(lr-j*L3), pp=R/(edge*fig.u);
       g.save(); g.beginPath(); g.arc(cx,cy,R,0,7); g.clip(); g.fillStyle='#0D1019'; g.fill(); g.translate(cx,cy); g.rotate(rot-fig.turn*DEG); g.scale(pp,pp);
+      if(skyIn){ const ss=fig.u/sky.r; g.save(); g.globalAlpha=skyFade; g.rotate(fig.turn*DEG); g.scale(ss,ss); g.drawImage(skyImg,-sky.cx,-sky.cy,sky.w,sky.h); g.restore(); }
       if(domeIn){ g.globalAlpha=fade; g.filter=brightCss(); g.drawImage(depthImg,-fig.cx,-fig.cy,cur.view_px,cur.view_px); g.filter='none'; }
       if(eyeIn){ const es=fig.u/eye.r; g.save(); g.globalAlpha=eyeFade; g.rotate(fig.turn*DEG); g.scale(es,es); g.drawImage(eyeImg,-eye.cx,-eye.cy,eye.w,eye.h); g.restore(); }
       g.restore(); g.globalAlpha=1; drawn++; }
@@ -2111,7 +2131,7 @@ function setMode(m){ if(m!=='pan') stop(); if(T3&&m!=='pan') T3.close();
   // circle, the level line, the two side circles and the hexagon), whatever is hidden or thinned elsewhere, as the thing to fit to.
   if(m==='iris'&&cur){ const out=[]; STEPS.slice(0,4).forEach((st,i)=>st.s.forEach((sh,j)=>{ const kp=keep(sh), e=shape(sh,.95,Math.max(1.2,thick[i])*(kp?KEEPW:1)/MAINW[i]); e.dataset.step=i; e.dataset.k=j; out.push(e); })); lay(out); }
   else if(was==='iris'&&cur) drawStep();
-  if(m==='iris'){ const sky=isSky(eyeId), bar=$('eyebar'); $(sky?'mode-sky':'mode-eye').querySelector('.modehead').after(bar);
+  if(m==='iris'){ const sky=placing==='sky', bar=$('eyebar'); $(sky?'mode-sky':'mode-eye').querySelector('.modehead').after(bar);
     bar.querySelector('.lbl').textContent=sky?'Place picture':'Place eye';
     bar.querySelector('.who').textContent=sky?'Fit the ring in the picture to the first circle.':'Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.';
     bar.querySelector('.note').textContent=sky?'Drag to move the picture. Zoom in to make it bigger, zoom out to make it smaller, until its ring just fills the first circle.':'Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.'; }
@@ -2136,8 +2156,10 @@ function zoom(f,p){ if(T3&&T3.on){ T3.zoom(f); return; } if(depthOn){ const lim=
 // The wheel zooms about the canvas's middle while the drawing sits on the guide lines, so zooming alone never pulls them apart.
 // Once the view has been dragged off, or while Draw is on, it zooms toward the pointer as usual.
 let eyeSaveT=0;
+// the picture being placed (the eye or the sky), and how its placing is kept
+const heldPic=()=>placing==='sky'?sky:eye, saveHeld=()=>placing==='sky'?saveSky():saveEye();
 sv.addEventListener('wheel',e=>{e.preventDefault();
-  if(mode==='iris'&&eye){ eye.r=Math.max(4,eye.r*Math.exp(e.deltaY*0.0012)); setEye(); clearTimeout(eyeSaveT); eyeSaveT=setTimeout(saveEye,300); return; }   // while placing, the wheel sizes the eye about the middle of the first circle
+  if(mode==='iris'&&heldPic()){ const p=heldPic(); p.r=Math.max(4,p.r*Math.exp(e.deltaY*0.0012)); setEye(); clearTimeout(eyeSaveT); eyeSaveT=setTimeout(saveHeld,300); return; }   // while placing, the wheel sizes the eye about the middle of the first circle
   zoom(Math.exp(e.deltaY*0.0015),aligned()&&!handOn&&mode!=='draw'?undefined:atView(e));},{passive:false});   // while drawing, the wheel zooms on the point under the pointer, as GeoGebra's does
 $('z-slide').oninput=e=>{ if(!cur||(T3&&T3.on)) return; zoom((fitView().w/view.w)/Math.pow(2,parseFloat(e.target.value))); };   // the slider is the zoom itself, doubling with each step of one
 $('z-in').onclick=()=>zoom(1/1.5); $('z-out').onclick=()=>zoom(1.5); $('z-fit').onclick=()=>{ if(T3&&T3.on){ T3.view('out'); return; } dive(0); diveLn=0; diveHome=null; $('dive-stop').hidden=true; viewTurn=0; setFig(); view=fitShown(); setView();};
@@ -2151,16 +2173,16 @@ sv.addEventListener('pointerdown',e=>{ if(mode==='draw'){ ownDown(e); return; } 
   if(mode==='pan'&&!handOn) return;   // the arrow only points
   try{sv.setPointerCapture(e.pointerId);}catch(_){} const p=at(e); drag={p,pv:atView(e),cx:e.clientX,cy:e.clientY,vx:view.x,vy:view.y,moved:false};
   if(e.button===2){ const c=figOnScreen(); drag.rot={c,a0:Math.atan2(e.clientY-c[1],e.clientX-c[0]),s0:viewTurn}; return; }
-  if(mode==='iris'&&eye) drag.eye0={cx:eye.cx,cy:eye.cy};
+  if(mode==='iris'&&heldPic()) drag.eye0={cx:heldPic().cx,cy:heldPic().cy};
   if(mode==='circle'||mode==='more'){ drawPreview(p,0,p); $('place').textContent='Drag to the edge'; }
   if(mode==='line'||mode==='level'){guide=[p,p]; drawGuide();} });
 sv.addEventListener('pointermove',e=>{ if(mode==='draw'){ ownMove(e); return; } if(!drag) return;
   if(drag.rot){ const d=drag.rot, a=d.s0+(Math.atan2(e.clientY-d.c[1],e.clientX-d.c[0])-d.a0)*180/Math.PI;   // the sheet follows the pointer round the centre
     viewTurn=Math.round((((a+180)%360+360)%360-180)*100)/100; setFig(); setView(); $('place').textContent=`${viewTurn.toFixed(1)}°`; return; }
   if(mode==='pan'){ const r=sv.getBoundingClientRect(), k=view.w/r.width; view.x=drag.vx-(e.clientX-drag.cx)*k; view.y=drag.vy-(e.clientY-drag.cy)*k; setView(); return;}
-  if(mode==='iris'){ if(!eye||!drag.eye0) return;
-    const q=at(e), s=fig.u/eye.r, a=-fig.turn*Math.PI/180, mx=(q[0]-drag.p[0])/s, my=(q[1]-drag.p[1])/s;
-    eye.cx=drag.eye0.cx-(mx*Math.cos(a)-my*Math.sin(a)); eye.cy=drag.eye0.cy-(mx*Math.sin(a)+my*Math.cos(a)); setEye(); return; }
+  if(mode==='iris'){ const p=heldPic(); if(!p||!drag.eye0) return;
+    const q=at(e), s=fig.u/p.r, a=-fig.turn*Math.PI/180, mx=(q[0]-drag.p[0])/s, my=(q[1]-drag.p[1])/s;
+    p.cx=drag.eye0.cx-(mx*Math.cos(a)-my*Math.sin(a)); p.cy=drag.eye0.cy-(mx*Math.sin(a)+my*Math.cos(a)); setEye(); return; }
   const p=at(e), dx=p[0]-drag.p[0], dy=p[1]-drag.p[1]; if(Math.hypot(e.clientX-drag.cx,e.clientY-drag.cy)>4) drag.moved=true;
   if(mode==='circle'||mode==='more'){ const r=Math.hypot(dx,dy); drawPreview(drag.p,r,p); $('place').textContent=`Radius ${r.toFixed(1)} px`; }
   if(mode==='line'&&drag.moved){guide=[drag.p,p]; drawGuide(); $('place').textContent='Release to level'; }
@@ -2180,7 +2202,7 @@ function endDrag(e){
     const p=e&&e.type==='pointerup'?at(e):d.p, r=Math.hypot(p[0]-d.p[0],p[1]-d.p[1]);
     if(d.moved&&r>=2){ addMore(d.p[0],d.p[1],r); clearPreview(false); $('place').textContent='Added. Drag another, or pick Point to finish'; } else clearPreview(true);
     return; }
-  if(was==='iris'){ if(eye) saveEye(); return; }   // dropped: the eye stays where it was let go, and the tool stays in hand until Done
+  if(was==='iris'){ if(heldPic()) saveHeld(); return; }   // dropped: the eye stays where it was let go, and the tool stays in hand until Done
   if(was==='level'){
     const q=e&&e.type==='pointerup'?atView(e):d.pv; guide=null; drawGuide();
     if(d.moved) setRot(rotOf(cur)-lean(q[0]-d.pv[0],q[1]-d.pv[1]));   // the picture turns until that line is level (or upright) on the canvas
@@ -2202,7 +2224,9 @@ $('auto-bright').checked=autoOn; $('auto-bright').onchange=()=>{ autoOn=$('auto-
 $('bright').oninput=e=>{ bright=parseFloat(e.target.value)||1; store.set('dome-brightness',bright); if(cur){ setPic(); drawDepth(); } };
 $('fade').oninput=$('fade2').oninput=e=>{ fade=Math.round(parseFloat(e.target.value)*100)/100; store.set('dome-photo-opacity',fade); setPic(); if(cur) drawDepth(); };   // the same slider twice: on the toolbar and in the Dome and eye box
 // The eye's strength. Moving it up from nothing turns the eye on, since a slider that shows nothing would look broken.
-$('eye-fade').oninput=$('eye-fade2').oninput=$('sky-fade').oninput=e=>{ eyeFade=Math.round(parseFloat(e.target.value)*100)/100; store.set('dome-eye-opacity',eyeFade);
+$('sky-fade').oninput=e=>{ skyFade=Math.round(parseFloat(e.target.value)*100)/100; store.set('dome-sky-opacity',skyFade);
+  if(skyFade>0&&!skyOn) setSkyOn(true); else if(cur){ setSky(); drawDepth(); if(T3) T3.dirty(); } };
+$('eye-fade').oninput=$('eye-fade2').oninput=e=>{ eyeFade=Math.round(parseFloat(e.target.value)*100)/100; store.set('dome-eye-opacity',eyeFade);
   if(eyeFade>0&&eye&&!eyeOn) setEyeOn(true); else if(cur){ setEye(); drawDepth(); if(T3) T3.dirty(); } };
 // The eye photo is chosen from this computer, made no larger than it needs to be, and kept here. A new one is placed straight away.
 function saveEye(){
@@ -2212,12 +2236,16 @@ function saveEye(){
     store.set('dome-eye-places',eyePlaces); }
   $('eye-unplace').disabled=!eyePlaced();
   store.set('dome-eye-id',eyeId); store.set('dome-eye-on',eyeOn); }
+function saveSky(){ if(!sky) return; const E=SKIES.find(x=>x.id===sky.id), same=E&&Math.abs(sky.cx-E.cx)<0.01&&Math.abs(sky.cy-E.cy)<0.01&&Math.abs(sky.r-E.r)<0.01;
+  if(same) delete eyePlaces[sky.id]; else eyePlaces[sky.id]={cx:sky.cx,cy:sky.cy,r:sky.r};
+  store.set('dome-eye-places',eyePlaces); $('sky-unplace').disabled=!eyePlaces[sky.id]; store.set('dome-sky-id',skyId); store.set('dome-sky-on',skyOn); }
 function fillEyes(){
-  const fill=(pre,list,at,own)=>{ const b=$(pre+'-list'), m=$(pre+'-menu'), E=EYES.find(e=>e.id===at); b.textContent=E?E.name:at==='own'?'Your own':''; b.title=E?E.credit:''; m.replaceChildren();
-    const add=(id,name)=>{ const o=el('button',name); o.type='button'; o.setAttribute('role','option'); o.setAttribute('aria-selected',id===at); o.onclick=()=>{ chooseEye(id); shutEyes(true); }; m.appendChild(o); };
+  const fill=(pre,list,at,own,choose)=>{ const b=$(pre+'-list'), m=$(pre+'-menu'), E=EYES.find(e=>e.id===at); b.textContent=E?E.name:at==='own'?'Your own':''; b.title=E?E.credit:''; m.replaceChildren();
+    const add=(id,name)=>{ const o=el('button',name); o.type='button'; o.setAttribute('role','option'); o.setAttribute('aria-selected',id===at); o.onclick=()=>{ choose(id); shutEyes(true); }; m.appendChild(o); };
     list.forEach(e=>add(e.id,e.name)); if(own) add('own','Your own'); };
-  fill('eye',EYES.filter(e=>!isSky(e.id)),isSky(eyeId)?(lastEye||firstEye()):eyeId,!!ownEye); fill('sky',SKIES,isSky(eyeId)?eyeId:(lastSky||(SKIES[0]||{}).id),false); }
-function chooseEye(id){ useEye(id); eyeOn=true; store.set('dome-eye-id',eyeId); store.set('dome-eye-on',eyeOn); store.set('dome-eye-last',lastEye); store.set('dome-sky-id',lastSky); fillEyes(); if(cur){ setEye(); if(T3) T3.dirty(); } }
+  fill('eye',EYES.filter(e=>!isSky(e.id)),eyeId,!!ownEye,chooseEye); fill('sky',SKIES,skyId||(SKIES[0]||{}).id,false,chooseSky); }
+function chooseEye(id){ useEye(id); eyeOn=true; store.set('dome-eye-id',eyeId); store.set('dome-eye-on',eyeOn); fillEyes(); if(cur){ setEye(); if(T3) T3.dirty(); } }
+function chooseSky(id){ useSky(id); skyOn=!!sky; store.set('dome-sky-id',skyId); store.set('dome-sky-on',skyOn); fillEyes(); if(cur){ setEye(); drawDepth(); if(T3) T3.dirty(); } }
 // The list opens beside its row as soon as the pointer comes over the row, and closes a moment after the pointer has left both.
 let eyeMenuT=0;
 // The list of pictures opens beside the Which row, on the side with more room, growing upward when the row is low on the page.
@@ -2238,12 +2266,13 @@ document.querySelector('.dockrow').addEventListener('mouseenter',()=>{ hideLineB
 fillEyes();
 function setEyeOn(on){ eyeOn=on&&!!eye; store.set('dome-eye-on',eyeOn); if(eyeOn&&eyeFade<=0){ eyeFade=0.6; store.set('dome-eye-opacity',eyeFade); }   // switched on with its strength at nothing: give it something to show
   if(cur){ setEye(); if(T3) T3.dirty(); } }
-$('eye-on').onchange=()=>{ if($('eye-on').checked&&!firstEye()){ $('eye-on').checked=false; $('eye-file').click(); return; } const on=$('eye-on').checked; if(mode==='iris') eyeDone();
-  if(on&&isSky(eyeId)) chooseEye(lastEye&&!isSky(lastEye)?lastEye:firstEye()); else setEyeOn(on); };
-$('sky-on').onchange=()=>{ const on=$('sky-on').checked; if(mode==='iris') eyeDone(); if(on&&!SKIES.length){ $('sky-on').checked=false; return; }
-  if(on&&!isSky(eyeId)) chooseEye(lastSky||SKIES[0].id); else setEyeOn(on); };
-$('sky-place').onclick=()=>{ if(!cur||!SKIES.length) return; if(!isSky(eyeId)) chooseEye(lastSky||SKIES[0].id); setEyeOn(true); setMode('iris'); };   // switched off while it is being placed: the placing ends first
-$('eye-place').onclick=()=>{ if(!cur||!firstEye()) return; if(isSky(eyeId)) chooseEye(lastEye&&!isSky(lastEye)?lastEye:firstEye()); if(!eye) return; setEyeOn(true); setMode('iris'); };
+function setSkyOn(on){ if(on&&!sky) useSky(skyId); skyOn=on&&!!sky; store.set('dome-sky-on',skyOn); store.set('dome-sky-id',skyId); if(skyOn&&skyFade<=0){ skyFade=0.85; store.set('dome-sky-opacity',skyFade); }
+  fillEyes(); if(cur){ setEye(); drawDepth(); if(T3) T3.dirty(); } }
+// A picture switched off while it is being placed: the placing ends first.
+$('eye-on').onchange=()=>{ if($('eye-on').checked&&!eye){ $('eye-on').checked=false; $('eye-file').click(); return; } const on=$('eye-on').checked; if(!on&&mode==='iris'&&placing==='eye') eyeDone(); setEyeOn(on); };
+$('sky-on').onchange=()=>{ const on=$('sky-on').checked; if(!on&&mode==='iris'&&placing==='sky') eyeDone(); setSkyOn(on); };
+$('eye-place').onclick=()=>{ if(!eye||!cur) return; if(mode==='iris') eyeDone(); placing='eye'; setEyeOn(true); setMode('iris'); };
+$('sky-place').onclick=()=>{ if(!cur||!SKIES.length) return; if(mode==='iris') eyeDone(); placing='sky'; setSkyOn(true); if(sky) setMode('iris'); };
 // Reset puts the iris back where the desk found it (or, for a photo of your own, back in the middle). Done keeps the placing.
 // Has this eye been placed by hand? (A photo of your own counts once it has been moved from the middle.) "Reset eye" in Canvas
 // Settings shows only then.
@@ -2253,9 +2282,11 @@ function resetEye(){ if(!eye) return; const E=EYES.find(x=>x.id===eye.id);
   if(E){ delete eyePlaces[E.id]; store.set('dome-eye-places',eyePlaces); eye.cx=E.cx; eye.cy=E.cy; eye.r=E.r; }
   else { eye.cx=eye.w/2; eye.cy=eye.h/2; eye.r=Math.min(eye.w,eye.h)*0.12; store.set('dome-eye',eye); }
   setEye(); }
-$('eye-reset').onclick=resetEye;
-$('eye-unplace').onclick=$('sky-unplace').onclick=()=>{ resetEye(); loadEye(); if(T3) T3.dirty(); };
-const eyeDone=()=>{ clearTimeout(eyeSaveT); if(eye){ saveEye(); loadEye(); } setMode('pan'); };
+function resetSky(){ if(!sky) return; const E=SKIES.find(x=>x.id===sky.id); if(!E) return; delete eyePlaces[E.id]; store.set('dome-eye-places',eyePlaces); sky.cx=E.cx; sky.cy=E.cy; sky.r=E.r; setEye(); }
+$('eye-reset').onclick=()=>mode==='iris'&&placing==='sky'?resetSky():resetEye();
+$('eye-unplace').onclick=()=>{ resetEye(); loadEye(); if(T3) T3.dirty(); };
+$('sky-unplace').onclick=()=>{ resetSky(); loadSky(); if(T3) T3.dirty(); };
+const eyeDone=()=>{ clearTimeout(eyeSaveT); if(placing==='sky'){ if(sky){ saveSky(); loadSky(); } } else if(eye){ saveEye(); loadEye(); } setMode('pan'); };
 $('eye-done').onclick=eyeDone;
 document.addEventListener('keydown',e=>{ if(mode==='iris'&&(e.key==='Escape'||e.key==='Enter')){ e.preventDefault(); eyeDone(); } });
 async function takeEye(blob){
@@ -2560,6 +2591,7 @@ function make3d(){
     c.translate(PAD-(fig.cx-half)*k,PAD-(fig.cy-half)*k); c.scale(k,k);                    // from here on, the picture's own pixels
     c.translate(V/2,V/2); c.rotate(rotOf(d)*Math.PI/180); c.translate(-V/2,-V/2);
     c.fillStyle='#0D1019'; c.fillRect(0,0,V,V);
+    if(skyShown()&&skyImg){ const s=fig.u/sky.r; c.save(); c.globalAlpha=skyFade; c.translate(fig.cx,fig.cy); c.rotate(fig.turn*Math.PI/180); c.scale(s,s); c.drawImage(skyImg,-sky.cx,-sky.cy,sky.w,sky.h); c.restore(); }
     c.save(); c.globalAlpha=fade; c.filter=brightCss(); c.drawImage(im,0,0,V,V); c.restore();
     if(eyeShown()&&eyeImg){ const s=fig.u/eye.r; c.save(); c.globalAlpha=eyeFade; c.translate(fig.cx,fig.cy); c.rotate(fig.turn*Math.PI/180); c.scale(s,s); c.drawImage(eyeImg,-eye.cx,-eye.cy,eye.w,eye.h); c.restore(); }
     c.restore();
@@ -2863,7 +2895,7 @@ const thkAt=()=>Math.log(Math.min(TMAX,Math.max(TMIN,middle(abase||thick)))/TMIN
 const RESETS={
   'z-slide':()=>0, 'turn-s':()=>cur?((fitted(cur).turn+180)%360+360)%360-180:0, 'vturn-s':()=>0,
   'axes-str':()=>0.45, 'paper-str':()=>1, 'xpts-size':()=>4.5, 'xpts-glow':()=>0.45, 'xpts-alpha':()=>0.92, 'pt-size':()=>1,
-  'fade':()=>1, 'fade2':()=>1, 'eye-fade':()=>0.6, 'eye-fade2':()=>0.6, 'sky-fade':()=>0.6, 'bright':()=>1,
+  'fade':()=>1, 'fade2':()=>1, 'eye-fade':()=>0.6, 'eye-fade2':()=>0.6, 'sky-fade':()=>0.85, 'bright':()=>1,
   'own-w':()=>2, 'dive-speed':()=>0.35, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
   'all-thk':thkAt, 'all-thk2':thkAt,
   'mthk':{ off:()=>chosen().some(i=>Math.abs(thick[i]-MAINW[i])>0.005), go:()=>{ chosen().forEach(i=>setThick(i,MAINW[i])); store.set('dome-thickness',thick); tickState(); } },
