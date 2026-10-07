@@ -137,6 +137,9 @@ tbody tr.go td:first-child{font:700 14px var(--serif)}
 .paper path{fill:none;stroke-width:1;stroke:rgb(212 175 90 / calc(.07 * var(--pk,1)))} .paper path.strong{stroke:rgb(212 175 90 / calc(.17 * var(--pk,1)))}   /* --pk: the Paper slider */
 /* Sky mode's stars behind the desk; the squared paper lies over them unless Grid lines is off */
 #space{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:none;pointer-events:none} .canvas.space #space{display:block} .canvas.space.nogrid #paper{visibility:hidden}
+/* a mark on a row's slider where it usually stands (--at: how far along, 0 to 1): a short line above and below the track, clear of the knob */
+label.row:has(>i.at){position:relative}
+label.row>i.at{position:absolute;right:calc(19px + 80px*(1 - var(--at,.5)));top:50%;width:2px;height:24px;margin-top:-12px;pointer-events:none;background:linear-gradient(var(--gilt) 0 4px,transparent 4px 20px,var(--gilt) 20px)}
 #xgl{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}   /* the crossings' dots, drawn by the graphics card over the drawing */
 #sv{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:pointer;display:block;user-select:none;transform:translateZ(0)}   /* its own sheet on the graphics card */
 /* the dome raised in 3D */
@@ -828,6 +831,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
           <section class="grp modebox" data-box="lines" aria-label="Lines"><h4>Lines</h4>
             <label class="row">Thickness <input type="range" id="all-thk" min="0" max="1" step="0.005" aria-label="Thickness of every line together"><span class="tv" id="all-val"></span></label>
             <label class="row">Point size <input type="range" id="pt-size" min="0.3" max="4" step="0.05" aria-label="Size of the points of the drawing"></label>
+            <label class="row" title="How far the earlier lines are held back behind the later ones. All the way left, every line is as strong as the next. The mark is the usual place.">Ratio <input type="range" id="ratio" min="0" max="2" step="0.01" aria-label="How far the earlier lines are held back behind the later ones"><i class="at" style="--at:.5"></i></label>
             <label class="row"><input type="checkbox" id="dark-lines"> Dark lines</label>
             <div class="btns"><button class="pill" id="show-all">Show all steps</button><button class="pill" id="thk-reset">Reset thickness</button></div>
           </section>
@@ -1132,12 +1136,17 @@ const inkOf=sh=>!darkLines||sh.col==='red'||sh.col==='blue'?INKS[sh.col]:sh.t===
 // How strongly a stroke of step i shows once the drawing has reached stroke n. After the turn, the six steps back so the eight reads against it.
 // Once the build has gone again, the fractals before the one being drawn stay where they are, dimmed (by BACK for each fractal
 // between). sh is the stroke itself where the caller has it, for the few strokes that count with the next fractal.
+// The Ratio slider (Lines) says how far all of that holding back goes. At 1, its usual place, the strengths are the ones given
+// here. Below 1 the earlier lines come forward, until at 0 every line is as strong as the one being drawn; above 1 they are
+// held back further still. (Each strength, as a share of the full 0.95, is raised to the power the slider gives.)
 const BACK=0.6;
+let lineRatio=+store.get('dome-line-ratio',1); if(!(lineRatio>=0&&lineRatio<=2)) lineRatio=1;
+const held=v=>lineRatio===1?v:0.95*Math.pow(v/0.95,lineRatio);
 function look(i,n,kept,current,sh){ if(current) return 0.95;
   const now=n>0?FR[Math.min(n,N)-1]:1, fr=(sh&&sh.fr)||FR[i], back=fr<now?Math.pow(BACK,now-fr):1;
-  if(kept) return 0.95*back;
-  if(BASE[i]<SIX&&(FR[i]<now||(n>0&&BASE[Math.min(n,N)-1]>=SIX))) return 0.28*back;
-  return (n===END()?0.8:0.6)*back; }
+  if(kept) return held(0.95*back);
+  if(BASE[i]<SIX&&(FR[i]<now||(n>0&&BASE[Math.min(n,N)-1]>=SIX))) return held(0.28*back);
+  return held((n===END()?0.8:0.6)*back); }
 const lookE=(e,n)=>look(+e.dataset.step,n,!!e.dataset.keep,false,STEPS[+e.dataset.step].s[+e.dataset.k]);
 // The drawing's own points (the dots put down on a centre or a crossing as the build goes). ptK is the Point size slider: 1 is
 // their usual size. A point that stays prominent (the red and the blue) is drawn larger than the rest.
@@ -2574,6 +2583,11 @@ $('xpts-on').checked=showX;
 $('pt-size').value=ptK; $('pt-size').oninput=e=>{ ptK=parseFloat(e.target.value)||1; store.set('dome-point-size',ptK);
   gFig.querySelectorAll('circle[data-step]').forEach(c=>{ const f=c.getAttribute('fill'); if(f&&f!=='none') c.setAttribute('r',dotR(!!c.dataset.keep)); }); dirty3(); };
 $('pt-size').onchange=()=>DOMES.forEach(d=>{ if(d.card) d.card.redraw(); });
+// Ratio: the strokes on the desk are given their new strengths where they lie (the step being drawn keeps its full strength).
+// While the build plays it takes hold at the next step.
+$('ratio').value=lineRatio; $('ratio').oninput=e=>{ const v=parseFloat(e.target.value); lineRatio=v>=0&&v<=2?v:1; store.set('dome-line-ratio',lineRatio); if(!cur) return;
+  if(!run){ const n=+stepEl.value, solo=$('solo').checked; gFig.querySelectorAll('[data-step][data-k]').forEach(el=>el.setAttribute('opacity',solo||+el.dataset.step===n-1?0.95:lookE(el,n))); drawDepth(); }
+  dirty3(); };
 $('xpts-glow').value=xGlow; $('xpts-glow').oninput=e=>{ xGlow=parseFloat(e.target.value)||0; store.set('dome-crossing-glow',xGlow); dressDots(); dirty3(); };
 $('xpts-alpha').value=xAlpha; $('xpts-alpha').oninput=e=>{ xAlpha=parseFloat(e.target.value)||0.92; store.set('dome-crossing-strength',xAlpha); dressDots(); dirty3(); };
 $('xpts-size').value=xSize; $('xpts-size').oninput=e=>{ xSize=parseFloat(e.target.value)||4.5; store.set('dome-crossing-size',xSize); if(cur) setView(); dirty3(); };
@@ -3437,7 +3451,7 @@ const RESETS={
   'z-slide':()=>0, 'turn-s':()=>cur?((fitted(cur).turn+180)%360+360)%360-180:0, 'vturn-s':()=>0,
   'axes-str':()=>0.45, 'paper-str':()=>1, 'xpts-size':()=>4.5, 'xpts-glow':()=>0.45, 'xpts-alpha':()=>0.92, 'pt-size':()=>1,
   'fade':()=>1, 'fade2':()=>1, 'eye-fade':()=>0.6, 'eye-fade2':()=>0.6, 'sky-fade':()=>0.85, 'bright':()=>1,
-  'own-w':()=>2, 'dive-speed':()=>0.35, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'arch3':()=>1.35*edgeOf(cur), 'archturn3':()=>0, 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
+  'own-w':()=>2, 'dive-speed':()=>0.35, 'ratio':()=>1, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'arch3':()=>1.35*edgeOf(cur), 'archturn3':()=>0, 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
   'all-thk':thkAt, 'all-thk2':thkAt,
   'mthk':{ off:()=>chosen().some(i=>Math.abs(thick[i]-MAINW[i])>0.005), go:()=>{ chosen().forEach(i=>setThick(i,MAINW[i])); store.set('dome-thickness',thick); tickState(); } },
   'lb-thk':{ off:()=>lbStep>=0&&Math.abs(thick[lbStep]-MAINW[lbStep])>0.005, go:()=>{ if(lbStep<0) return; setThick(lbStep,MAINW[lbStep]); store.set('dome-thickness',thick); $('lb-thk').value=thick[lbStep]; $('lb-val').textContent=thick[lbStep].toFixed(2); tickState(); } } };
