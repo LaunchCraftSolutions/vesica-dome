@@ -695,6 +695,8 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 .colsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
 .colsbox .col h4 .tv{margin-left:8px;font-weight:500;color:var(--soft)}
 .steps .sideall{margin:0;padding:0 2px 2px} .steps .sideall .pill{flex:1;justify-content:center}
+/* two small buttons in a column's heading, where another column has its On */
+.headbtns{display:flex;gap:6px} .headbtns .pill{padding:0 9px;height:17px;min-height:0;font-size:11.5px;line-height:1;border-radius:999px}
 .btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
 label.row.idle{opacity:.5}   /* a setting that acts only while something else is on: still there to be set, but quiet */
 .colsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
@@ -833,19 +835,21 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
           </div>
         </div></div>
       </div><div class="modes" id="setcol">
-          <section class="grp modebox" data-box="view" aria-label="View"><h4>View</h4>
+          <section class="grp modebox colsbox" data-box="view" id="viewbox" aria-label="Canvas and view"><h4 class="boxname">View</h4>
+            <div class="cols">
+            <div class="col" id="col-canvas" role="group" aria-label="Canvas"><div class="modehead"><h4>Canvas</h4></div>
+            <label class="row" title="The lines through the middle of the drawing: tick to show them, slide for how strong"><input type="checkbox" id="axes-on" checked> Guides <input type="range" id="axes-str" min="0.1" max="1" step="0.01" aria-label="How strong the guide lines are"></label>
+            <label class="row" title="How strong the squared paper is">Paper <input type="range" id="paper-str" min="0" max="3" step="0.05" aria-label="How strong the squared paper is"></label>
+            <div class="row2"><label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars</label><label class="row" title="The grid lines over the stars, while Nebula is on"><input type="checkbox" id="sky-grid"> Grid</label></div>
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col" id="col-view" role="group" aria-label="View"><div class="modehead"><h4>View</h4><span class="headbtns"><button class="pill" id="z-fit" title="The whole photo">Fit</button><button class="pill" id="centre-btn" title="Back to the middle, unturned">Centre</button></span></div>
             <label class="row">Zoom <span class="tv" id="z-pct">100%</span><input type="range" id="z-slide" min="-2" max="6" step="0.01" aria-label="Zoom"></label>
             <label class="row" title="The photo only, under the drawing">Turn photo <span class="tv numv"><input type="number" id="turn" step="0.5" aria-label="Turn the photo under the drawing, in degrees"><i>°</i></span><input type="range" id="turn-s" min="-180" max="180" step="0.5" aria-label="Turn the photo under the drawing"></label>
             <label class="row" title="The photo and the drawing together">Turn view <span class="tv numv"><input type="number" id="vturn" step="1" aria-label="Turn the whole view, in degrees"><i>°</i></span><input type="range" id="vturn-s" min="-180" max="180" step="1" aria-label="Turn the whole view"></label>
-            <div class="btns"><button class="pill" id="z-fit" title="The whole photo">Fit</button><button class="pill" id="centre-btn" title="Back to the middle, unturned">Centre</button></div>
             <span hidden><button id="z-out"></button><button id="z-in"></button><button id="turn-dn"></button><button id="turn-up"></button><button id="turn-0"></button><button id="vturn-dn"></button><button id="vturn-up"></button><button id="vturn-0"></button></span>
-          </section>
-          <section class="grp modebox" data-box="guides" aria-label="Canvas"><h4>Canvas</h4>
-            <label class="row"><input type="checkbox" id="axes-on" checked> Guide lines</label>
-            <label class="row">Strength <input type="range" id="axes-str" min="0.1" max="1" step="0.01" aria-label="How strong the guide lines are"></label>
-            <label class="row">Paper <input type="range" id="paper-str" min="0" max="3" step="0.05" aria-label="How strong the squared paper is"></label>
-            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
-            <label class="row" title="The grid lines over the stars, while Nebula is on"><input type="checkbox" id="sky-grid"> Grid lines</label>
+            </div>
+            </div>
           </section>
           <section class="grp modebox" data-box="helper" id="helper" aria-label="Helper" hidden>
             <div class="modehead"><h4>Helper</h4><span class="helpdots" id="help-n"></span></div>
@@ -1430,10 +1434,11 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   const toolsHome=ph||!boxPlaces.tools; TOOLS.classList.toggle('moved',!toolsHome); if(toolsHome){ TOOLS.style.left=TOOLS.style.top=''; } else moved(TOOLS);
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
   // the top row: the pictures' toolbar first, in the top left corner (it is as wide as its four columns), then the three settings boxes
-  const base=H-IN, top4=['picture','lines','guides'].map(by), PICS=by('picture'), LINES=by('lines'), CANVAS=by('guides'), wOf=b=>b.classList.contains('colsbox')?(b.classList.contains('shut')?b._ow||800:b._ow=b.offsetWidth):BW;
-  // Lines stands directly under the pictures' toolbar, both from the left edge. Canvas stands beside the pictures' toolbar when there is room for it before View, and beside Lines when there is not.
-  const canvasUp=IN+wOf(PICS)+G+BW<=W-IN-BW-G;
-  [...top4,by('view')].forEach(b=>{ b.style.minHeight=''; });
+  const base=H-IN, top4=['picture','lines'].map(by), PICS=by('picture'), LINES=by('lines'), VIEW=by('view'), wOf=b=>b.classList.contains('colsbox')?(b.classList.contains('shut')?b._ow||800:b._ow=b.offsetWidth):BW;
+  // Lines stands directly under the pictures' toolbar, both from the left edge. The Canvas and View toolbar stands in the top right corner, level with the
+  // pictures' toolbar when there is room beside it, and a row down, beside Lines, when there is not. The helper stands directly under it and is as wide as it is.
+  const viewUp=IN+wOf(PICS)+G+wOf(VIEW)<=W-IN, viewMid=IN+wOf(LINES)+G+wOf(VIEW)<=W-IN;
+  [...top4,VIEW].forEach(b=>{ b.style.minHeight=''; });
   // The boxes become drawers only when they truly do not fit open: when the row of mode toolbars is wider than the canvas, or when
   // the top boxes (which wrap on to a second row on a narrower canvas) and the tallest mode toolbar would leave less than 220
   // pixels of bare canvas between them. Going small shuts them all; going large again opens them all.
@@ -1441,8 +1446,8 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   // 1,635 tall counted as small.) A box's open height is noted whenever it is open, so the sum can be done while they are shut.
   DRAWERS().forEach(b=>{ if(!b.classList.contains('shut')) b._oh=b.offsetHeight; });
   const openH=b=>b._oh||(MODEROW.includes(b)?340:218);
-  const topH=canvasUp?Math.max(openH(PICS)+G+openH(LINES),openH(CANVAS),openH(by('view'))):Math.max(openH(PICS)+G+Math.max(openH(LINES),openH(CANVAS)),openH(by('view')));
-  const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=ph||W<2*IN+modesW||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
+  const topH=Math.max(openH(PICS)+G+openH(LINES),(viewUp?0:openH(PICS)+G)+openH(VIEW));
+  const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=ph||W<2*IN+modesW||(!viewUp&&!viewMid)||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
   let tabsEnd=0;
   if(compact!==wasCompact){ wasCompact=compact; DRAWERS().forEach(b=>b.classList.toggle('shut',compact)); }
   if(ph){ BOXES.forEach(b=>{ if(b!==TOOLS){ b.style.left=b.style.top=''; } }); st.style.setProperty('--cardb','8px'); st.style.setProperty('--annt','10px'); st.classList.add('cardlone'); phoneBar(true); return; }
@@ -1455,19 +1460,17 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
     let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; }); tabsEnd=mx;
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
-    put(by('view'),W-IN-BW,TOP);
-    const y2=TOP+PICS.offsetHeight+G; put(PICS,IN,TOP); put(LINES,IN,y2);
-    if(canvasUp) put(CANVAS,IN+wOf(PICS)+G,TOP); else put(CANVAS,IN+wOf(LINES)+G,y2);
+    const y2=TOP+PICS.offsetHeight+G; put(PICS,IN,TOP); put(LINES,IN,y2); put(VIEW,W-IN-wOf(VIEW),viewUp?TOP:y2);
     // the mode toolbars: one row across the bottom from the left corner, standing on the bottom edge, the longest first (3D, Draw, Fractal: MODEROW)
     MODEROW.forEach((b,i)=>put(b,IN+i*(BW+G),base-b.offsetHeight));
   }
   // the helper: in the bottom right corner; lifted clear of the mode toolbars when their row reaches under that corner
   // (as drawers, the modes are only their tabs along the bottom: the helper clears those too)
-  const hp=by('helper'), hw=Math.min(410,W-2*IN), lift=compact?(tabsEnd>W-IN-hw?Math.max(...MODEROW.map(b=>b._th||36))+G:0):IN+modesW+G>W-IN-hw?Math.max(...MODEROW.map(b=>b.offsetHeight))+G:0;
-  hp.style.width=hw+'px'; hp.style.minHeight=''; put(hp,W-IN-hw,base-lift-hp.offsetHeight);
+  const hp=by('helper'), hw=Math.min(410,W-2*IN), vw=compact?Math.min(wOf(VIEW),W-2*IN):VIEW.offsetWidth, vy=compact?TOP+40+G:(viewUp?TOP:TOP+PICS.offsetHeight+G)+VIEW.offsetHeight+G, lift=compact?(tabsEnd>W-IN-hw?Math.max(...MODEROW.map(b=>b._th||36))+G:0):IN+modesW+G>W-IN-hw?Math.max(...MODEROW.map(b=>b.offsetHeight))+G:0;
+  hp.style.width=vw+'px'; hp.style.minHeight=''; put(hp,W-IN-vw,vy);
   // The cards that name each step and each part as the build plays stand in the bottom right corner, or just above the helper
   // when the helper is up in that corner. The name of a part as it begins is written just under the top row of boxes (or tabs).
-  { const withHelper=!hp.hidden&&!boxPlaces.helper; st.style.setProperty('--cardb',(lift+(withHelper?IN+hp.offsetHeight+G:IN))+'px'); st.classList.toggle('cardlone',!withHelper); }
+  st.style.setProperty('--cardb',(lift+IN)+'px'); st.classList.add('cardlone');   // the helper is no longer in that corner, so the cards have it to themselves
   st.style.setProperty('--annt',(TOP+(compact?40:PICS.offsetHeight+G+LINES.offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
@@ -1482,7 +1485,7 @@ const relay=()=>{ modeSig=''; showModes(); };
 // On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
 // and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
 var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
-  const order=['picture','lines','view','guides','3d','draw','fractal'], name={picture:'Pictures',guides:'Canvas','3d':'3D'};
+  const order=['picture','lines','view','3d','draw','fractal'], name={picture:'Pictures','3d':'3D'};
   order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
     b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
     const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
