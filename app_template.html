@@ -856,17 +856,17 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row"><input type="checkbox" id="rings-on"> Circles</label>
             <div class="btns"><button class="pill" id="dive-in">Dive in</button><button class="pill" id="dive-out">Dive out</button></div>
         </section>
-        <section class="grp modebox" data-box="sky" id="mode-sky" aria-label="Sky"><div class="modehead"><h4>Sky<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="sky-on"> On</label></div>
-            <label class="row" title="How strong the sky picture is, under the dome">Strength <input type="range" id="sky-fade" min="0" max="1" step="0.01" aria-label="How strong the sky picture is"></label>
+        <section class="grp modebox" data-box="sky" id="mode-sky" aria-label="Nebula"><div class="modehead"><h4>Nebula<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="sky-on"> On</label></div>
+            <label class="row" title="How strong the nebula is, under the dome">Strength <input type="range" id="sky-fade" min="0" max="1" step="0.01" aria-label="How strong the nebula is"></label>
             <div class="row pick" id="sky-row"><span>Which</span><button type="button" class="pickbtn" id="sky-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
             <div class="btns"><button class="pill" id="sky-place">Place picture</button></div>
             <div class="btns"><button class="pill" id="sky-unplace" disabled>Reset picture</button></div>
-            <label class="row" title="Stars all round, behind everything, while Sky is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
+            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
             <label class="row" title="The grid lines over the stars"><input type="checkbox" id="sky-grid"> Grid lines</label>
-            <div class="subgrp mixgrp" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Sky to show more of it. In the middle, all three show equally."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
-              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the sky shows">
+            <div class="subgrp mixgrp" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
+              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the nebula shows">
                 <path class="tri" d="M110 26L22 178H198Z"/><path class="med" d="M110 26V178M22 178L154 102M198 178L66 102"/><circle class="mid" cx="110" cy="127.3" r="5"/>
-                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="198" y="198" text-anchor="middle">Sky</text>
+                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="218" y="198" text-anchor="end">Nebula</text>
                 <circle class="knob" id="mix-knob" cx="110" cy="127.3" r="9"/></svg>
               <p class="note" id="mix-says"></p></div>
         </section>
@@ -947,7 +947,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
   </div></dialog>
 </div>
 <div class="menu" id="eye-menu" role="listbox" aria-label="Which eye photo" hidden></div>
-<div class="menu" id="sky-menu" role="listbox" aria-label="Which sky picture" hidden></div>
+<div class="menu" id="sky-menu" role="listbox" aria-label="Which nebula" hidden></div>
 <script src="lib/leaflet/leaflet.min.js"></script>
 <script>
 const DOMES=/*DOMES*/[], UNDRAWN=/*UNDRAWN*/[], EYES=/*EYES*/[];
@@ -1642,7 +1642,10 @@ const allThk=[$('all-thk'),$('all-thk2')], allVal=[$('all-val'),$('all-val2')]; 
 const middle=a=>{ const s=a.slice().sort((p,q)=>p-q), n=s.length; return n%2?s[(n-1)/2]:(s[n/2-1]+s[n/2])/2; };
 function showAll(skip){ const m=Math.min(TMAX,Math.max(TMIN,middle(thick))), at=Math.log(m/TMIN)/Math.log(TMAX/TMIN);
   allThk.forEach(x=>{ if(x!==skip) x.value=at; }); allVal.forEach(s=>s.textContent=m.toFixed(2)); }
-const setThick=(i,v)=>{ thick[i]=v; if(!nudging){ if(abase){ abase[i]=v/allF; keepAll(); } showAll(); } srows[i].val.textContent=v.toFixed(2); srows[i].val.setAttribute('aria-valuenow',v); setWidth(i,v*((run&&playK.get(i))||1)); dirty3(); drawDepth(); };
+const setThick=(i,v)=>{ thick[i]=v; if(!nudging){ if(abase){ abase[i]=v/allF; keepAll(); } showAll(); } srows[i].val.textContent=v.toFixed(2); srows[i].val.setAttribute('aria-valuenow',v); if(nudging) return; setWidth(i,v*((run&&playK.get(i))||1)); dirty3(); drawDepth(); };
+// When every line is changed together, the strokes are given their new widths in one pass over the drawing, and the 3D sheet and
+// the fractal are told once. (Step by step it was a search of the whole drawing for each of the steps, on every move of the slider.)
+const thickAll=()=>{ setWidthAll(); dirty3(); drawDepth(); };
 let foldedFr=new Set(store.get('dome-folded-fractals',[2,3])); const FRG={};   // fractals folded away in the list, and each fractal's box
 let folded=new Set(store.get('dome-folded',[])), anchor=0, mbase=null, lastN=-1;
 const chosen=()=>ticked.size?[...ticked].sort((a,b)=>a-b):STEPS.map((_,i)=>i);
@@ -2121,6 +2124,7 @@ const band=sh=>{ if(sh.t==='c'){const d=Math.hypot(...sh.ctr); return [Math.abs(
 const BANDS=STEPS.map(st=>st.s.map(band).filter(Boolean));
 const STEPBAND=BANDS.map(a=>a.length?[Math.min(...a.map(x=>x[0])),Math.max(...a.map(x=>x[1]))]:null);
 const crossings=(j,i)=>{ const S=STEPBAND[j]; return S?BANDS[i].filter(x=>x[0]<=S[1]+1e-6&&S[0]<=x[1]+1e-6).length:BUSY; };
+const setWidthAll=()=>gFig.querySelectorAll('[data-step]').forEach(e=>{ if(!e.dataset.w) return; const j=+e.dataset.step; e.setAttribute('stroke-width',e.dataset.w*(e.dataset.keep?thick[j]*KEEPW:thick[j]*((run&&playK.get(j))||1))/MAINW[j]); });
 const setWidth=(j,m)=>gFig.querySelectorAll(`[data-step="${j}"]`).forEach(e=>{ if(e.dataset.w) e.setAttribute('stroke-width',e.dataset.w*(e.dataset.keep?thick[j]*KEEPW:m)/MAINW[j]); });
 // Naming each part as it begins. The turn from six to eight gets the long version: the six steps back and both pillars are marked.
 async function announce(ph,i,tok){
@@ -2443,7 +2447,7 @@ let mixOn=store.get('dome-mix-on',false)===true, mix=store.get('dome-mix',null);
 const MIXP=[[110,26],[22,178],[198,178]];
 function showMix(){ const [d,e,s]=mix, x=d*MIXP[0][0]+e*MIXP[1][0]+s*MIXP[2][0], y=d*MIXP[0][1]+e*MIXP[1][1]+s*MIXP[2][1];
   $('mix-knob').setAttribute('cx',x); $('mix-knob').setAttribute('cy',y); $('mix').classList.toggle('off',!mixOn); $('mix-on').checked=mixOn;
-  const pc=v=>Math.round(v*100)+'%'; $('mix-says').textContent=mixOn?`Dome ${pc(d)} · Eye ${pc(e)} · Sky ${pc(s)}`:''; }
+  const pc=v=>Math.round(v*100)+'%'; $('mix-says').textContent=mixOn?`Dome ${pc(d)} · Eye ${pc(e)} · Nebula ${pc(s)}`:''; }
 function applyMix(){ if(!mixOn||!cur) return; const [d,e,s]=mix, r2=v=>Math.round(Math.max(0,Math.min(1,v))*100)/100;
   eyeFade=r2(e); fade=d+s>1e-6?r2(d/(d+s)):0; skyFade=1;
   store.set('dome-eye-opacity',eyeFade); store.set('dome-photo-opacity',fade); store.set('dome-sky-opacity',skyFade);
@@ -2467,6 +2471,15 @@ $('mix-on').onchange=()=>setMix($('mix-on').checked);
   ['fade','fade2','eye-fade','eye-fade2','sky-fade'].forEach(id=>$(id).addEventListener('input',()=>{ if(mixOn) setMix(false); }));
   ['pic3','eye-on','sky-on'].forEach(id=>$(id).addEventListener('change',()=>{ if(mixOn&&!$(id).checked) setMix(false); }));
   showMix(); }
+// Space opens on the nebula: the Mix dot is put at the Nebula corner, so the ball is the nebula with the drawing on it. What
+// the three were set to before is kept, and comes back when Space is left, unless the dot has been moved off that corner since.
+let mixBack=null;
+function spaceMixIn(){ if(!SKIES.length||!cur) return; mixBack={mixOn,mix:mix.slice(),fade,eyeFade,skyFade,picOn,eyeOn,skyOn}; mix=[0,0,1]; store.set('dome-mix',mix); setMix(true); }
+function spaceMixOut(){ const b=mixBack; mixBack=null; if(!b||!mixOn||mix[0]!==0||mix[1]!==0) return;
+  mix=b.mix; mixOn=b.mixOn; fade=b.fade; eyeFade=b.eyeFade; skyFade=b.skyFade;
+  store.set('dome-mix',mix); store.set('dome-mix-on',mixOn); store.set('dome-eye-opacity',eyeFade); store.set('dome-photo-opacity',fade); store.set('dome-sky-opacity',skyFade);
+  if(picOn!==b.picOn) setPicOn(b.picOn); if(eyeOn!==b.eyeOn) setEyeOn(b.eyeOn); if(skyOn!==b.skyOn) setSkyOn(b.skyOn);
+  if(cur){ setPic(); setEye(); drawDepth(); dirty3(); } showMix(); }
 function setSkyOn(on){ if(on&&!sky) useSky(skyId); skyOn=on&&!!sky; store.set('dome-sky-on',skyOn); store.set('dome-sky-id',skyId); if(skyOn&&skyFade<=0){ skyFade=0.85; store.set('dome-sky-opacity',skyFade); }
   fillEyes(); if(cur){ setEye(); drawDepth(); dirty3(); } }
 // A picture switched off while it is being placed: the placing ends first.
@@ -2622,6 +2635,10 @@ function make3d(){
   const scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(50,1,0.01,600), tgt=new THREE.Vector3();
   const TS=Math.min(4096,R.capabilities.maxTextureSize), PAD=4, tc=document.createElement('canvas'); tc.width=tc.height=TS;   // the sheet; its clear border is what lies beyond the photo
   const tex=new THREE.CanvasTexture(tc); tex.anisotropy=R.capabilities.getMaxAnisotropy();
+  // Painting the full sheet and handing it to the graphics card takes about a tenth of a second, too long to do on every move of
+  // a slider. So there is a second sheet half the size each way, four times as quick: it is used while changes keep coming (a
+  // slider being dragged, the build playing), and the full sheet is painted once when they stop.
+  const TL=Math.min(2048,TS), tcL=document.createElement('canvas'); tcL.width=tcL.height=TL; const texL=new THREE.CanvasTexture(tcL); texL.anisotropy=tex.anisotropy;
   const LIVE3=45;   // while the build plays, the least time between two paintings of the sheet, in thousandths of a second
   // how far from the middle the sheet reaches, in first circles: just past the far side of whatever is drawn so far
   // It stops at the photo's furthest corner: past that there is no picture to lay the drawing on, and a wider sheet would only blur the photo.
@@ -2632,6 +2649,7 @@ function make3d(){
   const mesh=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({map:tex,side:THREE.DoubleSide,alphaTest:0.5})); mesh.frustumCulled=false; scene.add(mesh);
   const S={on:false,d:null,lift:1,az:0,pol:1,dist:3.4,stale:true,need:true,step:-1,last:0,key:'',pan:new THREE.Vector3()};
   const keyOf=()=>{ const m=archOf(S.d); return [fig.cx,fig.cy,fig.u,fig.turn,edgeOf(S.d),roundOf(S.d),reachNow(),m.on,m.size,m.turn].join(); };
+  const sheetKey=()=>[fig.cx,fig.cy,fig.u,fig.turn,reachNow()].join();   // what the sheet's own picture hangs on; the dome's and the arches' settings only bend it
   // The arches. With Arches on, the part of the photo outside the dome's ring is not left lying flat: it is a second sheet, shaped
   // into the crossing under the dome. The shape is the one such crossings are built to. The ring (radius a) stands on a square of
   // side 2a. A ball through the square's four corners, cut by the square's four sides, leaves four curved corners that carry the
@@ -2859,19 +2877,22 @@ function make3d(){
       const rA=A.Hc*A.a/(cf*(A.g+A.a*Math.sqrt(Math.max(0,1-tf*tf)))), rF=Math.max(rA*1.05,far/cf);
       for(let i=0;i<rowsA;i++){ const x=(i-NA)/NB, r=i<=NA?A.a+(rA-A.a)*i/NA:rA+(rF-rA)*x*(0.45+0.55*x), v=i*(NS+1)+j; flatA[v]=r;
         uvA[v*2]=m+(half+r*rim*ct)*s; uvA[v*2+1]=1-(m+(half+r*rim*st)*s); } }
-    geoA.attributes.uv.needsUpdate=true; S.key=keyOf(); raise(); }
-  async function sheet(){   // the photo and the strokes as they stand on the desk
-    const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return; deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,reach3(),TS/1860,true);
+    geoA.attributes.uv.needsUpdate=true; S.key=keyOf(); S.skey=sheetKey(); raise(); }
+  async function sheet(quick){   // the photo and the strokes as they stand on the desk
+    const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return; const n=quick?TL:TS, tx=quick?texL:tex;
+    deskTo((quick?tcL:tc).getContext('2d'),n,PAD*n/TS,d,im,fig.cx,fig.cy,reach3(),n/1860,true); if(mesh.material.map!==tx) mesh.material.map=tx; tx.needsUpdate=true;
     { const thru=starsShown(), m=mesh.material; if(m.transparent!==thru){ m.transparent=thru; m.alphaTest=thru?0.02:0.5; m.needsUpdate=true; } }   // see-through only while the stars are out
-    tex.needsUpdate=true; S.need=true; }
+    S.need=true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
-    if(S.key!==keyOf()){ fit3(); S.stale=true; }
+    if(S.key!==keyOf()){ const was=S.skey; fit3(); if(S.skey!==was) S.stale=true; }   // Opening, Rounding and the arches bend the sheet without a new painting
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
     // While the build plays the sheet is painted again and again from the live strokes; the spheres are rebuilt only when the
     // step changes. When the play ends the sheet is painted once more from the finished steps.
-    if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; sheet(); if(S.stale){ S.stale=false; spheres(); } } }
+    if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; S.sharp=t+260; sheet(true); if(S.stale){ S.stale=false; spheres(); } } }
     else { if(S.live){ S.live=false; S.stale=true; }
-      if(S.stale&&t-S.last>90){ S.stale=false; S.last=t; sheet(); spheres(); } }
+      // one change by itself is painted in full straight away; changes that keep coming get the quick sheet, and the full one when they stop
+      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+260:0; sheet(more); spheres(); }
+      else if(S.sharp&&t>S.sharp&&!S.stale){ S.sharp=0; sheet(false); } }
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(S.launch){ launchStep(t); S.need=true; }
@@ -3083,6 +3104,7 @@ let orbRound=+store.get('dome-ball-round',1); if(!(orbRound>=0&&orbRound<=1)) or
 function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); ren.setPixelRatio(Math.min(devicePixelRatio||1,2));
   const scene=new T.Scene(), cam=new T.PerspectiveCamera(28,1,0.05,200), g=new T.Group(); scene.add(g); const spaceO=makeSpace(T,100);
   const TS=Math.min(2048,ren.capabilities.maxTextureSize), PAD=2, tc=document.createElement('canvas'); tc.width=tc.height=TS; const tex=new T.CanvasTexture(tc); tex.anisotropy=ren.capabilities.getMaxAnisotropy();
+  const TL=Math.min(1024,TS), tcL=document.createElement('canvas'); tcL.width=tcL.height=TL; const texL=new T.CanvasTexture(tcL); texL.anisotropy=tex.anisotropy;   // the quick, smaller picture, used while changes keep coming (as on the 3D sheet)
   const NR=64, NS=160, nv=(NR+1)*(NS+1), idx=[]; for(let i=0;i<NR;i++) for(let j=0;j<NS;j++){ const a=i*(NS+1)+j, b=a+NS+1; idx.push(a,b,a+1,a+1,b,b+1); }
   // lit from where you stand: full in the middle, falling away toward the rim, so it reads as a ball however it is turned
   const mat=new T.ShaderMaterial({uniforms:{map:{value:tex},ballness:{value:1}},side:T.DoubleSide,
@@ -3107,13 +3129,15 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     for(let i=0;i<n&&i<STEPS.length;i++) STEPS[i].s.forEach(sh=>{ if(sh.t==='c'&&Math.hypot(sh.ctr[0],sh.ctr[1])<1e-6) rings.push(sh.r); });
     if(!(room>0.2)) return rings.length?Math.max(...rings):1; const fit=rings.filter(r=>r<=room*1.002); return fit.length?Math.max(...fit):room*0.95; }
   function sizeShown(){ const e=$('ball-size'); e.max=Math.max(12,Math.ceil(S.R*1.5)); e.value=S.R; $('ball-size-v').textContent=S.R.toFixed(2); }
-  async function paintT(){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return; deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,S.R*fig.u,TS/1500,picOn,'#0D1019'); tex.needsUpdate=true; S.need=true; }
+  async function paintT(quick){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return; const n=quick?TL:TS, tx=quick?texL:tex;
+    deskTo((quick?tcL:tc).getContext('2d'),n,PAD*n/TS,d,im,fig.cx,fig.cy,S.R*fig.u,n/1500,picOn,'#0D1019'); mat.uniforms.map.value=tx; tx.needsUpdate=true; S.need=true; }
   function place(){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return false; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; }
-    const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan(S.fov/2*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));
+    const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan((S.landF||S.fov)/2*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));   // while landing, the camera stands where the lens it will end with would put it
     cam.fov=S.fov; cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
-    if((S.stale||run)&&t-S.last>(run?70:0)){ S.stale=false; S.last=t; paintT(); }
+    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+260:0; paintT(more); }
+    else if(S.sharp&&t>S.sharp){ S.sharp=0; paintT(false); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
     if(!S.need) return;
@@ -3144,20 +3168,24 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   $('ball-round').oninput=e=>{ orbRound=Math.max(0,Math.min(1,parseFloat(e.target.value)||0)); store.set('dome-ball-round',orbRound); shape(); };
   $('ball-size').oninput=e=>{ S.R=Math.max(0.05,parseFloat(e.target.value)||1); $('ball-size-v').textContent=S.R.toFixed(2); S.stale=true; S.need=true; };
   $('ball-spin').onchange=()=>{ S.spin=$('ball-spin').checked; };
-  // The landing, after the launch from 3D. Space opens with Size as small as it goes and the lens as wide as it goes, and both
-  // ease to where they would have been, the sliders moving with them, while the tunnel slows and fades. The stars are turned
-  // so that the ones that were straight ahead at the end of the launch are straight ahead now.
-  function land(q){ if(!S.on) return; spaceO.turn(q); const R1=S.R, f1=S.fov, R0=Math.min(0.3,R1), t0=performance.now(), v0=WARP.v, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x); let last=t0, painted=0;
-    const set=(Rn,fn)=>{ S.R=Rn; S.fov=fn; sizeShown(); lens(); S.need=true; }; set(R0,130); S.stale=true;
-    const tick=now=>{ if(!S.on){ S.R=R1; S.fov=f1; WARP.k=0; return; } const s=(now-t0)/1000, u=Math.min(1,s/3.6), e=1-Math.pow(1-u,3), w=Math.min(1,s/2), dt=Math.min(0.05,(now-last)/1000); last=now;
+  // The landing, after the launch from 3D. The ball is first seen far off, a speck straight ahead: Size is as small as it goes
+  // and the lens as wide as it goes. Then both ease to their usual places, the sliders moving with them, and each brings the ball
+  // nearer: a narrowing lens magnifies it (the camera stays where the lens it will end with would put it, so here the lens does
+  // change how large the ball looks, which it does not once landed), and a growing Size makes it larger. It ends close: if the
+  // circle it stands for is small on the desk, the ball is brought in to fill a good part of the view, in the middle. The tunnel
+  // slows and fades on the way, and the stars are turned so that those straight ahead at the end of the launch are straight ahead now.
+  function land(q){ if(!S.on) return; spaceO.turn(q); const R1=S.R, f1=S.fov, R0=Math.min(0.3,R1), t0=performance.now(), v0=WARP.v, ez=x=>x<=0?0:x>=1?1:x*x*(3-2*x); let last=t0;
+    { const w=box.clientWidth, h=box.clientHeight, now1=R1*fig.u*S.k, want=0.3*Math.min(w,h); if(w&&h&&now1<want){ S.zoom=want/now1; S.sx=w/2; S.sy=h/2; } }
+    const set=(Rn,fn)=>{ S.R=Rn; S.fov=fn; sizeShown(); lens(); S.need=true; S.stale=true; }; S.landF=f1; set(R0,130);
+    const tick=now=>{ if(!S.on){ S.R=R1; S.fov=f1; S.landF=0; WARP.k=0; return; } const s=(now-t0)/1000, u=Math.min(1,s/4.2), e=u*u*(3-2*u), w=Math.min(1,s/2.2), dt=Math.min(0.05,(now-last)/1000); last=now;
       WARP.v=v0*(1-w)*(1-w); WARP.z+=WARP.v*dt; WARP.k=1-ez(w);
-      set(R0*Math.pow(R1/R0,e),130+(f1-130)*e); if(now-painted>90||u>=1){ painted=now; S.stale=true; }   // the picture on the ball is painted afresh about ten times a second on the way
-      if(u<1) requestAnimationFrame(tick); else { WARP.k=0; set(R1,f1); S.stale=true; } };
+      set(R0*Math.pow(R1/R0,e),130+(f1-130)*e);
+      if(u<1) requestAnimationFrame(tick); else { WARP.k=0; S.landF=0; set(R1,f1); } };
     requestAnimationFrame(tick); }
   return { get on(){ return S.on; }, dirty(){ S.stale=true; }, land,
     open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); lens(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
-    close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); } }; }
+    close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); spaceMixOut(); } }; }
 $('ball-round').value=orbRound;
 $('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false; return; } if(ORB&&ORB.on){ ORB.close(); return; }
   // From 3D, Space is reached by the launch: up through the spire and sight cone, and out. (Not for anyone who has asked their
@@ -3165,7 +3193,7 @@ $('ball-on').onchange=async()=>{ const b=$('ball-on'); if(!cur){ b.checked=false
   let facing=null; b.disabled=true;
   if(T3&&T3.on&&!matchMedia('(prefers-reduced-motion: reduce)').matches){ b.checked=true; facing=await T3.launch(); if(!T3.on){ b.checked=false; b.disabled=false; return; } }
   if(mode!=='pan') setMode('pan'); if(T3&&T3.on) T3.close();
-  try{ await loadThree(); if(!ORB) ORB=makeOrb(); ORB.open(); if(facing) ORB.land(facing); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
+  try{ await loadThree(); if(!ORB) ORB=makeOrb(); spaceMixIn(); ORB.open(); if(facing) ORB.land(facing); }catch(e){ b.checked=false; $('place').textContent=window.THREE?'This is not available in this browser':'This needs an internet connection the first time'; }
   b.disabled=false; };
 const open3d=async balls=>{ if(!cur){ $('go3d').checked=false; return; } if(mode!=='pan') setMode('pan'); const b=$('go3d'); b.disabled=true;
   try{ await loadThree(); if(!T3) T3=make3d(); T3.open(cur,balls); }
@@ -3188,7 +3216,7 @@ $('mthk').oninput=e=>{ const c=chosen(), v=parseFloat(e.target.value);
   if(c.length===1){ setThick(c[0],clampT(v)); $('mval').textContent=thick[c[0]].toFixed(2); }
   else { if(!mbase) mbase=thick.slice(); const f=Math.pow(4,v); $('mval').textContent='×'+f.toFixed(2); c.forEach(i=>setThick(i,clampT(mbase[i]*f))); } };
 $('mthk').onchange=()=>{ mbase=null; store.set('dome-thickness',thick); tickState(); };
-$('thk-reset').onclick=()=>{ allF=1; abase=null; keepAll(); nudging=true; MAINW.forEach((v,i)=>setThick(i,v)); nudging=false; showAll(); store.set('dome-thickness',thick); tickState(); };
+$('thk-reset').onclick=()=>{ allF=1; abase=null; keepAll(); nudging=true; MAINW.forEach((v,i)=>setThick(i,v)); nudging=false; thickAll(); showAll(); store.set('dome-thickness',thick); tickState(); };
 // Show all steps: everything on the canvas. Hidden steps come back, "This step only" is taken off, and the build goes to its
 // last step, so it works from wherever the build stands (it used to bring back hidden steps and nothing else).
 $('show-all').onclick=()=>{ stop(); hiddenSteps.clear(); store.set('dome-hidden',[]); $('solo').checked=false; stepEl.value=END(); drawStep(); tickState(); };
@@ -3209,7 +3237,7 @@ const noteOf=ph=>((notes[ph.base]||'').trim())||ph.card[2];   // a later fractal
 allThk.forEach(el=>{
   el.oninput=e=>{ if(!abase) abase=thick.slice();
     allF=TMIN*Math.pow(TMAX/TMIN,parseFloat(e.target.value)||0)/middle(abase);
-    nudging=true; thick.forEach((_,i)=>setThick(i,clampT(abase[i]*allF))); nudging=false; showAll(e.target); };
+    nudging=true; thick.forEach((_,i)=>setThick(i,clampT(abase[i]*allF))); nudging=false; thickAll(); showAll(e.target); };
   el.onchange=()=>{ if(Math.abs(allF-1)<1e-9){ allF=1; abase=null; } keepAll(); store.set('dome-thickness',thick); tickState(); showAll(); }; });
 showAll();
 // Either side panel folds to a narrow strip with one button to bring it back. The square desk grows into the room it leaves.
