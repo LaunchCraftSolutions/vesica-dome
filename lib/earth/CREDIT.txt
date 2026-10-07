@@ -1,0 +1,3 @@
+earth.jpg: "Blue Marble 2002", NASA Goddard Space Flight Center (Terra/MODIS). Public domain.
+https://commons.wikimedia.org/wiki/File:Blue_Marble_2002.png
+Made smaller (4096 x 2048) for the globe on the front page.

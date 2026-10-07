@@ -666,17 +666,48 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
   .app:not(.over) .steps>#tab-strokes{grid-area:list}
   .canvas.phone #boxes>.modebox:not(.shut):not(#helper){left:auto!important;right:8px;width:344px;max-height:58vh}
 }
+/* ---- the front page ----
+   A band across the top (the name, the search, the filter). Under it the top half of the window is the Earth, with a dot for
+   every dome; then the dome photos, large, with nothing drawn on them; then the flat map, the tables and the credits. */
+.app.over{grid-template-columns:minmax(0,1fr);grid-template-areas:"side" "main";grid-template-rows:auto minmax(0,1fr)}
+.app.over .side{flex-direction:row;align-items:center;flex-wrap:wrap;gap:10px 14px;padding:8px calc(var(--m)*2) 12px;position:static;height:auto;max-height:none;border-right:0;border-bottom:1px solid var(--rule);box-shadow:inset 0 -4px 0 var(--paper),inset 0 -5px 0 var(--line)}
+.side .mast{display:flex;align-items:center;flex-wrap:wrap;gap:4px 16px;padding:0;margin-right:auto;text-align:left}
+.side .mast h1{flex-direction:row;gap:12px;margin:0;font-size:28px} .side .mast h1 .mark{width:58px;height:58px}
+.side .mast .orn{display:none} .side .mast .sub{margin:0}
+.side .row{padding:0;flex:none;flex-wrap:nowrap} .side .row .field{width:230px;flex:none} .side .row .pill{flex:none}
+#overview{padding-top:0}
+.globe{position:relative;height:clamp(300px,52vh,900px);margin:0 calc(var(--m)*-2);overflow:hidden;background:radial-gradient(ellipse at 50% 50%,#141a2b 0%,#0b0e17 62%,#07090f 100%);border-bottom:1px solid var(--rule)}
+.globe canvas{position:absolute;inset:0;width:100%;height:100%;display:block;cursor:grab;touch-action:pan-y} .globe.turning canvas{cursor:grabbing} .globe.onadot canvas{cursor:pointer}
+#globe-zoom{position:absolute;right:calc(var(--m)*2);bottom:var(--m);flex-direction:column}
+#globe-zoom svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round}
+#globe-hint{position:absolute;left:calc(var(--m)*2);bottom:var(--m);margin:0;color:var(--soft);pointer-events:none}
+#globe-tip{position:absolute;z-index:5;width:max-content;max-width:300px;padding:8px 12px;border:1px solid var(--rule);border-radius:var(--r);background:var(--paper);color:var(--ink);
+  box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--line),0 10px 26px rgba(0,0,0,.6);font:400 13px/1.4 var(--text);pointer-events:none}
+#globe-tip b{display:block;font:700 14px/1.25 var(--serif)} #globe-tip span{display:block;color:var(--soft)}
+.near{display:flex;align-items:center;gap:var(--m);flex-wrap:wrap;margin:calc(var(--m)*1.5) 0 0;padding:10px 14px;border:1px solid var(--gilt);border-radius:var(--R)} .near b{font:700 17px var(--serif);margin-right:auto}
+.gallery>.label{display:block;font:700 21px/1.2 var(--serif);color:var(--ink);margin:calc(var(--m)*2) 0 var(--m)}
+.gallery .cards{grid-template-columns:repeat(auto-fill,minmax(clamp(170px,15vw,330px),1fr));gap:calc(var(--m)*1.25)}
+.gallery .card{padding:0;overflow:visible;text-align:left} .gallery .card .thumb{border:0;border-radius:calc(var(--R) - 1px) calc(var(--R) - 1px) 0 0}
+.gallery .card .thumb img{object-fit:cover;transition:transform .25s ease} .gallery .card:hover .thumb img{transform:scale(1.04)}
+.gallery .card .txt{padding:9px 12px 11px} .gallery .card .txt b{font-size:15.5px;margin-top:1px} .gallery .card .txt em{font-size:12.5px} .gallery .card .pl{font-size:12px}
+.gallery .card .fav{top:8px;left:auto;right:8px;z-index:2}
+@media (max-width:640px){
+  .app.over{height:auto;min-height:100vh;grid-template-rows:auto auto}
+  .app.over .side{padding:8px 12px 12px} .side .mast h1{font-size:22px} .side .mast h1 .mark{width:44px;height:44px}
+  .side .mast+.row{flex:1 1 100%} .side .row .field{width:auto;flex:1}
+  #overview{overflow:visible} .globe{height:46vh;margin:0 -12px} #globe-hint{left:12px;right:60px} #globe-zoom{right:12px}
+  .gallery .cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+}
 [hidden]{display:none!important}
 </style>
 </head>
 <body>
 <div class="app over" id="app">
   <aside class="side">
-    <div class="mast"><h1><svg class="mark" viewBox="-74 -74 148 148" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cy="-24" r="48" stroke="#D9B24A" stroke-width="1.2" opacity=".42"/><circle cy="24" r="48" stroke="#D9B24A" stroke-width="1.2" opacity=".42"/><circle cx="-24" r="48" stroke="#4169C9" stroke-width="1.3" opacity=".7"/><circle cx="24" r="48" stroke="#C8414F" stroke-width="1.3" opacity=".7"/><path d="M0-41.57A48 48 0 0 1 0 41.57A48 48 0 0 1 0-41.57Z" stroke="#D9B24A" stroke-width="1.5" opacity=".8"/><path d="M-41.57 0A48 48 0 0 1 41.57 0A48 48 0 0 1-41.57 0Z" stroke="#D9B24A" stroke-width="3.4"/><circle r="24" stroke="#D9B24A" stroke-width="2.4"/><path d="M0-24L16.98 16.98L-24 0L16.98-16.98L0 24L-16.98-16.98L24 0L-16.98 16.98Z" stroke="#D9B24A" stroke-width="1.6"/></g><circle cx="-41.57" r="4.6" fill="#4169C9"/><circle cx="41.57" r="4.6" fill="#C8414F"/></svg>Vesica Dome</h1><div class="orn"><i></i><svg viewBox="0 0 34 10" aria-hidden="true"><circle cx="4" cy="5" r="1.6"/><path d="M17 0l6 5-6 5-6-5z"/><circle cx="30" cy="5" r="1.6"/></svg><i></i></div><p class="sub">The same drawing on <span id="nd"></span> domes</p></div>
-    <div class="row"><button class="pill accent" id="go-over">Map and measurements</button></div>
+    <div class="mast"><h1><svg class="mark" viewBox="-74 -74 148 148" aria-hidden="true"><g fill="none" stroke-linecap="round" stroke-linejoin="round"><circle cy="-24" r="48" stroke="#D9B24A" stroke-width="1.2" opacity=".42"/><circle cy="24" r="48" stroke="#D9B24A" stroke-width="1.2" opacity=".42"/><circle cx="-24" r="48" stroke="#4169C9" stroke-width="1.3" opacity=".7"/><circle cx="24" r="48" stroke="#C8414F" stroke-width="1.3" opacity=".7"/><path d="M0-41.57A48 48 0 0 1 0 41.57A48 48 0 0 1 0-41.57Z" stroke="#D9B24A" stroke-width="1.5" opacity=".8"/><path d="M-41.57 0A48 48 0 0 1 41.57 0A48 48 0 0 1-41.57 0Z" stroke="#D9B24A" stroke-width="3.4"/><circle r="24" stroke="#D9B24A" stroke-width="2.4"/><path d="M0-24L16.98 16.98L-24 0L16.98-16.98L0 24L-16.98-16.98L24 0L-16.98 16.98Z" stroke="#D9B24A" stroke-width="1.6"/></g><circle cx="-41.57" r="4.6" fill="#4169C9"/><circle cx="41.57" r="4.6" fill="#C8414F"/></svg>Vesica Dome</h1><div class="orn"><i></i><svg viewBox="0 0 34 10" aria-hidden="true"><circle cx="4" cy="5" r="1.6"/><path d="M17 0l6 5-6 5-6-5z"/><circle cx="30" cy="5" r="1.6"/></svg><i></i></div><p class="sub">The same drawing on <span id="nd"></span> domes. Pick one to open it.</p></div>
     <div class="row"><input class="field" id="q" type="search" placeholder="Search domes" aria-label="Search domes"></div>
     <div class="row"><div class="seg" id="filter"><button data-f="all" aria-pressed="true">All</button><button data-f="line" aria-pressed="false">On the line</button><button data-f="off" aria-pressed="false">Elsewhere</button></div></div>
-    <div class="scroll" id="cards"></div>
+    <div class="row"><button class="pill" id="go-over">Map and tables</button></div>
   </aside>
 
   <aside class="panel steps" id="steps" hidden>
@@ -712,7 +743,13 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 
   <main class="main">
     <section id="overview">
-      <div class="title"><span class="label">Overview</span><h2>All Domes</h2><div class="orn"><i></i><svg viewBox="0 0 34 10" aria-hidden="true"><circle cx="4" cy="5" r="1.6"/><path d="M17 0l6 5-6 5-6-5z"/><circle cx="30" cy="5" r="1.6"/></svg><i></i></div><p class="lede">One drawing, fitted to each dome by size and rotation. Pick a dome to open it.</p></div>
+      <div class="globe" id="globe-box"><canvas id="globe" aria-label="The Earth, with a dot for every dome. Drag to turn it."></canvas>
+        <div class="gg" id="globe-zoom" role="toolbar" aria-label="Zoom"><button type="button" id="globe-in" title="Closer"><svg viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg></button><button type="button" id="globe-out" title="Further away"><svg viewBox="0 0 24 24"><path d="M5 12h14"/></svg></button></div>
+        <p class="note" id="globe-hint">Drag to turn the Earth. Pick a dot to see its domes.</p>
+        <div id="globe-tip" hidden></div></div>
+      <div class="near" id="near" hidden><b id="near-t"></b><button class="pill" id="near-x">Show all domes</button></div>
+      <div class="gallery" id="cards"></div>
+      <h3 id="flat">Map</h3>
       <div class="sheet"><div id="map"></div></div>
       <div class="legend">
         <span><span class="dot" style="background:var(--l4)"></span>Drawn</span>
@@ -2053,7 +2090,7 @@ function overview(){
   DOMES.forEach(x=>x.card.el.setAttribute('aria-current',false)); history.replaceState(null,'',location.pathname+location.search);
   if(map){ map.invalidateSize(); if(!mapFitted&&$('map').offsetWidth){ mapFitted=true; fitMap(); } }
 }
-$('go-over').onclick=()=>{ overview(); $('overview').scrollIntoView({behavior:'smooth',block:'start'}); }; $('crumb-over').onclick=overview; $('logo').onclick=overview;
+$('go-over').onclick=()=>{ overview(); $('flat').scrollIntoView({behavior:'smooth',block:'start'}); }; $('crumb-over').onclick=overview; $('logo').onclick=overview;
 // Building, photo and notes are sheets, opened from the toolbar and closed by their button, the Escape key or a click outside.
 [['open-building','sheet-building'],['open-photo','sheet-photo'],['open-notes','sheet-notes']].forEach(([b,s])=>$(b).onclick=()=>{ if(!cur) return; const dlg=$(s); dlg.querySelector('.sheet-name').textContent=cur.place; dlg.showModal(); });
 document.querySelectorAll('.sheetbox').forEach(dlg=>{ dlg.querySelector('.close').onclick=()=>dlg.close(); dlg.onclick=e=>{ if(e.target===dlg) dlg.close(); }; });
@@ -2713,21 +2750,72 @@ const groups=[['Favorites',d=>false],['From Dresden to Edirne',d=>d.along!==null
   const lab=el('span',name,'label between'), box=el('div',undefined,'cards'); cards.append(lab,box); return {lab,box,test}; });
 DOMES.forEach(d=>{
   const b=el('button',undefined,'card'), th=el('div',undefined,'thumb'), i=el('img'); i.src=d.thumb||d.img; i.alt=''; i.loading='lazy'; th.appendChild(i); b.appendChild(th);
-  const t=el('div',undefined,'txt'); t.appendChild(el('span','Dome '+(DOMES.indexOf(d)+1),'pl')); t.appendChild(el('b',d.place)); const sub=el('em'); t.appendChild(sub); b.appendChild(t);
+  const t=el('div',undefined,'txt'); t.appendChild(el('span',((d.building||{}).where||'').split(', ').pop(),'pl')); t.appendChild(el('b',d.place)); const sub=el('em'); t.appendChild(sub); b.appendChild(t);
   b.appendChild(favStar(d));
   b.onclick=()=>show(d); groups.find(g=>g.test(d)).box.appendChild(b);
-  const cv=el('canvas'); cv.width=cv.height=CARD; th.appendChild(cv);
-  d.card={el:b, redraw(){ const c=cv.getContext('2d'), k=CARD/d.view_px, f=yours(d)||fitted(d); c.clearRect(0,0,CARD,CARD);
-    i.style.transform=rots[d.slug]?`rotate(${rots[d.slug]}deg)`:'';
-    paint(c,{cx:f.cx*k,cy:f.cy*k,u:f.u*k,turn:f.turn},FEND[0],1.2); sub.textContent=places[d.slug]?'Your placement':d.built.split(',')[0]; }};
+  d.card={el:b, redraw(){ i.style.transform=rots[d.slug]?`rotate(${rots[d.slug]}deg)`:''; sub.textContent=places[d.slug]?'Your placement':d.built.split(/[,;]/)[0]; }};
   d.card.redraw();
 });
-let filt='all';
+let filt='all', nearSet=null;
+// Picking a spot on the globe where several domes stand shows just those; "Show all domes" puts the rest back.
+function showNear(list){ nearSet=list?new Set(list.map(d=>d.slug)):null; $('near').hidden=!list; if(list) $('near-t').textContent=list.length+' domes near '+list[0].place.split(',')[0];
+  applyFilter(); if(list) $('near').scrollIntoView({behavior:'smooth',block:'start'}); }
+$('near-x').onclick=()=>showNear(null);
 function applyFilter(){ const q=$('q').value.trim().toLowerCase();
-  DOMES.forEach(d=>{ const ok=(filt==='all'||(filt==='line')===(d.along!==null))&&(!q||d.place.toLowerCase().includes(q)); d.card.el.hidden=!ok; });
+  DOMES.forEach(d=>{ const ok=(filt==='all'||(filt==='line')===(d.along!==null))&&(!q||(d.place+' '+((d.building||{}).name||'')+' '+((d.building||{}).where||'')).toLowerCase().includes(q))&&(!nearSet||nearSet.has(d.slug)); d.card.el.hidden=!ok; });
   groups.forEach(g=>{ const any=[...g.box.children].some(c=>!c.hidden); g.lab.hidden=!any; g.box.hidden=!any; }); }
 $('q').oninput=applyFilter;
 document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{ filt=b.dataset.f; document.querySelectorAll('#filter button').forEach(x=>x.setAttribute('aria-pressed',x===b)); applyFilter(); });
+// ---- the globe ----
+// The Earth (NASA's Blue Marble, lib/earth) as a ball that turns under the pointer, with a dot where each dome stands. Dragging
+// turns it; the two buttons bring it closer and take it away; the wheel is left alone so the page still scrolls. Over a dot the
+// dome is named. Picking a dot opens that dome, or, where several stand within reach of the pointer, shows just those below.
+// It turns slowly by itself until it is first touched. Nothing is drawn while a dome is open or the tab is out of sight.
+(()=>{ const box=$('globe-box'), cv=$('globe'), tip=$('globe-tip'), RAD=Math.PI/180, CLOSE=1.45; let FAR=3.9, yaw=(-90-16)*RAD, pitch=40*RAD, D=FAR, spin=true, held=null, stale=true, G=null;
+  const xyz=(lat,lon,r)=>{ const ph=(90-lat)*RAD, th=(lon+180)*RAD; return [-r*Math.sin(ph)*Math.cos(th), r*Math.cos(ph), r*Math.sin(ph)*Math.sin(th)]; };
+  loadThree().then(()=>{ const T=THREE, ren=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); ren.setPixelRatio(Math.min(2,devicePixelRatio||1));
+    const scene=new T.Scene(), cam=new T.PerspectiveCamera(32,1,0.1,50), g=new T.Group(); scene.add(g);
+    // a plain dark ball with its dots until the picture of the Earth has arrived
+    const land=new T.MeshBasicMaterial({color:0x141c30}); g.add(new T.Mesh(new T.SphereGeometry(1,96,64),land));
+    const tex=new T.TextureLoader().load('lib/earth/earth.jpg',()=>{ land.map=tex; land.color.set(0xc9cdd8); land.needsUpdate=true; stale=true; }); tex.anisotropy=ren.capabilities.getMaxAnisotropy();
+    const pos=new Float32Array(DOMES.length*3); DOMES.forEach((d,i)=>pos.set(xyz(d.lat,d.lon,1.006),i*3));
+    const disc=(()=>{ const c=document.createElement('canvas'); c.width=c.height=64; const x=c.getContext('2d'); x.beginPath(); x.arc(32,32,21,0,7); x.fillStyle='#fff'; x.fill(); x.lineWidth=8; x.strokeStyle='rgba(10,12,20,.8)'; x.stroke(); return new T.CanvasTexture(c); })();
+    const geo=new T.BufferGeometry(); geo.setAttribute('position',new T.BufferAttribute(pos,3));
+    const dots=new T.Points(geo,new T.PointsMaterial({map:disc,color:css('--gilt')||'#D9B24A',size:12,sizeAttenuation:false,transparent:true,alphaTest:0.35})); g.add(dots);
+    const lit=new T.Points(new T.BufferGeometry(),new T.PointsMaterial({map:disc,color:'#FFF6D8',size:19,sizeAttenuation:false,transparent:true,alphaTest:0.35,depthTest:false})); lit.frustumCulled=false; g.add(lit);
+    const light=list=>{ const p=new Float32Array(list.length*3); list.forEach((i,k)=>p.set(pos.subarray(i*3,i*3+3),k*3)); lit.geometry.setAttribute('position',new T.BufferAttribute(p,3)); stale=true; };
+    G={ren,scene,cam,g,pos,light,v:new T.Vector3()};
+    const fit=()=>{ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return; ren.setSize(w,h,false); cam.aspect=w/h; cam.updateProjectionMatrix();
+      { const far=1.07/Math.sin(Math.atan(Math.tan(16*RAD)*Math.min(1,w/h))); if(D>=FAR-1e-6||D>far) D=far; FAR=far; }
+      dots.material.size=Math.max(9,Math.min(18,h/56)); lit.material.size=dots.material.size*1.6; stale=true; };
+    new ResizeObserver(fit).observe(box); fit();
+    const frame=()=>{ requestAnimationFrame(frame); if(document.hidden||!$('app').classList.contains('over')||!box.clientWidth) return;
+      if(spin&&!held){ yaw+=0.0003; stale=true; } if(!stale) return; stale=false;
+      g.rotation.set(pitch,yaw,0); cam.position.set(0,0,D); cam.lookAt(0,0,0); ren.render(scene,cam); };
+    frame();
+  }).catch(()=>{ $('globe-hint').textContent='The globe could not be loaded. The photos below still work.'; $('globe-zoom').hidden=true; });
+  // the domes whose dots are within reach of a spot on the canvas, nearest first (only those on the side facing us)
+  const under=(x,y,reach)=>{ if(!G) return []; const r=cv.getBoundingClientRect(), out=[]; G.g.rotation.set(pitch,yaw,0); G.g.updateMatrixWorld(); G.cam.position.set(0,0,D); G.cam.lookAt(0,0,0); G.cam.updateMatrixWorld();
+    for(let i=0;i<DOMES.length;i++){ const v=G.v.fromArray(G.pos,i*3).applyMatrix4(G.g.matrixWorld); if(v.z*D<1.05) continue; v.project(G.cam);
+      const q=Math.hypot((v.x+1)/2*r.width-x,(1-v.y)/2*r.height-y); if(q<=reach) out.push([q,i]); }
+    return out.sort((a,b)=>a[0]-b[0]).map(o=>o[1]); };
+  const spot=e=>{ const r=cv.getBoundingClientRect(); return [e.clientX-r.left,e.clientY-r.top]; };
+  const hush=()=>{ tip.hidden=true; box.classList.remove('onadot'); if(G) G.light([]); };
+  cv.addEventListener('pointerdown',e=>{ if(e.button) return; spin=false; const [x,y]=spot(e); held={x,y,yaw,pitch,moved:false,touch:e.pointerType==='touch'}; try{ cv.setPointerCapture(e.pointerId); }catch(_){} box.classList.add('turning'); $('globe-hint').hidden=true; });
+  cv.addEventListener('pointermove',e=>{ const [x,y]=spot(e);
+    if(held){ const k=2.3*(D-1)/(2.9*Math.max(200,box.clientHeight)), dx=x-held.x, dy=y-held.y; if(Math.hypot(dx,dy)>4) held.moved=true; if(!held.moved) return;
+      yaw=held.yaw+dx*k; if(!held.touch) pitch=Math.max(-1.35,Math.min(1.35,held.pitch+dy*k)); hush(); stale=true; return; }
+    const at=under(x,y,13); if(!at.length){ hush(); return; }
+    const d=DOMES[at[0]]; tip.replaceChildren(el('b',d.place),el('span',at.length>1?'and '+(at.length-1)+' more here. Pick to see them.':((d.building||{}).where||'')+' · '+d.built.split(/[,;]/)[0]));
+    tip.hidden=false; const w=tip.offsetWidth, h=tip.offsetHeight; tip.style.left=Math.max(6,Math.min(box.clientWidth-w-6,x+16))+'px'; tip.style.top=Math.max(6,Math.min(box.clientHeight-h-6,y+16))+'px';
+    box.classList.add('onadot'); G.light(at); });
+  const drop=e=>{ const h=held; held=null; box.classList.remove('turning'); if(!h||h.moved||e.type==='pointercancel') return;
+    const at=under(h.x,h.y,h.touch?22:13); if(at.length===1) show(DOMES[at[0]]); else if(at.length>1) showNear(at.map(i=>DOMES[i])); };
+  cv.addEventListener('pointerup',drop); cv.addEventListener('pointercancel',drop); cv.addEventListener('pointerleave',()=>{ if(!held) hush(); });
+  const zoom=f=>{ D=Math.max(CLOSE,Math.min(FAR,D*f)); spin=false; stale=true; };
+  $('globe-in').onclick=()=>zoom(0.78); $('globe-out').onclick=()=>zoom(1/0.78); cv.addEventListener('dblclick',()=>zoom(0.7));
+  cv.addEventListener('wheel',e=>{ if(!e.ctrlKey) return; e.preventDefault(); zoom(Math.exp(e.deltaY*0.01)); },{passive:false});
+})();
 // ---- overview: the map and the tables ----
 const ev=document.querySelector('#ev tbody');
 DOMES.forEach(d=>{
@@ -2764,6 +2852,7 @@ const linkTo=(txt,href)=>{ if(!href) return document.createTextNode(txt); const 
 const creditRow=(what,title,page,by,lic,licUrl)=>{ const tr=el('tr'), t1=el('td'), t2=el('td'); tr.appendChild(el('td',what)); t1.appendChild(linkTo(title||'Source',page)); tr.appendChild(t1);
   tr.appendChild(el('td',by||'Not recorded')); t2.appendChild(linkTo(lic||'See source',licUrl)); tr.appendChild(t2); crb.appendChild(tr); };
 DOMES.forEach(d=>creditRow(d.place,d.file_title,d.page,(d.meta||{}).artist,(d.meta||{}).license,d.licence_url));
+creditRow('The globe on the front page','Blue Marble 2002.png','https://commons.wikimedia.org/wiki/File:Blue_Marble_2002.png','NASA Goddard Space Flight Center','Public domain','https://creativecommons.org/publicdomain/mark/1.0/');
 EYES.forEach(e=>creditRow((e.id[0]==='c'?'Under the drawing: ':isSky(e.id)?'Sky: ':'Eye: ')+e.name,(e.title||'').replace(/^File:/,''),e.page,e.by,e.licence,e.licence_url));
 
 // ---- resets ----
