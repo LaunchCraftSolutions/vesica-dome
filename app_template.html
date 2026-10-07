@@ -696,7 +696,8 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 .colsbox .col h4 .tv{margin-left:8px;font-weight:500;color:var(--soft)}
 .steps .sideall{position:sticky;top:0;z-index:2;margin:0 0 var(--s);padding:0;background:var(--paper)} .steps .sideall .pill{flex:1;justify-content:center;min-height:30px}   /* at the head of the list, as wide as the list, and staying there while the list scrolls */
 /* two small buttons in a column's heading, where another column has its On */
-.headbtns{display:flex;gap:6px} .headbtns .pill{padding:0 9px;height:17px;min-height:0;font-size:11.5px;line-height:1;border-radius:999px}
+.headend{display:flex;align-items:center;gap:10px}   /* the right-hand end of a heading: All off, then the On, which stays in the corner */
+.headbtns{display:flex;gap:6px} :is(.headbtns,.headend) .pill{padding:0 9px;height:17px;min-height:0;font-size:11.5px;line-height:1;border-radius:999px}
 .btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
 label.row.idle{opacity:.5}   /* a setting that acts only while something else is on: still there to be set, but quiet */
 .colsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
@@ -883,7 +884,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
         
             </div>
             <i class="colrule" aria-hidden="true"></i>
-            <div class="col mixgrp" id="col-mix" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally. Switching Mix on switches all three on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
+            <div class="col mixgrp" id="col-mix" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally. Switching Mix on switches all three on."><div class="modehead"><h4>Mix</h4><span class="headend"><button type="button" class="pill" id="pics-off" title="Switch Dome, Eye and Nebula off">All off</button><label class="onoff" title="Switch Dome, Eye and Nebula on, mixed as the dot says"><input type="checkbox" id="mix-on"> All on</label></span></div>
               <svg id="mix" class="tri3" viewBox="0 0 228 122" role="img" aria-label="How much of the dome, the eye and the nebula shows">
                 <path class="tri" d="M114 12L58 108H170Z"/><path class="med" d="M114 12V108M58 108L142 60M170 108L86 60"/><circle class="mid" cx="114" cy="76" r="4"/>
                 <text x="126" y="20">Dome <tspan class="pc" id="mix-pd"></tspan></text>
@@ -907,7 +908,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             <label class="row" title="A soft light round each dot">Glow <input type="range" id="xpts-glow" min="0" max="1" step="0.01" aria-label="How much the crossing dots glow"></label>
             </div>
             <i class="colrule" aria-hidden="true"></i>
-            <div class="col mixgrp" id="col-lmix" role="group" aria-label="Mix" title="Drag the dot toward Circles, Lines or Crossings to bring that one forward and hold the others back. In the middle, all three are at full strength. Switching Mix on switches Lines and Crossings on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="lmix-on"> On</label></div>
+            <div class="col mixgrp" id="col-lmix" role="group" aria-label="Mix" title="Drag the dot toward Circles, Lines or Crossings to bring that one forward and hold the others back. In the middle, all three are at full strength. Switching Mix on switches Lines and Crossings on."><div class="modehead"><h4>Mix</h4><span class="headend"><button type="button" class="pill" id="lines-off" title="Switch Lines and Crossings off">All off</button><label class="onoff" title="Switch Lines and Crossings on, mixed as the dot says"><input type="checkbox" id="lmix-on"> All on</label></span></div>
               <svg id="lmix" class="tri3" viewBox="0 0 228 122" role="img" aria-label="How strongly the circles, the lines and the crossings show">
                 <path class="tri" d="M104 12L48 108H160Z"/><path class="med" d="M104 12V108M48 108L132 60M160 108L76 60"/><circle class="mid" cx="104" cy="76" r="4"/>
                 <text x="116" y="20">Circles <tspan class="pc" id="lmix-pc"></tspan></text>
@@ -930,7 +931,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             <label class="row"><input type="checkbox" id="rings-on"> Circles</label>
             <div class="btns"><button class="pill" id="dive-in">Dive in</button><button class="pill" id="dive-out">Dive out</button></div>
         </section>
-        <section class="grp modebox" data-box="3d" id="mode-3d" aria-label="3D and Space"><div class="modehead"><h4>3D<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="go3d"> On</label></div>
+        <section class="grp modebox" data-box="3d" id="mode-3d" aria-label="3D and Space"><div class="modehead"><h4>3D<span class="modetag">mode</span></h4><span class="headend"><button type="button" class="pill" id="d3-off" title="Switch 3D, the arches and Space off: back to the flat desk">All off</button><label class="onoff"><input type="checkbox" id="go3d"> On</label></span></div>
             <div id="d3-more">
               <div class="subgrp g3" role="group" aria-label="Dome"><h4>Dome</h4>
               <label class="row" title="Where the dome meets the ground: the foot of its wall">Opening <span class="tv numv"><input type="number" id="edge-num" min="1" max="7" step="0.01" aria-label="Dome opening, exact value"></span><input type="range" id="edge3" min="1" max="7" step="0.005" aria-label="Where the dome's opening is, in first circles from the centre"></label>
@@ -2617,6 +2618,12 @@ $('lmix-on').onchange=()=>setLmix($('lmix-on').checked);
   const up=()=>{ down=false; }; tri.addEventListener('pointerup',up); tri.addEventListener('pointercancel',up);
   tri.addEventListener('dblclick',()=>{ lmix=[1/3,1/3,1/3]; store.set('dome-lmix',lmix); if(!lmixOn) setLmix(true); else showLines(); });
   showLines(); }
+// All off, one for each toolbar that has more than one On. Each switch that is on is pressed, so whatever hangs on it (its Mix, a
+// picture being placed) follows as it would by hand. For 3D it means back to the flat desk: Space, 3D and the arches all off.
+const pressOff=ids=>ids.forEach(id=>{ const e=$(id); if(e.checked) e.click(); });
+$('pics-off').onclick=()=>{ if(!cur) return; pressOff(['pic3','eye-on','sky-on']); if(mixOn) setMix(false); };
+$('lines-off').onclick=()=>{ if(!cur) return; pressOff(['lines-on','xpts-on']); };
+$('d3-off').onclick=()=>{ if(!cur) return; if(ORB&&ORB.on) ORB.close(); if(T3&&T3.on) T3.close(); pressOff(['arch-on']); };
 let mixBack=null;
 function spaceMixIn(){ if(!SKIES.length||!cur) return; mixBack={mixOn,mix:mix.slice(),fade,eyeFade,skyFade,picOn,eyeOn,skyOn}; mix=[0,0,1]; store.set('dome-mix',mix); setMix(true); }
 function spaceMixOut(){ const b=mixBack; mixBack=null; if(!b||!mixOn||mix[0]!==0||mix[1]!==0) return;
