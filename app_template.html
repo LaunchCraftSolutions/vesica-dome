@@ -618,6 +618,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 .canvas.phone #boxes,.canvas.phone.bare #boxes{position:static;display:block}
 .canvas.phone #boxes>.modebox{display:none!important}
 .canvas.phone #boxes>.modebox:not(.shut):not(#helper){display:flex!important;position:fixed;left:8px!important;right:8px;top:auto!important;bottom:8px;width:auto;box-sizing:border-box;max-height:max(230px,calc(100vh - var(--ch,60vw) - 86px));overflow:auto;z-index:60!important;pointer-events:auto;background:var(--paper);box-shadow:inset 0 0 0 2px var(--paper),inset 0 0 0 3px var(--gilt),0 -10px 40px rgba(0,0,0,.7)}
+.canvas.phone #boxes>.modebox.colsbox:not(.shut){max-width:none}
 .canvas.phone #boxes>.modebox .handle{display:none}
 .canvas.phone #boxes>.modebox h4::after{display:none}
 .canvas.phone .sheetdone{display:flex;justify-content:center;flex:none;min-height:40px;margin-top:4px}
@@ -3490,7 +3491,7 @@ const groups=[['Favorites',d=>false],['From Dresden to Edirne',d=>d.along!==null
   const lab=el('span',name,'label between'), box=el('div',undefined,'cards'); cards.append(lab,box); return {lab,box,test}; });
 // A card's picture is fetched when the card first comes near the screen. (The browser's own lazy loading does not hold a picture
 // back while its card is not yet on the page, so all 326 were fetched the moment the page opened, ahead of the open dome's own photo.)
-const cardSeen=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ const i=e.target; cardSeen.unobserve(i); i.src=i.dataset.src; } }),{root:$('overview'),rootMargin:'1200px'});   // a screen or so ahead of the scrolling, so they are there on arrival
+const cardSeen=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ const i=e.target; cardSeen.unobserve(i); i.src=i.dataset.src; } }),{root:/auto|scroll/.test(getComputedStyle($('overview')).overflowY)?$('overview'):null,rootMargin:'1200px'});   // a screen or so ahead of the scrolling, so they are there on arrival (on a phone the whole page scrolls, not the list)
 DOMES.forEach(d=>{
   const b=el('button',undefined,'card'), th=el('div',undefined,'thumb'), i=el('img'); i.alt=''; i.dataset.src=d.thumb||d.img; cardSeen.observe(i); th.appendChild(i); b.appendChild(th);
   const t=el('div',undefined,'txt'); t.appendChild(el('span',((d.building||{}).where||'').split(', ').pop(),'pl')); t.appendChild(el('b',d.place)); const sub=el('em'); t.appendChild(sub); b.appendChild(t);
