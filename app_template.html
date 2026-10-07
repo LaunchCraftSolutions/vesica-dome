@@ -303,10 +303,10 @@ input.field{border:1px solid var(--rule);background:var(--paper);padding:0 12px}
 .steps .panel-head{padding-bottom:var(--s)}
 .nav{padding:var(--m)} .phases{margin-bottom:var(--s)} .navrow{gap:var(--s)} .navrow label{min-height:var(--h)} .cap{margin-top:var(--m);gap:var(--s)}
 .cap .chip{border-radius:4px;padding:5px 9px}
-#title{top:auto;right:var(--cardr,52px);bottom:var(--cardb,52px);z-index:7;border-radius:var(--R)}   /* in the bottom right corner, over the boxes; --cardb lifts it above the helper when the helper is up (see layBoxes) */
+#title{top:var(--cardt,52px);right:52px;bottom:auto;z-index:7;border-radius:var(--R)}   /* in the top right corner, under the Canvas and View toolbar, or under the helper when the helper is up (--cardt, see layBoxes) */
 #announce{top:var(--annt,20px);z-index:7}
 /* alone in the corner (no helper), the card takes the helper's width and larger lettering, so it fills the corner as the helper does */
-.canvas.cardlone #title{width:min(410px,80%);padding:30px 30px 26px} .canvas.cardlone #title .label{font-size:12.5px}
+.canvas.cardlone #title{width:min(var(--cardw,410px),80%);padding:30px 30px 26px} .canvas.cardlone #title .label{font-size:12.5px}
 .canvas.cardlone #title h3{font-size:30px;margin-top:11px} .canvas.cardlone #title.big h3{font-size:40px} .canvas.cardlone #title p{font-size:16px} #title .fr{border-radius:3px} #place{bottom:var(--m);border-radius:var(--r)}
 /* right */
 .panel-head{padding:var(--m) var(--m) 0} .panel-head p{margin:var(--s) 0 var(--m)}
@@ -623,7 +623,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 .canvas.phone .sheetdone{display:flex;justify-content:center;flex:none;min-height:40px;margin-top:4px}
 .canvas.phone #boxes .row,.canvas.phone #boxes .pill{min-height:40px}
 /* the cards that name a step or a part: smaller, and across the foot of the canvas */
-.canvas.phone #title{left:8px;right:8px;bottom:8px;width:auto;padding:12px 14px 12px}
+.canvas.phone #title{left:8px;right:8px;top:auto;bottom:8px;width:auto;padding:12px 14px 12px}
 .canvas.phone #title h3,.canvas.phone.cardlone #title h3{font-size:19px;margin-top:6px}
 .canvas.phone #title.big h3,.canvas.phone.cardlone #title.big h3{font-size:26px}
 .canvas.phone #title p,.canvas.phone.cardlone #title p{font-size:13px;margin-top:6px}
@@ -644,7 +644,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
   #phonebar .pill{flex:1 1 28%;justify-content:center;min-height:40px;padding:0 6px}
   #phonebar .pill[aria-pressed=true]{border-color:var(--gilt);color:var(--gilt)}
   #phonebar .pill.is-on::after{content:"";flex:none;width:7px;height:7px;margin-left:7px;border-radius:50%;background:var(--gilt)}
-  .app:not(.over) .steps>#tab-strokes{overflow:visible;flex:none;min-height:0;margin-bottom:24px}
+  .app:not(.over) .steps>#tab-strokes{overflow:visible;flex:none;min-height:0;margin-bottom:24px} .steps .sideall{position:static}
 }
 /* a phone: one column */
 @media (max-width:640px){
@@ -694,7 +694,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 .colsbox>.boxname{display:none} .canvas.compact .colsbox>.boxname,.canvas.phone .colsbox>.boxname{display:flex}
 .colsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
 .colsbox .col h4 .tv{margin-left:8px;font-weight:500;color:var(--soft)}
-.steps .sideall{margin:0;padding:0 2px 2px} .steps .sideall .pill{flex:1;justify-content:center}
+.steps .sideall{position:sticky;top:0;z-index:2;margin:0 0 var(--s);padding:0;background:var(--paper)} .steps .sideall .pill{flex:1;justify-content:center;min-height:30px}   /* at the head of the list, as wide as the list, and staying there while the list scrolls */
 /* two small buttons in a column's heading, where another column has its On */
 .headbtns{display:flex;gap:6px} .headbtns .pill{padding:0 9px;height:17px;min-height:0;font-size:11.5px;line-height:1;border-radius:999px}
 .btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
@@ -768,8 +768,8 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
     <div class="bound" id="picked"><span class="lbl">Line thickness</span><span class="tv" id="mval"></span><span class="who" id="who"></span>
       <input type="range" id="mthk" aria-label="Thickness of the selected steps">
       <p class="note" id="mhint"></p></div>
-    <div class="btns sideall"><button class="pill" id="show-all" title="Bring back every step that has been hidden, and show the whole build">Show all steps</button></div>
     <div class="scroll" id="tab-strokes">
+      <div class="btns sideall"><button class="pill" id="show-all" title="Bring back every step that has been hidden, and show the whole build">Show all steps</button></div>
       <div id="slist"></div></div>
     <div class="nav">
       <span class="lbl">Play</span>
@@ -1470,7 +1470,9 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   hp.style.width=vw+'px'; hp.style.minHeight=''; put(hp,W-IN-vw,vy);
   // The cards that name each step and each part as the build plays stand in the bottom right corner, or just above the helper
   // when the helper is up in that corner. The name of a part as it begins is written just under the top row of boxes (or tabs).
-  st.style.setProperty('--cardb',(lift+IN)+'px'); st.style.setProperty('--cardr',(!compact&&drawHome?IN+BW+G:IN)+'px'); st.classList.add('cardlone');
+  // The card that names each step and each part as the build plays stands in the top right corner too: directly under the helper
+  // when the helper is up, and directly under the Canvas and View toolbar when it is not. It is as wide as they are.
+  { const helperUp=!hp.hidden&&!boxPlaces.helper; st.style.setProperty('--cardt',(vy+(helperUp?hp.offsetHeight+G:0))+'px'); st.style.setProperty('--cardw',vw+'px'); st.classList.add('cardlone'); }
   st.style.setProperty('--annt',(TOP+(compact?40:PICS.offsetHeight+G+LINES.offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
