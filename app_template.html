@@ -888,6 +888,10 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
               <label class="row" title="Where the dome meets the ground: the foot of its wall">Opening <span class="tv numv"><input type="number" id="edge-num" min="1" max="7" step="0.01" aria-label="Dome opening, exact value"></span><input type="range" id="edge3" min="1" max="7" step="0.005" aria-label="Where the dome's opening is, in first circles from the centre"></label>
               <label class="row" title="Where the straight wall ends and the dome starts to curve. Equal to the opening: no straight wall">Rounding <span class="tv numv"><input type="number" id="round-num" min="0.3" max="7" step="0.01" aria-label="Dome rounding, exact value"></span><input type="range" id="round3" min="0.3" max="7" step="0.005" aria-label="Where the dome starts to curve, in first circles from the centre"></label>
               </div>
+              <div class="subgrp" role="group" aria-label="Arches" title="For a dome that stands on four arches. The photo round the dome is shaped into them."><div class="modehead"><h4>Arches</h4><label class="onoff"><input type="checkbox" id="arch-on"> On</label></div>
+              <label class="row" title="A square on the photo. Put its corners where the arches meet, at the top of the four piers.">Size <span class="tv numv"><input type="number" id="arch-num" min="1" max="14" step="0.01" aria-label="Arches size, exact value"></span><input type="range" id="arch3" min="1" max="14" step="0.005" aria-label="Half the side of the arches' square, in first circles from the centre"></label>
+              <label class="row" title="Turn the square until the dotted arches lie on the arches in the photo">Turn <input type="range" id="archturn3" min="-45" max="45" step="0.25" value="0" aria-label="Turn the arches' square"></label>
+              </div>
               <label class="row" title="From lying flat to raised into the dome">Raise <input type="range" id="lift3" min="0" max="1" step="0.01" value="1" aria-label="How far the photo is raised, from flat to dome"></label>
               <label class="row">Spire <input type="range" id="spire3" min="0" max="2.5" step="0.05" value="0" aria-label="Height of the lantern and spire, in dome radii"></label>
               <label class="row">Sight cone <input type="range" id="cone3" min="0" max="6" step="0.05" value="0" aria-label="Height of the cone of sight over the dome"></label>
@@ -2457,7 +2461,22 @@ function googleReady(){
   return googleAsked;
 }
 const googleTile=(z,x,y)=>`https://tile.googleapis.com/v1/2dtiles/${z}/${x}/${y}?session=${GSESSION}&key=${GKEY}`;
-function showEdge(skip){ if(!cur) return; const v=edgeOf(cur); if(skip!=='range') $('edge3').value=v; if(skip!=='num') $('edge-num').value=v.toFixed(2); showRound(); }
+// Arches. Many domes stand on four arches over a square (the crossing): the dome's ring rests on four curved corners (the
+// pendentives), those on the arches, the arches on four piers, and a vault runs off behind each arch. In a photo taken looking
+// straight up, all of that lies round the dome. With Arches on, 3D shapes that part of the photo into the crossing.
+// Two settings place it, both read off the photo: Size is half the side of a square whose corners are the four points where the
+// arches meet (the tops of the piers), in first circles from the centre, and Turn lines that square up. The dome's opening is
+// taken as the ring the arches carry, so the square is always larger than the opening. Remembered per dome.
+let arches=store.get('dome-3d-arches',{}); if(!arches||typeof arches!=='object') arches={};
+const archOf=d=>{ const m=(d&&arches[d.slug])||{}, e=edgeOf(d); return {on:m.on===true,size:Math.min(14,Math.max(1.08*e,+m.size||1.35*e)),turn:Math.max(-45,Math.min(45,+m.turn||0))}; };
+function showArch(skip){ if(!cur) return; const m=archOf(cur); $('arch-on').checked=m.on; if(skip!=='range') $('arch3').value=m.size; if(skip!=='num') $('arch-num').value=m.size.toFixed(2); $('archturn3').value=m.turn; }
+function setArch(part,from){ if(!cur) return; if('size' in part&&isNaN(part.size)) return; arches[cur.slug]=Object.assign({},arches[cur.slug],part); store.set('dome-3d-arches',arches); showArch(from); }
+$('arch-on').onchange=()=>setArch({on:$('arch-on').checked});
+$('arch3').oninput=e=>setArch({size:parseFloat(e.target.value),on:true},'range');
+$('arch-num').oninput=e=>setArch({size:parseFloat(e.target.value),on:true},'num');
+$('arch-num').onkeydown=e=>{ if(e.key==='PageUp'||e.key==='PageDown'){ e.preventDefault(); setArch({size:archOf(cur).size+(e.key==='PageUp'?0.1:-0.1),on:true}); } };
+$('archturn3').oninput=e=>setArch({turn:parseFloat(e.target.value)||0,on:true});
+function showEdge(skip){ if(!cur) return; const v=edgeOf(cur); if(skip!=='range') $('edge3').value=v; if(skip!=='num') $('edge-num').value=v.toFixed(2); showRound(); showArch(); }
 function setEdge(v,from){ if(!cur||isNaN(v)) return; edges[cur.slug]=Math.min(7,Math.max(1,v)); store.set('dome-3d-edge',edges); showEdge(from); }
 function showRound(skip){ if(!cur) return; const v=roundOf(cur); if(skip!=='range') $('round3').value=v; if(skip!=='num') $('round-num').value=v.toFixed(2); }
 function setRound(v,from){ if(!cur||isNaN(v)) return; const e=edgeOf(cur), w=Math.min(e,Math.max(0.3,v)); if(w>=e-1e-6) delete rounds[cur.slug]; else rounds[cur.slug]=w; store.set('dome-3d-round',rounds); showRound(w===v?from:undefined); }
@@ -2487,7 +2506,25 @@ function make3d(){
   const geo=new THREE.BufferGeometry(); geo.setIndex(idx); geo.setAttribute('position',new THREE.BufferAttribute(pos,3)); geo.setAttribute('uv',new THREE.BufferAttribute(uv,2));
   const mesh=new THREE.Mesh(geo,new THREE.MeshBasicMaterial({map:tex,side:THREE.DoubleSide,alphaTest:0.5})); mesh.frustumCulled=false; scene.add(mesh);
   const S={on:false,d:null,lift:1,az:0,pol:1,dist:3.4,stale:true,need:true,step:-1,last:0,key:'',pan:new THREE.Vector3()};
-  const keyOf=()=>[fig.cx,fig.cy,fig.u,fig.turn,edgeOf(S.d),roundOf(S.d),reachNow()].join();
+  const keyOf=()=>{ const m=archOf(S.d); return [fig.cx,fig.cy,fig.u,fig.turn,edgeOf(S.d),roundOf(S.d),reachNow(),m.on,m.size,m.turn].join(); };
+  // The arches. With Arches on, the part of the photo outside the dome's ring is not left lying flat: it is a second sheet, shaped
+  // into the crossing under the dome. The shape is the one such crossings are built to. The ring (radius a) stands on a square of
+  // side 2a. A ball through the square's four corners, cut by the square's four sides, leaves four curved corners that carry the
+  // ring: the pendentives. Each cut is a half circle of radius a: an arch. Behind each arch a half-round vault of the same size
+  // runs off, and under the corners the piers go straight down.
+  // The photo is laid on that shape the way it was taken. The photographer stood under the middle looking up, so every spot of
+  // the flat photo is pushed straight away from that standing point until it meets the shape. Seen from the standing point the
+  // picture is therefore unchanged at any Raise; step off it and the arches stand out. How far below the ring the standing point
+  // is follows from Size: the further out the arches' corners show in the photo, the closer under them the photo was taken.
+  // The rows run outward from the ring, with one row exactly on the four arches and four columns exactly on the piers' edges,
+  // the only two places where the shape has a crease.
+  const NA=18, NB=64, rowsA=NA+NB+1, posA=new Float32Array(rowsA*(NS+1)*3), uvA=new Float32Array(rowsA*(NS+1)*2), flatA=new Float32Array(rowsA*(NS+1)), idxA=[];
+  for(let i=0;i<NA+NB;i++) for(let j=0;j<NS;j++){ const a=i*(NS+1)+j, b=a+NS+1; idxA.push(a,b,a+1,a+1,b,b+1); }
+  const geoA=new THREE.BufferGeometry(); geoA.setIndex(idxA); geoA.setAttribute('position',new THREE.BufferAttribute(posA,3)); geoA.setAttribute('uv',new THREE.BufferAttribute(uvA,2));
+  const meshA=new THREE.Mesh(geoA,mesh.material); meshA.frustumCulled=false; meshA.visible=false; scene.add(meshA);
+  const arch3=()=>{ const m=archOf(S.d), a=edgeOf(S.d)/RIM0, s=m.size/RIM0, Hc=s*a/(s-a); return {on:m.on,a,s,Hc,g:Hc-a,tau:m.turn*Math.PI/180}; };   // a: ring and half square; s: the square as the photo shows it; Hc: the standing point, below the ring; g: the same, below the foot of the arches
+  const fold8=ph=>{ const q=Math.PI/2; return ((ph+q/2)%q+q)%q-q/2; };   // the angle from the nearest of the four arms
+  const archShow=()=>{ const on=!!(S.arch&&S.arch.on); meshA.visible=on&&picOn; archRing.visible=on; geo.setDrawRange(0,on?NR*NS*6:Infinity); };
   // The shape, with the drawing's own rim as 1. E is the opening: the foot of the wall, on the ground. Rr is where the rounding
   // begins. Between them the picture stands straight up as a wall of height H; inside Rr it is a half-sphere of the opening's size
   // sitting on that wall. The wall keeps the plain dome's measure: a distance in the picture becomes that distance times a quarter
@@ -2505,7 +2542,10 @@ function make3d(){
   const edgeRing=new THREE.Group(); scene.add(edgeRing);
   // A second, finer dotted ring at the top of the straight wall, where the rounding begins. Shown only when there is a wall.
   const roundRing=new THREE.Group(); scene.add(roundRing);
+  // The four arches, dotted the same way, so the square can be lined up with the arches in the photo.
+  const archRing=new THREE.Group(); archRing.visible=false; scene.add(archRing);
   { const light=new THREE.MeshBasicMaterial({color:0xFFF3C4}), dark=new THREE.MeshBasicMaterial({color:0x0D1019});
+    for(let i=0;i<4*61;i++){ const b=new THREE.Mesh(bead,i%2?dark:light); b.scale.setScalar(i%2?0.010:0.016); archRing.add(b); }
     for(let i=0;i<168;i++){ const b=new THREE.Mesh(bead,i%2?dark:light); b.scale.setScalar(i%2?0.012:0.019); edgeRing.add(b); }
     for(let i=0;i<120;i++){ const b=new THREE.Mesh(bead,i%2?dark:light); b.scale.setScalar(i%2?0.008:0.012); roundRing.add(b); } }
   // A sphere's skin: almost clear where you look straight through it and bright where it turns away from you, so each sphere
@@ -2524,7 +2564,7 @@ function make3d(){
     fragmentShader:'#include <clipping_planes_pars_fragment>\nuniform vec3 c; uniform float o; uniform float b; uniform float r; varying vec3 n; varying vec3 v; void main(){\n#include <clipping_planes_fragment>\nfloat f=1.0-abs(dot(normalize(n),normalize(v))); gl_FragColor=vec4(c,o*(b+r*pow(f,2.6))); }'});
   function spheres(){
     while(grp.children.length){ const o=grp.children[grp.children.length-1]; grp.remove(o); o.material.dispose(); if(![ball,bead,hoop,rod].includes(o.geometry)) o.geometry.dispose(); }
-    const balls=$('sph3').checked, embryo=balls&&$('embryo3').checked, cells=[]; let seq=0; grp.visible=balls||!picOn; mesh.visible=picOn; S.need=true; if(!grp.visible) return;
+    const balls=$('sph3').checked, embryo=balls&&$('embryo3').checked, cells=[]; let seq=0; grp.visible=balls||!picOn; mesh.visible=picOn; archShow(); S.need=true; if(!grp.visible) return;
     const n=+stepEl.value, solo=$('solo').checked, K=ownScale()/RIM0, a=fig.turn*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a);
     const edge=reach3()/Math.max(fitted(S.d).u,fig.u);
     const at3=(p,inf)=>{ let [X,Y]=p; if(inf){ const far=Math.hypot(X,Y); X*=edge/far; Y*=edge/far; } return new THREE.Vector3(-(X*ca-Y*sa)*K,0,(X*sa+Y*ca)*K); };   // lines that run off the picture stop at the sheet's edge
@@ -2570,7 +2610,19 @@ function make3d(){
       if(r<=Rr){ const ph=r/Rr*Math.PI/2; q=r+L*(E*Math.sin(ph)-r); y=L*(H+E*Math.cos(ph)); }
       else if(r<E){ q=r+L*(E-r); y=L*H*(E-r)/(E-Rr); }
       for(let j=0;j<=NS;j++){ const th=2*Math.PI*j/NS, k=(i*(NS+1)+j)*3; pos[k]=-q*Math.cos(th); pos[k+1]=y; pos[k+2]=q*Math.sin(th); } }   // x is mirrored so that from inside, looking up, the picture reads as the photo does
-    geo.attributes.position.needsUpdate=true; geo.boundingSphere=null; geo.boundingBox=null; S.need=true; spire(); placeGround(); }
+    geo.attributes.position.needsUpdate=true; geo.boundingSphere=null; geo.boundingBox=null; raiseArch(); S.need=true; spire(); placeGround(); }
+  // Each spot of the flat photo, r from the middle, goes to t of the way from the standing point to where it lay: t is 1 on the
+  // ring and on the crowns of the four vaults, which stay where the flat photo was, and less everywhere else, which hangs below.
+  function raiseArch(){ const A=S.arch; if(!A||!A.on) return; const {a,s,Hc,g,tau}=A, L=S.lift;
+    for(let j=0;j<=NS;j++){ const ph=2*Math.PI*j/NS, sf=Math.abs(Math.sin(fold8(ph))), ct=Math.cos(ph+tau), st=Math.sin(ph+tau);
+      for(let i=0;i<rowsA;i++){ const v=i*(NS+1)+j, r=flatA[v]; let t;
+        if(i<=NA){ const q=Hc*Hc+r*r; t=(Hc*g+Math.sqrt(Math.max(0,Hc*Hc*g*g-q*(g*g-2*a*a))))/q; }                 // a curved corner: on the ball
+        else { const c=r*sf; if(c>s) t=a/c;                                                                          // a pier: the straight side under a vault
+          else { const q=c*c+Hc*Hc; t=(Hc*g+Math.sqrt(Math.max(0,Hc*Hc*a*a-c*c*(g*g-a*a))))/q; } }                  // a vault: half a round tunnel
+        t=Math.min(1,t); const q2=r*(1+L*(t-1)); posA[v*3]=-q2*ct; posA[v*3+1]=-L*Hc*(1-t); posA[v*3+2]=q2*st; } }
+    geoA.attributes.position.needsUpdate=true; geoA.boundingSphere=null; geoA.boundingBox=null;
+    archRing.children.forEach((b,i)=>{ const k=i/61|0, be=Math.PI*(i%61)/60, u=a, w=a*Math.cos(be), y=-a+a*Math.sin(be), f=1+(1-L)*(Hc/(y+Hc)-1), an=tau+k*Math.PI/2, ca=Math.cos(an), sa=Math.sin(an);
+      b.position.set(-(u*ca-w*sa)*f,L*y+0.003,(u*sa+w*ca)*f); }); }
   // Two things can stand on the dome's crown.
   // The spire is the lantern as lanterns are built. It stands on the ring of the opening (the first circle) and is as wide as that
   // ring: a drum of columns for a little over half its height, a small cap that tapers by the eight's own rule, then an orb and a
@@ -2656,7 +2708,15 @@ function make3d(){
     edgeRing.children.forEach((b,i)=>{ const a=2*Math.PI*i/edgeRing.children.length; b.position.set(-E*Math.cos(a),0.004,E*Math.sin(a)); });
     const m=PAD/TS, s=(1-2*m)/(2*half);
     for(let i=0;i<rows3;i++) for(let j=0;j<=NS;j++){ const th=2*Math.PI*j/NS, k=(i*(NS+1)+j)*2; uv[k]=m+(half+rad[i]*rim*Math.cos(th))*s; uv[k+1]=1-(m+(half+rad[i]*rim*Math.sin(th))*s); }
-    geo.attributes.uv.needsUpdate=true; S.key=keyOf(); raise(); }
+    geo.attributes.uv.needsUpdate=true;
+    // The arches' sheet: from the ring out to the arches (where each shows in the flat photo), then on out to a square that
+    // covers the picture, closer together near the arches.
+    const A=S.arch=arch3(); archShow();
+    if(A.on) for(let j=0;j<=NS;j++){ const ph=2*Math.PI*j/NS, f=fold8(ph), cf=Math.cos(f), tf=Math.tan(f), th=ph+A.tau, ct=Math.cos(th), st=Math.sin(th);
+      const rA=A.Hc*A.a/(cf*(A.g+A.a*Math.sqrt(Math.max(0,1-tf*tf)))), rF=Math.max(rA*1.05,far/cf);
+      for(let i=0;i<rowsA;i++){ const x=(i-NA)/NB, r=i<=NA?A.a+(rA-A.a)*i/NA:rA+(rF-rA)*x*(0.45+0.55*x), v=i*(NS+1)+j; flatA[v]=r;
+        uvA[v*2]=m+(half+r*rim*ct)*s; uvA[v*2+1]=1-(m+(half+r*rim*st)*s); } }
+    geoA.attributes.uv.needsUpdate=true; S.key=keyOf(); raise(); }
   async function sheet(){   // the photo and the strokes as they stand on the desk
     const d=S.d, im=await photoOf(d); if(d!==S.d||!S.on) return; deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,reach3(),TS/1860,true);
     tex.needsUpdate=true; S.need=true; }
@@ -2681,7 +2741,7 @@ function make3d(){
   const ray=new THREE.Raycaster(), ndc=new THREE.Vector2();
   function drawAt(px,py){
     const r=cv.getBoundingClientRect(); ndc.set((px-r.left)/r.width*2-1,1-(py-r.top)/r.height*2); ray.setFromCamera(ndc,cam);
-    const hit=ray.intersectObject(mesh,false)[0]; if(!hit||!hit.uv) return null;
+    const hit=ray.intersectObjects(meshA.visible?[mesh,meshA]:[mesh],false)[0]; if(!hit||!hit.uv) return null;
     const half=reach3(), m=PAD/TS, s=(1-2*m)/(2*half), X=(hit.uv.x-m)/s-half, Y=(1-hit.uv.y-m)/s-half, a=-fig.turn*DEG, dx=X/fig.u, dy=Y/fig.u;
     return [dx*Math.cos(a)-dy*Math.sin(a),dx*Math.sin(a)+dy*Math.cos(a)]; }
   // The spire and the sight cone answer the pointer too: the part under it (the columns, the gold, the cap, one star's tiers)
@@ -2750,8 +2810,9 @@ function make3d(){
         S.spireView=true; cam.fov=50; S.pol=1.3; S.az=Math.PI/2; S.dist=Math.min(12,size*0.74/Math.tan(25*DEG)); S.pan.set(0,L*E+C/2-0.3*L*E,0); cam.updateProjectionMatrix(); S.need=true; coneBtn(); return; }
       S.spireView=false; S.back=null; coneBtn();
       const sh3=shape3(), tall=sh3.top/sh3.E;   // a dome on a wall is taller, so the views from outside stand that much further back
-      if(w==='in'){ S.pol=Math.PI-0.04; S.dist=2.0; S.az=-Math.PI/2; cam.fov=72; }
-      else if(w==='under'){ S.pol=2.2; S.dist=3.3*tall; S.az=-Math.PI/2; cam.fov=55; }   // below the dome and off to one side, looking up into it at an angle
+      const A=arch3();   // with the arches up, From inside stands where the photo was taken, and the angled view looks in along one of the four arms
+      if(w==='in'){ S.pol=Math.PI-0.04; S.dist=2.0; S.az=-Math.PI/2; cam.fov=72; if(A.on){ S.dist=A.Hc+0.3*S.lift*sh3.top; S.az=-Math.PI/2-A.tau; } }
+      else if(w==='under'){ S.pol=2.2; S.dist=3.3*tall; S.az=-Math.PI/2-(A.on?A.tau:0); cam.fov=55; }   // below the dome and off to one side, looking up into it at an angle
       else { S.pol=1.0; S.dist=3.4*tall; S.az=Math.PI/2; cam.fov=50; } S.pan.set(0,0,0); cam.updateProjectionMatrix(); S.need=true; } };
   return api;
 }
@@ -3117,7 +3178,7 @@ const RESETS={
   'z-slide':()=>0, 'turn-s':()=>cur?((fitted(cur).turn+180)%360+360)%360-180:0, 'vturn-s':()=>0,
   'axes-str':()=>0.45, 'paper-str':()=>1, 'xpts-size':()=>4.5, 'xpts-glow':()=>0.45, 'xpts-alpha':()=>0.92, 'pt-size':()=>1,
   'fade':()=>1, 'fade2':()=>1, 'eye-fade':()=>0.6, 'eye-fade2':()=>0.6, 'sky-fade':()=>0.85, 'bright':()=>1,
-  'own-w':()=>2, 'dive-speed':()=>0.35, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
+  'own-w':()=>2, 'dive-speed':()=>0.35, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'arch3':()=>1.35*edgeOf(cur), 'archturn3':()=>0, 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
   'all-thk':thkAt, 'all-thk2':thkAt,
   'mthk':{ off:()=>chosen().some(i=>Math.abs(thick[i]-MAINW[i])>0.005), go:()=>{ chosen().forEach(i=>setThick(i,MAINW[i])); store.set('dome-thickness',thick); tickState(); } },
   'lb-thk':{ off:()=>lbStep>=0&&Math.abs(thick[lbStep]-MAINW[lbStep])>0.005, go:()=>{ if(lbStep<0) return; setThick(lbStep,MAINW[lbStep]); store.set('dome-thickness',thick); $('lb-thk').value=thick[lbStep]; $('lb-val').textContent=thick[lbStep].toFixed(2); tickState(); } } };
