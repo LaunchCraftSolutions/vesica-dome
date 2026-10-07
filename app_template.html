@@ -1530,7 +1530,7 @@ function setFig(){
 const SKYDIR='lib/sky/';
 let skyPic=null, skyCat=null;
 const skyBig=()=>(navigator.deviceMemory||8)>=8&&Math.max(screen.width,screen.height)*(devicePixelRatio||1)>=1800;   // the large picture only where there is the screen and the memory for it
-const skyImage=()=>skyPic||(skyPic=new Promise(ok=>{ const im=new Image(); im.onload=()=>ok(im); im.onerror=()=>ok(null); im.src=SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'); }));
+const skyImage=()=>skyPic||(skyPic=(cur?photoOf(cur).catch(()=>{}):Promise.resolve()).then(()=>new Promise(ok=>{ const im=new Image(); im.onload=()=>ok(im); im.onerror=()=>ok(null); im.src=SKYDIR+(skyBig()?'starmap_8k.jpg':'starmap_4k.jpg'); })));   // after the open dome's own photo, which matters more
 const skyStars=()=>skyCat||(skyCat=fetch(SKYDIR+'stars.bin').then(r=>r.ok?r.arrayBuffer():null).catch(()=>null));
 let starsOn=store.get('dome-sky-stars',true)!==false, starGrid=store.get('dome-sky-grid',true)!==false;
 const starsShown=()=>skyShown()&&starsOn, SPACEINK='#03040a';
@@ -1902,15 +1902,19 @@ let diveSpeed=+store.get('dome-dive-speed',0.35)||0.35, spiralsOn=store.get('dom
 // size, turned half a point each level.
 let extraStars=String(store.get('dome-stars','')||'');
 const parseStars=txt=>(txt.match(/\d+\s*\/\s*\d+/g)||[]).map(x=>x.split('/').map(Number)).filter(([n,k])=>n>=5&&n<=60&&k>=2&&k<n/2).slice(0,6);
+var depthClean=false;   // the fractal's canvas has nothing on it
 function drawDepth(){
-  const cv=$('frac'), box=sv.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2), W=Math.round(box.width*dpr), H=Math.round(box.height*dpr);
+  const cv=$('frac'), live=depthOn&&!!cur&&!!fig&&mode==='pan'&&!(T3&&T3.on);
+  // This is called on every move of the view. With Fractal off there is nothing to draw, so the canvas is wiped once and then left
+  // alone, and the page is not asked to measure itself.
+  if(!live){ diveLn=0; cv.dataset.drawn=0; if(!depthClean){ cv.getContext('2d').clearRect(0,0,cv.width,cv.height); depthClean=true; }
+    if(deepNow||$('world').style.visibility){ deepNow=false; $('world').style.visibility=''; xPaint(); } return; }
+  const box=sv.getBoundingClientRect(), dpr=Math.min(window.devicePixelRatio||1,2), W=Math.round(box.width*dpr), H=Math.round(box.height*dpr);
   if(!W||!H) return;
   if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
-  const g=cv.getContext('2d'); g.clearRect(0,0,W,H);
-  const live=depthOn&&!!cur&&!!fig&&mode==='pan'&&!(T3&&T3.on);
-  if(!live) diveLn=0;
-  const dived=diveLn>0; deepNow=live&&(dived||view.w<cur.view_px/300); $('world').style.visibility=deepNow?'hidden':''; xPaint();
-  cv.dataset.drawn=0; if(!live) return;
+  const g=cv.getContext('2d'); g.clearRect(0,0,W,H); depthClean=false;
+  const dived=diveLn>0; deepNow=dived||view.w<cur.view_px/300; $('world').style.visibility=deepNow?'hidden':''; xPaint();
+  cv.dataset.drawn=0;
   const k=W/view.w, cx=dived?W/2:(fig.cx-view.x)*k, cy=dived?H/2:(fig.cy-view.y)*k, rot=viewTurn*DEG, lnS=Math.log(fig.u*k)+diveLn;
   const far=Math.hypot(Math.max(cx,W-cx),Math.max(cy,H-cy)), near=Math.hypot(Math.max(-cx,0,cx-W),Math.max(-cy,0,cy-H));
   DF={cx,cy,rot,lnS,dpr,left:box.left,top:box.top,dived};
@@ -2676,7 +2680,7 @@ $('edge-num').onkeydown=e=>{ if(e.key==='PageUp'||e.key==='PageDown'){ e.prevent
 const THREE_URL='lib/three/three.min.js';
 const loadThree=()=>window.THREE?Promise.resolve():new Promise((ok,no)=>{ const s=document.createElement('script'); s.src=THREE_URL; s.onload=ok; s.onerror=no; document.head.appendChild(s); });
 const photos=new Map();
-async function photoOf(d){ if(!photos.has(d.slug)){ const im=new Image(); im.src=d.img; await im.decode(); photos.set(d.slug,im); } return photos.get(d.slug); }
+async function photoOf(d){ if(!photos.has(d.slug)){ const im=new Image(); im.fetchPriority='high'; im.src=d.img; await im.decode(); photos.set(d.slug,im); } return photos.get(d.slug); }
 function make3d(){
   const box=$('three'), cv=$('gl'), R=new THREE.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); R.localClippingEnabled=true; R.setPixelRatio(Math.min(devicePixelRatio,2));
   const scene=new THREE.Scene(), cam=new THREE.PerspectiveCamera(50,1,0.01,600), tgt=new THREE.Vector3();
@@ -2938,7 +2942,7 @@ function make3d(){
     if(run){ S.live=true; if(t-S.last>LIVE3){ S.last=t; S.sharp=t+260; sheet(true); if(S.stale){ S.stale=false; spheres(); } } }
     else { if(S.live){ S.live=false; S.stale=true; }
       // one change by itself is painted in full straight away; changes that keep coming get the quick sheet, and the full one when they stop
-      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+260:0; sheet(more); spheres(); }
+      if(S.stale&&t-S.last>(S.sharp?30:90)){ const more=t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; sheet(more); spheres(); }
       else if(S.sharp&&t>S.sharp&&!S.stale){ S.sharp=0; sheet(false); } }
     if($('spin3').checked&&!dg){ S.az+=0.004; S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
@@ -3183,7 +3187,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
     cam.fov=S.fov; cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
-    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+260:0; paintT(more); }
+    if((S.stale||run)&&t-S.last>(run?70:0)){ const more=run||t-S.last<320; S.stale=false; S.last=t; S.sharp=more?t+170:0; paintT(more); }
     else if(S.sharp&&t>S.sharp){ S.sharp=0; paintT(false); }
     if(S.spin&&!S.drag){ g.rotateOnWorldAxis(YAX,0.005); S.need=true; }
     if(fly.on&&fly.step(t)) S.need=true;
@@ -3333,8 +3337,11 @@ function toggleFav(d){ if(favs.has(d.slug)) favs.delete(d.slug); else favs.add(d
 $('fav-cur').onclick=()=>{ if(cur) toggleFav(cur); };
 const groups=[['Favorites',d=>false],['From Dresden to Edirne',d=>d.along!==null],['Elsewhere',d=>d.along===null]].map(([name,test])=>{
   const lab=el('span',name,'label between'), box=el('div',undefined,'cards'); cards.append(lab,box); return {lab,box,test}; });
+// A card's picture is fetched when the card first comes near the screen. (The browser's own lazy loading does not hold a picture
+// back while its card is not yet on the page, so all 326 were fetched the moment the page opened, ahead of the open dome's own photo.)
+const cardSeen=new IntersectionObserver(es=>es.forEach(e=>{ if(e.isIntersecting){ const i=e.target; cardSeen.unobserve(i); i.src=i.dataset.src; } }),{root:$('overview'),rootMargin:'1200px'});   // a screen or so ahead of the scrolling, so they are there on arrival
 DOMES.forEach(d=>{
-  const b=el('button',undefined,'card'), th=el('div',undefined,'thumb'), i=el('img'); i.src=d.thumb||d.img; i.alt=''; i.loading='lazy'; th.appendChild(i); b.appendChild(th);
+  const b=el('button',undefined,'card'), th=el('div',undefined,'thumb'), i=el('img'); i.alt=''; i.dataset.src=d.thumb||d.img; cardSeen.observe(i); th.appendChild(i); b.appendChild(th);
   const t=el('div',undefined,'txt'); t.appendChild(el('span',((d.building||{}).where||'').split(', ').pop(),'pl')); t.appendChild(el('b',d.place)); const sub=el('em'); t.appendChild(sub); b.appendChild(t);
   b.appendChild(favStar(d));
   b.onclick=()=>show(d); groups.find(g=>g.test(d)).box.appendChild(b);
@@ -3358,7 +3365,8 @@ document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{ filt=b.da
 // It turns slowly by itself until it is first touched. Nothing is drawn while a dome is open or the tab is out of sight.
 (()=>{ const box=$('globe-box'), cv=$('globe'), tip=$('globe-tip'), RAD=Math.PI/180, CLOSE=1.45; let FAR=3.9, yaw=(-90-16)*RAD, pitch=40*RAD, D=FAR, spin=true, held=null, stale=true, G=null;
   const xyz=(lat,lon,r)=>{ const ph=(90-lat)*RAD, th=(lon+180)*RAD; return [-r*Math.sin(ph)*Math.cos(th), r*Math.cos(ph), r*Math.sin(ph)*Math.sin(th)]; };
-  loadThree().then(()=>{ const T=THREE, ren=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); ren.setPixelRatio(Math.min(2,devicePixelRatio||1));
+  // made the first time the front page is on screen: a page opened straight on a dome fetches neither the Earth nor the 3D library for it
+  const begin=()=>loadThree().then(()=>{ const T=THREE, ren=new T.WebGLRenderer({canvas:cv,antialias:true,alpha:true}); ren.setPixelRatio(Math.min(2,devicePixelRatio||1));
     const scene=new T.Scene(), cam=new T.PerspectiveCamera(32,1,0.1,50), g=new T.Group(); scene.add(g);
     // a plain dark ball with its dots until the picture of the Earth has arrived
     const land=new T.MeshBasicMaterial({color:0x141c30}); g.add(new T.Mesh(new T.SphereGeometry(1,96,64),land));
@@ -3379,6 +3387,7 @@ document.querySelectorAll('#filter button').forEach(b=>b.onclick=()=>{ filt=b.da
       g.rotation.set(pitch,yaw,0); cam.position.set(0,0,D); cam.lookAt(0,0,0); ren.render(scene,cam); };
     frame();
   }).catch(()=>{ $('globe-hint').textContent='The globe could not be loaded. The photos below still work.'; $('globe-zoom').hidden=true; });
+  new IntersectionObserver((es,ob)=>{ if(es.some(e=>e.isIntersecting)){ ob.disconnect(); begin(); } }).observe(box);
   // the domes whose dots are within reach of a spot on the canvas, nearest first (only those on the side facing us)
   const under=(x,y,reach)=>{ if(!G) return []; const r=cv.getBoundingClientRect(), out=[]; G.g.rotation.set(pitch,yaw,0); G.g.updateMatrixWorld(); G.cam.position.set(0,0,D); G.cam.lookAt(0,0,0); G.cam.updateMatrixWorld();
     for(let i=0;i<DOMES.length;i++){ const v=G.v.fromArray(G.pos,i*3).applyMatrix4(G.g.matrixWorld); if(v.z*D<1.05) continue; v.project(G.cam);
@@ -3409,8 +3418,10 @@ DOMES.forEach(d=>{
   tr.onclick=()=>show(d); tr.onkeydown=e=>key(e,()=>show(d)); ev.appendChild(tr);
 });
 showFavs();
+// The map is made the first time it comes near the screen, not when the page opens: opened straight on a dome, the page then
+// asks for no map tiles at all.
 let map=null, mapFitted=false, fitMap=()=>{}; const marks={};
-if(window.L){
+function makeMap(){ if(map) return; if(!window.L){ $('map').textContent='Map tiles could not be loaded; everything else still works.'; return; }
   const onLine=DOMES.filter(d=>d.along!==null);
   map=L.map('map',{scrollWheelZoom:false});
   // Fitted to the whole line. A map that has no width yet (the page opened in a hidden tab, or straight on a dome in a narrow window) cannot be
@@ -3425,11 +3436,12 @@ if(window.L){
   UNDRAWN.forEach(u=>{marks[u.place]=L.circleMarker([u.lat,u.lon],{radius:5,color:css('--soft'),weight:2,fillOpacity:0}).addTo(map).bindTooltip(u.place);});
   DOMES.forEach(d=>L.circleMarker([d.lat,d.lon],{radius:8,color:css('--l4'),fillColor:css('--l4'),fillOpacity:.85,weight:2})
     .addTo(map).bindTooltip(d.place).on('click',()=>show(d)));
-}else{ $('map').textContent='Map tiles could not be loaded; everything else still works.'; }
+}
+new IntersectionObserver((es,ob)=>{ if(es.some(e=>e.isIntersecting)){ ob.disconnect(); makeMap(); } },{root:$('overview'),rootMargin:'900px'}).observe($('map'));
 const un=document.querySelector('#un tbody');
 UNDRAWN.forEach(u=>{const tr=el('tr',undefined,'go'); tr.tabIndex=0;
   [u.place,u.km+' km from Dresden',Math.abs(u.off_line_km)+' km '+(u.off_line_km>=0?'south-west':'north-east')].forEach(t=>tr.appendChild(el('td',t)));
-  const f=()=>{if(map){map.setView([u.lat,u.lon],9); marks[u.place].openTooltip(); $('map').scrollIntoView({behavior:'smooth',block:'center'});}};
+  const f=()=>{ makeMap(); if(map){map.setView([u.lat,u.lon],9); marks[u.place].openTooltip(); $('map').scrollIntoView({behavior:'smooth',block:'center'});}};
   tr.onclick=f; tr.onkeydown=e=>key(e,f); un.appendChild(tr);});
 // ---- photo credits: who took each photo and under which licence, with the way back to where it came from ----
 const crb=document.querySelector('#cr tbody');
