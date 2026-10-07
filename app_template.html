@@ -685,26 +685,28 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
 /* The pictures' toolbar: Dome, Eye, Nebula and Mix side by side, each a column with its own heading and switch, a gold-tipped
    rule between them. A column whose switch is off is dimmed, as a whole toolbar is. The box's own name shows only when it is
    shut to a tab on a small canvas. On a phone the columns stand one under another. */
-#boxes>.modebox.picsbox{width:auto;max-width:calc(100% - 2*var(--in,52px))}
-.picsbox>.boxname{display:none} .canvas.compact .picsbox>.boxname,.canvas.phone .picsbox>.boxname{display:flex}
-.picsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
+#boxes>.modebox.colsbox{width:auto;max-width:calc(100% - 2*var(--in,52px))}
+.colsbox>.boxname{display:none} .canvas.compact .colsbox>.boxname,.canvas.phone .colsbox>.boxname{display:flex}
+.colsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px;flex:1}
+.colsbox .col h4 .tv{margin-left:8px;font-weight:500;color:var(--soft)}
+.steps .sideall{margin:0;padding:0 2px 2px} .steps .sideall .pill{flex:1;justify-content:center}
 .btns.pair{flex-wrap:nowrap;margin-top:0} .btns.pair .pill{flex:1 1 0;min-width:0;justify-content:center}
 label.row.idle{opacity:.5}   /* a setting that acts only while something else is on: still there to be set, but quiet */
-.picsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
-.picsbox .col h4{cursor:default!important;margin:0} .picsbox .col h4::after{display:none!important}
-.picsbox .col.off>:not(.modehead){opacity:.4;pointer-events:none}
-.picsbox .colrule{flex:0 0 21px;position:relative}
-.picsbox .colrule::before{content:"";position:absolute;left:10px;top:2px;bottom:2px;width:1px;background:linear-gradient(transparent,var(--rule) 10%,var(--rule) 90%,transparent)}
-.picsbox .colrule::after{content:"";position:absolute;left:7px;top:50%;width:6px;height:6px;margin-top:-4px;transform:rotate(45deg);background:var(--paper);border:1px solid var(--gilt)}
-.canvas.phone .picsbox .cols{flex-direction:column;flex-wrap:nowrap} .canvas.phone .picsbox .col{flex:none}
-.canvas.phone .picsbox .colrule{flex:0 0 17px} .canvas.phone .picsbox .colrule::before{left:2px;right:2px;top:8px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent)} .canvas.phone .picsbox .colrule::after{left:50%;top:5px;margin:0 0 0 -4px}
-#mix{display:block;width:100%;max-width:228px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
-#mix .tri{fill:color-mix(in srgb,var(--gilt) 7%,transparent);stroke:var(--gilt);stroke-width:1.6;stroke-linejoin:round}
-#mix .med{fill:none;stroke:var(--line);stroke-width:1} #mix .mid{fill:none;stroke:var(--gilt);stroke-width:1.2;opacity:.8}
-#mix text{font:600 12px var(--text);fill:var(--ink)}
-#mix .knob{fill:var(--gilt);stroke:var(--paper);stroke-width:3;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
-#mix.off .knob{fill:var(--soft)} #mix.off .tri{stroke:var(--rule)} #mix.off text{fill:var(--soft)}
-#mix .pc{fill:var(--soft);font-weight:500}
+.colsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
+.colsbox .col h4{cursor:default!important;margin:0} .colsbox .col h4::after{display:none!important}
+.colsbox .col.off>:not(.modehead){opacity:.4;pointer-events:none}
+.colsbox .colrule{flex:0 0 21px;position:relative}
+.colsbox .colrule::before{content:"";position:absolute;left:10px;top:2px;bottom:2px;width:1px;background:linear-gradient(transparent,var(--rule) 10%,var(--rule) 90%,transparent)}
+.colsbox .colrule::after{content:"";position:absolute;left:7px;top:50%;width:6px;height:6px;margin-top:-4px;transform:rotate(45deg);background:var(--paper);border:1px solid var(--gilt)}
+.canvas.phone .colsbox .cols{flex-direction:column;flex-wrap:nowrap} .canvas.phone .colsbox .col{flex:none}
+.canvas.phone .colsbox .colrule{flex:0 0 17px} .canvas.phone .colsbox .colrule::before{left:2px;right:2px;top:8px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent)} .canvas.phone .colsbox .colrule::after{left:50%;top:5px;margin:0 0 0 -4px}
+.tri3{display:block;width:100%;max-width:228px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
+.tri3 .tri{fill:color-mix(in srgb,var(--gilt) 7%,transparent);stroke:var(--gilt);stroke-width:1.6;stroke-linejoin:round}
+.tri3 .med{fill:none;stroke:var(--line);stroke-width:1} .tri3 .mid{fill:none;stroke:var(--gilt);stroke-width:1.2;opacity:.8}
+.tri3 text{font:600 12px var(--text);fill:var(--ink)}
+.tri3 .knob{fill:var(--gilt);stroke:var(--paper);stroke-width:3;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
+.tri3.off .knob{fill:var(--soft)} .tri3.off .tri{stroke:var(--rule)} .tri3.off text{fill:var(--soft)}
+.tri3 .pc{fill:var(--soft);font-weight:500}
 /* ---- the front page ----
    A band across the top (the name, the search, the filter). Under it the top half of the window is the Earth, with a dot for
    every dome; then the dome photos, large, with nothing drawn on them; then the flat map, the tables and the credits. */
@@ -759,6 +761,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
     <div class="bound" id="picked"><span class="lbl">Line thickness</span><span class="tv" id="mval"></span><span class="who" id="who"></span>
       <input type="range" id="mthk" aria-label="Thickness of the selected steps">
       <p class="note" id="mhint"></p></div>
+    <div class="btns sideall"><button class="pill" id="show-all" title="Bring back every step that has been hidden, and show the whole build">Show all steps</button></div>
     <div class="scroll" id="tab-strokes">
       <div id="slist"></div></div>
     <div class="nav">
@@ -845,20 +848,7 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             <p class="helpp" id="help-p"></p>
             <div class="helpfoot"><span class="helpquiet"><button type="button" id="help-close" title="Put the helper away for this dome">Not now</button><button type="button" id="help-off" title="No helper on any dome, until it is switched on again in the toolbar">Turn off</button></span><span class="helpgo"><button class="pill" id="help-back">Back</button><button class="pill accent" id="help-next">Next</button></span></div>
           </section>
-          <section class="grp modebox" data-box="lines" aria-label="Lines"><h4>Lines</h4>
-            <label class="row">Thickness <input type="range" id="all-thk" min="0" max="1" step="0.005" aria-label="Thickness of every line together"><span class="tv" id="all-val"></span></label>
-            <label class="row">Point size <input type="range" id="pt-size" min="0.3" max="4" step="0.05" aria-label="Size of the points of the drawing"></label>
-            <label class="row" title="How far the earlier lines are held back behind the later ones. All the way left, every line is as strong as the next. The mark is the usual place.">Ratio <input type="range" id="ratio" min="0" max="2" step="0.01" aria-label="How far the earlier lines are held back behind the later ones"><i class="at" style="--at:.5"></i></label>
-            <label class="row"><input type="checkbox" id="dark-lines"> Dark lines</label>
-            <div class="btns"><button class="pill" id="show-all">Show all steps</button><button class="pill" id="thk-reset">Reset thickness</button></div>
-          </section>
-          <section class="grp modebox" data-box="crossings" aria-label="Crossings"><h4>Crossings</h4>
-            <label class="row"><input type="checkbox" id="xpts-on"> Crossings<span class="tv" id="xpts-n" style="margin-left:auto"></span></label>
-            <label class="row">Strength <input type="range" id="xpts-alpha" min="0.1" max="1" step="0.01" aria-label="How strong the crossing dots are"></label>
-            <label class="row">Dot size <input type="range" id="xpts-size" min="1" max="10" step="0.1" aria-label="Size of the crossing dots"></label>
-            <label class="row" title="A soft light round each dot">Glow <input type="range" id="xpts-glow" min="0" max="1" step="0.01" aria-label="How much the crossing dots glow"></label>
-          </section>
-          <section class="grp modebox picsbox" data-box="picture" id="pics" aria-label="Dome, eye and nebula"><h4 class="boxname">Pictures</h4>
+          <section class="grp modebox colsbox" data-box="picture" id="pics" aria-label="Dome, eye and nebula"><h4 class="boxname">Pictures</h4>
             <div class="cols">
             <div class="col" id="col-dome" role="group" aria-label="Dome"><div class="modehead"><h4>Dome</h4><label class="onoff"><input type="checkbox" id="pic3" checked> On</label></div>
             <label class="row">Strength <input type="range" id="fade2" min="0" max="1" step="0.01" aria-label="How strong the dome photo is"></label>
@@ -885,12 +875,36 @@ label.row.idle{opacity:.5}   /* a setting that acts only while something else is
             </div>
             <i class="colrule" aria-hidden="true"></i>
             <div class="col mixgrp" id="col-mix" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally. Switching Mix on switches all three on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
-              <svg id="mix" viewBox="0 0 228 122" role="img" aria-label="How much of the dome, the eye and the nebula shows">
+              <svg id="mix" class="tri3" viewBox="0 0 228 122" role="img" aria-label="How much of the dome, the eye and the nebula shows">
                 <path class="tri" d="M114 12L58 108H170Z"/><path class="med" d="M114 12V108M58 108L142 60M170 108L86 60"/><circle class="mid" cx="114" cy="76" r="4"/>
                 <text x="126" y="20">Dome <tspan class="pc" id="mix-pd"></tspan></text>
                 <text x="50" y="96" text-anchor="end">Eye</text><text class="pc" id="mix-pe" x="50" y="111" text-anchor="end"></text>
                 <text x="178" y="96">Nebula</text><text class="pc" id="mix-ps" x="178" y="111"></text>
                 <circle class="knob" id="mix-knob" cx="114" cy="76" r="8"/></svg>
+            </div>
+            </div>
+          </section>
+          <section class="grp modebox colsbox" data-box="lines" id="linesbox" aria-label="Lines and crossings"><h4 class="boxname">Lines</h4>
+            <div class="cols">
+            <div class="col" id="col-lines" role="group" aria-label="Lines"><div class="modehead"><h4>Lines</h4><label class="onoff"><input type="checkbox" id="lines-on" checked> On</label></div>
+            <label class="row">Thickness <input type="range" id="all-thk" min="0" max="1" step="0.005" aria-label="Thickness of every line together"><span class="tv" id="all-val"></span></label>
+            <label class="row">Point size <input type="range" id="pt-size" min="0.3" max="4" step="0.05" aria-label="Size of the points of the drawing"></label>
+            <label class="row" title="How far the earlier lines are held back behind the later ones. All the way left, every line is as strong as the next. The mark is the usual place.">Ratio <input type="range" id="ratio" min="0" max="2" step="0.01" aria-label="How far the earlier lines are held back behind the later ones"><i class="at" style="--at:.5"></i></label>
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col" id="col-cross" role="group" aria-label="Crossings"><div class="modehead"><h4>Crossings<span class="tv" id="xpts-n"></span></h4><label class="onoff"><input type="checkbox" id="xpts-on"> On</label></div>
+            <label class="row">Strength <input type="range" id="xpts-alpha" min="0.1" max="1" step="0.01" aria-label="How strong the crossing dots are"></label>
+            <label class="row">Dot size <input type="range" id="xpts-size" min="1" max="10" step="0.1" aria-label="Size of the crossing dots"></label>
+            <label class="row" title="A soft light round each dot">Glow <input type="range" id="xpts-glow" min="0" max="1" step="0.01" aria-label="How much the crossing dots glow"></label>
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col mixgrp" id="col-lmix" role="group" aria-label="Mix" title="Drag the dot toward Circles, Lines or Crossings to bring that one forward and hold the others back. In the middle, all three are at full strength. Switching Mix on switches Lines and Crossings on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="lmix-on"> On</label></div>
+              <svg id="lmix" class="tri3" viewBox="0 0 228 122" role="img" aria-label="How strongly the circles, the lines and the crossings show">
+                <path class="tri" d="M104 12L48 108H160Z"/><path class="med" d="M104 12V108M48 108L132 60M160 108L76 60"/><circle class="mid" cx="104" cy="76" r="4"/>
+                <text x="116" y="20">Circles <tspan class="pc" id="lmix-pc"></tspan></text>
+                <text x="40" y="96" text-anchor="end">Lines</text><text class="pc" id="lmix-pl" x="40" y="111" text-anchor="end"></text>
+                <text x="168" y="96">Crossings</text><text class="pc" id="lmix-px" x="168" y="111"></text>
+                <circle class="knob" id="lmix-knob" cx="104" cy="76" r="8"/></svg>
             </div>
             </div>
           </section>
@@ -1156,7 +1170,7 @@ let ticked=new Set(store.get('dome-ticked',[]).filter(i=>i<N));   // strokes the
 // Red and blue (the two pillars and everything they draw), the hexagon and the octagon stay prominent from the moment they appear.
 function keep(sh){ return !!sh.keep||sh.col==='red'||sh.col==='blue'; }
 // Dark lines: every line in one dark ink with blue points, like a pencil drawing over a bright photo. Red and blue keep their colour.
-let darkLines=store.get('dome-dark-lines',false)===true;
+const darkLines=false;   // there was a Dark lines switch; it was never used and was taken away on 2026-10-06
 const inkOf=sh=>!darkLines||sh.col==='red'||sh.col==='blue'?INKS[sh.col]:sh.t==='d'?'#1E63C8':'#2B2B2B';
 // How strongly a stroke of step i shows once the drawing has reached stroke n. After the turn, the six steps back so the eight reads against it.
 // Once the build has gone again, the fractals before the one being drawn stay where they are, dimmed (by BACK for each fractal
@@ -1329,10 +1343,11 @@ stepEl.max=END();
 // opening and a line growing on the dome as they do on the flat desk.
 function paintLive(ctx,f,px){
   ctx.save(); ctx.translate(f.cx,f.cy); ctx.rotate(f.turn*Math.PI/180); ctx.scale(f.u,f.u);
+  const LK=lineK();
   for(const g of ownShow?[gC,gL,gO]:[gC,gL]) for(const e of g.children){
-    if(e.style.display==='none') continue;
+    if(e.style.display==='none') continue; const gk=g===gC?LK[0]:g===gL?LK[1]:1; if(gk<=0) continue;
     const a=n=>parseFloat(e.getAttribute(n))||0, op=e.getAttribute('opacity'), fill=e.getAttribute('fill'), lit=hotStep>=0&&e.dataset.step===String(hotStep);
-    ctx.globalAlpha=lit?1:op===null?1:Math.max(0,Math.min(1,+op));
+    ctx.globalAlpha=gk*(lit?1:op===null?1:Math.max(0,Math.min(1,+op)));
     if(fill&&fill!=='none'){ ctx.fillStyle=lit?'#FFF6D8':fill; ctx.beginPath(); ctx.arc(a('cx'),a('cy'),a('r'),0,7); ctx.fill(); continue; }
     ctx.strokeStyle=lit?'#FFF6D8':e.getAttribute('stroke'); ctx.lineWidth=a('stroke-width')*px/f.u; ctx.beginPath();
     if(e.tagName==='circle') ctx.arc(a('cx'),a('cy'),Math.max(0,a('r')),0,7);
@@ -1407,7 +1422,9 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   const toolsHome=ph||!boxPlaces.tools; TOOLS.classList.toggle('moved',!toolsHome); if(toolsHome){ TOOLS.style.left=TOOLS.style.top=''; } else moved(TOOLS);
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
   // the top row: the pictures' toolbar first, in the top left corner (it is as wide as its four columns), then the three settings boxes
-  const base=H-IN, top4=['picture','lines','guides','crossings'].map(by), PICS=by('picture'), wOf=b=>b===PICS?(PICS.classList.contains('shut')?PICS._ow||1000:PICS._ow=PICS.offsetWidth):BW;
+  const base=H-IN, top4=['picture','lines','guides'].map(by), PICS=by('picture'), LINES=by('lines'), CANVAS=by('guides'), wOf=b=>b.classList.contains('colsbox')?(b.classList.contains('shut')?b._ow||800:b._ow=b.offsetWidth):BW;
+  // Lines stands directly under the pictures' toolbar, both from the left edge. Canvas stands beside the pictures' toolbar when there is room for it before View, and beside Lines when there is not.
+  const canvasUp=IN+wOf(PICS)+G+BW<=W-IN-BW-G;
   [...top4,by('view')].forEach(b=>{ b.style.minHeight=''; });
   // The boxes become drawers only when they truly do not fit open: when the row of mode toolbars is wider than the canvas, or when
   // the top boxes (which wrap on to a second row on a narrower canvas) and the tallest mode toolbar would leave less than 220
@@ -1416,7 +1433,7 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   // 1,635 tall counted as small.) A box's open height is noted whenever it is open, so the sum can be done while they are shut.
   DRAWERS().forEach(b=>{ if(!b.classList.contains('shut')) b._oh=b.offsetHeight; });
   const openH=b=>b._oh||(MODEROW.includes(b)?340:218);
-  let topH=0; { let rx=IN, row=0, rh=openH(by('view')); top4.forEach(b=>{ const limit=row===0?W-IN-BW-G:W-IN, w=wOf(b); if(rx+w>limit&&rx>IN){ rx=IN; topH+=rh+G; row++; rh=0; } rx+=w+G; rh=Math.max(rh,openH(b)); }); topH+=rh; }
+  const topH=canvasUp?Math.max(openH(PICS)+G+openH(LINES),openH(CANVAS),openH(by('view'))):Math.max(openH(PICS)+G+Math.max(openH(LINES),openH(CANVAS)),openH(by('view')));
   const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=ph||W<2*IN+modesW||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
   let tabsEnd=0;
   if(compact!==wasCompact){ wasCompact=compact; DRAWERS().forEach(b=>b.classList.toggle('shut',compact)); }
@@ -1431,8 +1448,8 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
     put(by('view'),W-IN-BW,TOP);
-    let x=IN, y=TOP, rowH=0;
-    top4.forEach(b=>{ const limit=y===TOP?W-IN-BW-G:W-IN, w=wOf(b); if(x+w>limit&&x>IN){ x=IN; y+=rowH+G; rowH=0; } put(b,x,y); x+=w+G; rowH=Math.max(rowH,b.offsetHeight); });
+    const y2=TOP+PICS.offsetHeight+G; put(PICS,IN,TOP); put(LINES,IN,y2);
+    if(canvasUp) put(CANVAS,IN+wOf(PICS)+G,TOP); else put(CANVAS,IN+wOf(LINES)+G,y2);
     // the mode toolbars: one row across the bottom from the left corner, standing on the bottom edge, the longest first (3D, Draw, Fractal: MODEROW)
     MODEROW.forEach((b,i)=>put(b,IN+i*(BW+G),base-b.offsetHeight));
   }
@@ -1443,11 +1460,11 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   // The cards that name each step and each part as the build plays stand in the bottom right corner, or just above the helper
   // when the helper is up in that corner. The name of a part as it begins is written just under the top row of boxes (or tabs).
   { const withHelper=!hp.hidden&&!boxPlaces.helper; st.style.setProperty('--cardb',(lift+(withHelper?IN+hp.offsetHeight+G:IN))+'px'); st.classList.toggle('cardlone',!withHelper); }
-  st.style.setProperty('--annt',(TOP+(compact?40:by('lines').offsetHeight)+14)+'px');
+  st.style.setProperty('--annt',(TOP+(compact?40:PICS.offsetHeight+G+LINES.offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
   const on=[!!(T3&&T3.on),depthOn,mode==='draw',!!(ORB&&ORB.on)], st=$('stage');   // each box is dimmed while its own switch is off
-  const cols=[['col-dome',picOn],['mode-eye',eyeShown()||(mode==='iris'&&placing==='eye')],['mode-sky',skyShown()||(mode==='iris'&&placing==='sky')]];   // and so is each column of the pictures' toolbar
+  const cols=[['col-lines',linesOn!==false],['col-cross',showX],['col-dome',picOn],['mode-eye',eyeShown()||(mode==='iris'&&placing==='eye')],['mode-sky',skyShown()||(mode==='iris'&&placing==='sky')]];   // and so is each column of the pictures' toolbar
   cols.forEach(([id,o])=>$(id).classList.toggle('off',!o));
   const sig=on.join()+st.clientWidth+'x'+st.clientHeight+$('dive-stop').hidden+$('align').hidden+$('boxes-back').hidden+mode; if(sig===modeSig) return; modeSig=sig;
   MODEBOXES.forEach((b,i)=>b.classList.toggle('off',!on[i])); layBoxes(); }
@@ -1455,7 +1472,7 @@ const relay=()=>{ modeSig=''; showModes(); };
 // On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
 // and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
 var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
-  const order=['picture','view','lines','guides','crossings','3d','draw','fractal','ball'], name={picture:'Pictures',guides:'Canvas','3d':'3D',ball:'Space'};
+  const order=['picture','lines','view','guides','3d','draw','fractal','ball'], name={picture:'Pictures',guides:'Canvas','3d':'3D',ball:'Space'};
   order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
     b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
     const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
@@ -1719,6 +1736,8 @@ const setThick=(i,v)=>{ thick[i]=v; if(!nudging){ if(abase){ abase[i]=v/allF; ke
 // When every line is changed together, the strokes are given their new widths in one pass over the drawing, and the 3D sheet and
 // the fractal are told once. (Step by step it was a search of the whole drawing for each of the steps, on every move of the slider.)
 const thickAll=()=>{ setWidthAll(); dirty3(); drawDepth(); };
+// every line back to the thickness it was designed with (the small reset beside Thickness)
+function thickHome(){ allF=1; abase=null; keepAll(); nudging=true; MAINW.forEach((v,i)=>setThick(i,v)); nudging=false; thickAll(); showAll(); store.set('dome-thickness',thick); tickState(); }
 let foldedFr=new Set(store.get('dome-folded-fractals',[2,3])); const FRG={};   // fractals folded away in the list, and each fractal's box
 let folded=new Set(store.get('dome-folded',[])), anchor=0, mbase=null, lastN=-1;
 const chosen=()=>ticked.size?[...ticked].sort((a,b)=>a-b):STEPS.map((_,i)=>i);
@@ -2093,7 +2112,7 @@ function xPaint(){ if(!XGL) return; const cv=$('xgl'), on=showX&&!!cur&&!!fig&&x
   const dpr=Math.min(devicePixelRatio||1,2), W=Math.round(xW*dpr), H=Math.round(xH*dpr); if(cv.width!==W||cv.height!==H){ cv.width=W; cv.height=H; }
   const k=W/view.w, s=fig.u*k, a=viewTurn*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a);
   const w=Math.max(1,Math.min(xSize,0.06*(xSize/4.5)*fig.u*xW/view.w))*dpr/2, g=xGlow>0.005?xGlow:0;   // half the dot's width, in the canvas's pixels
-  XGL.draw(xNow,[s*ca,-s*sa,s*sa,s*ca],[(fig.cx-view.x)*k,(fig.cy-view.y)*k],[w,w*(1+HALO[0][0]*g),w*(1+HALO[1][0]*g),w*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha],darkLines?'#1E63C8':'#FFF6D8'); }
+  XGL.draw(xNow,[s*ca,-s*sa,s*sa,s*ca],[(fig.cx-view.x)*k,(fig.cy-view.y)*k],[w,w*(1+HALO[0][0]*g),w*(1+HALO[1][0]*g),w*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha].map(v=>v*lineK()[2]),darkLines?'#1E63C8':'#FFF6D8'); }
 new ResizeObserver(()=>{ const r=sv.getBoundingClientRect(); xW=r.width; xH=r.height; xPaint(); }).observe($('stage'));
 function dressDots(){ xPaint(); const p=$('xpts'), w=cur&&fig?Math.max(1,Math.min(xSize,0.06*(xSize/4.5)*fig.u*sv.getBoundingClientRect().width/view.w)):xSize, ink=darkLines?'#1E63C8':'#FFF6D8';
   p.setAttribute('stroke-width',w.toFixed(2)); p.setAttribute('stroke',ink); p.setAttribute('opacity',xAlpha);
@@ -2550,6 +2569,39 @@ $('mix-on').onchange=()=>setMix($('mix-on').checked);
   showMix(); }
 // Space opens on the nebula: the Mix dot is put at the Nebula corner, so the ball is the nebula with the drawing on it. What
 // the three were set to before is kept, and comes back when Space is left, unless the dot has been moved off that corner since.
+// ---- Lines and Crossings: a switch each, and their Mix ----
+// Lines has a switch of its own now: off, the drawing's circles and lines are put away (the crossings can stay, as dots alone).
+// Their Mix is a triangle like the pictures' one, with Circles, Lines and Crossings at its corners. Where the dot stands says
+// how strongly each shows beside the others: the one it is nearest is at full strength, and each of the others at its share of
+// that. So in the middle all three are full; at a corner only that one shows; half way along a side the two at its ends are
+// full and the third is gone. Switching Mix on switches Lines and Crossings on, and switching either of them off switches Mix off.
+var linesOn=store.get('dome-lines-on',true)!==false, lmixOn=store.get('dome-lmix-on',false)===true, lmix=store.get('dome-lmix',null);
+if(!(Array.isArray(lmix)&&lmix.length===3&&lmix.every(v=>v>=0&&v<=1)&&Math.abs(lmix[0]+lmix[1]+lmix[2]-1)<0.01)) lmix=[1/3,1/3,1/3];
+const LMIXP=[[104,12],[48,108],[160,108]];
+function lineK(){ if(!lmix) return [1,1,1]; let k=[1,1,1]; if(lmixOn){ const m=Math.max(lmix[0],lmix[1],lmix[2])||1; k=lmix.map(v=>Math.min(1,v/m)); } if(!linesOn){ k[0]=0; k[1]=0; } return k; }   // how strongly the circles, the lines and the crossings show: 0 to 1 each
+function showLines(){ const k=lineK(), [c,l,x]=lmix, pc=v=>lmixOn?Math.round(v*100)+'%':'';
+  gC.style.opacity=k[0]; gL.style.opacity=k[1]; $('lines-on').checked=linesOn; $('lmix-on').checked=lmixOn; $('lmix').classList.toggle('off',!lmixOn);
+  $('lmix-knob').setAttribute('cx',c*LMIXP[0][0]+l*LMIXP[1][0]+x*LMIXP[2][0]); $('lmix-knob').setAttribute('cy',c*LMIXP[0][1]+l*LMIXP[1][1]+x*LMIXP[2][1]);
+  $('lmix-pc').textContent=pc(k[0]); $('lmix-pl').textContent=pc(k[1]); $('lmix-px').textContent=pc(k[2]);
+  xPaint(); dirty3(); showModes(); }
+function setLmix(on){ lmixOn=on; store.set('dome-lmix-on',on);
+  if(on){ linesOn=true; store.set('dome-lines-on',true); if(!showX){ showX=true; store.set('dome-crossings',true); $('xpts-on').checked=true; drawCrossings(); } }
+  showLines(); }
+$('lines-on').onchange=()=>{ linesOn=$('lines-on').checked; store.set('dome-lines-on',linesOn); if(!linesOn&&lmixOn){ lmixOn=false; store.set('dome-lmix-on',false); } showLines(); };
+$('xpts-on').addEventListener('change',()=>setTimeout(()=>{ if(!showX&&lmixOn){ lmixOn=false; store.set('dome-lmix-on',false); } showLines(); },0));   // a moment later, once the crossings' own switch has done its work
+$('lmix-on').onchange=()=>setLmix($('lmix-on').checked);
+{ const tri=$('lmix'); let down=false;
+  const put=e=>{ const r=tri.getBoundingClientRect(), x=(e.clientX-r.left)*228/r.width, y=(e.clientY-r.top)*122/r.height;
+    const [A,B,C]=LMIXP, det=(B[1]-C[1])*(A[0]-C[0])+(C[0]-B[0])*(A[1]-C[1]);
+    let c=((B[1]-C[1])*(x-C[0])+(C[0]-B[0])*(y-C[1]))/det, l=((C[1]-A[1])*(x-C[0])+(A[0]-C[0])*(y-C[1]))/det, s=1-c-l;
+    c=Math.max(0,c); l=Math.max(0,l); s=Math.max(0,s); const sum=c+l+s||1; c/=sum; l/=sum; s/=sum;
+    if(Math.hypot(c-1/3,l-1/3,s-1/3)<0.05) c=l=s=1/3; else [[1,0,0],[0,1,0],[0,0,1]].forEach(q=>{ if(Math.hypot(c-q[0],l-q[1],s-q[2])<0.05) [c,l,s]=q; });
+    lmix=[c,l,s]; store.set('dome-lmix',lmix); if(!lmixOn) setLmix(true); else showLines(); };
+  tri.addEventListener('pointerdown',e=>{ if(e.button||!cur) return; down=true; try{ tri.setPointerCapture(e.pointerId); }catch(_){} put(e); });
+  tri.addEventListener('pointermove',e=>{ if(down) put(e); });
+  const up=()=>{ down=false; }; tri.addEventListener('pointerup',up); tri.addEventListener('pointercancel',up);
+  tri.addEventListener('dblclick',()=>{ lmix=[1/3,1/3,1/3]; store.set('dome-lmix',lmix); if(!lmixOn) setLmix(true); else showLines(); });
+  showLines(); }
 let mixBack=null;
 function spaceMixIn(){ if(!SKIES.length||!cur) return; mixBack={mixOn,mix:mix.slice(),fade,eyeFade,skyFade,picOn,eyeOn,skyOn}; mix=[0,0,1]; store.set('dome-mix',mix); setMix(true); }
 function spaceMixOut(){ const b=mixBack; mixBack=null; if(!b||!mixOn||mix[0]!==0||mix[1]!==0) return;
@@ -2627,8 +2679,6 @@ $('xpts-glow').value=xGlow; $('xpts-glow').oninput=e=>{ xGlow=parseFloat(e.targe
 $('xpts-alpha').value=xAlpha; $('xpts-alpha').oninput=e=>{ xAlpha=parseFloat(e.target.value)||0.92; store.set('dome-crossing-strength',xAlpha); dressDots(); dirty3(); };
 $('xpts-size').value=xSize; $('xpts-size').oninput=e=>{ xSize=parseFloat(e.target.value)||4.5; store.set('dome-crossing-size',xSize); if(cur) setView(); dirty3(); };
 $('xpts-on').onchange=()=>{ showX=$('xpts-on').checked; store.set('dome-crossings',showX); drawCrossings(); };
-$('dark-lines').checked=darkLines;
-$('dark-lines').onchange=()=>{ darkLines=$('dark-lines').checked; store.set('dome-dark-lines',darkLines); if(cur){ if(run) recolour(); else drawStep(); } DOMES.forEach(d=>{ if(d.card) d.card.redraw(); }); };
 sv.addEventListener('pointerup',endDrag); sv.addEventListener('pointercancel',endDrag);
 sv.addEventListener('pointerup',e=>{ if(mode==='draw') ownUp(e); }); sv.addEventListener('pointerleave',()=>{ if(mode==='draw'&&!ownDrag) ownMark(null); });
 turnEl.oninput=()=>{const v=parseFloat(turnEl.value); if(!isNaN(v)){fig.turn=v; custom=true; setFig(); squareUp(); remember();}};
@@ -2808,7 +2858,7 @@ function make3d(){
     const ring=(c,r,tube,nrm,col,op)=>{ const m=new THREE.Mesh(new THREE.TorusGeometry(r,tube,5,Math.max(40,Math.min(128,Math.round(r*110)))),ink(col,op));
       m.renderOrder=50000+(++seq); m.position.copy(c); m.quaternion.setFromUnitVectors(ZED,nrm); grp.add(m); return m; };
     STEPS.slice(0,n).forEach((st,i)=>{ const cur=i===n-1; if((solo&&!cur)||hiddenSteps.has(i)) return;
-      st.s.forEach(sh=>{ const kp=keep(sh), lit=i===hotStep, col=new THREE.Color(lit?'#FFF6D8':INKS[sh.col]), op=lit?1:look(i,n,kp,cur,sh);
+      st.s.forEach(sh=>{ const kp=keep(sh), lit=i===hotStep, col=new THREE.Color(lit?'#FFF6D8':INKS[sh.col]), op=(lit?1:look(i,n,kp,cur,sh))*lineK()[sh.t==='c'?0:1];
         if(sh.t==='c'){ const c0=at3(sh.ctr), r=sh.r*K, w=weight(sh,i,kp);
           planes.forEach(([axis,nrm],pi)=>{ const c=axis?c0.clone().applyAxisAngle(axis,Math.PI/2):c0;
             if(pi){ const id=[c.x,c.y,c.z,r].map(x=>x.toFixed(4)).join(); if(c.distanceTo(c0)<1e-6||seen.has(id)) return; seen.add(id); }   // a centre on the turning axis is the same sphere again
@@ -3112,7 +3162,7 @@ function deskTo(c,TS,PAD,d,im,mx,my,half,px,dome,ground){ const V=d.view_px, k=(
   paintLive(c,on,px);
   moreNow().forEach(m=>paintLive(c,{cx:PAD+(m.cx-mx+half)*k,cy:PAD+(m.cy-my+half)*k,u:m.u*k,turn:fig.turn},px));
   if(showX&&xNow.length&&sheetDots(TS)){ const rp=Math.max(1.2,Math.min(4.95,on.u*0.018)*xSize/4.5), g=xGlow>0.005?xGlow:0, a=on.turn*Math.PI/180, ca=Math.cos(a), sa=Math.sin(a);   // one draw by the graphics card, then laid on the sheet
-    SDOTS.draw(xNow,[on.u*ca,-on.u*sa,on.u*sa,on.u*ca],[on.cx,on.cy],[rp,rp*(1+HALO[0][0]*g),rp*(1+HALO[1][0]*g),rp*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha],darkLines?'#1E63C8':'#FFF6D8');
+    SDOTS.draw(xNow,[on.u*ca,-on.u*sa,on.u*sa,on.u*ca],[on.cx,on.cy],[rp,rp*(1+HALO[0][0]*g),rp*(1+HALO[1][0]*g),rp*(1+HALO[2][0]*g)],[xAlpha,HALO[0][1]*g*xAlpha,HALO[1][1]*g*xAlpha,HALO[2][1]*g*xAlpha].map(v=>v*lineK()[2]),darkLines?'#1E63C8':'#FFF6D8');
     c.drawImage(SDOTS.canvas,0,0); }
   else if(showX&&xNow.length){ const rr=Math.max(1.2,Math.min(4.95,on.u*0.018)*xSize/4.5)/on.u;
     c.save(); c.translate(on.cx,on.cy); c.rotate(on.turn*Math.PI/180); c.scale(on.u,on.u); c.fillStyle=darkLines?'#1E63C8':'#FFF6D8';
@@ -3300,7 +3350,6 @@ $('mthk').oninput=e=>{ const c=chosen(), v=parseFloat(e.target.value);
   if(c.length===1){ setThick(c[0],clampT(v)); $('mval').textContent=thick[c[0]].toFixed(2); }
   else { if(!mbase) mbase=thick.slice(); const f=Math.pow(4,v); $('mval').textContent='×'+f.toFixed(2); c.forEach(i=>setThick(i,clampT(mbase[i]*f))); } };
 $('mthk').onchange=()=>{ mbase=null; store.set('dome-thickness',thick); tickState(); };
-$('thk-reset').onclick=()=>{ allF=1; abase=null; keepAll(); nudging=true; MAINW.forEach((v,i)=>setThick(i,v)); nudging=false; thickAll(); showAll(); store.set('dome-thickness',thick); tickState(); };
 // Show all steps: everything on the canvas. Hidden steps come back, "This step only" is taken off, and the build goes to its
 // last step, so it works from wherever the build stands (it used to bring back hidden steps and nothing else).
 $('show-all').onclick=()=>{ stop(); hiddenSteps.clear(); store.set('dome-hidden',[]); $('solo').checked=false; stepEl.value=END(); drawStep(); tickState(); };
@@ -3495,7 +3544,7 @@ const RESETS={
   'axes-str':()=>0.45, 'paper-str':()=>1, 'xpts-size':()=>4.5, 'xpts-glow':()=>0.45, 'xpts-alpha':()=>0.92, 'pt-size':()=>1,
   'fade':()=>1, 'fade2':()=>1, 'eye-fade':()=>0.6, 'eye-fade2':()=>0.6, 'sky-fade':()=>0.85, 'bright':()=>1,
   'own-w':()=>2, 'dive-speed':()=>0.35, 'ratio':()=>1, 'edge3':()=>RIM0, 'round3':()=>edgeOf(cur), 'arch3':()=>1.35*edgeOf(cur), 'archturn3':()=>0, 'lift3':()=>1, 'spire3':()=>0, 'cone3':()=>0, 'mapturn3':()=>0,
-  'all-thk':thkAt, 'all-thk2':thkAt,
+  'all-thk':{ off:()=>thick.some((v,i)=>Math.abs(v-MAINW[i])>0.005), go:thickHome }, 'all-thk2':{ off:()=>thick.some((v,i)=>Math.abs(v-MAINW[i])>0.005), go:thickHome },
   'mthk':{ off:()=>chosen().some(i=>Math.abs(thick[i]-MAINW[i])>0.005), go:()=>{ chosen().forEach(i=>setThick(i,MAINW[i])); store.set('dome-thickness',thick); tickState(); } },
   'lb-thk':{ off:()=>lbStep>=0&&Math.abs(thick[lbStep]-MAINW[lbStep])>0.005, go:()=>{ if(lbStep<0) return; setThick(lbStep,MAINW[lbStep]); store.set('dome-thickness',thick); $('lb-thk').value=thick[lbStep]; $('lb-val').textContent=thick[lbStep].toFixed(2); tickState(); } } };
 const resetBtns=[];
