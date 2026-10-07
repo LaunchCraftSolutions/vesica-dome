@@ -861,6 +861,7 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
         <section class="grp modebox" data-box="ball" id="mode-ball" aria-label="Ball"><div class="modehead"><h4>Ball<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="ball-on"> On</label></div>
             <label class="row" title="From a flat disc to a full ball">Round <input type="range" id="ball-round" min="0" max="1" step="0.01" aria-label="How round it is, from a flat disc to a full ball"></label>
             <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
+            <label class="row" title="How wide the lens is. Narrow is flatter and closer; wide takes in more and deepens the ball. In Free fly the wheel moves it too.">Field of view <span class="tv" id="ball-fov-v"></span><input type="range" id="ball-fov" min="8" max="130" step="1" aria-label="Field of view, in degrees"></label>
             <label class="row"><input type="checkbox" id="ball-spin"> Spin</label>
             <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label>
             <p class="note" id="ball-fly-note" hidden>Move the mouse to look round. W A S D to move, Q and E to roll left and right, Space up, C down, Shift faster. The wheel widens and narrows the lens. Esc or F to stop.</p>
@@ -2822,7 +2823,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   const half=sign=>{ const geo=new T.BufferGeometry(); geo.setIndex(idx); ['position','normal'].forEach(k=>geo.setAttribute(k,new T.BufferAttribute(new Float32Array(nv*3),3))); geo.setAttribute('uv',new T.BufferAttribute(new Float32Array(nv*2),2));
     const m=new T.Mesh(geo,mat); m.frustumCulled=false; g.add(m); return {geo,m,sign}; };
   const front=half(1), back=half(-1), YAX=new T.Vector3(0,1,0), XAX=new T.Vector3(1,0,0), ZAX=new T.Vector3(0,0,1);
-  const S={on:false,d:null,R:1,zoom:1,spin:false,stale:true,need:true,step:-1,last:0,sx:0,sy:0,k:1,w:0,h:0,drag:null,D0:4};
+  const S={on:false,d:null,R:1,zoom:1,spin:false,stale:true,need:true,step:-1,last:0,sx:0,sy:0,k:1,w:0,h:0,drag:null,D0:4,fov:Math.max(8,Math.min(130,+store.get('dome-ball-fov',28)||28))};
   function shape(){ const t=orbRound, m=PAD/TS;
     [front,back].forEach(h=>{ const p=h.geo.attributes.position.array, u=h.geo.attributes.uv.array, nn=h.geo.attributes.normal.array;
       for(let i=0;i<=NR;i++){ const th=i/NR*Math.PI/2, rho=Math.sin(th), z=Math.cos(th);
@@ -2840,8 +2841,8 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   function sizeShown(){ const e=$('ball-size'); e.max=Math.max(12,Math.ceil(S.R*1.5)); e.value=S.R; $('ball-size-v').textContent=S.R.toFixed(2); }
   async function paintT(){ const d=S.d, im=await photoOf(d); if(!S.on||d!==S.d) return; deskTo(tc.getContext('2d'),TS,PAD,d,im,fig.cx,fig.cy,S.R*fig.u,TS/1500,picOn,'#0D1019'); tex.needsUpdate=true; S.need=true; }
   function place(){ const w=box.clientWidth, h=box.clientHeight; if(!w||!h) return false; if(S.w!==w||S.h!==h){ ren.setSize(w,h,false); S.w=w; S.h=h; }
-    const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan(14*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));
-    cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
+    const rpx=Math.max(4,S.R*fig.u*S.k*S.zoom), s=Math.min(0.8,rpx*Math.tan(S.fov/2*Math.PI/180)/(h/2)), D=Math.sqrt(orbRound*orbRound+1/(s*s));
+    cam.fov=S.fov; cam.aspect=w/h; cam.position.set(0,0,D); cam.rotation.set(0,0,0); cam.near=Math.max(0.01,D-1.6); cam.far=D+3; cam.setViewOffset(w,h,-(S.sx-w/2),-(S.sy-h/2),w,h); cam.updateProjectionMatrix(); return true; }
   function loop(t){ if(!S.on) return; requestAnimationFrame(loop);
     if(+stepEl.value!==S.step){ S.step=+stepEl.value; S.stale=true; }
     if((S.stale||run)&&t-S.last>(run?70:0)){ S.stale=false; S.last=t; paintT(); }
@@ -2854,7 +2855,11 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   // Getting about, as in 3D: the left button moves it across the screen, the right button turns it, the wheel brings it closer.
   // (Shift with either button rolls it.) Turning goes the way it does when you look up into the dome in 3D: the picture slides
   // against the drag, as it would if you were the one moving.
-  const FLYFOV=62, fly=makeFly(cv,cam,{speed:()=>Math.max(0.3,S.D0*0.5), changed:()=>{ S.need=true; }, ended:()=>{ cam.fov=28; $('ball-fly').checked=false; $('ball-fly-note').hidden=true; S.need=true; }});
+  // Field of view: one slider for the lens. Out of Free fly it is the ball's own lens (the ball keeps its size on screen, so a
+  // wider lens only deepens it); in Free fly it is the camera's, and the wheel moves it as well.
+  const lens=()=>{ const v=Math.round(fly.on?cam.fov:S.fov); $('ball-fov').value=v; $('ball-fov-v').textContent=v+'°'; };
+  const FLYFOV=62, fly=makeFly(cv,cam,{speed:()=>Math.max(0.3,S.D0*0.5), changed:()=>{ S.need=true; lens(); }, ended:()=>{ cam.fov=S.fov; $('ball-fly').checked=false; $('ball-fly-note').hidden=true; S.need=true; lens(); }});
+  $('ball-fov').oninput=e=>{ const v=Math.max(8,Math.min(130,parseFloat(e.target.value)||28)); if(fly.on){ cam.fov=v; cam.updateProjectionMatrix(); } else { S.fov=v; store.set('dome-ball-fov',v); } $('ball-fov-v').textContent=Math.round(v)+'°'; S.need=true; };
   $('ball-fly').onchange=()=>{ if(!S.on){ $('ball-fly').checked=false; return; } if(!$('ball-fly').checked){ fly.leave(); return; }
     // the same view, through a camera that looks straight ahead: turned toward where the ball stands on the screen
     // (and through a wider lens, brought closer so the ball looks the size it did)
@@ -2872,7 +2877,7 @@ function makeOrb(){ const T=THREE, box=$('orbbox'), cv=$('orb'), ren=new T.WebGL
   $('ball-size').oninput=e=>{ S.R=Math.max(0.05,parseFloat(e.target.value)||1); $('ball-size-v').textContent=S.R.toFixed(2); S.stale=true; S.need=true; };
   $('ball-spin').onchange=()=>{ S.spin=$('ball-spin').checked; };
   return { get on(){ return S.on; }, dirty(){ S.stale=true; },
-    open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
+    open(){ S.d=cur; S.on=true; frame(); S.R=pick(); sizeShown(); lens(); g.quaternion.identity(); S.zoom=1; S.spin=$('ball-spin').checked; $('ball-round').value=orbRound; shape(); S.step=-1; S.stale=true; S.need=true;
       box.hidden=false; $('place').hidden=true; $('ball-on').checked=true; showModes(); requestAnimationFrame(loop); },
     close(){ if(!S.on) return; fly.leave(); S.on=false; S.drag=null; box.hidden=true; $('place').hidden=false; $('ball-on').checked=false; showModes(); } }; }
 $('ball-round').value=orbRound;
