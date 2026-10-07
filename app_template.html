@@ -666,6 +666,15 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
   .app:not(.over) .steps>#tab-strokes{grid-area:list}
   .canvas.phone #boxes>.modebox:not(.shut):not(#helper){left:auto!important;right:8px;width:344px;max-height:58vh}
 }
+/* Mix: the triangle in the Sky box. It can be used while the Sky box itself is off (using it switches all three on). */
+#mode-sky.off>.mixgrp{opacity:1;pointer-events:auto}
+#mix{display:block;width:100%;max-width:230px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
+#mix .tri{fill:color-mix(in srgb,var(--gilt) 7%,transparent);stroke:var(--gilt);stroke-width:1.6;stroke-linejoin:round}
+#mix .med{fill:none;stroke:var(--line);stroke-width:1} #mix .mid{fill:none;stroke:var(--gilt);stroke-width:1.2;opacity:.8}
+#mix text{font:600 13px var(--text);fill:var(--ink)}
+#mix .knob{fill:var(--gilt);stroke:var(--paper);stroke-width:3;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
+#mix.off .knob{fill:var(--soft)} #mix.off .tri{stroke:var(--rule)} #mix.off text{fill:var(--soft)}
+#mix-says{margin:0;text-align:center;color:var(--soft);min-height:1.4em}
 /* ---- the front page ----
    A band across the top (the name, the search, the filter). Under it the top half of the window is the Earth, with a dot for
    every dome; then the dome photos, large, with nothing drawn on them; then the flat map, the tables and the credits. */
@@ -838,6 +847,12 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <div class="row pick" id="sky-row"><span>Which</span><button type="button" class="pickbtn" id="sky-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
             <div class="btns"><button class="pill" id="sky-place">Place picture</button></div>
             <div class="btns"><button class="pill" id="sky-unplace" disabled>Reset picture</button></div>
+            <div class="subgrp mixgrp" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Sky to show more of it. In the middle, all three show equally."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
+              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the sky shows">
+                <path class="tri" d="M110 26L22 178H198Z"/><path class="med" d="M110 26V178M22 178L154 102M198 178L66 102"/><circle class="mid" cx="110" cy="127.3" r="5"/>
+                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="198" y="198" text-anchor="middle">Sky</text>
+                <circle class="knob" id="mix-knob" cx="110" cy="127.3" r="9"/></svg>
+              <p class="note" id="mix-says"></p></div>
         </section>
         <section class="grp modebox" data-box="eye" id="mode-eye" aria-label="Eye"><div class="modehead"><h4>Eye</h4><label class="onoff"><input type="checkbox" id="eye-on"> On</label></div>
         <div class="bound placebar" id="eyebar" hidden><span class="lbl">Place eye</span><span class="who">Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.</span><p class="note">Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.</p><div class="btns"><button class="pill" id="eye-reset">Reset</button><button class="pill accent" id="eye-done">Done</button></div></div>
@@ -2266,6 +2281,40 @@ document.querySelector('.dockrow').addEventListener('mouseenter',()=>{ hideLineB
 fillEyes();
 function setEyeOn(on){ eyeOn=on&&!!eye; store.set('dome-eye-on',eyeOn); if(eyeOn&&eyeFade<=0){ eyeFade=0.6; store.set('dome-eye-opacity',eyeFade); }   // switched on with its strength at nothing: give it something to show
   if(cur){ setEye(); if(T3) T3.dirty(); } }
+// ---- Mix ----
+// A triangle with Dome, Eye and Sky at its corners and one dot inside. Where the dot stands says how much of each shows: at a
+// corner only that one, on a side the two at its ends, in the middle a third of each. The three lie one over another (the eye
+// over the dome over the sky), so a third of each is not three sliders at a third: the eye is given its share, the dome its
+// share of what the eye leaves, and the sky all of the rest. The three Strength sliders are moved to those values. Moving a
+// Strength slider by hand, or switching one of the three off, switches Mix off, since the dot would no longer say what shows.
+let mixOn=store.get('dome-mix-on',false)===true, mix=store.get('dome-mix',null); if(!(Array.isArray(mix)&&mix.length===3&&mix.every(v=>v>=0&&v<=1)&&Math.abs(mix[0]+mix[1]+mix[2]-1)<0.01)) mix=[1/3,1/3,1/3];
+const MIXP=[[110,26],[22,178],[198,178]];
+function showMix(){ const [d,e,s]=mix, x=d*MIXP[0][0]+e*MIXP[1][0]+s*MIXP[2][0], y=d*MIXP[0][1]+e*MIXP[1][1]+s*MIXP[2][1];
+  $('mix-knob').setAttribute('cx',x); $('mix-knob').setAttribute('cy',y); $('mix').classList.toggle('off',!mixOn); $('mix-on').checked=mixOn;
+  const pc=v=>Math.round(v*100)+'%'; $('mix-says').textContent=mixOn?`Dome ${pc(d)} · Eye ${pc(e)} · Sky ${pc(s)}`:''; }
+function applyMix(){ if(!mixOn||!cur) return; const [d,e,s]=mix, r2=v=>Math.round(Math.max(0,Math.min(1,v))*100)/100;
+  eyeFade=r2(e); fade=d+s>1e-6?r2(d/(d+s)):0; skyFade=1;
+  store.set('dome-eye-opacity',eyeFade); store.set('dome-photo-opacity',fade); store.set('dome-sky-opacity',skyFade);
+  setPic(); setEye(); drawDepth(); if(T3) T3.dirty(); }
+function setMix(on){ mixOn=on; store.set('dome-mix-on',mixOn);
+  if(on){ if(!picOn) setPicOn(true); if(eye&&!eyeOn) setEyeOn(true); if(!skyOn) setSkyOn(true); applyMix(); }
+  showMix(); }
+$('mix-on').onchange=()=>setMix($('mix-on').checked);
+{ const sv3=$('mix'); let down=false;
+  const put=e=>{ const r=sv3.getBoundingClientRect(); let x=(e.clientX-r.left)*220/r.width, y=(e.clientY-r.top)*204/r.height;
+    const [A,B,C]=MIXP, det=(B[1]-C[1])*(A[0]-C[0])+(C[0]-B[0])*(A[1]-C[1]);
+    let d=((B[1]-C[1])*(x-C[0])+(C[0]-B[0])*(y-C[1]))/det, ee=((C[1]-A[1])*(x-C[0])+(A[0]-C[0])*(y-C[1]))/det, s=1-d-ee;
+    d=Math.max(0,d); ee=Math.max(0,ee); s=Math.max(0,s); const sum=d+ee+s||1; d/=sum; ee/=sum; s/=sum;
+    // the middle and the three corners catch the dot when it comes close
+    if(Math.hypot(d-1/3,ee-1/3,s-1/3)<0.05) d=ee=s=1/3; else [[1,0,0],[0,1,0],[0,0,1]].forEach(c=>{ if(Math.hypot(d-c[0],ee-c[1],s-c[2])<0.05) [d,ee,s]=c; });
+    mix=[d,ee,s]; store.set('dome-mix',mix); if(!mixOn) setMix(true); else { applyMix(); showMix(); } };
+  sv3.addEventListener('pointerdown',e=>{ if(e.button||!cur) return; down=true; try{ sv3.setPointerCapture(e.pointerId); }catch(_){} put(e); });
+  sv3.addEventListener('pointermove',e=>{ if(down) put(e); });
+  const up=()=>{ down=false; }; sv3.addEventListener('pointerup',up); sv3.addEventListener('pointercancel',up);
+  sv3.addEventListener('dblclick',()=>{ mix=[1/3,1/3,1/3]; store.set('dome-mix',mix); if(!mixOn) setMix(true); else { applyMix(); showMix(); } });
+  ['fade','fade2','eye-fade','eye-fade2','sky-fade'].forEach(id=>$(id).addEventListener('input',()=>{ if(mixOn) setMix(false); }));
+  ['pic3','eye-on','sky-on'].forEach(id=>$(id).addEventListener('change',()=>{ if(mixOn&&!$(id).checked) setMix(false); }));
+  showMix(); }
 function setSkyOn(on){ if(on&&!sky) useSky(skyId); skyOn=on&&!!sky; store.set('dome-sky-on',skyOn); store.set('dome-sky-id',skyId); if(skyOn&&skyFade<=0){ skyFade=0.85; store.set('dome-sky-opacity',skyFade); }
   fillEyes(); if(cur){ setEye(); drawDepth(); if(T3) T3.dirty(); } }
 // A picture switched off while it is being placed: the placing ends first.
