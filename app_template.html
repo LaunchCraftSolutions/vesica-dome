@@ -682,7 +682,20 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
   .canvas.phone #boxes>.modebox:not(.shut):not(#helper){left:auto!important;right:8px;width:344px;max-height:58vh}
 }
 /* Mix: the triangle in the Sky box. It can be used while the Sky box itself is off (using it switches all three on). */
-#mode-sky.off>.mixgrp{opacity:1;pointer-events:auto}
+/* The pictures' toolbar: Dome, Eye, Nebula and Mix side by side, each a column with its own heading and switch, a gold-tipped
+   rule between them. A column whose switch is off is dimmed, as a whole toolbar is. The box's own name shows only when it is
+   shut to a tab on a small canvas. On a phone the columns stand one under another. */
+#boxes>.modebox.picsbox{width:auto;max-width:calc(100% - 2*var(--in,52px))}
+.picsbox>.boxname{display:none} .canvas.compact .picsbox>.boxname,.canvas.phone .picsbox>.boxname{display:flex}
+.picsbox .cols{display:flex;align-items:stretch;flex-wrap:wrap;row-gap:12px}
+.picsbox .col{flex:0 0 228px;min-width:0;display:flex;flex-direction:column;gap:var(--s)}
+.picsbox .col h4{cursor:default!important;margin:0} .picsbox .col h4::after{display:none!important}
+.picsbox .col.off>:not(.modehead){opacity:.4;pointer-events:none}
+.picsbox .colrule{flex:0 0 21px;position:relative}
+.picsbox .colrule::before{content:"";position:absolute;left:10px;top:2px;bottom:2px;width:1px;background:linear-gradient(transparent,var(--rule) 10%,var(--rule) 90%,transparent)}
+.picsbox .colrule::after{content:"";position:absolute;left:7px;top:50%;width:6px;height:6px;margin-top:-4px;transform:rotate(45deg);background:var(--paper);border:1px solid var(--gilt)}
+.canvas.phone .picsbox .cols{flex-direction:column;flex-wrap:nowrap} .canvas.phone .picsbox .col{flex:none}
+.canvas.phone .picsbox .colrule{flex:0 0 17px} .canvas.phone .picsbox .colrule::before{left:2px;right:2px;top:8px;bottom:auto;width:auto;height:1px;background:linear-gradient(90deg,transparent,var(--rule) 10%,var(--rule) 90%,transparent)} .canvas.phone .picsbox .colrule::after{left:50%;top:5px;margin:0 0 0 -4px}
 #mix{display:block;width:100%;max-width:230px;margin:0 auto;cursor:pointer;touch-action:none;user-select:none}
 #mix .tri{fill:color-mix(in srgb,var(--gilt) 7%,transparent);stroke:var(--gilt);stroke-width:1.6;stroke-linejoin:round}
 #mix .med{fill:none;stroke:var(--line);stroke-width:1} #mix .mid{fill:none;stroke:var(--gilt);stroke-width:1.2;opacity:.8}
@@ -841,11 +854,44 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row">Dot size <input type="range" id="xpts-size" min="1" max="10" step="0.1" aria-label="Size of the crossing dots"></label>
             <label class="row" title="A soft light round each dot">Glow <input type="range" id="xpts-glow" min="0" max="1" step="0.01" aria-label="How much the crossing dots glow"></label>
           </section>
-          <section class="grp modebox" data-box="picture" aria-label="Dome"><h4>Dome</h4>
-            <label class="row"><input type="checkbox" id="pic3" checked> Dome</label>
+          <section class="grp modebox picsbox" data-box="picture" id="pics" aria-label="Dome, eye and nebula"><h4 class="boxname">Pictures</h4>
+            <div class="cols">
+            <div class="col" id="col-dome" role="group" aria-label="Dome"><div class="modehead"><h4>Dome</h4><label class="onoff"><input type="checkbox" id="pic3" checked> On</label></div>
             <label class="row">Strength <input type="range" id="fade2" min="0" max="1" step="0.01" aria-label="How strong the dome photo is"></label>
             <label class="row">Brightness <input type="range" id="bright" min="0.4" max="2.5" step="0.01" aria-label="Brightness of the dome photo"><span class="tv" id="bright-val"></span></label>
             <label class="row" title="Lifts the photo where a close view is darker than the dome as a whole"><input type="checkbox" id="auto-bright"> Brighten close-ups</label>
+          
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col" id="mode-eye" role="group" aria-label="Eye"><div class="modehead"><h4>Eye</h4><label class="onoff"><input type="checkbox" id="eye-on"> On</label></div>
+        <div class="bound placebar" id="eyebar" hidden><span class="lbl">Place eye</span><span class="who">Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.</span><p class="note">Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.</p><div class="btns"><button class="pill" id="eye-reset">Reset</button><button class="pill accent" id="eye-done">Done</button></div></div>
+            <label class="row">Strength <input type="range" id="eye-fade2" min="0" max="1" step="0.01" aria-label="How strong the eye is"></label>
+            <div class="row pick" id="eye-row"><span>Which</span><button type="button" class="pickbtn" id="eye-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
+            <div class="btns"><button class="pill" id="eye-place">Place eye</button></div>
+            <div class="btns"><button class="pill" id="eye-unplace" disabled>Reset eye</button></div>
+            <input type="file" id="eye-file" accept="image/*" hidden>
+        
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col" id="mode-sky" role="group" aria-label="Nebula"><div class="modehead"><h4>Nebula</h4><label class="onoff"><input type="checkbox" id="sky-on"> On</label></div>
+            <label class="row" title="How strong the nebula is, under the dome">Strength <input type="range" id="sky-fade" min="0" max="1" step="0.01" aria-label="How strong the nebula is"></label>
+            <div class="row pick" id="sky-row"><span>Which</span><button type="button" class="pickbtn" id="sky-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
+            <div class="btns"><button class="pill" id="sky-place">Place picture</button></div>
+            <div class="btns"><button class="pill" id="sky-unplace" disabled>Reset picture</button></div>
+            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
+            <label class="row" title="The grid lines over the stars"><input type="checkbox" id="sky-grid"> Grid lines</label>
+
+        
+            </div>
+            <i class="colrule" aria-hidden="true"></i>
+            <div class="col mixgrp" id="col-mix" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally. Switching Mix on switches all three on."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
+              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the nebula shows">
+                <path class="tri" d="M110 26L22 178H198Z"/><path class="med" d="M110 26V178M22 178L154 102M198 178L66 102"/><circle class="mid" cx="110" cy="127.3" r="5"/>
+                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="218" y="198" text-anchor="end">Nebula</text>
+                <circle class="knob" id="mix-knob" cx="110" cy="127.3" r="9"/></svg>
+              <p class="note" id="mix-says"></p>
+            </div>
+            </div>
           </section>
         </div><div class="modes" id="boxes"></div><div class="modes" id="modes" hidden>
         <section class="grp modebox" data-box="fractal" id="mode-fractal" aria-label="Fractal"><div class="modehead"><h4>Fractal<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="depth-on"> On</label></div>
@@ -860,20 +906,6 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row"><input type="checkbox" id="rings-on"> Circles</label>
             <div class="btns"><button class="pill" id="dive-in">Dive in</button><button class="pill" id="dive-out">Dive out</button></div>
         </section>
-        <section class="grp modebox" data-box="sky" id="mode-sky" aria-label="Nebula"><div class="modehead"><h4>Nebula<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="sky-on"> On</label></div>
-            <label class="row" title="How strong the nebula is, under the dome">Strength <input type="range" id="sky-fade" min="0" max="1" step="0.01" aria-label="How strong the nebula is"></label>
-            <div class="row pick" id="sky-row"><span>Which</span><button type="button" class="pickbtn" id="sky-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
-            <div class="btns"><button class="pill" id="sky-place">Place picture</button></div>
-            <div class="btns"><button class="pill" id="sky-unplace" disabled>Reset picture</button></div>
-            <label class="row" title="Stars all round, behind everything, while Nebula is on"><input type="checkbox" id="sky-stars"> Stars behind</label>
-            <label class="row" title="The grid lines over the stars"><input type="checkbox" id="sky-grid"> Grid lines</label>
-            <div class="subgrp mixgrp" role="group" aria-label="Mix" title="Drag the dot toward Dome, Eye or Nebula to show more of it. In the middle, all three show equally."><div class="modehead"><h4>Mix</h4><label class="onoff"><input type="checkbox" id="mix-on"> On</label></div>
-              <svg id="mix" viewBox="0 0 220 204" role="img" aria-label="How much of the dome, the eye and the nebula shows">
-                <path class="tri" d="M110 26L22 178H198Z"/><path class="med" d="M110 26V178M22 178L154 102M198 178L66 102"/><circle class="mid" cx="110" cy="127.3" r="5"/>
-                <text x="110" y="16" text-anchor="middle">Dome</text><text x="22" y="198" text-anchor="middle">Eye</text><text x="218" y="198" text-anchor="end">Nebula</text>
-                <circle class="knob" id="mix-knob" cx="110" cy="127.3" r="9"/></svg>
-              <p class="note" id="mix-says"></p></div>
-        </section>
         <section class="grp modebox" data-box="ball" id="mode-ball" aria-label="Space"><div class="modehead"><h4>Space<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="ball-on"> On</label></div>
             <label class="row" title="From a flat disc to a full ball">Round <input type="range" id="ball-round" min="0" max="1" step="0.01" aria-label="How round it is, from a flat disc to a full ball"></label>
             <label class="row" title="How much of the drawing the ball takes in, in first circles out from the middle">Size <span class="tv" id="ball-size-v"></span><input type="range" id="ball-size" min="0.3" max="12" step="0.01" aria-label="How much the ball takes in, in first circles"></label>
@@ -882,14 +914,6 @@ button.rs{position:absolute;top:-7px;right:-7px;z-index:2;width:17px!important;h
             <label class="row" title="Look round with the mouse and move with W A S D, as through a camera. F switches it on and off."><input type="checkbox" id="ball-fly"> Free fly</label>
             <p class="note" id="ball-fly-note" hidden>Hold the left button and move the mouse to look round, or hold the right button and pull the dot from the ring to turn that way. W A S D to move, Q and E to roll left and right, Space up, Shift down. The wheel widens and narrows the lens. Esc or F to stop.</p>
             <div class="btns"><button class="pill" id="ball-front" title="Turn it to face you again, at the size it began">Face on</button></div>
-        </section>
-        <section class="grp modebox" data-box="eye" id="mode-eye" aria-label="Eye"><div class="modehead"><h4>Eye</h4><label class="onoff"><input type="checkbox" id="eye-on"> On</label></div>
-        <div class="bound placebar" id="eyebar" hidden><span class="lbl">Place eye</span><span class="who">Fit the iris to the first circle. The iris is the coloured ring, not the black pupil.</span><p class="note">Drag to move the eye. Zoom in to make the eye bigger, zoom out to make it smaller, until the iris just fills the first circle.</p><div class="btns"><button class="pill" id="eye-reset">Reset</button><button class="pill accent" id="eye-done">Done</button></div></div>
-            <label class="row">Strength <input type="range" id="eye-fade2" min="0" max="1" step="0.01" aria-label="How strong the eye is"></label>
-            <div class="row pick" id="eye-row"><span>Which</span><button type="button" class="pickbtn" id="eye-list" aria-haspopup="listbox" aria-expanded="false"></button></div>
-            <div class="btns"><button class="pill" id="eye-place">Place eye</button></div>
-            <div class="btns"><button class="pill" id="eye-unplace" disabled>Reset eye</button></div>
-            <input type="file" id="eye-file" accept="image/*" hidden>
         </section>
         <section class="grp modebox" data-box="3d" id="mode-3d" aria-label="3D"><div class="modehead"><h4>3D<span class="modetag">mode</span></h4><label class="onoff"><input type="checkbox" id="go3d"> On</label></div>
             <div id="d3-more">
@@ -1363,12 +1387,14 @@ function aligned(){ if(!cur||!fig) return true; const k=sv.getBoundingClientRect
 //   Each box has a handle at its top. Dragged by it, the box stays where it is dropped. The place is remembered from the nearer
 //   side and the nearer of top and bottom, so the box keeps its corner when the window changes size. Double-click the handle and
 //   the box goes back to its usual place.
-const LAYER=$('boxes'), SETBOXES=[...$('setcol').children], MODEBOXES=['mode-3d','mode-fractal','mode-eye','mode-draw','mode-sky','mode-ball'].map(i=>$(i)), MODEROW=['mode-3d','mode-draw','mode-fractal','mode-sky','mode-ball'].map(i=>$(i)), TOOLS=$('drawer'), BOXES=[...SETBOXES,...MODEBOXES,TOOLS];
+const LAYER=$('boxes'), SETBOXES=[...$('setcol').children], MODEBOXES=['mode-3d','mode-fractal','mode-draw','mode-ball'].map(i=>$(i)), MODEROW=['mode-3d','mode-draw','mode-fractal','mode-ball'].map(i=>$(i)), TOOLS=$('drawer'), BOXES=[...SETBOXES,...MODEBOXES,TOOLS];
 [...SETBOXES,...MODEBOXES].forEach(b=>LAYER.appendChild(b)); $('setcol').hidden=true; $('modes').hidden=true; TOOLS.dataset.box='tools';
 let boxDrag=false;   // a box is being dragged: pointing at lines is off until it is dropped
 let boxPlaces=store.get('dome-box-places',{}), modeSig='', zTop=1; if(!boxPlaces||typeof boxPlaces!=='object') boxPlaces={};
 // The toolbars' own places changed on 2026-10-05 (Draw joined the bottom row). Places saved before that are dropped once, so every toolbar starts from where it now belongs.
 if(!store.get('dome-box-places-2',false)){ boxPlaces={}; store.set('dome-box-places',boxPlaces); store.set('dome-box-places-2',true); }
+// And again on 2026-10-06: Dome, Eye and Nebula became one toolbar at the top left.
+if(!store.get('dome-box-places-3',false)){ boxPlaces={}; store.set('dome-box-places',boxPlaces); store.set('dome-box-places-3',true); }
 const putBox=(b,x,y)=>{ const W=$('stage').clientWidth, H=$('stage').clientHeight; b.style.left=Math.max(4,Math.min(W-b.offsetWidth-4,x))+'px'; b.style.top=Math.max(4,Math.min(H-b.offsetHeight-4,y))+'px'; };
 // DRAWERS: the boxes that become drawers on a small canvas (all but the helper and the main toolbar).
 const DRAWERS=()=>[...SETBOXES,...MODEBOXES].filter(b=>b.id!=='helper');
@@ -1379,8 +1405,8 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   // the toolbar: in its corner at the bottom right unless it has been moved
   const toolsHome=ph||!boxPlaces.tools; TOOLS.classList.toggle('moved',!toolsHome); if(toolsHome){ TOOLS.style.left=TOOLS.style.top=''; } else moved(TOOLS);
   const put=(b,x,y)=>{ if(!moved(b)) putBox(b,x,y); }, by=k=>SETBOXES.find(b=>b.dataset.box===k);
-  // the top row: the four settings boxes, then the Eye box beside Dome (it is switched on and off like 3D, Draw and Fractal, but it is about what the photo shows, so it sits with Dome)
-  const base=H-IN, top4=[...['lines','guides','crossings','picture'].map(by),$('mode-eye')];
+  // the top row: the pictures' toolbar first, in the top left corner (it is as wide as its four columns), then the three settings boxes
+  const base=H-IN, top4=['picture','lines','guides','crossings'].map(by), PICS=by('picture'), wOf=b=>b===PICS?(PICS.classList.contains('shut')?PICS._ow||1000:PICS._ow=PICS.offsetWidth):BW;
   // The boxes become drawers only when they truly do not fit open: when the row of mode toolbars is wider than the canvas, or when
   // the top boxes (which wrap on to a second row on a narrower canvas) and the tallest mode toolbar would leave less than 220
   // pixels of bare canvas between them. Going small shuts them all; going large again opens them all.
@@ -1388,7 +1414,7 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   // 1,635 tall counted as small.) A box's open height is noted whenever it is open, so the sum can be done while they are shut.
   DRAWERS().forEach(b=>{ if(!b.classList.contains('shut')) b._oh=b.offsetHeight; });
   const openH=b=>b._oh||(MODEROW.includes(b)?340:218);
-  let topH=0; { let rx=IN, row=0, rh=openH(by('view')); top4.forEach(b=>{ const limit=row===0?W-IN-BW-G:W-IN; if(rx+BW>limit&&rx>IN){ rx=IN; topH+=rh+G; row++; rh=0; } rx+=BW+G; rh=Math.max(rh,openH(b)); }); topH+=rh; }
+  let topH=0; { let rx=IN, row=0, rh=openH(by('view')); top4.forEach(b=>{ const limit=row===0?W-IN-BW-G:W-IN, w=wOf(b); if(rx+w>limit&&rx>IN){ rx=IN; topH+=rh+G; row++; rh=0; } rx+=w+G; rh=Math.max(rh,openH(b)); }); topH+=rh; }
   const modesW=MODEROW.length*BW+(MODEROW.length-1)*G, compact=ph||W<2*IN+modesW||H-TOP-topH-Math.max(...MODEROW.map(openH))-IN<220; st.classList.toggle('compact',compact);
   let tabsEnd=0;
   if(compact!==wasCompact){ wasCompact=compact; DRAWERS().forEach(b=>b.classList.toggle('shut',compact)); }
@@ -1396,15 +1422,15 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   if(compact){
     // Each drawer has a fixed tab: the settings along the top from the left with View at the right, the modes up the left side
     // from the bottom. A tab's size is taken while it is shut. An open drawer grows from its tab, over whatever is beside it.
-    $('mode-eye').style.minHeight=''; DRAWERS().forEach(b=>{ if(b.classList.contains('shut')){ b._tw=b.offsetWidth; b._th=b.offsetHeight; } });
+    DRAWERS().forEach(b=>{ if(b.classList.contains('shut')){ b._tw=b.offsetWidth; b._th=b.offsetHeight; } });
     let x=IN; top4.forEach(b=>{ put(b,x,TOP); x+=(b._tw||110)+G; });
     const v=by('view'); put(v,W-IN-v.offsetWidth,TOP);
     let mx=IN; MODEROW.forEach(b=>{ put(b,mx,base-b.offsetHeight); mx+=(b._tw||120)+G; }); tabsEnd=mx;
   } else {
     // every box keeps the slot it would have with all the boxes in place, so moving one away leaves a gap and shifts nothing
-    put(by('view'),W-IN-BW,TOP); $('mode-eye').style.minHeight=by('picture').offsetHeight+'px';   // the Eye box is as tall as the boxes it stands beside
+    put(by('view'),W-IN-BW,TOP);
     let x=IN, y=TOP, rowH=0;
-    top4.forEach(b=>{ const limit=y===TOP?W-IN-BW-G:W-IN; if(x+BW>limit&&x>IN){ x=IN; y+=rowH+G; rowH=0; } put(b,x,y); x+=BW+G; rowH=Math.max(rowH,b.offsetHeight); });
+    top4.forEach(b=>{ const limit=y===TOP?W-IN-BW-G:W-IN, w=wOf(b); if(x+w>limit&&x>IN){ x=IN; y+=rowH+G; rowH=0; } put(b,x,y); x+=w+G; rowH=Math.max(rowH,b.offsetHeight); });
     // the mode toolbars: one row across the bottom from the left corner, standing on the bottom edge, the longest first (3D, Draw, Fractal: MODEROW)
     MODEROW.forEach((b,i)=>put(b,IN+i*(BW+G),base-b.offsetHeight));
   }
@@ -1418,14 +1444,16 @@ function layBoxes(){ const ph=innerWidth<=1100; $('stage').classList.toggle('pho
   st.style.setProperty('--annt',(TOP+(compact?40:by('lines').offsetHeight)+14)+'px');
 }
 function showModes(){ if(!cur){ modeSig=''; return; }
-  const on=[!!(T3&&T3.on),depthOn,eyeShown()||(mode==='iris'&&placing==='eye'),mode==='draw',skyShown()||(mode==='iris'&&placing==='sky'),!!(ORB&&ORB.on)], st=$('stage');   // each box is dimmed while its own switch is off
+  const on=[!!(T3&&T3.on),depthOn,mode==='draw',!!(ORB&&ORB.on)], st=$('stage');   // each box is dimmed while its own switch is off
+  const cols=[['col-dome',picOn],['mode-eye',eyeShown()||(mode==='iris'&&placing==='eye')],['mode-sky',skyShown()||(mode==='iris'&&placing==='sky')]];   // and so is each column of the pictures' toolbar
+  cols.forEach(([id,o])=>$(id).classList.toggle('off',!o));
   const sig=on.join()+st.clientWidth+'x'+st.clientHeight+$('dive-stop').hidden+$('align').hidden+$('boxes-back').hidden+mode; if(sig===modeSig) return; modeSig=sig;
   MODEBOXES.forEach((b,i)=>b.classList.toggle('off',!on[i])); layBoxes(); }
 const relay=()=>{ modeSig=''; showModes(); };
 // On a phone each toolbar has a button in a row under Play. Pressing it opens that toolbar as a sheet at the foot of the screen
 // and shuts any other; pressing it again, or Done in the sheet, shuts it. A mode that is switched on has a gold dot on its button.
 var PHONEBAR=(()=>{ const bar=document.createElement('div'); bar.id='phonebar'; bar.appendChild(Object.assign(document.createElement('span'),{className:'lbl',textContent:'Settings and modes'}));
-  const order=['picture','eye','view','lines','guides','crossings','3d','draw','fractal','sky','ball'], name={picture:'Dome','3d':'3D'};
+  const order=['picture','view','lines','guides','crossings','3d','draw','fractal','ball'], name={picture:'Pictures','3d':'3D',ball:'Space'};
   order.forEach(k=>{ const box=[...SETBOXES,...MODEBOXES].find(b=>b.dataset.box===k); if(!box) return; const b=document.createElement('button'); b.type='button'; b.className='pill'; b.dataset.for=k;
     b.textContent=name[k]||k[0].toUpperCase()+k.slice(1); b.onclick=()=>{ const h=box.querySelector('h4'); if(h) h.click(); }; bar.appendChild(b);
     const done=document.createElement('button'); done.type='button'; done.className='pill sheetdone'; done.textContent='Done'; done.onclick=()=>{ box.classList.add('shut'); relay(); }; box.appendChild(done); });
@@ -2435,7 +2463,7 @@ axesOn.onchange=()=>{ store.set('dome-canvas-lines',axesOn.checked); $('axes').s
   const gs=$('axes-str'), ps=$('paper-str'); gs.value=num('dome-guide-strength',0.45,0.1,1); ps.value=num('dome-paper-strength',1,0,3);
   const lay=()=>{ $('axes').style.opacity=gs.value; $('paper').style.setProperty('--pk',ps.value); }; lay();
   gs.oninput=()=>{ store.set('dome-guide-strength',+gs.value); lay(); }; ps.oninput=()=>{ store.set('dome-paper-strength',+ps.value); lay(); }; }
-function setPicOn(on){ picOn=on; store.set('dome-picture-on',on); if(cur) setPic(); if(T3) T3.redraw(); }
+function setPicOn(on){ picOn=on; store.set('dome-picture-on',on); if(cur){ setPic(); showModes(); } if(T3) T3.redraw(); }
 $('pic3').onchange=()=>setPicOn($('pic3').checked);
 $('auto-bright').checked=autoOn; $('auto-bright').onchange=()=>{ autoOn=$('auto-bright').checked; store.set('dome-auto-bright',autoOn); setAuto(); };
 $('bright').oninput=e=>{ bright=parseFloat(e.target.value)||1; store.set('dome-brightness',bright); if(cur){ setPic(); drawDepth(); } };
